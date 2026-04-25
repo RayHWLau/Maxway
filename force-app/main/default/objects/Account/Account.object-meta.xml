@@ -265,6 +265,13 @@
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.ADDRESS1_CITY</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.PHONE1</customTabListAdditionalFields>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <excludedStandardButtons>DiscoveryGetAccountsAction</excludedStandardButtons>
+        <excludedStandardButtons>NavigateToAccountDiscoveryDashboard</excludedStandardButtons>
+        <excludedStandardButtons>PipelineInspection</excludedStandardButtons>
+        <excludedStandardButtons>MassAssignRecordLabel</excludedStandardButtons>
+        <excludedStandardButtons>MassEvalAccForResearchStudy</excludedStandardButtons>
+        <listViewButtons>SendWhatsAppMessage</listViewButtons>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Student_ID__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>PC_PHONE3</lookupDialogsAdditionalFields>

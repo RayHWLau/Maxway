@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Queue_Duplicate_Detection</name>
         <label>Queue Duplicate Detection</label>
-        <locationX>176</locationX>
-        <locationY>192</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <actionName>LeadDuplicateDetectionFlowAction</actionName>
         <actionType>apex</actionType>
         <flowTransactionModel>Automatic</flowTransactionModel>
@@ -22,9 +22,21 @@
     <environments>Default</environments>
     <interviewLabel>Lead Detect Duplicate On Create Async {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Lead Detect Duplicate On Create Async</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <filterLogic>1 AND (2 OR 3 OR 4)</filterLogic>
         <filters>
