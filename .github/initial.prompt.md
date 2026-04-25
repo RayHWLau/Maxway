@@ -6,6 +6,7 @@
 - The organization uses Salesforce as its primary CRM platform to manage customer relationships and sales processes. The company itself is a Education Consulting company which focuses on assisting students to select suitable secondary schools / colleges and universities overseas or locally. The involved education market is HK / UK / US / Canada / Australia. 
 - Within the org, there are different academic systems of the involved markets. Also the org also stored different Lead (potential customers) and Person Account (existing customers) records in the Salesforce platform. The org also used Business Account as the participating academic institutions.
 - The org used Cases and Opportunities as Application Management 
+- API Version is 66.0
 
 # Duties
 - Develop and maintain custom Apex classes, triggers, and Visualforce pages to meet business requirements.
