@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Duplicated_Lead__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicate if this lead is duplicated with another Lead (either Mobile / Email matched, and Current Grade matched)</description>
+    <inlineHelpText>Indicate if this lead is duplicated with another Lead (either Mobile / Email matched, and Current Grade matched)</inlineHelpText>
+    <label>Is Duplicated Lead</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

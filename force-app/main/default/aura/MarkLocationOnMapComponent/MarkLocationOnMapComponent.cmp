@@ -1,0 +1,39 @@
+<aura:component access="global" >
+    
+    <aura:attribute name="mapMarkers" type="Object"/>
+    <aura:attribute name="zoomLevel" type="Integer" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <div class="boxClass">
+        <p class="pStyle">
+            <table style="width:100%;text-align:left;">
+                <tr>
+                    <td style="color:white;" width="15%">Tel</td>
+                    <td style="color:white;" width="5%">:</td>
+                    <td style="color:white;" width="80%">{!$Label.c.Telephone}</td>
+                </tr> 
+                <tr>
+                    <td style="color:white;" width="15%">Fax</td>
+                     <td style="color:white;" width="5%">:</td>
+                    <td style="color:white;" width="80%">{!$Label.c.Fax}</td>
+                </tr> 
+                
+                <tr>
+                    <td style="color:white;" width="15%">Email</td>
+                     <td style="color:white;" width="5%">:</td>
+                    <td style="color:white;" width="80%">{!$Label.c.Email}</td>
+                </tr> 
+                <tr>
+                    <td style="color:white;vertical-align: text-top;" width="15%">Address</td>
+                     <td style="color:white; vertical-align: text-top;" width="5%">:</td>
+                    <td style="color:white;" width="80%">{!$Label.c.Address}</td>
+
+                </tr>  
+             </table>            
+        </p>
+    </div>   
+    <div >
+    <lightning:map class="boxClass1" mapMarkers="{! v.mapMarkers }" zoomLevel="{!v.zoomLevel}" />  
+</div>   
+</aura:component>

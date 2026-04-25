@@ -1,0 +1,68 @@
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:actionOverride,force:hasRecordId,force:lightningQuickActionwithoutheader,forceCommunity:availableForAllPageTypes" access="global" controller="OpportunityCustomScreenAura">
+    <aura:attribute name="options" type="List" />
+    <aura:attribute name="value" type="String" />
+    <aura:attribute name="showspinner" type="boolean" default="true"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doint}" />
+    <lightning:overlayLibrary aura:id="overlayLib"/>  
+    <aura:if isTrue ="{!v.showspinner}">
+        <lightning:spinner alternativeText="Loading" size="medium" />
+    </aura:if>
+    <aura:if isTrue ="{!!v.showspinner}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small slds-fade-in-open">
+            
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-modal__close" title="Close" 
+                            onclick="{!c.close}">
+                        <lightning:icon class="white slds-icon_small inverse-icon" iconName="utility:close"  variant="inverse" /> 
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">New Opportunity</h2>
+                    
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-8">
+                        </div>
+                        <div class="slds-col slds-size_2-of-8 slds-text-align_right">
+                            <span>Select Record Type</span>
+                        </div>
+                        <div class="slds-col slds-size_5-of-8">
+                            <span></span>
+                        </div>  
+                    </div>
+                    
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-8">
+                        </div>
+                        <div class="slds-col slds-size_2-of-8 "> 
+                        </div>
+                        <div class="slds-col slds-size_5-of-8 slds-clearfix">
+                            <div class="slds-float_left">
+                                <lightning:radioGroup
+                                                      aura:id="mygroup"
+                                                      name="radioButtonGroup"
+                                                      label="Radio Button Group"
+                                                      options="{! v.options }"
+                                                      value="{! v.value }"
+                                                      onchange="{! c.handleChange }"
+                                                      variant="label-hidden"
+                                                      />
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick ="{!c.close}">Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick ="{!c.gotonextpage}" >Next</button>
+                </footer>
+            </div>
+            
+        </section>
+    </aura:if>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+    
+</aura:component>

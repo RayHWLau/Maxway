@@ -1,0 +1,127 @@
+<aura:component controller="EnquiryFormController" access="global" >
+    <aura:attribute name="EnquiryDetails" type="Lead" default="{'sobjectType':'Lead','Number_Of_Full_Time_Staff__c' : 1}"/>   
+    <aura:attribute name="TypePicklist" type="String[]" />  
+    <aura:attribute name="salutationPicklist" type="list" default="[]"/>  
+    <aura:attribute name="countryCodePicklist" type="list" default="[]"/>   
+    <aura:attribute name="CountryWithStateMap" type="Map" />
+    <aura:attribute name="StateWithCityMap" type="Map" />
+    <aura:attribute name="headOfficePicklist" type="List" access="PRIVATE"/>
+    <aura:attribute name="headOfficeStatePicklist" type="List" access="PRIVATE"/>
+    <aura:attribute name="headOfficeCityPicklist" type="List" access="PRIVATE"/>
+    <aura:attribute name="whereDidYouPicklist" type="List" default="[]" />
+    <aura:attribute name="functionPicklist" type="List" default="[]" />
+    <aura:attribute name="countryToStateMap" type="Map" default="{}" />
+    <aura:attribute name="stateToCityMap" type="Map" default="{}" />
+    <aura:attribute name="functionString" type="String[]" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    <aura:attribute name="showSuccess" type="Boolean" default="false" />
+    <aura:attribute name="errorMsg" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:card title="">
+        <aura:if isTrue="{!v.errorMsg.length > 0}" >
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.errorMsg}
+            </ui:message>
+        </aura:if>
+        <aura:if isTrue="{!v.showSpinner}">
+            <lightning:spinner variant="brand" size="small" />
+        </aura:if>
+        <div class="slds-p-left_medium" style="font-weight:bold;font-size:large;color:#16325c;">
+            Enquiry Form
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-p-around_small slds-size_1-of-2 " >
+                <lightning:select aura:id="salutation" class="fontsize" name="salutation" label="Salutation" value="{!v.EnquiryDetails.Salutation}" required="true" messageWhenValueMissing="Please mention Salutation."> 
+                    <option value="">--None--</option>
+                    <aura:iteration items="{!v.salutationPicklist}" var="val">
+                        <option value="{!val}">{!val}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+            <div class="slds-p-around_small slds-size_1-of-2">
+                <lightning:input aura:id="lastName" name="lastName" label="Last Name" value="{!v.EnquiryDetails.LastName}" required="true" messageWhenValueMissing="Please mention your Name."/>
+            </div>
+            <div class="slds-p-around_small slds-size_1-of-2">
+                <lightning:select aura:id="countryCode" name="countryCode" label="Country Code" value="{!v.EnquiryDetails.Country_Code__c}" required="true" messageWhenValueMissing="Please mention Country Code.">  
+                    <option value="">--None--</option>
+                    <aura:iteration items="{!v.countryCodePicklist}" var="val">
+                        <option value="{!val}">{!val}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>            
+            <div class="slds-p-around_small slds-size_1-of-2" onkeypress="{!c.isNumber}">
+                <lightning:input aura:id="mobileid" name="mobileid" label="Mobile"  value="{!v.EnquiryDetails.MobilePhone}"  required="true" messageWhenValueMissing="Please mention Mobile."/>
+            </div> 
+            
+            <div class="slds-p-around_small slds-size_1-of-2">
+                <lightning:input aura:id="emailId" name="emailId" label="Email"  value="{!v.EnquiryDetails.Email}" required="true" messageWhenValueMissing="Please mention Email."/>
+            </div>
+            <div class="slds-p-around_small slds-size_1-of-2">
+                <lightning:input aura:id="title" name="title" label="Title" required="true" value="{!v.EnquiryDetails.Title}" messageWhenValueMissing="Please mention Title."/>
+            </div> 
+            <div class="slds-p-around_small slds-size_1-of-1" >
+                <lightning:dualListbox aura:id="function"
+                                       name="function"
+                                       label="Function"
+                                       sourceLabel="Available Function"
+                                       selectedLabel="Selected Function"
+                                       required="true"
+                                       options="{!v.functionPicklist}"
+                                       value="{!v.functionString}"
+                                       messageWhenValueMissing="Please mention Function."
+                                       />
+            </div>
+            <div class="slds-p-around_small slds-size_1-of-2">
+                <lightning:input aura:id="company" name="company" label="Company"  value="{!v.EnquiryDetails.Company}" required="true" messageWhenValueMissing="Please mention Company."/>
+            </div>  
+            
+            <div class="slds-p-around_small slds-size_1-of-2">
+                <lightning:select aura:id="headOfficeCountry" name="headOfficeCountry" label="Head Office Country" value="{!v.EnquiryDetails.Head_Office_Country__c}" required="true" onchange="{!c.OnChangeValueOfCountry}" messageWhenValueMissing="Please mention Head Office Country.">  
+                    
+                    <aura:iteration items="{!v.headOfficePicklist}" var="val">
+                        
+                        <option text="{!val.label}" value="{!val.value}"></option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+            <div class="slds-p-around_small slds-size_1-of-2" >
+                <lightning:input aura:id="website" label="Website" name="website" required="true" value="{!v.EnquiryDetails.Website}" messageWhenValueMissing="Please mention Website."/>
+            </div>
+            <aura:if isTrue="false">
+            <div class="slds-p-around_small slds-size_1-of-2">
+                <lightning:select aura:id="headOfficeState" name="headOfficeState" label="Head Office State" value="{!v.EnquiryDetails.Head_Office_Province_State__c}" required="true" onchange="{!c.OnChangeValueOfState}"  disabled="{!(v.EnquiryDetails.Head_Office_Country__c.length > 0 ? false : true)}" messageWhenValueMissing="Please mention Head Office State.">  
+                    <option text="--None--" value=""></option>
+                    <aura:iteration items="{!v.headOfficeStatePicklist}" var="val">
+                        <option text="{!val.label}" value="{!val.value}"></option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+            </aura:if>
+            <div class="slds-p-around_small slds-size_1-of-2">
+                <lightning:select aura:id="whereDidYou" name="whereDidYou" label="Where Did You Hear About Us? " required="true" value="{!v.EnquiryDetails.Where_did_you_hear_about_us__c}" messageWhenValueMissing="Please mention Where Did You Hear About Us?">  
+                    <option value="">--None--</option>
+                    <aura:iteration items="{!v.whereDidYouPicklist}" var="val">
+                        <option value="{!val}">{!val}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+            <aura:if isTrue="false">
+            <div class="slds-p-around_small slds-size_1-of-2">
+                <lightning:select aura:id="headOfficeCity" name="headOfficeCity"  label="Head Office City" value="{!v.EnquiryDetails.Head_Office_City__c}"  required="true" disabled="{!(v.EnquiryDetails.Head_Office_Province_State__c.length > 0 ? false : true)}" messageWhenValueMissing="Please mention Head Office City.">  
+                    <option text="--None--" value=""></option>
+                    <aura:iteration items="{!v.headOfficeCityPicklist}" var="val">
+                        <option text="{!val.label}" value="{!val.value}"></option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+            </aura:if>
+            
+        </div>
+        
+        <div class="slds-text-align_center slds-p-top_small">	
+            <lightning:button variant="brand" label="SUBMIT" onclick="{!c.saveLeadDetails}"/>  
+        </div>
+    </lightning:card>
+</aura:component>

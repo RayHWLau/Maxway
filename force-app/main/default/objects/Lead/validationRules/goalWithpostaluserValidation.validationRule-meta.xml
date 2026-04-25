@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>goalWithpostaluserValidation</fullName>
+    <active>true</active>
+    <description>If Goal With Portal is &apos;Others&apos;  then Goal With Portal Others is required and vice versa.</description>
+    <errorConditionFormula>AND(RecordType.Name =&apos;Agent Acquisition&apos;,
+     OR(
+	 (INCLUDES(Goal_With_Portal__c,&apos;Others&apos;) &amp;&amp; ISBLANK(Goal_With_Portal_Others__c )), 
+     (NOT(INCLUDES(Goal_With_Portal__c,&apos;Others&apos;)) &amp;&amp; NOT(ISBLANK( Goal_With_Portal_Others__c )))
+       )
+    )</errorConditionFormula>
+    <errorMessage>Align values between Goal With Portal and Goal With Portal Others.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidationLeadStageQualified</fullName>
+    <active>true</active>
+    <description>Company  Information section, Company Profile section, Goal with Portal field and Function field needs to be complete before change stage to qualified.</description>
+    <errorConditionFormula>AND( RecordType.Name =&apos;Agent Acquisition&apos;,
+TEXT(Status)=&apos;Qualified&apos;,
+   OR(
+      ISBLANK(Company),ISBLANK(Website) , 
+	  ISBLANK(TEXT(Branch_Conflicts_with_Maxway__c)), 
+          ISBLANK(TEXT( Head_Office_Country__c )),
+ 
+   ISBLANK(TEXT(Last_Years_Total_Successful_Applications__c)), 
+   ISBLANK(TEXT(Number_Of_Full_Time_Staff__c)), 
+	  ISBLANK( Study_Abroad_Countries__c ),ISBLANK( Goal_With_Portal__c ), ISBLANK(Top_Sending_Countries__c ),
+      ISBLANK(Function__c),ISBLANK(TEXT(Number_Of_Branches__c))
+	  ) 
+)</errorConditionFormula>
+    <errorMessage>All the fields mention in company Information section and Company Profile section should have information to Qualify the Lead.</errorMessage>
+</ValidationRule>

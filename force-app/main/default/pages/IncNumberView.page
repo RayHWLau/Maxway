@@ -1,0 +1,9 @@
+<apex:page >
+
+    <apex:sectionHeader title="Auto-increment Numbers Setup"/>
+    
+    <apex:pageBlock >
+      <apex:listViews type="IncNumber__c" />
+    </apex:pageBlock>
+
+</apex:page>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Secondary_Level__c</fullName>
+    <label>Post Secondary Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre Asso</fullName>
+                <default>false</default>
+                <label>Pre Asso</label>
+            </value>
+            <value>
+                <fullName>Asso1</fullName>
+                <default>false</default>
+                <label>Asso1</label>
+            </value>
+            <value>
+                <fullName>Asso2</fullName>
+                <default>false</default>
+                <label>Asso2</label>
+            </value>
+            <value>
+                <fullName>Dip</fullName>
+                <default>false</default>
+                <label>Dip</label>
+            </value>
+            <value>
+                <fullName>HDip 1</fullName>
+                <default>false</default>
+                <label>HDip 1</label>
+            </value>
+            <value>
+                <fullName>HDip 2</fullName>
+                <default>false</default>
+                <label>HDip 2</label>
+            </value>
+            <value>
+                <fullName>HDip 3</fullName>
+                <default>false</default>
+                <label>HDip 3</label>
+            </value>
+            <value>
+                <fullName>U0</fullName>
+                <default>false</default>
+                <label>U0</label>
+            </value>
+            <value>
+                <fullName>U1</fullName>
+                <default>false</default>
+                <label>U1</label>
+            </value>
+            <value>
+                <fullName>U2</fullName>
+                <default>false</default>
+                <label>U2</label>
+            </value>
+            <value>
+                <fullName>U3</fullName>
+                <default>false</default>
+                <label>U3</label>
+            </value>
+            <value>
+                <fullName>U4</fullName>
+                <default>false</default>
+                <label>U4</label>
+            </value>
+            <value>
+                <fullName>Postgrad</fullName>
+                <default>false</default>
+                <label>Postgrad</label>
+            </value>
+            <value>
+                <fullName>Working</fullName>
+                <default>false</default>
+                <label>Working</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

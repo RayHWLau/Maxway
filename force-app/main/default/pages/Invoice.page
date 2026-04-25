@@ -1,0 +1,413 @@
+<apex:page cache="false" showHeader="false" action="{!init}" sidebar="false" standardController="Payment_Record__c" Extensions="PaymentRecordInvoiceEx"
+standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', 'pdf', '')}">
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            div.container {
+                width: 900px;
+                margin: 0px auto;
+                text-align: left;
+            }
+
+            table { 
+                border-spacing: 0px;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            tr#heading td#logo
+            {
+                width: 33%;
+            }
+
+            tr#heading td#logo img
+            {
+                height: 80px;
+            }
+
+            tr#heading td#title
+            {
+                width: 33%;
+                text-align: center;
+                font-size: xx-large;
+                font-weight: bold;
+            }
+
+            tr#heading td#invoice-number-and-etc
+            {
+                width: 33%;
+                text-align: left;
+            }
+
+            table#std-info, table#description
+            {
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+                border: 1px solid black;
+            }
+
+            table#std-info td:nth-child(odd)
+            {
+                width: 40%;
+            }
+
+            table#std-info td:nth-child(even)
+            {
+                border-bottom-style: dashed;
+                border-bottom-width: 1px;
+            }
+            
+            table#std-info tr.empty td
+            {
+                height: 10px;
+                border-bottom-width: 0px;
+            }
+            
+            table tr#remark td:nth-child(1)
+            {
+                padding-left: 10%;
+                padding-right: 10%;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            table#description {
+                margin-top: 10px;
+            }
+
+            table#description thead{
+                text-align: center;
+            }
+
+            table#description th:nth-child(1){
+                width: 80%
+            }
+            
+            table#description td.amount {
+                text-align : right;
+            }
+            
+            table#description > thead > tr {
+                background-color : #3d93d5;
+                border-bottom : 1px solid black;
+            }
+            
+            table#description > thead > tr > th:nth-child(odd){
+                border-right: 1px dashed black;
+            }
+            
+            table#description > tbody > tr {
+                border-bottom : 1px dashed grey;
+            }
+            
+            table#description > tbody > tr > td:nth-child(odd){
+                border-right : 1px dashed grey;
+            }
+
+            table#methods {
+                width: 100%;
+            }
+
+            table#methods tr.item td {
+                border: 1px solid black;
+                vertical-align: top;
+            }
+
+            table#methods tr.empty {
+                height: 10px;
+            }
+        </style>
+        <apex:includeScript value="{!$Resource.underscorejs}" />
+        <apex:includeScript value="{!$Resource.jquery}" />
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                <tbody>
+                    <tr id="heading">
+                        <td id="logo"><apex:image value="{!$Resource.logo}"/></td>
+                        <td id="title">INVOICE</td>
+                        <td id="invoice-number-and-etc">
+                            Inv#: {!Payment_Record__c.new_invoice_id__c}<br />
+                            Date: 
+                            <apex:outputtext value="{0,date,dd/MM/yyyy}">
+                                <apex:param value="{!Payment_Record__c.Invoice_Issue_Date__c}"/>
+                            </apex:outputtext><br />
+                            Student #: {!Payment_Record__c.Record_ID__c}<br />
+                        </td>
+                    </tr>
+                    <tr id="content">
+                        <td colspan="3">
+                            <table id="std-info">
+                                <tbody>
+                                    <tr class="empty"><td></td><td></td></tr>
+                                    <tr id="name">
+                                        <td>Name of student:</td>
+                                        <td>{!Payment_Record__c.Opportunity__r.Account.Name}</td>
+                                    </tr>
+                                    <tr id="school-pg-name">
+                                        <td>School or program name:</td>
+                                        <td>{!Payment_Record__c.Name}</td>
+                                    </tr>
+                                    <tr id="start-date-or-semester">
+                                        <td>Start date or semester:</td>
+                                        <td>{!IF(Payment_Record__c.Year__c == 'TBD' || Payment_Record__c.Term__c == 'TBD', 'TBD', Payment_Record__c.Year__c + ' ' + Payment_Record__c.Term__c)}</td>
+                                    </tr>
+                                    <tr id="total-invoice-amount">
+                                        <td>Total invoice amount:</td>
+                                        <td>
+                                            {!Payment_Record__c.CurrencyIsoCode}
+                                            <apex:outputText value="{0, number, #,###.00}">
+                                                <apex:param value="{!Payment_Record__c.Invoice_Amt__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                    </tr>
+                                    <tr class="empty"><td></td><td></td></tr>
+                                </tbody>
+                            </table>
+                            <table id="description">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- should be rendered by template for different record type -->
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="remark">
+                        <!--render by template for different record type -->
+                    </tr>
+                    <tr id="pay-methods">
+                        <td colspan="3">
+                            <table id="methods">
+                                <thead>
+                                    <tr>
+                                        <th>請選以下其中一項付款方式</th>
+                                        <th>Please select one of the following payment method :</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="item">
+                                        <td>
+                                            支票抬頭 : 萬威教育集團有限公司<br />
+                                            香港灣仔, 皇后大道東43-59<br />
+                                            東美中心2108室<br />
+                                            切記 : <strong>支票背面註明學生名字</strong>
+                                        </td>
+                                        <td>
+                                            by cheque : payable to Maxway Education Group Limited <br />
+                                            Rm 2108 Dominion Center, 43-59 Queen's Road East,  <br />
+                                            Wanchai, Hong Kong <br />
+                                            <strong>Write student name at the back of the cheque</strong>
+                                        </td>
+                                    </tr>
+                                    <tr class="empty"><td></td><td></td></tr>
+                                    <tr class="item">
+                                        <td>
+                                            直接存入銀行<br />
+                                            香港匯豐銀行<br />
+                                            帳戶號碼 : <strong>658-042759-001 (HK$)</strong><br />
+                                            切記 : <strong>存款單背面註明學生名字</strong><br />
+                                            <!--將存款單傳真致 : <strong>30115284</strong>-->
+                                        </td>
+                                        <td>
+                                            pay-in to bank directly<br />
+                                            Hong Kong bank account :  658-042759-001 (HK$)<br />
+                                            account name :  Maxway Education Group Limited<br />
+                                            <strong>Write student name on bank pay-in slip</strong>
+                                        </td>
+                                    </tr>
+                                    <!--render<tr class="empty"><td></td><td></td></tr>
+                                    <tr class="item">
+                                        <td colspan="2">
+                                            人民币帐户 (只限國內客戶)<br />
+                                            收款人：李静华<br />
+                                            账号：6225-8878-6471-4957<br />
+                                            汇入地点：深圳分行  罗湖支行<br />
+                                            汇入行名称：招商银行深圳分行<br />
+                                            切记 : <strong>存款单背面註明学生名字</strong>         将存款单传真致香港 : (852) 3011-5284
+                                        </td>
+                                    </tr>-->
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <apex:outputPanel rendered="{!Payment_Record__c.Invoice_Description__c != null}">Invoice Description : {!Payment_Record__c.Invoice_Description__c}</apex:outputPanel>
+        </div>
+        <script type="text/javascript">
+            // A nice helper function to format the number as common money format.
+            Number.prototype.formatMoney = function(c, d, t){
+                var n = this, 
+                    c = isNaN(c = Math.abs(c)) ? 2 : c, 
+                    d = d == undefined ? "." : d, 
+                    t = t == undefined ? "," : t, 
+                    s = n < 0 ? "-" : "", 
+                    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", 
+                    j = (j = i.length) > 3 ? j % 3 : 0;
+                return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+            };
+            var paymentType = '{!RecordTypeName}'.toLowerCase().replace(/[^a-z0-9]/, '-');
+            var payment = {!Json};
+            // convert the Item_Name_ and Item_Amount_ into a list for display
+            var names = _.pick(payment, 
+                'Item_Name_1__c', 'Item_Name_2__c',
+                'Item_Name_3__c', 'Item_Name_4__c', 
+                'Item_Name_5__c', 'Item_Name_6__c', 
+                'Item_Name_7__c', 'Item_Name_8__c', 
+                'Item_Name_9__c', 'Item_Name_10__c'
+            );
+            var re = /^Item_Name_([0-9]+)__c$/;
+            payment.items = _.map(names, function(v, k){
+                var tmp = re.exec(k);
+                if (tmp){
+                    var x = tmp[1];
+                    var a = 'Item_Amount_' + x + '__c';
+                    var amount = _.has(payment, a) ? parseFloat(payment[a]) : 0;
+                    return {name: v, amount: amount};
+                } else {
+                    return null;
+                }
+            });
+            
+            payment.services = {
+                application : payment.Service_Application__c
+                , visa      : payment.Service_Visa__c
+            };
+            
+            payment.applicationExtra = {
+                skype     : payment.Service_Application_Skype_Interview__c
+                , housing : payment.Service_Application_Housing__c
+                , posit   : payment.Service_Application_Posit_Tracking__c
+                , arrival : payment.Service_Application_Arrival_Itinerary__c
+            };
+            
+            $(document).ready(function(){
+                var tmpl = _.template($('script#template-description-' + paymentType).html());
+                var descHtml = tmpl(payment);
+                
+                var remarkTmpl = _.template($('script#template-remark-' + paymentType).html());
+                var remarkHtml = remarkTmpl(payment);
+                
+                $('table#description tbody').html(descHtml);
+                $('tr#remark').html(remarkHtml);
+            })
+        </script>
+        
+        <script type="text/template" id="template-description-service-fee">
+<% var total = Invoice_Amt__c; %>
+<% var total = _.reduce(items, function(memo, i){ return memo + (i.amount ?  i.amount : 0) ; }, 0); %>
+<% _.each(items, function(i){ %>
+<tr>
+    <td class="name"><%= i.name %></td>
+    <td class="amount"><%= i.amount ? ('$ ' + i.amount.formatMoney(2)) : '' %></td>
+</tr>
+<% }) %>
+<tr>
+    <td><input type="checkbox" <%= services.application === true ? 'checked="checked"' : '' %> /> Application</td>
+    <td></td>
+</tr>
+<tr>
+    <td>&nbsp;&nbsp;&nbsp; 
+      <input type="checkbox" <%= applicationExtra.skype === true ? 'checked="checked"' : '' %> /> Skype Interview &nbsp;
+      <input type="checkbox" <%= applicationExtra.housing === true ? 'checked="checked"' : '' %> /> housing arrangement (by school only)
+    </td>
+    <td></td>
+</tr>
+<tr>
+    <td>&nbsp;&nbsp;&nbsp; 
+      <input type="checkbox" <%= applicationExtra.posit === true ? 'checked="checked"' : '' %> /> position tracking &nbsp;
+      <input type="checkbox" <%= applicationExtra.arrival === true ? 'checked="checked"' : '' %> /> arrival itinerary (does not include special arrangement)
+    </td>
+    <td></td>
+</tr>
+<tr>
+    <td><input type="checkbox" <%= services.visa === true ? 'checked="checked"' : '' %> /> Visa</td>
+    <td></td>
+</tr>
+<tr>
+    <td>Total : 
+        <input type="checkbox" <%= CurrencyIsoCode === 'HKD' ? 'checked="checked"' : '' %> /> HKD &nbsp; 
+        <input type="checkbox" <%= CurrencyIsoCode === 'CNY' ? 'checked="checked"' : '' %> /> RMB (人民币)
+    </td>
+    <td class="amount"><%= total ? ('$ ' + total.formatMoney(2)) : ('$ ' + Number(0).formatMoney(2))  %></td>
+</tr>
+        </script>
+
+        <script type="text/template" id="template-description-independent">
+<% var total = _.reduce(items, function(memo, i){ return memo + (i.amount ?  i.amount : 0) ; }, 0); %>
+<% _.each(items, function(i){ %>
+<tr>
+    <td class="name"><%= i.name %></td>
+    <td class="amount"><%= i.amount ? ('$ ' + i.amount.formatMoney(2)) : '' %></td>
+</tr>
+<% }) %>
+<tr class="empty">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td>Total : 
+        <input type="checkbox" <%= CurrencyIsoCode === 'HKD' ? 'checked="checked"' : '' %> /> HKD &nbsp; 
+        <input type="checkbox" <%= CurrencyIsoCode === 'CNY' ? 'checked="checked"' : '' %> /> RMB (人民币)
+    </td>
+    <td class="amount"><%= total ? ('$ ' + total.formatMoney(2)) : ('$ ' + Number(0).formatMoney(2))  %></td>
+</tr>
+        </script>
+        
+        <script type="text/template" id="template-description-training">
+<% var total = _.reduce(items, function(memo, i){ return memo + (i.amount ?  i.amount : 0) ; }, 0); %>
+<% _.each(items, function(i){ %>
+<tr>
+    <td class="name"><%= i.name %></td>
+    <td class="amount"><%= i.amount ? ('$ ' + i.amount.formatMoney(2)) : '' %></td>
+</tr>
+<% }) %>
+<tr class="empty">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td>Total : 
+        <input type="checkbox" <%= CurrencyIsoCode === 'HKD' ? 'checked="checked"' : '' %> /> HKD &nbsp; 
+        <input type="checkbox" <%= CurrencyIsoCode === 'CNY' ? 'checked="checked"' : '' %> /> RMB (人民币)
+    </td>
+    <td class="amount"><%= total ? ('$ ' + total.formatMoney(2)) : ('$ ' + Number(0).formatMoney(2))  %></td>
+</tr>
+        </script>
+        
+        <script type="text/template" id="template-remark-independent">
+<td colspan="3"><strong>Our service fees does not include test registration or score request</strong></td>
+        </script>
+        
+        <script type="text/template" id="template-remark-service-fee">
+<td colspan="3"><strong>Our service fees does not include test registration or score request</strong></td>
+        </script>
+        
+        <script type="text/template" id="template-remark-training">
+<td colspan="3">
+    <strong>Remark:</strong>
+    <ul>
+        <li>No make class if the student misses a class.</li> 
+        <li>Class will resume 3 hours after any of the signals (typhoon #8, black rainstorm signal, red rainstorm signal) is removed.</li>  
+        <li>Typhoon signal #8 : class will be cancelled and there will be make up class.</li>
+        <li>Black rainstorm signal : if the signal is up 4 hours before class start, class will be cancelled, there will be make up class.</li>
+        <li>Red rainstorm signal : class will be cancelled, there will be make up class. If the Red signal is announced during the class period, then the teacher will decide what to do.</li>
+    </ul>
+</td>
+        </script>
+        
+    </body>
+</html>
+</apex:page>

@@ -1,0 +1,104 @@
+<aura:component controller="OptOutAddingFunctionality" implements="force:appHostable">
+    <aura:attribute name="accountId" type="string" />
+    <aura:attribute name="contryname" type="string" />
+    <aura:attribute name="accountwrap" type="list" />
+    <aura:attribute name="accountwrapmaster" type="list" />
+    <aura:attribute name="accountwrapserver" type="list" />
+    
+    <aura:registerEvent name="navigate" type="c:AccountList"/>
+    <aura:registerEvent name="checksearchvalue" type="c:SearchvalueEvent"/>
+    <aura:attribute name="isPage" type="boolean" default="true"/>
+    <!-- aura:registerEvent name="pagination" type="c:AccountListPage"/ -->
+    <lightning:overlayLibrary aura:id="overlayLib" />
+    
+    <aura:handler action="{!c.closemodal}" event="c:StatusAppEvent" />
+    <aura:handler name="init" action ="{!c.donint}" value = "{!this}" />
+    <!-- Pagination -->
+    <aura:attribute name="PageNumber" type="integer" default="1"/>
+    <aura:attribute name="TotalPages" type="integer" default="0"/>
+    <aura:attribute name="TotalRecords" type="integer" default="0"/>
+    <aura:attribute name="RecordStart" type="integer" default="0"/>
+    <aura:attribute name="RecordEnd" type="integer" default="0"/>
+    <aura:attribute name="setAccId" type="String"/>
+    <aura:attribute name="delAccId" type="String"/>
+    <!-- /pagination -->
+    <div class="slds-grid slds-m-bottom_medium ">
+        <div class="slds-size_1-of-7"></div>
+        <div class="slds-size_5-of-7">
+            <div onkeyup="{! c.handleKeyUp }" >
+                <lightning:input
+                                 aura:id="enter-search"
+                                 name="enter-search"
+                                 label="Search when user hits the 'enter' key"
+                                 type="search"
+                                 variant="label-hidden"
+                                 placeholder="School"
+                                 onchange ="{!c.rerenderlist}"
+                                 />
+            </div>
+        </div>
+        <div class="slds-size_1-of-7"></div>
+    </div>
+    <div class="slds-grid slds-gutters slds-border_top slds-border_bottom slds-border_left slds-border_right slds-m-horizontal_large slds-m-top_small">
+        <!-- div class="slds-float_right">
+            <ui:inputSelect aura:id="pageSize" label="Display Records Per Page: " change="{!c.onSelectChange}">
+                <ui:inputSelectOption text="10" label="10" value="true"/>
+                <ui:inputSelectOption text="15" label="15"/>
+                <ui:inputSelectOption text="20" label="20"/>
+            </ui:inputSelect>
+            <br/>
+        </div-->
+        <div class="slds-size_1-of-6 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+            S.No.
+        </div>
+        
+        <div class="slds-size_3-of-6 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+            School
+        </div>
+        
+        <div class="slds-size_2-of-6 slds-text-align_center slds-p-around_xx-small slds-text-heading_small">
+            Opt Out
+        </div>
+        
+        
+    </div>
+    <aura:if isTrue="{!v.accountwrap.length==0}">
+        <div class="slds-text-align_center slds-m-around_x-large slds-text-heading_small">
+            <i> No School Found.</i>
+        </div>
+        
+        <aura:set attribute ="else" >
+            <aura:iteration var="var" items ="{!v.accountwrap}" indexVar="index">
+                <div class="slds-grid slds-gutters  slds-border_bottom slds-border_left slds-border_right slds-m-horizontal_large">
+                    
+                    <div class="slds-size_1-of-6 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                        {!index+1}
+                    </div>
+                    
+                    <div class="slds-size_3-of-6 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                        {!var.sch.Name}
+                    </div>
+                    
+                    <div class="slds-size_2-of-6 slds-text-align_center slds-p-around_xx-small ">
+                        <lightning:input aura:id='checked' type="checkbox-button" label="{!var.sch.Id}" checked="{!var.isoptout}" name="Opt Out" onchange="{!c.checkedaccounts}"/> 
+                    </div>
+                    
+                </div>
+            </aura:iteration>
+            
+        </aura:set>
+    </aura:if>
+    <!-- Pagination -->
+    <aura:if isTrue="{!v.isPage}">
+        <div class="slds-clearfix" style="width: 92%;margin-left: 22px;">
+            <div class="slds-page-header" role="banner">
+                <div class="slds-float_right">            
+                    <lightning:button disabled="{!v.PageNumber == 1}" variant="base" aura:id="prevPage" label="Prev" onclick="{!c.handlePrev}" class="fontSize"/> &nbsp;           
+                    <lightning:button disabled="{!v.PageNumber == v.TotalPages}" aura:id="nextPage" variant="base" label="Next" onclick="{!c.handleNext}" class="fontSize"/>
+                </div>
+                <p style="font-size: inherit;">{!v.RecordStart}-{!v.RecordEnd} of {!v.TotalRecords} | Page {!v.PageNumber} of {!v.TotalPages}</p>
+            </div>
+        </div>
+    </aura:if>
+    <!-- Pagination -->
+</aura:component>

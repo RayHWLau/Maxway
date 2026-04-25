@@ -1,0 +1,23 @@
+<aura:component controller="RefrenceCheckController" access="global">
+    <aura:attribute name="oppId" type="String" />
+    <aura:attribute name="buttonLabel" type="String" />
+    <aura:attribute name="message" type="String" />
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.showSpinner}" >
+        <lightning:spinner variant="brand" size="medium" />
+    </aura:if>
+    
+  
+     <div class="slds-grid slds-gutters"  style="margin-top:200px;margin-bottom:300px;">
+                    <div class="slds-col slds-size_1-of-3">
+                    </div>
+                    <div class="slds-align_absolute-center slds-col slds-size_1-of-3 slds-p-top_xx-large slds-p-bottom_xx-large" style="font-weight:bold;font-size:large; border :3px solid #D3D3D3;">
+                         {!v.message}
+                    </div>
+                    <div class="slds-col slds-size_1-of-3">
+                    </div>
+                </div>
+</aura:component>

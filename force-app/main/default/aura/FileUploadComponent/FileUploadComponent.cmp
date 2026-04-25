@@ -1,0 +1,140 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes" controller="AgentSignupFormController" access="global" >
+ 
+    <aura:attribute name="oppId" type="String" />
+    <aura:attribute name="documentList" type="Map" default="{}"/> 
+    <aura:attribute name="iteratorList" type="List" />    
+    <aura:attribute name="uploadList" type="List" />  
+    <aura:attribute name="doclink" type="Boolean" default="false" />
+    <aura:attribute name="showSpinner" type="boolean" default="false" />
+    <aura:attribute name="btnVisible" type="Boolean" default="true" />
+    <aura:attribute name="isdeletable" type="Boolean"  />
+    <aura:attribute name ="docidmap" type ="List" />    
+    <aura:attribute name="errorMsg" type="String" default="" />
+    <aura:attribute name="businessValidTillDate" type="Boolean" />
+    <aura:attribute name="businessvaliddate" type="date" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" /> 
+    
+    <aura:if isTrue="{!v.errorMsg.length > 0}" >
+        <div class="slds-border_top slds-text-align_center slds-p-around_small slds-text-heading_small slds-text-color_error">
+            
+            {!v.errorMsg}
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.errorMsg.length == 0}">
+        
+        <aura:if isTrue="{!v.iteratorList.length > 0}">
+            
+            <lightning:card title="Upload Document" iconName="action:add_file">           
+                <div class="slds-p-around_x-large">
+                    <aura:if isTrue="{!v.businessValidTillDate}" >
+                        
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <div class="slds-modal__container">
+                                
+                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <lightning:input type="date" label="Business Valid Till Date" required="true" aura:id="licensedate" value="{!v.businessvaliddate}" messageWhenValueMissing="Please Enter Business Valid Till Date"></lightning:input>
+                                    
+                                    <div class="slds-align_absolute-center slds-p-top_medium ">  <lightning:button variant="neutral"
+                                                                                                                   label="Save"
+                                                                                                                   title="Save"
+                                                                                                                   onclick="{!c.closeModelandsave }"/></div>
+                                </div>
+                                
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open"></div>
+                        
+                    </aura:if> 
+                    <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-max-medium-table--stacked-horizontal">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Name">Document Name</div>
+                                </th>
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Process">Corresponding Stage</div>
+                                </th>
+                                <aura:if isTrue="{!v.doclink}">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Document Link">Document Link</div>
+                                    </th>
+                                </aura:if>
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Upload File">Upload File</div>
+                                </th>
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Uploaded">Uploaded</div>
+                                </th>
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Delete">Delete</div>
+                                </th> 
+                            </tr>
+                        </thead>
+                        <tbody>     
+                            <aura:iteration items="{!v.iteratorList}" var="item" indexVar="index">                            
+                                <tr>
+                                    <th scope="row" data-label="Document Name">
+                                        <aura:if isTrue="{!item.required.length > 0}">
+                                            <span style="color:red;">*</span>{!item.key}
+                                            <aura:set attribute="else">
+                                                <span>&nbsp;&nbsp;</span>{!item.key}                                        
+                                            </aura:set>
+                                        </aura:if> 
+                                    </th>
+                                    <th scope="row" data-label="Corresponding Stage">
+                                        {!item.process} 
+                                    </th>
+                                    <aura:if isTrue="{!v.doclink}">
+                                        <th scope="row" data-label="Document Link">
+                                            <aura:if isTrue="{!and(item.link.length > 0,item.value.length > 0)}">
+                                                <div class="slds-truncate" title="">
+                                                    <a onclick="{!c.handleClick}" data-index="{!item.link}">View Document</a>
+                                                </div>
+                                            </aura:if>
+                                        </th>
+                                    </aura:if>
+                                    <th scope="row" data-label="Upload File">
+                                        <div class="slds-truncate" >
+                                            <lightning:fileUpload title="{!item.key}"
+                                                                  aura:id="FileUpload" 
+                                                                  name="{!index}"
+                                                                  multiple="false"
+                                                                  accept=".jpg,.jpeg,.png,.pdf,.docx,.xls,.csv"
+                                                                  recordId="{!item.Id}"
+                                                                  onuploadfinished="{!c.handleUploadFinished}"
+                                                                  disabled="{!v.isdeletable}" /> 
+                                            
+                                        </div>                           
+                                    </th>
+                                    <th scope="row" data-label="Uploaded">
+                                        <div class="slds-truncate" title="uploaded">
+                                            <aura:if isTrue="{!item.value.length > 0}">
+                                                <lightning:icon iconName="action:check" alternativeText="Check" size="xx-small" />
+                                                <aura:set attribute="else">
+                                                    <lightning:icon iconName="action:close" alternativeText="Uncheck" size="xx-small" />                                     
+                                                </aura:set>
+                                            </aura:if>                                                                        
+                                        </div>
+                                    </th> 
+                                    <th scope="row" data-label="Delete">
+                                        <aura:if isTrue="{!item.docId.length > 0}">
+                                            <lightning:button variant="brand" label="Delete" value="{!item.Id}" name="{!item.docId}" onclick="{!c.deleltedoc}" disabled="{!v.isdeletable}" />   
+                                        </aura:if>    
+                                    </th>
+                                </tr>     
+                            </aura:iteration>
+                        </tbody>
+                    </table>  
+                </div>            
+            </lightning:card>  
+        </aura:if>
+        <aura:if isTrue="{!v.iteratorList.length == 0}">
+            <div class="slds-border_top slds-text-align_center slds-p-around_small slds-text-heading_small">
+                No Document Found
+            </div>
+        </aura:if>
+    </aura:if>   
+</aura:component>

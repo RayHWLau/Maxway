@@ -1,0 +1,45 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithOutHeader" access="global" controller="OptOutAddingFunctionality">
+    <aura:attribute name="recordId" type="string" />
+    <aura:attribute name="countrylist" type="list" />
+    
+    <aura:handler action="{!c.handleNotification}" event="c:StatusAppEvent" />
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:handler name="init" action ="{!c.donint}" value = "{!this}" />
+    
+    <div class="slds-grid ">
+        <div class="slds-size_1-of-8"></div>
+        <div class="slds-size_1-of-8 slds-clearfix"><div class="slds-float_right"><lightning:icon iconName="standard:contact_list" alternativeText="Country List"  size="medium"/></div></div>
+        <div class=" slds-text-heading_medium slds-size_4-of-8 slds-p-top_xx-small slds-p-left_small">
+            Agent Country Purchased List
+        </div>
+        <div class="slds-size_2-of-8"></div>
+    </div>
+    <div class=" slds-border_bottom   slds-m-vertical_small" />
+    <aura:if isTrue="{!v.countrylist.length>0}" >
+        <aura:iteration var="var" items ="{!v.countrylist}" indexVar="index">
+            <div class="slds-grid  slds-m-horizontal_large  slds-m-top_medium">
+                <div class="slds-size_2-of-8 ">
+                </div>
+                <div class="slds-size_3-of-8" >
+                    <lightning:button variant="neutral" label="{!var.countryname}" title="{!var.countryname}" onclick="{! c.createComponent }" />  
+                </div>
+                <div class="slds-size_1-of-8 ">
+                    <aura:if isTrue="{!var.hasoptout}">
+                        <lightning:icon iconName="action:approval" alternativeText="Check" size="xx-small" />
+                        <aura:set attribute="else" >
+                            <lightning:icon iconName="action:close" alternativeText="Uncheck" size="xx-small" />
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="slds-size_3-of-8">
+                </div>
+            </div>
+        </aura:iteration>
+        <aura:set attribute="else">
+            <div class="slds-text-align_center slds-m-around_x-large slds-text-heading_small">
+                <i>No Country List Purchased.</i>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+<lightning:card title="Site To Lead">
+ <div class="slds-align_absolute-center">   <a onclick="{!c.handleClick}">Click Here</a>	</div>
+</lightning:card>
+    </aura:component>

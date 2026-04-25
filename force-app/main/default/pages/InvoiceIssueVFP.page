@@ -1,0 +1,3 @@
+<apex:page standardController="School_Invoice__c" extensions="InvoiceCustomController"
+ recordSetVar="records" action="{!issueInvoice}">
+</apex:page>

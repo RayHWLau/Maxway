@@ -1,0 +1,19 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="checkSentAgentSignupController" >	
+    <aura:attribute name="conformation" type="boolean" default="true" />
+    <aura:attribute name="showSpinner" type="boolean" default="false" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="msg" type="string"  />    
+    <aura:if isTrue="{!!v.showSpinner}">
+    <div class="slds-align_absolute-center slds-text-heading_small " >{!v.msg}</div>
+    <div class="slds-align_absolute-center slds-p-top_medium ">
+        <aura:if isTrue ="{!v.conformation}">
+        <lightning:button variant="neutral" label="Cancel"  onclick="{!c.closeaction}"/>
+        <lightning:button variant="Brand" label="OK" onclick="{!c.ok}" />
+            </aura:if>
+        <aura:if isTrue ="{!!v.conformation}">
+            <lightning:button variant="Brand" label="OK"  onclick="{!c.closeaction}"/>
+        </aura:if>
+        </div> 
+    </aura:if>
+</aura:component>

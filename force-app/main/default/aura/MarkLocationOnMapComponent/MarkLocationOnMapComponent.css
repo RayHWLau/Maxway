@@ -1,0 +1,17 @@
+.boxClass.THIS{
+    background-color:#16325c;
+    height: 200px;
+}
+.boxClass1.THIS{
+  
+    height: 700px !important;
+}
+
+.THIS .pStyle{    
+    font-size:17px;
+    font-weight: bold;
+    padding-left:30px;
+    padding-top:20px;
+    font-family:Serif;    
+    color:white;
+}

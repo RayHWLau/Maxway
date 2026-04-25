@@ -1,0 +1,27 @@
+<apex:page standardController="Lead" extensions="LeadSchoolShortlistController" tabStyle="Lead" action="{!search}">
+    <apex:sectionHeader title="Lead" subtitle="School Shortlist" />
+    <apex:outputtext value="{!debug}"></apex:outputtext>
+    <apex:form >
+        <apex:pageBlock title="Search Results">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Add to Shortlist" action="{!addtoshortlist}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!results}" var="r">
+                <apex:column >
+                    <apex:inputCheckbox value="{!r.Selected}" />
+                </apex:column>
+                <apex:column headerValue="School Name">
+                    <apex:outputLink value="/{!r.Record.Id}" >
+                        <apex:outputText value="{!r.Record.Name}" />
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Record Type" value="{!r.Record.RecordType.Name}"  />
+              <apex:column value="{!r.Record.Head_Office_Country__c}"  />
+                <apex:column value="{!r.Record.Head_Office_Province_State__c}"  /> 
+                <apex:column value="{!r.Record.Partner_Type__c}"  />
+                <apex:column value="{!r.Record.Est_Annual_Cost__c}"  />
+                <apex:column headerValue="School Agency" value="{!r.Record.School_Agency__r.Name}"  />        
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

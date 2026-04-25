@@ -1,0 +1,196 @@
+<aura:component implements="force:appHostable,force:hasRecordId,force:lightningQuickAction" access="global" controller="docUpload" >
+    <aura:html tag="style">
+        .slds-modal__container{ 
+        height : auto; width: 90%; max-width: 90%; 
+        } 
+        .modal-body{ 
+        height : 62vh !important; 
+        max-height: 62vh !important; 
+        } 
+        .slds-modal__footer{ 
+        display: inline !important; 
+        }
+        .slds-modal__content {
+        overflow-y: hidden !important;
+        height: unset !important;
+        max-height: unset !important;
+        } 
+    </aura:html>
+    <aura:attribute name="appid" type="string" />
+    <aura:attribute name="docList" type="list" />
+    <aura:attribute name="existingdocList" type="list" />
+    <aura:attribute name="masterdocList" type="list" />
+    <aura:attribute name="mainmasterdocList" type="list" />
+    <aura:attribute name="ismaxway" type="boolean" default="true" />
+    <aura:attribute name="issearching" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    <div class="slds-col modal-body slds-scrollable_y " >
+        <div class="slds-grid slds-gutters">
+            <div class="slds-size_2-of-7  slds-p-horizontal_medium">
+               <i> <div class="slds-text-heading_small slds-text-align_center slds-m-bottom_x-small">Add from Master Document</div></i>
+                <div onkeyup="{! c.handleKeyUp }" >
+                    <lightning:input
+                                     aura:id="enter-search"
+                                     name="enter-search"
+                                     label="Search when user hits the 'enter' key"
+                                     isLoading="{! v.issearching }"
+                                     type="search"
+                                     variant="label-hidden"
+                                     placeholder="Search Document"
+                                     onchange ="{!c.rerenderlist}"
+                                     />
+                </div>
+                <div class="slds-scrollable_y " style="height:45vh;">
+                <table class="slds-m-top_large slds-table slds-table--bordered slds-table--cell-buffer slds-max-medium-table--stacked-horizontal">
+                      
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate slds-m-left_xx-small"  style="font-size:13px;" title="S.No.">Add</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate slds-m-left_medium " style="font-size:13px;" title="Name">Name</div>
+                            </th>
+                            <aura:if isTrue="{!v.ismaxway}">
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" style="font-size:13px;" title="Required">Required</div>
+                                </th>
+                            </aura:if>
+                            
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                      
+                        <aura:iteration items="{!v.masterdocList}" var="item" indexVar="index">                            
+                            <tr>
+                                <th scope="row"  data-label="Add">
+                                    <lightning:input aura:id="add" class ="" type="checkbox-button" label="{!item.masterdoc.Id+';'+item.masterdoc.Name}" name="Add" variant ="label-hidden" checked="{!item.add}"/> 
+                                </th>
+                                <th scope="row" data-label="Name">
+                                    <div class ="slds-m-left_medium " >{!item.masterdoc.Name}</div>
+                                    
+                                </th>
+                                
+                                <aura:if isTrue="{!v.ismaxway}">
+                                    <th scope="row" data-label="Required">
+                                        <lightning:input class ="slds-m-left_x-small" aura:id="required" type="toggle" label="{!item.masterdoc.Id+';'+item.masterdoc.Name}" name="Required" variant ="label-hidden" checked="{!item.required}" onchange="{!c.checkeddoc}" messageToggleActive="" messageToggleInactive=""/>  
+                                    </th>
+                                </aura:if>
+                                
+                            </tr>     
+                        </aura:iteration>
+                      
+                    </tbody>
+                          
+                </table> 
+                </div>
+                 <div class="slds-border_top" />
+                <div class="slds-align_absolute-center slds-m-top_small">
+                    <lightning:button label="Save" variant="brand" onclick="{!c.addmasterdoc}"/>
+                </div>
+            </div>
+            <div class="slds-size_3-of-7 slds-p-horizontal_xx-small slds-border_right slds-border_left">
+               <i> <div class="slds-text-heading_small slds-text-align_center">Add Document</div></i> 
+                <table class="slds-m-top_small slds-table slds-table--bordered slds-table--cell-buffer slds-max-medium-table--stacked-horizontal">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" style="font-size:13px;" title="S.No.">S.No.</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" style="font-size:13px;" title="Name">Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" style="font-size:13px;" title="Process">Description</div>
+                            </th>
+                            <aura:if isTrue="{!v.ismaxway}">
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" style="font-size:13px;" title="Document Link">Required</div>
+                                </th>
+                            </aura:if>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" style="font-size:13px;" title="Upload File">Remove</div>
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <aura:iteration items="{!v.docList}" var="item" indexVar="index">                            
+                            <tr>
+                                <th scope="row"  data-label="S.No.">
+                                   <div class=" slds-m-left_xx-small"> {!index+1} </div>
+                                </th>
+                                <th scope="row" data-label="Name">
+                                    <lightning:input type="text" name="Name" label="Name" variant ="label-hidden" value="{!item.Name}" />
+                                    
+                                </th>
+                                <th scope="row" data-label="Discription">
+                                    <lightning:textarea name="Discription" label="Description" variant ="label-hidden" value="{!item.Document_Discription__c}" />
+                                    
+                                </th>
+                                <aura:if isTrue="{!v.ismaxway}">
+                                    <th scope="row" data-label="Required">
+                                        <lightning:input aura:id="requireddoc" class ="slds-m-left_x-small" type="toggle" label="Required" name="Required" variant ="label-hidden"  messageToggleActive="" messageToggleInactive=""/>  
+                                    </th>
+                                </aura:if>
+                                <th scope="row" data-label="Remove">
+                                    <aura:if isTrue="{!index > 0}">
+                                        <lightning:buttonIcon class ="slds-m-left_small" iconName="utility:close"  alternativeText="Delete" onclick="{!c.remove}" accesskey="{!index}" />  
+                                    </aura:if>
+                                </th>
+                            </tr>     
+                        </aura:iteration>
+                        
+                    </tbody>
+                </table>
+                
+                <div class="slds-clearfix slds-m-vertical_small">
+                    <div class="slds-float_right">
+                        <lightning:button label="Add" variant="brand" onclick="{!c.addmore}"/>   
+                    </div>
+                </div>
+                <div class="slds-border_top" />
+                <div class="slds-align_absolute-center slds-m-vertical_small">
+                    
+                    <lightning:button label="Save" variant="brand" onclick="{!c.save}"/>  
+                    
+                </div>
+            </div>
+            <div class="slds-size_2-of-7">
+                <i> <div class="slds-text-heading_small slds-text-align_center ">Remove Document</div></i> 
+                <table class="slds-m-top_small slds-table slds-table--bordered slds-table--cell-buffer slds-max-medium-table--stacked-horizontal">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" style="font-size:13px;" title="Remove">Remove</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" style="font-size:13px;" title="Name">Name</div>
+                            </th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    
+                    <tbody> 
+                        <aura:iteration items="{!v.existingdocList}" var="item" indexVar="index">                            
+                            <tr>
+                                <th scope="row"  data-label="Remove">
+                                    
+                                    <lightning:input class ="slds-m-left_small" type="checkbox-button" label="{!item.Id}" name="Remove" variant ="label-hidden" onclick="{!c.removeexisting}"/> 
+                                </th>
+                                <th scope="row" data-label="Document Name">
+                                    {!item.Name}  
+                                </th>
+     
+                            </tr>     
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> 
+</aura:component>

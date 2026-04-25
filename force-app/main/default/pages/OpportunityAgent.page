@@ -1,0 +1,20 @@
+<apex:page showHeader="false" sidebar="false" lightningStyleSheets="true" recordSetVar="Opportunity" standardController="Opportunity" >
+    
+    <apex:slds />
+    <apex:includeLightning />
+    
+    <div id="lightning" />
+   
+    <script>
+    var occid ="{!$CurrentPage.parameters.Id}"
+    
+    $Lightning.use("c:LightningEnquiryApp", function() {
+        $Lightning.createComponent("c:OpportunityCreationFromRelatedList",
+                                   {"accId" :occid},
+                                   "lightning",
+                                   function() {
+                                   });
+    });
+    </script>
+    
+</apex:page>

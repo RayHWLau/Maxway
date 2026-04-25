@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CloseLostReasonByLeadStatus</fullName>
+    <active>true</active>
+    <description>IF Status is &apos;Closed Lost&apos; and Closed Lost Reason is empty.</description>
+    <errorConditionFormula>AND(
+RecordType.Name =&apos;Agent Acquisition&apos;,
+ISPICKVAL( Status , &quot;Closed_Lost&quot;),
+ (ISBLANK(  Closed_Lost_Reason__c))
+)</errorConditionFormula>
+    <errorDisplayField>Closed_Lost_Reason__c</errorDisplayField>
+    <errorMessage>Enter Closed Lost Reason</errorMessage>
+</ValidationRule>

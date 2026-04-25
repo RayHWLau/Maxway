@@ -1,0 +1,119 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId" controller="AgentSignupFormController" access="global" >
+    
+    <aura:attribute name="oppId" type="String" />
+    <aura:attribute name="documentList" type="Map" default="{}"/> 
+    <aura:attribute name="iteratorList" type="List" />    
+    <aura:attribute name="uploadList" type="List" />  
+    <aura:attribute name="idandfilename" type="List" />  
+    <aura:attribute name="doclink" type="Boolean" default="false" />
+    <aura:attribute name="showSpinner" type="boolean" default="false" />
+    <aura:attribute name="btnVisible" type="Boolean" default="true" />
+    <aura:attribute name="componentvisibleviavfpage" type="Boolean" default="false" />
+    <aura:attribute name ="displayofvfinpage" type ="string" />    
+    <aura:attribute name="errorMsg" type="String" default="" />
+    <aura:attribute name="successMsg" type="String" default="" />
+    <aura:attribute name="firstErrorMsg" type="String" default="" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner name="spinner" size="medium" variant="brand" />
+    </aura:if>        
+    
+    <aura:if isTrue="{!v.errorMsg.length > 0}" >
+        <ui:message title="Error" severity="error" closable="true">
+            {!v.errorMsg}
+        </ui:message>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.errorMsg.length == 0}">
+        <aura:if isTrue="{!v.successMsg.length == 0}">
+            <aura:if isTrue="{!v.iteratorList.length > 0}">
+                <div class="divStyle1" >
+                    <lightning:card title="Upload Document" iconName="action:add_file">           
+                        <div class="slds-p-around_x-large">
+                            <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-max-medium-table--stacked-horizontal">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Name">Document Name</div>
+                                        </th>
+                                        <aura:if isTrue="{!v.doclink}">
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Upload">Document Link</div>
+                                        </th>
+                                            </aura:if>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Upload">Upload File</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Uploaded">Uploaded</div>
+                                        </th>                                
+                                    </tr>
+                                </thead>
+                                <tbody>     
+                                    <aura:iteration items="{!v.iteratorList}" var="item" indexVar="index">                            
+                                        <tr>
+                                            <th scope="row" data-label="Document Name">
+                                                
+                                                
+                                                <aura:if isTrue="{!item.required.length > 0}">
+                                                    <span style="color:red;">*</span>{!item.key}
+                                                    <aura:set attribute="else">
+                                                        <span>&nbsp;&nbsp;</span>{!item.key}                                        
+                                                    </aura:set>
+                                                </aura:if> 
+                                            </th>
+                                            <aura:if isTrue="{!v.doclink}">
+                                            <th scope="row" data-label="Document Link">
+                                                 <aura:if isTrue="{!item.link.length > 0}">
+                                                <div class="slds-truncate" title="">
+                                                    <a onclick="{!c.handleClick}" data-index="{!item.link}">View Document</a>
+                                                   
+                                                </div>
+                                                </aura:if>
+                                            </th>
+                                            </aura:if>
+                                            
+                                            <th scope="row" data-label="Upload File">
+                                                <div class="slds-truncate" >
+                                                    <lightning:input type="file" label="" title="{!item.key}" name="{!index}" multiple="false" accept=".jpg,.jpeg,.png,.pdf,.docx,.xls" onchange="{!c.getFile}" />                                                
+                                                </div>                           
+                                            </th>
+                                            <th scope="row" data-label="Uploaded">
+                                                <div class="slds-truncate" title="uploaded">
+                                                    <aura:if isTrue="{!item.value.length > 0}">
+                                                        <lightning:icon iconName="action:check" alternativeText="Check" size="xx-small" />
+                                                        <aura:set attribute="else">
+                                                            <lightning:icon iconName="action:close" alternativeText="Uncheck" size="xx-small" />                                     
+                                                        </aura:set>
+                                                    </aura:if>                                                                        
+                                                </div>
+                                            </th>                                                              
+                                        </tr>     
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                            <aura:if isTrue="{!v.firstErrorMsg.length > 0}" >
+                                <ui:message title="Error" severity="error" closable="true">
+                                    {!v.firstErrorMsg}
+                                </ui:message>
+                            </aura:if>
+                            <aura:if isTrue="{!v.btnVisible}">
+                                <div class="slds-align_absolute-center" style="height:5rem">
+                                    <lightning:button variant="brand" label="Save" onclick="{!c.doSave}"/>  
+                                </div>
+                            </aura:if>
+                        </div>            
+                    </lightning:card>
+                </div>
+            </aura:if>
+        </aura:if>
+        <aura:if isTrue="{!v.successMsg.length > 0}" >
+            <div style="font-size:large;text-align:center;font-weight:bold;" >
+                {!v.successMsg}
+            </div>	
+        </aura:if>        
+    </aura:if>
+</aura:component>

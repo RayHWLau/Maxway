@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_Leads</fullName>
+    <columns>Student_ID__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Mobile__c</columns>
+    <columns>Education_System__c</columns>
+    <columns>Current_Grade_Mapping__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Student</value>
+    </filters>
+    <filters>
+        <field>LEAD.CONVERTED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Student Leads</label>
+    <sharedTo>
+        <role>CustomerService</role>
+    </sharedTo>
+</ListView>

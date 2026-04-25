@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="OpportunityCustomScreenAura" >
+    <aura:handler name="init" value="{!this}" action="{!c.doint}" />
+    <aura:attribute name="ScheoolColumns" type="List"/>
+    <aura:attribute name="ScheoolRecords" type="List"/>
+    <aura:attribute name="opp" type="string"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/> 
+    <lightning:card  title="{!v.opp}" iconName="standard:contract">
+        <aura:set attribute="actions">
+            <lightning:button label="New" onclick ="{!c.redirect}"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+    <lightning:datatable columns="{!v.oppcolumns}"
+                         data = "{!v.oppdata}"
+                         keyField = "Id"
+                         hideCheckboxColumn="true"
+                         showRowNumberColumn = "true" >
+        
+    </lightning:datatable> 
+        </p>
+    </lightning:card>
+</aura:component>

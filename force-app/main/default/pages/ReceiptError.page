@@ -1,0 +1,4 @@
+<apex:page >
+  <br/>
+  <h1 style="font-size:20px;text-align:center;">Cannot generate Receipt without Payment Pay-in Date.</h1>
+</apex:page>

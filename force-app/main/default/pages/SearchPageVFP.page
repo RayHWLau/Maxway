@@ -1,0 +1,251 @@
+<!-- <apex:page standardController="Account" recordSetVar="accountList" extensions="SearchPageCon"> -->
+<apex:page controller="SearchPageCon" standardStyleSheets="false">
+	<apex:stylesheet value="{!URLFOR($Resource.HPResources, '/HPResources/css/jquery-ui.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.HPResources, '/HPResources/js/jquery-1.7.2.min.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.HPResources, '/HPResources/js/jquery-ui.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.HPResources, '/HPResources/js/jquery.blockUI.js')}" />
+  	<style type="text/css">
+		.middle
+		{
+			background-color: #f5f5f5;
+			border-left: 1px solid #393A3C;
+			border-right: 1px solid #393A3C;
+ 		}
+ 		.innerContent {
+		     padding: 12px 16px 8px 20px;
+		     overflow:auto;
+ 		}
+ 		.overlayDialog.inlineEditDialog {
+          position: absolute;
+      	}
+      	.topRight  
+		{
+		    padding-right: 6px;
+		    background: transparent url(/img/overlaytopright.gif) no-repeat top right;
+		}
+		.topLeft 
+		{
+		    padding: 4px 2px 6px 12px;
+		    background: transparent url(/img/overlaytopleft.gif) no-repeat top left;
+		}
+		.dialogClose 
+		{ 
+		    background-position: 0px 0px;width:16px;
+		    height:16px;
+		    float: right;
+		    cursor: pointer;
+		    background-position: top left;
+		}
+		.dialogCloseOn 
+		{ 
+		    background-image: url(/img/func_icons/util/dialogClose16.gif);
+		    background-position: 0px 0px;width:16px;
+		    height:16px;
+		    float: right;
+		    cursor: pointer;
+		    background-position: top right;
+		}
+		.overlayBackground 
+		{
+			background-color: #000000;
+			border: medium none;
+			display: none;
+			opacity: 0.6;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 100; 
+		}
+	</style>
+	<apex:form id="theForm">
+		<apex:pageBlock title="Search Page">
+			<apex:pageMessages />
+			<apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    Search Type:
+                    <apex:selectRadio value="{!selectedRecordType}">
+                        <apex:selectOptions value="{!availableRecordTypes}"/>
+                        <apex:actionSupport action="{!changeSearchType}" event="onchange"/>
+                    </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+			
+			<apex:pageBlockSection columns="1" title="Search Filters" rendered="{!bShowFilterPanel}">		    
+
+				<apex:pageBlockSectionItem >
+						Program Type
+	                    <apex:outputPanel >	                    
+	                        <div class="requiredInput">
+	                            <div class="requiredBlock"></div>			                    
+			                    <apex:selectList value="{!selectedProgramTypeOptions}" size="1"  multiselect="false">
+			                        <apex:selectOptions value="{!ProgramTypeOptions}"/>
+			                        <apex:actionSupport action="{!changeProgramType}" event="onchange"/>
+			                    </apex:selectList>
+		                    </div>
+						</apex:outputPanel>
+	                </apex:pageBlockSectionItem>
+				<apex:repeat value="{!SearchFieldSet}" var="f">
+					<!-- <apex:inputField value="{!filterObj[f.fieldPath]}" rendered="{!!OR(f.fieldPath = 'Housing_Option__c', f.fieldPath = 'Annual_Tuition_Fees__c')}"/> -->					
+					<apex:pageBlockSectionItem rendered="{!!OR(
+					f.fieldPath = 'Housing_Option__c', 
+					f.fieldPath = 'Est_Annual_Cost__c', 
+					f.fieldPath = 'Stream__c',
+					f.fieldPath = 'Major__c',
+	                f.fieldPath = 'Client_s_ACT__c',
+	                f.fieldPath = 'Client_s_SAT__c',
+	                f.fieldPath = 'Client_s_GMAT__c', 
+	                f.fieldPath = 'Client_s_GRE__c'
+	                )
+	                }">
+						{!f.Label}
+	                    <apex:outputPanel >	                    
+	                        <div class="requiredInput">
+	                            <div class="requiredBlock {!IF(OR(f.fieldPath = 'Country__c',(f.fieldPath = 'Major_filter__c' && selectedRecordType='Uni')), '', 'hidden')}"></div>			                    
+			                    <apex:inputField value="{!sow.obj[f.fieldPath]}">
+			                    	<apex:actionSupport action="{!changeCountry}" event="onchange"/>
+			                    </apex:inputField>
+		                    </div>
+						</apex:outputPanel>
+	                </apex:pageBlockSectionItem>	              
+	                
+					<apex:pageBlockSectionItem rendered="{!f.fieldPath = 'Est_Annual_Cost__c'}">
+	                    Est Annual Cost
+	                    <apex:outputPanel >	                    
+	                        <!-- <div class="requiredInput">
+	                            <div class="requiredBlock"></div>	 -->
+			                    <apex:selectList value="{!selectedAnnualTuitionFeesOptions}" size="1"  multiselect="false">
+			                        <apex:selectOptions value="{!AnnualTuitionFeesOptions}"/>
+			                    </apex:selectList>
+							<!-- </div> -->
+						</apex:outputPanel>
+	                </apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem rendered="{!OR(f.fieldPath = 'Housing_Option__c',f.fieldPath = 'Stream__c',f.fieldPath = 'Major__c')}">
+						{!f.Label}
+	                    <apex:outputPanel >	                    
+	                        <!-- <div class="requiredInput">
+	                            <div class="requiredBlock"></div>	 -->		                    
+			                    <apex:selectList value="{!selectedHouseingOptions}" size="1"  multiselect="false">
+			                        <apex:selectOptions value="{!HousingOptions}"/>
+			                    </apex:selectList>
+		                    <!-- </div> -->
+						</apex:outputPanel>
+	                </apex:pageBlockSectionItem>
+	                <!-- [{!programType}, {!f.fieldPath}] -->
+	                <apex:pageBlockSectionItem rendered="{!
+	                OR(AND(programType='Bachelor', 
+	                OR(f.fieldPath = 'Client_s_ACT__c',
+	                f.fieldPath = 'Client_s_SAT__c')), 
+	                AND(programType='Master', 
+	                OR(f.fieldPath = 'Client_s_GMAT__c', 
+	                f.fieldPath = 'Client_s_GRE__c')))
+	                }">
+						{!f.Label}
+	                    <apex:outputPanel >	                    
+	                        <div class="requiredInput">
+	                            <div class="requiredBlock {!IF(OR(f.fieldPath = 'Country__c',f.fieldPath = 'Major_filter__c'), '', 'hidden')}"></div>			                    
+			                    <apex:inputField value="{!sow.obj[f.fieldPath]}"/>
+		                    </div>
+						</apex:outputPanel>
+	                </apex:pageBlockSectionItem>	                
+				</apex:repeat>
+				<apex:pageBlockSectionItem rendered="{!CONTAINS($Profile.Name,'Admin')}">
+						<apex:outputLabel value="Show Non-Commission?"/>                 
+			            <apex:inputCheckbox value="{!bShowNonCommission}"/>
+	                </apex:pageBlockSectionItem>	
+				<apex:commandButton value="Search" action="{!search}"/>  
+			</apex:pageBlockSection>
+			<apex:pageBlockSection id="resultPanel" title="Search Results"  rendered="{!sows.size > 0 && bShowResultPanel}" columns="1">			
+				<apex:panelGrid columns="2" rendered="{!sows.size > 0}">
+					<!-- <apex:commandButton value="Add to Opportunity" action="{!addToOpp}"/> -->
+					<apex:commandButton value="Export to Excel" action="{!gotoPage2}"/>
+					<input type="button" value="Add to Opportunity" onclick="openEnterOpptyInfo(this)" class="btn"  />
+				</apex:panelGrid>
+				<apex:pageBlockSectionItem rendered="{!sows.size > 0}">
+		            	<apex:pageBlockTable value="{!sows}" var="o">
+							<apex:column width="25px">
+		                        <apex:inputCheckbox value="{!o.selected}"/>
+		                    </apex:column>
+                    		<apex:repeat value="{!ResultFieldSet}" var="f">
+			                	<apex:column value="{!o.obj[f.fieldPath]}"/>
+							</apex:repeat>
+			            </apex:pageBlockTable>
+			     </apex:pageBlockSectionItem>
+			     <!-- <apex:pageBlockSectionItem rendered="{!sows.size = 0 && bShowResultPanel}">
+		            <apex:outputPanel>
+		            	<Strong>No results found!</Strong>
+		            </apex:outputPanel>
+	            </apex:pageBlockSectionItem> -->
+	              
+				<!-- <apex:panelGrid columns="2" rendered="{!objList.size > 0 && bShowResultPanel}">
+					<apex:commandLink action="{!previous}" >Previous</apex:commandlink>
+					<apex:commandLink action="{!next}">Next</apex:commandlink>
+			    </apex:panelGrid> -->
+			    <apex:panelGrid columns="2">
+				    <!-- <apex:commandLink action="{!first}">First</apex:commandlink> -->
+				    <apex:commandLink action="{!previous}" rendered="{!hasPrevious}">Previous</apex:commandlink>
+				    <apex:commandLink action="{!next}" rendered="{!hasNext}">Next</apex:commandlink>
+				    <!-- <apex:commandLink action="{!last}">Last</apex:commandlink> -->
+				    <apex:facet name="footer">Showing Page # {!pageNumber} of {!totalPages}</apex:facet>
+			    </apex:panelGrid>
+				
+			</apex:pageBlockSection>
+			<apex:actionFunction name="openEnterOpptyInfoPopFun" action="{!addToOpp}" reRender="theForm" oncomplete="$.unblockUI();openPop('InlinEditDialog')" />
+		</apex:pageBlock>
+		<div id="InlinEditDialog" class="overlayDialog inlineEditDialog" style="max-width:800px; display:block;left:400px; top:200px;visibility:hidden;">
+          <div class="topRight">
+            <div class="topLeft">
+              <img id="InlineEditDialogX" onmouseover="this.className='dialogCloseOn'" onmouseout="this.className='dialogClose'" onclick="closePop('InlinEditDialog')" class="dialogClose" src="/s.gif" />
+              <apex:outputPanel >
+                <h2 id="inlineEditDialogTitle">
+                  Enter Opportunity Information
+                </h2>
+              </apex:outputPanel>         
+            </div>
+          </div>
+          <div class="middle">
+            <div class="innerContent" id="InlineEditDialogContent">
+                <div class="activeField">
+                  <div class="inlineEditCompoundDiv" style="text-align:left;max-height:450px; min-width:600px; overflow-y:auto;overflow-x:hidden;color:#000">                    
+                    <apex:outputPanel >
+                      <apex:pageBlock >
+                        <apex:pageBlockButtons location="top">
+                          <apex:commandButton value="Add" action="{!saveRS}" />
+                          <input type="button" class="btn" value="Cancel" onclick="closePop('InlinEditDialog');" />
+                        </apex:pageBlockButtons>
+                        <apex:pageBlockSection >
+                          <apex:inputField id="Opportunity" value="{!rs.Opportunity__c}" />
+                        </apex:pageBlockSection>
+                      </apex:pageBlock>
+                    </apex:outputPanel>
+                  </div>
+                </div>
+            </div> 
+          </div>
+      </div>
+      <div class="overlayBackground" id="background" style="width:3289px; height:1293px; display:none;position:fixed;"></div>
+	</apex:form>
+	<script>
+		function closePop(dialogId)
+	    {
+	      document.getElementById(dialogId).style.visibility = 'hidden';
+	      document.getElementById("background").style.display = 'none';
+	    }
+	
+	    function openPop(dialogId)
+	    {
+	      document.getElementById(dialogId).style.visibility = 'visible';
+	      document.getElementById("background").style.display = 'block';
+	    }
+		function openEnterOpptyInfo(element)
+	    {
+	        var index = $(element).closest('tr').attr('id');
+	        $(":hidden[id$='indexS']").val(index);
+	        blockScreen();
+	        openEnterOpptyInfoPopFun();
+	    }
+        function blockScreen()
+        {
+            $.blockUI({ message: '<img src=\'/img/loading.gif\' style=\'margin-right:10px;\' id=\'statusImg\'/>' + 'Waiting...', css: { border: '3px solid #CFEEF8', padding:'10px' } });            
+        }
+	</script>
+</apex:page>

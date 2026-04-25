@@ -1,0 +1,720 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller ="SchoolSearchAura" >
+    <!-- 4 may 2020 changes in layout -->
+    <aura:handler name="init" value="{!this}" action="{!c.doint}" />
+    
+    <aura:attribute name="selectedProgramType" type="String"/>
+    <aura:attribute name="selectedSchoolType" type="String"/>
+    <aura:attribute name="selectedCountry" type="String"/>
+    <aura:attribute name="selectedState" type="String"/>   
+    <aura:attribute name="selectedCity" type="String"/>   
+    <aura:attribute name="selectedHousing" type="String"/> 
+    <aura:attribute name="selectedGrade" type="String" /> 
+    <aura:attribute name="selectedMajor" type="String"/>
+    <aura:attribute name="selectedCurrency" type="String"/>
+    <aura:attribute name="selectedminBudget" type="String"/> 
+    <aura:attribute name="selectedmaxBudget" type="String"/>
+    <aura:attribute name="selectedaddmissionage" type="String"/>
+    <aura:attribute name="selectedprogramobjective" type="String"/>
+    <aura:attribute name="selectedhighschoolgrad" type="String"/> 
+    <aura:attribute name="selectedBachloreneeded" type="String"/>
+    <aura:attribute name="selectedtoefl" type="String"/>
+    <aura:attribute name="selectediltes" type="String"/>
+    <aura:attribute name="addmissionage" type="list" default="[]"/> 
+    <aura:attribute name="usercountrylist" type="list" default="[]"/>  
+    <aura:attribute name="programobjective" type="list" default="[]"/> 
+    <aura:attribute name="programobjectivePS" type="list" default="[]"/> 
+    <aura:attribute name="programobjectivePG" type="list" default="[]"/> 
+    <aura:attribute name="highschoolgrad" type="list" default="[]"/>
+    <aura:attribute name="Bachloreneeded" type="list" default="[]"/>
+    <aura:attribute name="CountryWithcurrencyMap" type="Map" />
+    <aura:attribute name="admissiongrade" type="list" default="[]"/> 
+    <aura:attribute name="nationalitylist" type="list" default="[]"/>
+    <aura:attribute name="programtype" type="List"/> 
+    <aura:attribute name="schooltype" type="List"/> 
+    <aura:attribute name="programtypeHS" type="List" />
+    <aura:attribute name="programtypePS" type="List" />
+    <aura:attribute name="programtypePG" type="List" />
+    <aura:attribute name="housing" type="list" default="[]"/>  
+    <aura:attribute name="CountryWithStateMap" type="Map" />
+    <aura:attribute name="StateWithCityMap" type="Map" />
+    <aura:attribute name="headOfficePicklist" type="List" />
+    <aura:attribute name="headOfficeStatePicklist" type="List" />
+    <aura:attribute name="headOfficeCityPicklist" type="List" />
+    <aura:attribute name="Majorresults" type="List" />
+    <aura:attribute name="MajoropenDropDown" type="Boolean" default="false" /> 
+    <aura:attribute name="results" type="List" />
+    <aura:attribute name="openDropDown" type="Boolean" default="false" />
+    <aura:attribute name="selectedOption" type="String" />
+    <aura:attribute name="inputValue" type="String" />
+    <aura:attribute name="inputSearchFunction" type="Object" />
+    <aura:attribute name="filteritems" type="List" />
+    <aura:attribute name="spinneristrue" type="Boolean"/>
+    <aura:attribute name="minisgreaterthanmax" type="Boolean"/>
+     <aura:attribute name="listIeltsOptions" type="List" default="[]"/> 
+    
+    <aura:registerEvent name="SearchEventHS" type="c:SearchHighSchool"/> 
+    <aura:registerEvent name="SearchEventPS" type="c:SearchPostSecondarySchool"/> 
+    <aura:registerEvent name="SearchEventPG" type="c:SearchPostGradSchool"/> 
+    <aura:registerEvent name="Clearschoolresult" type="c:ClearSchoolResult"/> 
+    
+    <aura:handler name="change" value="{!v.selectedCountry}" action="{!c.OnChangeValueOfCountry}"/>
+    <aura:handler name="change" value="{!v.selectedState}" action="{!c.OnChangeValueOfState}"/>
+    
+    <aura:attribute name="isHSButtonShow" type="boolean" default="true"/>
+    <aura:attribute name="isPSButtonShow" type="boolean" default="false"/>  
+    <aura:attribute name="isPGButtonShow" type="boolean" default="false"/> 
+    
+    <!-- added on 8 may 2020 for program dependent picklist -->
+    <aura:attribute name="mapSchoolTypeWithProgram" type="Map" />
+    <aura:attribute name="listProgramType" type="List" />
+    
+    <aura:html tag="style">
+        .slds-scope .slds-tabs_scoped, .slds-scope .slds-tabs--scoped {
+        display: inline !important;
+        }
+        .slds-scope .slds-button_brand[disabled], .slds-scope .slds-button_brand:disabled, .slds-scope .slds-button--brand[disabled], .slds-scope .slds-button--brand:disabled{
+        position: relative !important;
+        left: 64% !important;
+        }
+        .slds-scope .slds-button_brand, .slds-scope .slds-button--brand{
+        position: relative !important;
+        left: 64% !important;
+        }
+    </aura:html>
+    <aura:if isTrue="{!v.spinneristrue}" >
+        <lightning:spinner name="spinner" size="medium" variant="brand" />
+    </aura:if>
+    
+    <div class="slds-tabs_scoped slds-tabs_small " style="width:100%">
+        <ul class="slds-tabs_scoped__nav" role="tablist" style="width:100%">
+            <li class="slds-tabs_scoped__item slds-is-active slds-text-align_center" title="HIGH SCHOOL" role="presentation" onclick="{!c.handleHighSchoolClick}" id="tab-scoped-1__item" style="width:30%"><a class="slds-tabs_scoped__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-scoped-1" style="font-size: 12px;background-color:#33334d;color:white;">HIGH SCHOOL</a></li>
+            <li class="slds-tabs_scoped__item slds-text-align_center" title="POST SECONDARY" role="presentation" onclick="{!c.handlePostSecondaryClick}" id="tab-scoped-2__item" style="width:35%"><a class="slds-tabs_scoped__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-scoped-2" style="font-size: 12px;font-weight: 500;background-color:white;color:black;">POST SECONDARY</a></li>
+            <li class="slds-tabs_scoped__item slds-text-align_center" title="POST GRADUATE" role="presentation" onclick="{!c.handlePostGraduateClick}" id="tab-scoped-3__item" style="width:35%"><a class="slds-tabs_scoped__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-scoped-3" style="font-size: 12px;font-weight: 500;background-color:white;color:black;">POST GRADUATE</a></li>
+        </ul>
+        <div id="tab-scoped-1" class="slds-tabs_scoped__content slds-show" role="tabpanel" aria-labelledby="tab-scoped-1__item" style="overflow-y: scroll;height:70%; width:100%">
+            <div class="slds-section slds-is-open" aura:id="Filter">
+                <h3 class="slds-section__title">
+                    <button aria-controls="Filterlist" class="slds-button slds-section__title-action">
+                        <span onclick="{!c.toggleSection}" data-auraId="Filter">
+                            <lightning:icon iconName="utility:switch"
+                                            size="x-small"
+                                            class="slds-section__title-action-icon slds-button__icon_left"
+                                            alternativeText="button icon" 
+                                            />
+                        </span>
+                        <i> <span class="slds-truncate" title="Company Info">Filter</span></i>
+                    </button>
+                </h3>
+                
+                <!--  ###############################  Filter Accordian  ##########################################  -->
+                <div class="slds-section__content" id="Filter"> 
+                    <span>
+                        <aura:iteration var="pillLabel" items="{!v.filteritems}">
+                            <aura:if isTrue = "{!pillLabel.label.length>0}"> 
+                                <span class="slds-pill">
+                                    <lightning:icon iconName="{!pillLabel.iconName}" size="x-small" class="slds-input__icon" alternativeText="Remove" />
+                                    &nbsp;{!pillLabel.label} 
+                                    <button class="slds-button slds-button--icon slds-pill__remove" title="Remove" name="{!pillLabel.name}"  onclick="{!c.handleRemove}">
+                                        <lightning:icon iconName="utility:close" size="x-small" class="slds-input__icon" alternativeText="Remove" />
+                                        
+                                    </button>
+                                </span>
+                            </aura:if>
+                        </aura:iteration>
+                        
+                    </span> 
+                    <!-- #################################  High School Layout  ###################################-->
+                    <aura:If isTrue="{!v.isHSButtonShow}">
+                        
+                        <!--                                          High School  ROW  1  															-->
+                        <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                            
+                            <div class="slds-col slds-size_1-of-3">
+                                
+                                <lightning:select label="Country" value="{!v.selectedCountry}" aura:Id="filter" name="countryId" onchange="{!c.OnChangeValueOfCountry}" required="true" >
+                                    <aura:iteration items="{!v.headOfficePicklist}" var="val">
+                                        
+                                        <option text="{!val.label}" value="{!val.value}"></option>
+                                    </aura:iteration>
+                                </lightning:select> 
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-3">
+                                
+                                <lightning:select name="ProvinceId" label="Province" value="{!v.selectedState}" aura:Id="addfilter" onchange="{!c.OnChangeValueOfState}">
+                                    <option text="--None--" value=""></option>
+                                    <aura:iteration items="{!v.headOfficeStatePicklist}" var="val">
+                                        <option text="{!val.label}" value="{!val.value}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-3">
+                                
+                                <lightning:select name="CityId" label="City" value="{!v.selectedCity}" aura:Id="addfilter" onchange="{!c.citychange}" >
+                                    <option text="--None--" value=""></option>
+                                    <aura:iteration items="{!v.headOfficeCityPicklist}" var="val">
+                                        <option text="{!val.label}" value="{!val.value}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                
+                            </div>
+                        </div>
+                        
+                        <!--                                          High School  ROW  2  															-->
+                        <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                            
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning:input  label="Currency" value="{!v.selectedCurrency}"   name="CurrencyId" required="true"  readonly = "true" />
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                
+                                <div  onkeypress="{!c.isNumber}">
+                                    <lightning:input  required="true" label="Budget" aura:id='filter' value="{!v.selectedmaxBudget}"  name="maxid" onchange ="{!c.maxchange}" onpaste="{! c.handlePaste }" />
+                                </div>
+                                
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                        
+                                <div class="slds-form-element ">
+                        <label class="slds-form-element__label" for="combobox-id-21"><abbr class="slds-required" title="required">* </abbr>Nationality</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-combobox_container">
+                                <div class="{! v.openDropDown ? 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open' : 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click'}"
+                                     aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                                        <input type="text" aura:Id="NationalityId" name="NationalityId"
+                                               class="slds-input slds-combobox__input  slds-combobox__input-value"
+                                               id="NationalityId" aria-autocomplete="list" aria-controls="listbox-id-11"
+                                               autoComplete="off" onkeyup="{!c.searchHandler}" role="textbox" 
+                                               value="{!v.inputValue}" />
+                                        
+                                    </div>
+                                    <div id="listbox-id-11" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                                         role="listbox">
+                                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                            <aura:iteration items="{!v.results}" var="result">
+                                                <li role="presentation" class="slds-listbox__item" data-id="NationalityId"
+                                                    data-value="{!result}" onclick="{!c.optionClickHandler}">
+                                                    <div id="{!result}"
+                                                         class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                                         role="option">
+                                                        <span class="slds-media__figure slds-listbox__option-icon"></span>
+                                                        <span class="slds-media__body">
+                                                            <span class="slds-truncate" title="All Nationality">
+                                                                <span>{!result}</span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </aura:iteration>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                                
+                            </div>
+                        </div>
+                    
+                        <!--                                          High School  ROW  3  															-->
+                        <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                            
+                            <div class="slds-col slds-size_1-of-3">
+                                
+                                <lightning:select  label="Program" value="{!v.selectedProgramType}" aura:Id="filter"  name="programTypeId" required="true" onchange ="{!c.programtypechange}">
+                                    <aura:iteration items="{!v.programtype}" var="item">
+                                        <option text="{!item.label}" value="{!item.value}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-3">
+                                
+                                <lightning:select name="GradeHSId" label="Intended Grade" value="{!v.selectedGrade}" aura:Id="filter" onchange="{!c.gradechange}" required="true">
+                                    <option text="--None--" value=""></option>
+                                    <aura:iteration items="{!v.admissiongrade}" var="item">
+                                        <option>{!item}</option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-3">
+                                
+                                <lightning:select name="HousingId" label="Housing" value="{!v.selectedHousing}" aura:Id="addfilter" onchange="{!c.housingchange}" >
+                                    <option text="--None--" value=""></option>
+                                    <aura:iteration items="{!v.housing}" var="item">
+                                        <option>{!item}</option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                
+                            </div>
+                        </div>
+                    </aura:If>
+                    
+                    <!-- #################################  Graduation Layout  ###################################-->
+                    <aura:If isTrue="{!or(v.isPSButtonShow,v.isPGButtonShow)}">
+                    
+                        <!--                                          Graduation  ROW  1  															-->
+                        <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                            
+                                <lightning:select label="Country" value="{!v.selectedCountry}" aura:Id="filter" name="countryId" onchange="{!c.OnChangeValueOfCountry}" required="true" >
+                                    <aura:iteration items="{!v.headOfficePicklist}" var="val">
+                                        
+                                        <option text="{!val.label}" value="{!val.value}"></option>
+                                    </aura:iteration>
+                                </lightning:select> 
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                                
+                                <lightning:select name="ProvinceId" label="Province" value="{!v.selectedState}" aura:Id="addfilter" onchange="{!c.OnChangeValueOfState}">
+                                    <option text="--None--" value=""></option>
+                                    <aura:iteration items="{!v.headOfficeStatePicklist}" var="val">
+                                        <option text="{!val.label}" value="{!val.value}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                                
+                                <lightning:select name="CityId" label="City" value="{!v.selectedCity}" aura:Id="addfilter" onchange="{!c.citychange}" >
+                                    <option text="--None--" value=""></option>
+                                    <aura:iteration items="{!v.headOfficeCityPicklist}" var="val">
+                                        <option text="{!val.label}" value="{!val.value}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                                
+                                <div class="slds-form-element ">
+                                    <label class="slds-form-element__label" for="combobox-id-21"><abbr class="slds-required" title="required">* </abbr>Major</label>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-combobox_container">
+                                            <div class="{! v.MajoropenDropDown ? 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open' : 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click'}"
+                                                 aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                                                    <input type="text" aura:Id="MajorId" name="MajorId"
+                                                           class="slds-input slds-combobox__input  slds-combobox__input-value"
+                                                           id="MajorId" aria-autocomplete="list" aria-controls="listbox-id-11"
+                                                           autoComplete="off" onkeyup="{!c.MajorsearchHandler}" role="textbox" 
+                                                           value="{!v.selectedMajor}" />
+                                                    
+                                                </div>
+                                                <div id="listbox-id-11" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                                                     role="listbox">
+                                                    <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                                        <aura:iteration items="{!v.Majorresults}" var="result">
+                                                            <li role="presentation" class="slds-listbox__item" data-id="MajorId"
+                                                                data-value="{!result}" onclick="{!c.MajoroptionClickHandler}">
+                                                                <div id="{!result}"
+                                                                     class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                                                     role="option">
+                                                                    <span class="slds-media__figure slds-listbox__option-icon"></span>
+                                                                    <span class="slds-media__body">
+                                                                        <span class="slds-truncate" title="All Major">
+                                                                            <span>{!result}</span>
+                                                                        </span>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                        </aura:iteration>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        <!--                                          Graduation  ROW  2  															-->
+                        <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                            
+                                <lightning:input  label="Currency" value="{!v.selectedCurrency}"   name="CurrencyId" required="true"  readonly = "true" />
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-4" onkeypress="{!c.isNumber}" >
+                                <!-- ################################### THIS was Max Budget , Just see the outcome as min budget was removed 
+                                <div class="slds-col" onkeypress="{!c.isNumber}">
+                                    <lightning:input  required="true" label="Min Budget" aura:id='filter' value="{!v.selectedminBudget}" name="minid" onchange ="{!c.minchange}" onpaste="{! c.handlePaste }"  />
+                                </div> -->
+                                <!-- div class="slds-col" onkeypress="{!c.isNumber}"--><!-- earlier it was Max Budget -->
+                                    <lightning:input  required="true" label="Budget" aura:id='filter' value="{!v.selectedmaxBudget}"  name="maxid" onchange ="{!c.maxchange}" onpaste="{! c.handlePaste }" />
+                                <!-- /div -->
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                                
+                                <div class="slds-form-element ">
+                                    <label class="slds-form-element__label" for="combobox-id-21"><abbr class="slds-required" title="required">* </abbr>Nationality</label>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-combobox_container">
+                                            <div class="{! v.openDropDown ? 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open' : 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click'}"
+                                                 aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                                                    <input type="text" aura:Id="NationalityId" name="NationalityId"
+                                                           class="slds-input slds-combobox__input  slds-combobox__input-value"
+                                                           id="NationalityId" aria-autocomplete="list" aria-controls="listbox-id-11"
+                                                           autoComplete="off" onkeyup="{!c.searchHandler}" role="textbox" 
+                                                           value="{!v.inputValue}" />
+                                                    
+                                                </div>
+                                                <div id="listbox-id-11" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                                                     role="listbox">
+                                                    <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                                        <aura:iteration items="{!v.results}" var="result">
+                                                            <li role="presentation" class="slds-listbox__item" data-id="NationalityId"
+                                                                data-value="{!result}" onclick="{!c.optionClickHandler}">
+                                                                <div id="{!result}"
+                                                                     class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                                                     role="option">
+                                                                    <span class="slds-media__figure slds-listbox__option-icon"></span>
+                                                                    <span class="slds-media__body">
+                                                                        <span class="slds-truncate" title="All Nationality">
+                                                                            <span>{!result}</span>
+                                                                        </span>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                        </aura:iteration>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                                
+                                <aura:If isTrue="{!v.isPSButtonShow}"> 
+                                <lightning:select  label="High School Graduate?" value="{!v.selectedhighschoolgrad}" aura:Id="filter"  name="highschoolgradId" required="true" onchange ="{!c.highschoolgradchange}">
+                                    <option text="--None--" value=""></option>
+                                    <aura:iteration items="{!v.highschoolgrad}" var="item">
+                                        <option>{!item}</option>
+                                    </aura:iteration>
+                                    </lightning:select>  
+                                </aura:If>
+                                
+                                <aura:If isTrue="{!v.isPGButtonShow}"> 
+                                    <lightning:select  label="Bachelor Acquired?" value="{!v.selectedBachloreneeded}" aura:Id="filter"  name="BachloreneededId" required="true" onchange ="{!c.Bachloreneededchange}">
+                                        <option text="--None--" value=""></option>
+                                        <aura:iteration items="{!v.Bachloreneeded}" var="item">
+                                            <option>{!item}</option>
+                                        </aura:iteration>
+                                    </lightning:select>  
+                                    
+                                </aura:If> 
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        <!--                                          Graduation  ROW  3  															-->
+                        <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                            
+                                <div class="slds-col" onkeypress="{!c.isNumber}">
+                                    <lightning:select  label="IELTS" value="{!v.selectediltes}" aura:id='addfilter'  name="iltesid" onchange ="{!c.ilteschange}" >
+                                        <option text="--None--" value=""></option>
+                                        <aura:iteration items="{!v.listIeltsOptions}" var="item">
+                                           <option text="{!item.value}" value="{!item.value}"></option>
+                                        </aura:iteration>
+                                    </lightning:select>  
+                                    
+                                    <!-- lightning:input   label="IELTS" aura:id='addfilter' value="{!v.selectediltes}"  name="iltesid" onchange ="{!c.ilteschange}" onpaste="{! c.handlePaste }" / -->
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-4" onkeypress="{!c.isNumber}" >
+                                
+                                <!-- div class="slds-col" onkeypress="{!c.isNumber}" -->
+                                    <lightning:input   label="TOEFL(1-120)" aura:id='addfilter' value="{!v.selectedtoefl}" name="toeflid" onchange ="{!c.toeflchange}" onpaste="{! c.handlePaste }"  />
+                                <!-- /div -->
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                                
+                                <lightning:select  label="School Type" value="{!v.selectedSchoolType}" aura:Id="filter"  name="SchoolTypeId"  onchange ="{!c.schooltypechange}"> <!--  required="true" -->
+                                    <option text="--None--" value=""></option>
+                                    <aura:iteration items="{!v.schooltype}" var="item"> 
+                                        <option text="{!item.label}" value="{!item.value}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                
+                            </div>
+                            
+                            <div class="slds-col slds-size_1-of-4">
+                                
+                                <lightning:select  label="Program Type" value="{!v.selectedProgramType}" aura:Id="ProgramTypeOrObjective"  name="programTypeId"  onchange ="{!c.programtypechange}">
+                                    <aura:iteration items="{!v.listProgramType}" var="item">
+                                        <option text="{!item.label}" value="{!item.value}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </aura:If>
+                    
+                    <!--  ############################### NOT IN USE COMMENTD ON 4 MAY 2020 ######################## -->
+                    <aura:If isTrue="false">
+                        <!--  ############################### NOT IN USE COMMENTD ON 4 MAY 2020 ######################## -->
+                        <div class="slds-form-element ">
+                            <label class="slds-form-element__label" for="combobox-id-21"><abbr class="slds-required" title="required">* </abbr>Nationality</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-combobox_container">
+                                    <div class="{! v.openDropDown ? 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open' : 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click'}"
+                                         aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                                            <input type="text" aura:Id="NationalityId" name="NationalityId"
+                                                   class="slds-input slds-combobox__input  slds-combobox__input-value"
+                                                   id="NationalityId" aria-autocomplete="list" aria-controls="listbox-id-11"
+                                                   autoComplete="off" onkeyup="{!c.searchHandler}" role="textbox" 
+                                                   value="{!v.inputValue}" />
+                                            
+                                        </div>
+                                        <div id="listbox-id-11" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                                             role="listbox">
+                                            <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                                <aura:iteration items="{!v.results}" var="result">
+                                                    <li role="presentation" class="slds-listbox__item" data-id="NationalityId"
+                                                        data-value="{!result}" onclick="{!c.optionClickHandler}">
+                                                        <div id="{!result}"
+                                                             class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                                             role="option">
+                                                            <span class="slds-media__figure slds-listbox__option-icon"></span>
+                                                            <span class="slds-media__body">
+                                                                <span class="slds-truncate" title="All Nationality">
+                                                                    <span>{!result}</span>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </aura:iteration>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-p-vertical_xxx-small" />
+                        <lightning:select label="Prefer Country" value="{!v.selectedCountry}" aura:Id="filter" name="countryId" onchange="{!c.OnChangeValueOfCountry}" required="true" >
+                            <aura:iteration items="{!v.headOfficePicklist}" var="val">
+                                
+                                <option text="{!val.label}" value="{!val.value}"></option>
+                            </aura:iteration>
+                        </lightning:select> 
+                        <div class="slds-p-vertical_xxx-small" />
+                        <aura:If isTrue="{!or(v.isPSButtonShow,v.isPGButtonShow)}"> 
+                            <lightning:select  label="School Type" value="{!v.selectedSchoolType}" aura:Id="filter"  name="SchoolTypeId" required="true" onchange ="{!c.schooltypechange}">
+                                <option text="--None--" value=""></option>
+                                <aura:iteration items="{!v.schooltype}" var="item"> 
+                                    <option text="{!item.label}" value="{!item.value}"></option>
+                                </aura:iteration>
+                            </lightning:select>
+                            <div class="slds-p-vertical_xxx-small" />
+                        </aura:If>
+                        <aura:If isTrue="{!or(v.isPSButtonShow,v.isPGButtonShow)}"> 
+                            <lightning:select  label="Programs" value="{!v.selectedProgramType}" aura:Id="ProgramTypeOrObjective"  name="programTypeId"  onchange ="{!c.programtypechange}">
+                                <aura:iteration items="{!v.programtype}" var="item">
+                                    <option text="{!item.label}" value="{!item.value}"></option>
+                                </aura:iteration>
+                            </lightning:select>
+                            <div class="slds-p-vertical_xxx-small" />
+                        </aura:If>
+                        <aura:If isTrue="{!v.isHSButtonShow}">
+                            <lightning:select  label="Programs" value="{!v.selectedProgramType}" aura:Id="filter"  name="programTypeId" required="true" onchange ="{!c.programtypechange}">
+                                <aura:iteration items="{!v.programtype}" var="item">
+                                    <option text="{!item.label}" value="{!item.value}"></option>
+                                </aura:iteration>
+                            </lightning:select>
+                            <div class="slds-p-vertical_xxx-small" />
+                        </aura:If>
+                        <aura:If isTrue="{!or(v.isPSButtonShow,v.isPGButtonShow)}"> 
+                            <lightning:select  label="Program Objective" value="{!v.selectedprogramobjective}" aura:Id="ProgramTypeOrObjective"  name="programobjectiveId"  onchange ="{!c.programobjectivechange}">
+                                <option text="--None--" value=""></option>
+                                <aura:iteration items="{!v.programobjective}" var="item">
+                                    <option>{!item}</option>
+                                </aura:iteration>
+                            </lightning:select>  
+                            <div class="slds-p-vertical_xxx-small" />
+                        </aura:If>
+                        <aura:If isTrue="{!v.isHSButtonShow}">
+                            <lightning:select name="GradeHSId" label="Intended Grade" value="{!v.selectedGrade}" aura:Id="filter" onchange="{!c.gradechange}" required="true">
+                                <option text="--None--" value=""></option>
+                                <aura:iteration items="{!v.admissiongrade}" var="item">
+                                    <option>{!item}</option>
+                                </aura:iteration>
+                            </lightning:select>
+                            <div class="slds-p-vertical_xxx-small" />
+                        </aura:If>
+                        <aura:If isTrue="{!or(v.isPSButtonShow,v.isPGButtonShow)}"> 
+                            <div class="slds-form-element ">
+                                <label class="slds-form-element__label" for="combobox-id-21"><abbr class="slds-required" title="required">* </abbr>Major</label>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-combobox_container">
+                                        <div class="{! v.MajoropenDropDown ? 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open' : 'slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click'}"
+                                             aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                                            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                                                <input type="text" aura:Id="MajorId" name="MajorId"
+                                                       class="slds-input slds-combobox__input  slds-combobox__input-value"
+                                                       id="MajorId" aria-autocomplete="list" aria-controls="listbox-id-11"
+                                                       autoComplete="off" onkeyup="{!c.MajorsearchHandler}" role="textbox" 
+                                                       value="{!v.selectedMajor}" />
+                                                
+                                            </div>
+                                            <div id="listbox-id-11" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                                                 role="listbox">
+                                                <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                                    <aura:iteration items="{!v.Majorresults}" var="result">
+                                                        <li role="presentation" class="slds-listbox__item" data-id="MajorId"
+                                                            data-value="{!result}" onclick="{!c.MajoroptionClickHandler}">
+                                                            <div id="{!result}"
+                                                                 class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                                                 role="option">
+                                                                <span class="slds-media__figure slds-listbox__option-icon"></span>
+                                                                <span class="slds-media__body">
+                                                                    <span class="slds-truncate" title="All Major">
+                                                                        <span>{!result}</span>
+                                                                    </span>
+                                                                </span>
+                                                            </div>
+                                                        </li>
+                                                    </aura:iteration>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:If> 
+                        <aura:If isTrue="{!v.isPSButtonShow}"> 
+                            <lightning:select  label="High School Graduate?" value="{!v.selectedhighschoolgrad}" aura:Id="filter"  name="highschoolgradId" required="true" onchange ="{!c.highschoolgradchange}">
+                                <option text="--None--" value=""></option>
+                                <aura:iteration items="{!v.highschoolgrad}" var="item">
+                                    <option>{!item}</option>
+                                </aura:iteration>
+                            </lightning:select>  
+                            <div class="slds-p-vertical_xxx-small" />
+                        </aura:If>
+                        <aura:If isTrue="{!v.isPGButtonShow}"> 
+                            <lightning:select  label="Has Bachelor Acquired?" value="{!v.selectedBachloreneeded}" aura:Id="filter"  name="BachloreneededId" required="true" onchange ="{!c.Bachloreneededchange}">
+                                <option text="--None--" value=""></option>
+                                <aura:iteration items="{!v.Bachloreneeded}" var="item">
+                                    <option>{!item}</option>
+                                </aura:iteration>
+                            </lightning:select>  
+                            <div class="slds-p-vertical_xxx-small" />
+                        </aura:If> 
+                        <lightning:input  label="Currency" value="{!v.selectedCurrency}"   name="CurrencyId" required="true"  readonly = "true" />
+                        <div class="slds-p-vertical_xxx-small" />
+                        <aura:If isTrue="{!or(v.isPSButtonShow,v.isPGButtonShow)}"> 
+                            
+                            <div class="slds-grid slds-gutters">
+                                <div class="slds-col" onkeypress="{!c.isNumber}">
+                                    <lightning:input  required="true" label="Min Budget" aura:id='filter' value="{!v.selectedminBudget}" name="minid" onchange ="{!c.minchange}" onpaste="{! c.handlePaste }"  />
+                                </div>
+                                <div class="slds-col" onkeypress="{!c.isNumber}">
+                                    <lightning:input  required="true" label="Max Budget" aura:id='filter' value="{!v.selectedmaxBudget}"  name="maxid" onchange ="{!c.maxchange}" onpaste="{! c.handlePaste }" />
+                                </div>
+                                
+                            </div>
+                            <aura:if isTrue ="{!v.minisgreaterthanmax}">
+                                <i><div class="slds-m-around_xx-small slds-text-color_destructive">Mini Budget should not be greater than Max Budget.</div></i>
+                            </aura:if>
+                        </aura:If>
+                        <aura:If isTrue="{!v.isHSButtonShow}"> 
+                            <div  onkeypress="{!c.isNumber}">
+                                <lightning:input  required="true" label="Max Budget" aura:id='filter' value="{!v.selectedmaxBudget}"  name="maxid" onchange ="{!c.maxchange}" onpaste="{! c.handlePaste }" />
+                            </div>
+                        </aura:If>
+                        <!--  ############################### NOT IN USE COMMENTD ON 4 MAY 2020 ######################## -->
+                    </aura:If>
+                    
+                    <div class="slds-p-vertical_xx-small " />
+                    <div class="slds-float--left slds-p-left_large">
+                        <lightning:button variant="brand" label=" &nbsp;&nbsp; Search &nbsp;&nbsp; " title="Search" onclick="{!c.handleSearch}"  aura:Id="SearchId" class="buttonclassdis" />
+                        &nbsp; &nbsp; &nbsp;    
+                        <lightning:button  label="Clear" title=" &nbsp;&nbsp;&nbsp; Clear &nbsp;&nbsp;&nbsp; " onclick="{!c.handleClearHS}" class="buttonclass "/>
+                    </div>
+                </div>
+                <!--  ###############################  Filter SECTION END  ##########################################  -->
+                
+                
+            </div>
+            
+            <!--  ############################### NOT IN USE COMMENTD ON 4 MAY 2020 ######################## -->
+            <aura:If isTrue="false">
+                <!--  ############################### NOT IN USE COMMENTD ON 4 MAY 2020 ######################## -->
+                <aura:If isTrue="{!or(v.isPSButtonShow,v.isPGButtonShow)}"> 
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col" onkeypress="{!c.isNumber}">
+                            <lightning:input   label="TOEFL" aura:id='addfilter' value="{!v.selectedtoefl}" name="toeflid" onchange ="{!c.toeflchange}" onpaste="{! c.handlePaste }"  />
+                        </div>
+                        <div class="slds-col" onkeypress="{!c.isNumber}">
+                            <lightning:input   label="IELTS" aura:id='addfilter' value="{!v.selectediltes}"  name="iltesid" onchange ="{!c.ilteschange}" onpaste="{! c.handlePaste }" />
+                        </div>
+                    </div>
+                    
+                </aura:If>
+                
+                <lightning:select name="ProvinceId" label="Province" value="{!v.selectedState}" aura:Id="addfilter" onchange="{!c.OnChangeValueOfState}">
+                    <option text="--None--" value=""></option>
+                    <aura:iteration items="{!v.headOfficeStatePicklist}" var="val">
+                        <option text="{!val.label}" value="{!val.value}"></option>
+                    </aura:iteration>
+                </lightning:select>
+                <div class="slds-p-vertical_xx-small" />
+                
+                <lightning:select name="CityId" label="City" value="{!v.selectedCity}" aura:Id="addfilter" onchange="{!c.citychange}" >
+                    <option text="--None--" value=""></option>
+                    <aura:iteration items="{!v.headOfficeCityPicklist}" var="val">
+                        <option text="{!val.label}" value="{!val.value}"></option>
+                    </aura:iteration>
+                </lightning:select>
+                
+                
+                <aura:If isTrue="{!v.isHSButtonShow}">
+                    <div class="slds-p-vertical_xxx-small" />   
+                    <lightning:select name="HousingId" label="Housing" value="{!v.selectedHousing}" aura:Id="addfilter" onchange="{!c.housingchange}" >
+                        <option text="--None--" value=""></option>
+                        <aura:iteration items="{!v.housing}" var="item">
+                            <option>{!item}</option>
+                        </aura:iteration>
+                    </lightning:select>
+                    <div class="slds-p-vertical_xxx-small" />
+                </aura:If>
+                <!--  ############################### NOT IN USE COMMENTD ON 4 MAY 2020 ######################## -->
+            </aura:If>
+            
+        </div> <!-- end of slds tab content -->
+    </div><!-- end of slds tab -->
+    
+    
+</aura:component>

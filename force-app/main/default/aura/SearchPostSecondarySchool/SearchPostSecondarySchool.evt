@@ -1,0 +1,17 @@
+<aura:event type="APPLICATION" description="Display High School Information according to search keyword">
+    <aura:attribute name="nationality" type="String"/>
+    <aura:attribute name="country" type="String"/>
+    <aura:attribute name="programtype" type="String"/>
+    <aura:attribute name="minbudget" type="String"/>
+    <aura:attribute name="maxbudget" type="String"/>
+    <aura:attribute name="programobjective" type="String"/>
+    <aura:attribute name="province" type="String"/>
+    <aura:attribute name="city" type="String"/>
+    <aura:attribute name="Major" type="String"/>
+    <aura:attribute name="addmissionage" type="String"/>
+    <aura:attribute name="highschoolgrad" type="String"/>
+    <aura:attribute name="toefl" type="String"/>
+    <aura:attribute name="ielts" type="String"/>
+    <aura:attribute name="currencycode" type="String"/>
+    <aura:attribute name="recordtype" type="String"/>
+</aura:event>

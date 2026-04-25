@@ -1,0 +1,1048 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global"  controller="OpportunityCustomScreenAura" >
+    
+    <aura:attribute name="opportunity" type="Opportunity" default="{ 'sobjectType': 'Opportunity' }"/>
+    <aura:attribute name="account" type="Account" default="{ 'sobjectType': 'Account' }"/>
+    <aura:attribute name="Contact1" type="Contact" default="{ 'sobjectType': 'Contact' }"/>
+    <aura:attribute name="Contact2" type="Contact" default="{ 'sobjectType': 'Contact' }"/>
+    <aura:attribute name ="recordtypeid" type="string" />
+    <aura:attribute name ="recordtypename" type="string" />
+    <aura:attribute name ="selectedcloselostreason" type="list"  />
+    <aura:attribute name ="selectedacccloselostreason" type="list"  />
+    <aura:attribute name ="selectedHousing" type="list"  />
+    <aura:attribute name ="EmailValidation" type="integer" default="0"/>
+    <aura:attribute name ="selectedschooltype" type="list"  />
+    <aura:attribute name ="selectedmajor" type="list"  />
+    <aura:attribute name ="selectedCountry" type="list"  />
+    <aura:attribute name ="opportunitycountry" type="list" />
+    <aura:attribute name ="HousingOptionlist" type="list" />
+    <aura:attribute name ="ForCCorUniversityPreferredMajorlist" type="list" />
+    <aura:attribute name ="ForCCorUniversitylist" type="list" />
+    <aura:attribute name ="ForHSPreferredProgramlist" type="list" />
+    <aura:attribute name ="PreferredSchoolTypelist" type="list" />
+    <aura:attribute name ="FollowUpSituationlist" type="list" />
+    <aura:attribute name ="AnnualBudgetlist" type="list" />
+    <aura:attribute name ="ClosedLostReasonlist" type="list" />
+    <aura:attribute name ="StageNamelist" type="list" />
+    <aura:attribute name ="Relationshiplist" type="list" />
+    <aura:attribute name ="salutationlist" type="list" />
+    <aura:attribute name ="studentstatuslist" type="list" />
+    <aura:attribute name ="closeAccountreasonlist" type="list" />
+    <aura:attribute name ="SourceOfReferrallist" type="list" />
+    <aura:attribute name ="countryCodelist" type="list" />
+    <aura:attribute name ="consocialmedialist" type="list" />
+    <aura:attribute name ="accsocialmedialist" type="list" />
+    <aura:attribute name ="nationalitylist" type="list" />
+    <aura:attribute name ="educationSystem" type="list" />
+    <aura:attribute name ="levelofeducationlist" type="list" />
+    <aura:attribute name ="studentatwhatyearlist" type="list" />
+    <aura:attribute name ="startofacedmicyearlist" type="list" />
+    <aura:attribute name ="totalyearofeduationlist" type="list" />
+    <aura:attribute name ="oppId" type="string" />
+    <aura:attribute name="CountryWithStateMap" type="Map" />
+    <aura:attribute name="StateWithCityMap" type="Map" />
+    <aura:attribute name ="countrylist" type="list" />
+    <aura:attribute name ="statelist" type="list" />
+    <aura:attribute name ="citylist" type="list" />
+    <aura:attribute name ="genderlist" type="list" />
+    <aura:attribute name ="accRelationshiplist" type="list" />
+    <aura:attribute name ="accedmlist" type="list" />
+    <aura:attribute name ="accwechatsourcelist" type="list" />
+    <aura:attribute name ="accConfirmedclientinCompanysocialmedialist" type="list" />
+    <aura:attribute name ="conwechatsourcelist" type="list" />
+    <aura:attribute name ="conConfirmedclientinCompanysocialmedialist" type="list" />
+    <aura:attribute name ="accdataoriginlist" type="list" />
+    <aura:attribute name ="showspinner" type="boolean" default="true" />
+    <aura:attribute name ="showbutton" type="boolean" default="true" />
+    <aura:attribute name ="cancloselost" type="boolean" default="false" />
+    <aura:attribute name ="showstatecity" type="boolean" default="false" />
+    <aura:attribute name ="isportal" type="boolean"  />
+    <aura:attribute name ="schooltype" type="string"  />
+    <aura:attribute name="currencylist" type="list" />
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doinit}" />
+    
+      <!-- Added on 18 may 2020 -->
+    <aura:attribute name ="prefferedCountrylist" type="list" />
+    <aura:attribute name ="selectedCountryOps" type="list" />
+    <aura:attribute name ="prefferedStatelist" type="list" />
+    <aura:attribute name ="selectedStateOps" type="list" />
+    <aura:attribute name ="prefferedCitylist" type="list" />
+    <aura:attribute name ="selectedCityOps" type="list" />
+    
+    <!--END 18 may 2020 -->
+    
+    <aura:handler name="change" value="{!v.account.Account_Manager__c}" action="{!c.Onaccountmangerchange}"/>
+    <aura:handler name="change" value="{!v.account.Original_Grade_Mapping__c}" action="{!c.OnOriginalgradechange}"/>
+    <aura:attribute name="counVal" type="string"/>
+    <aura:if isTrue="{!v.showspinner}">
+        <lightning:spinner name="spinner" size="medium" variant="brand" />
+    </aura:if>
+    <aura:if isTrue="{!v.showbutton}">
+        <div class="slds-clearfix">
+            <div class="slds-float_right">
+                <lightning:button variant="Brand" label="New" title="New" onclick="{!c.hidenew}"/>
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small slds-fade-in-open">
+                
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-modal__close" title="Close" 
+                                onclick="{!c.closemodal}">
+                            <lightning:icon class="white slds-icon_small inverse-icon" iconName="utility:close"  variant="inverse" /> 
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">New Opportunity: Student</h2>
+                        
+                    </header>
+                    
+                    <div class="slds-modal__content  slds-p-around_medium slds-scrollable_y slds-border_bottom slds-border_top" style="height:55vh;" id="modal-content-id-1">
+                        <div class="slds-section slds-is-open" aura:id="StudentId">
+                            <h3 class="slds-section__title">
+                                <button aria-controls="Filterlist" class="slds-button slds-section__title-action">
+                                    <span onclick="{!c.toggleSection}" data-auraId="StudentId">
+                                        <lightning:icon iconName="utility:switch"
+                                                        size="x-small"
+                                                        class="slds-section__title-action-icon slds-button__icon_left"
+                                                        alternativeText="button icon" 
+                                                        />
+                                    </span>
+                                    <i> <span class="slds-truncate" title="Company Info">Student Information</span></i>
+                                </button>
+                            </h3>
+                            <div class="slds-section__content" id="StudentId">
+                                
+                                <!-- ##################################################  Personal Information  ############################################# -->
+                                <div class ="slds-m-horizontal_small" >
+                                    
+                                    <button  class="slds-button slds-section__title-action">
+                                        <i> <span class="slds-truncate" title="Basic Information">Personal Information</span></i>
+                                    </button>
+                                    
+                                </div>
+                                <!--                                          Personal Information  ROW  1  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        <lightning:input aura:id="acc" type="text" name="Agent Code" label="Agent Code"  disabled="true"  value="{!v.account.Student_s_Agent_Code__c}" />  
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        <c:Lookup aura:id="acc" label="Account Manager" object="Staff__c" searchField="Name" 
+                                                  iconName="custom:custom27" order="Name"
+                                                  limit="10" required="true" loadingMessage="Loading..." errorMessage="Invalid input" value="{!v.account.Account_Manager__c}" />
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Personal Information  ROW  2  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        <lightning:select aura:id="acc"  name="salutation" label="Salutation"  required="true" value="{!v.account.Salutation}" > 
+                                            
+                                            <option value="">--None--</option>
+                                            
+                                            <aura:iteration items="{!v.salutationlist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                            
+                                        </lightning:select>  
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        <lightning:input aura:id="acc" type="text" name="Last Name" label="Last Name" required="true" value="{!v.account.LastName}"  />  
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Personal Information  ROW    3  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        <lightning:input aura:id="acc" type="text" name="First Name" label="First Name"  value="{!v.account.FirstName}" /> 
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2"> 
+                                        <lightning:select  aura:id="acc"  name="Source Of Referral" label="Source Of Referral" required="true" value="{!v.account.Source_Of_Referral__c}" > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.SourceOfReferrallist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>  
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Personal Information  ROW    4  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        <lightning:input aura:id="acc" type="text" name="Source Of Referral Others" label="Source Of Referral Others"  value="{!v.account.Source_Of_Referral_Others__c}" />  
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        <lightning:input aura:id="acc" type="Date" name="Date Of Birth" label="Date Of Birth" value="{!v.account.Date_of_Birth__c}"  />  <!--PersonBirthdate-->  
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Personal Information  ROW    5  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="acc"  name="Gender" label="Gender" value="{!v.account.Gender__c}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.genderlist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select  aura:id="acc" name="Nationality" label="Nationality" required="true"  value="{!v.account.Nationality__c}"> 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.nationalitylist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>   
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Personal Information  ROW    6  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="acc"  name="Country Residing" label="Country Residing"  required="true" value="{!v.account.Country_Residing__c}" onchange="{!c.OnChangeValueOfCountry}" > 
+                                            
+                                            <aura:iteration items="{!v.countrylist}" var="val">
+                                                <option value="{!val.value}">{!val.label}</option>
+                                            </aura:iteration>
+                                        </lightning:select> 
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <aura:if isTrue="{!!v.isportal}">
+                                            <aura:if isTrue="{!v.showstatecity}">
+                                                <lightning:select aura:id="acc"  name="Come From Province" label="Come From Province"  value="{!v.account.Come_From_Province__c}" onchange="{!c.OnChangeValueOfstate}" disabled="{!!v.statelist.length>0}" > 
+                                                    <option value="">--None--</option>
+                                                    <aura:iteration items="{!v.statelist}" var="val">
+                                                        <option value="{!val.value}">{!val.label}</option>
+                                                    </aura:iteration>
+                                                </lightning:select> 
+                                                <aura:set attribute="else">
+                                                    <lightning:input aura:id="acc"  name="Come From Province" label="Come From Province"  value="{!v.account.Come_From_Province__c}"  disabled="true" />
+                                                </aura:set>
+                                            </aura:if>
+                                            <aura:set attribute="else">
+                                                <lightning:input aura:id="acc"  name="Province/State" label="Province/State"  value="{!v.account.Province__c}"   />
+                                            </aura:set>
+                                        </aura:if>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Personal Information  ROW    7  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <aura:if isTrue="{!!v.isportal}">
+                                            <aura:if isTrue="{!v.showstatecity}">
+                                                <lightning:select aura:id="acc"  name="Come From City" label="Come From City"  value="{!v.account.Come_From_City__c}" disabled="{!!v.citylist.length>0}" > 
+                                                    <option value="">--None--</option>
+                                                    <aura:iteration items="{!v.citylist}" var="val">
+                                                        <option value="{!val.value}">{!val.label}</option>
+                                                    </aura:iteration>
+                                                </lightning:select>
+                                                <aura:set attribute="else">
+                                                    <lightning:input aura:id="acc"  name="Come From City" label="Come From City"  value="{!v.account.Come_From_City__c}"  disabled="true" />
+                                                </aura:set>
+                                            </aura:if>
+                                            <aura:set attribute="else">
+                                                <lightning:input aura:id="acc"  name="City" label="City"  value="{!v.account.City__c}"   />
+                                            </aura:set>
+                                        </aura:if> 
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select  aura:id="acc" name="Student Status" label="Student Status"   value="{!v.account.Student_Status__c}" onchange="{!c.accStatusChange}" disabled="{!v.account.Student_Status__c=='Don\'t Contact'}"> 
+                                            <aura:iteration items="{!v.studentstatuslist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>  
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input type="text" name="Recordtype" label="Recordtype" readonly="true" value="{!v.recordtypename}" />
+                                    </div>
+                                    
+                                </div -->
+                                
+                                
+                                
+                                <!-- div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="acc" type="text" name="Source Of Referral Others" label="Source Of Referral Others"  value="{!v.account.Source_Of_Referral_Others__c}" />  
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:dualListbox aura:id="acc"
+                                                               name="Don't Contact Reason"
+                                                               label="Don't Contact Reason"
+                                                               sourceLabel="Available Don't Contact Reason"
+                                                               selectedLabel="Selected Don't Contact Reason"
+                                                               options="{!v.closeAccountreasonlist }"
+                                                               value="{!v.selectedacccloselostreason}"
+                                                               disabled="true"/> 
+                                    </div>
+                                    
+                                </div>
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="acc"  name="Don't Contact Reason Others" label="Don't Contact Reason Others"  value="{!v.account.Dont_Contact_Reason_Others__c}" disabled="true" />   
+                                    </div>
+                                    
+                                </div>
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                   
+                                    
+                                    
+                                    
+                                </div>
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                    </div>
+                                    
+                                   
+                                    
+                                </div -->
+                                
+                                
+                                
+                                <!--div class ="slds-m-horizontal_small slds-m-top_small" >
+                                    <button  class="slds-button slds-section__title-action">
+                                        <i> <span class="slds-truncate" title="Basic Information">Personal Information</span></i>
+                                    </button>
+                                </div>
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    
+                                  
+                                    
+                                </div>
+                                
+                                
+                                
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                  
+                                    
+                                    
+                                    
+                                </div>
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2"> 
+                                        
+                                    </div>
+                                    
+                                </div -->
+                                <!--  ###############################################  Account Contact  ##############################################################  -->
+                                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                                    <button  class="slds-button slds-section__title-action">
+                                        <i> <span class="slds-truncate" title="Contact">Account Contact</span></i> <!-- Contact -->
+                                    </button>
+                                </div>
+                                
+                                <!--                                                  Account Contact  ROW    1  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="acc"  name="Country Code" label="Country Code" value="{!v.account.Country_Code__c}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.countryCodelist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>  
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="acc" type="text" name="validation" label="Mobile(Student)" value="{!v.account.Mobile__c}"  />  
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Account Contact  ROW    2  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="acc"  name="validation" label="Social Media" value="{!v.account.Social_Media__pc}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.accsocialmedialist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>     
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="acc" type="text" name="validation" label="Social Media Others" value="{!v.account.Social_Media_Others__c}"  />  
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+                                <!--                                                  Account Contact  ROW    3  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="acc" type="text" name="validation" label="Social Media Account" value="{!v.account.WeChat_ID__pc}"  />  
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="acc" type="email" name="validation" label="Email(Student)"  value="{!v.account.PersonEmail}"  />
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Account Contact  ROW    4  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2 slds-m-top_large"> <!-- slds-m-top_large -->
+                                        
+                                        <lightning:input aura:id="acc" type="checkbox" name="Add client to Company social media." label="Add Client to Company Social Media Account." checked="{!v.account.Add_client_to_Company_social_media__c}" /><!-- value="{!v.account.Add_client_to_Company_social_media__c}" -->    
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2"></div>
+                                    
+                                </div>
+                                
+                                <!--  ###############################################  Educational Qualification  ##############################################################  -->
+                                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                                    <button  class="slds-button slds-section__title-action">
+                                        <i> <span class="slds-truncate" title="Basic Information">Educational Qualification</span></i>
+                                    </button>
+                                </div>
+                                
+                                <!--                                                  Educational Qualification  ROW   1  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="acc"  name="Education System" label="Education System" required ="true" value="{!v.account.Education_System__c}"  onchange="{! c.getEdu}"> 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.educationSystem}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>   
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2 ">
+                                        <lightning:select aura:id="acc"  name="Start of academic year" label="School Start Month" required ="true" value="{!v.account.Start_of_Academic_Month__c}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.startofacedmicyearlist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>    
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Educational Qualification  ROW   2  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <c:strike_lookup 
+                                                         label="Original Grade"
+                                                         object="Grade_Mapping__c"
+                                                         searchField="Name"
+                                                         placeholder="Select an option"
+                                                         iconName="standard:account"
+                                                         value="{!v.account.Original_Grade_Mapping__c}"
+                                                         filter="{!'Country__c='+'\''+v.counVal+'\''}"
+                                                         order="Name"
+                                                         aura:id="acc"
+                                                         showRecentRecords = "true"
+                                                         loadingMessage="Loading..."
+                                                         errorMessage="Invalid input"
+                                                         required="true"/>
+                                    </div> 
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input type="Date" aura:id="acc" name="Expected Graduation Date" label="Expected Graduation Date" required="true" value="{!v.account.Expected_Graduation_Date__c}"  />  
+                                    </div>
+                                    
+                                </div>
+                                
+                                <aura:if isTrue="false">
+                                    <!-- Not In Used -->
+                                    <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                        <div class="slds-col slds-size_1-of-2 ">
+                                            <c:Lookup aura:id="acc" label="Current Grade" object="Grade_Mapping__c" searchField="Name" 
+                                                      iconName="custom:custom27" order="Name"
+                                                      limit="10" required="true" loadingMessage="Loading..." errorMessage="Invalid input" value="{!v.account.Current_Grade_Mapping__c}" disabled ="true" />   
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-2 ">
+                                            <lightning:select aura:id="acc"  name="Start of academic year" label="Start of academic Month" required ="true" value="{!v.account.Start_of_Academic_Month__c}"  > 
+                                                <option value="">--None--</option>
+                                                <aura:iteration items="{!v.startofacedmicyearlist}" var="val">
+                                                    <option value="{!val}">{!val}</option>
+                                                </aura:iteration>
+                                            </lightning:select>    
+                                        </div>
+                                    </div>
+                                    <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                        <div class="slds-col slds-size_1-of-2">
+                                            
+                                            <lightning:select aura:id="acc"  name="Student at What Year" label="Student at What Year" required ="true" value="{!v.account.Student_at_What_Year__c}"  > 
+                                                <option value="">--None--</option>
+                                                <aura:iteration items="{!v.studentatwhatyearlist}" var="val">
+                                                    <option value="{!val}">{!val}</option>
+                                                </aura:iteration>
+                                            </lightning:select>    
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <!-- Not In Used -->
+                                </aura:if>
+                            </div> <!-- end of student section -->
+                        </div><!-- end of student id accordian -->
+                        
+                        <div class="slds-section " aura:id="ParentContactId">
+                            <h3 class="slds-section__title">
+                                <button aria-controls="Filterlist" class="slds-button slds-section__title-action">
+                                    <span onclick="{!c.toggleSection}" data-auraId="ParentContactId">
+                                        <lightning:icon iconName="utility:switch"
+                                                        size="x-small"
+                                                        class="slds-section__title-action-icon slds-button__icon_left"
+                                                        alternativeText="button icon" 
+                                                        />
+                                    </span>
+                                    <i> <span class="slds-truncate" title="Parent Info">Parent Information</span></i>
+                                </button>
+                            </h3>
+                            
+                            <div class="slds-section__content" id="ParentContactId">
+                                
+                                <!--  ###############################################  Parent 1 Contact  ##############################################################  -->
+                                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                                    <button  class="slds-button slds-section__title-action">
+                                        <i> <span class="slds-truncate" title="Parent Information">Parent 1 Contact</span></i>
+                                    </button>
+                                </div>
+                                
+                                <!--                                                  Parent 1 Contact  ROW   1  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="par1"  name="reqiuredonceanyonevalueisfilled" label="Salutation" value="{!v.Contact1.Salutation}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.salutationlist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>  
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="par1" type="text" name="reqiuredonceanyonevalueisfilled" label="Last Name" value="{!v.Contact1.LastName}"  />  
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Parent 1 Contact  ROW  2  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="par1"  name="Relationship" label="Relationship"  value="{!v.Contact1.Relationship__c}" > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.Relationshiplist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select> 
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input  aura:id="par1" type="text"  label="First Name" value="{!v.Contact1.FirstName}"  /> 
+                                    </div>
+                                    
+                                    
+                                </div>
+                                
+                                <!--                                                  Parent 1 Contact  ROW  3  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select  aura:id="par1"   label="Country Code" value="{!v.Contact1.Country_Code__c}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.countryCodelist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>  
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        <lightning:input aura:id="par1" type="text"  label="Mobile" value="{!v.Contact1.MobilePhone}"  />   
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Parent 1 Contact  ROW  4  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="par1" type="email"  label="Email" value="{!v.Contact1.Email}"  />  
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="par1"  name="Social Media" label="Social Media"  value="{!v.Contact1.Social_Media__c}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.consocialmedialist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>     
+                                    </div>
+                                </div>
+                                
+                                <!--                                                  Parent 1 Contact  ROW  5  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="par1" type="text" name="Social Media Others" label="Social Media Others" value="{!v.Contact1.Social_Media_Others__c}"  />                
+                                        
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="par1" type="text" name="Social Media Account" label="Social Media Account" value="{!v.Contact1.WeChat_ID__c}"  />                    
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Parent 1 Contact  ROW  6  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2 slds-m-top_small">
+                                        <lightning:input aura:id="par1" type="checkbox" name="Add client to Company social media"  label="Add Client to Company Social Media Account"  checked="{!v.Contact1.Add_client_to_Company_social_media__c}"   />  <!-- value="{!v.Contact1.Add_client_to_Company_social_media__c}" -->
+                                    </div>
+                                </div>
+                                
+                                <aura:if isTrue="false">
+                                    <!-- ##########################        Not in used  #####################################-->
+                                    <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                        <div class="slds-col slds-size_1-of-2">
+                                            <lightning:select  aura:id="par1"  name="Nationality" label="Nationality"  value="{!v.Contact1.Nationality__c}"   > 
+                                                <option value="">--None--</option>
+                                                <aura:iteration items="{!v.nationalitylist}" var="val">
+                                                    <option value="{!val}">{!val}</option>
+                                                </aura:iteration>
+                                            </lightning:select>
+                                        </div>
+                                    </div>
+                                    <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                        <div class="slds-col slds-size_1-of-2 ">
+                                            <lightning:select aura:id="par1"  name="Confirmed client in Company social media" label="Confirmed client in Company social media"  value="{!v.Contact1.Confirmed_client_in_Company_social_media__c}"  > 
+                                                <option value="">--None--</option>
+                                                <aura:iteration items="{!v.conConfirmedclientinCompanysocialmedialist}" var="val">
+                                                    <option value="{!val}">{!val}</option>
+                                                </aura:iteration>
+                                            </lightning:select>                
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- ##########################        Not in used  #####################################-->
+                                </aura:if>
+                                
+                                <!--  ###############################################  Parent 2 Contact  ##############################################################  -->
+                                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                                    <button  class="slds-button slds-section__title-action">
+                                        <i> <span class="slds-truncate" title="Parent Information">Parent 2 Contact</span></i>
+                                    </button>
+                                </div>
+                                
+                                <!--                                                  Parent 2 Contact  ROW  1  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="par2"  name="reqiuredonceanyonevalueisfilled" label="Salutation" value="{!v.Contact2.Salutation}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.salutationlist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>  
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="par2" type="text" name="reqiuredonceanyonevalueisfilled" label="Last Name" value="{!v.Contact2.LastName}"  />  
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Parent 2 Contact  ROW  2  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select aura:id="par2"  name="Relationship" label="Relationship" value="{!v.Contact2.Relationship__c}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.Relationshiplist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select> 
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="par2" type="text"  label="First Name" value="{!v.Contact2.FirstName}"  /> 
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Parent 2 Contact  ROW  3  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select  aura:id="par2"  label="Country Code" value="{!v.Contact2.Country_Code__c}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.countryCodelist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>  
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="par2" type="text"  label="Mobile" value="{!v.Contact2.MobilePhone}"  /> 
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Parent 2 Contact  ROW  4  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="par2" type="email"  label="Email" value="{!v.Contact2.Email}"  />  
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:select  aura:id="par2" name="Social Media" label="Social Media" value="{!v.Contact2.Social_Media__c}"  > 
+                                            <option value="">--None--</option>
+                                            <aura:iteration items="{!v.consocialmedialist}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>     
+                                    </div>
+                                </div>
+                                
+                                <!--                                                  Parent 2 Contact  ROW  5  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="par2" type="text" name="Social Media Others" label="Social Media Others" value="{!v.Contact2.Social_Media_Others__c}"  />                
+                                        
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input  aura:id="par2" type="text" name="Social Media Account" label="Social Media Account" value="{!v.Contact2.WeChat_ID__c}"  />                    
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Parent 2 Contact  ROW  6  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2 slds-m-top_small">
+                                        <lightning:input aura:id="par2" type="checkbox" name="Add client to Company social media"  label="Add Client to Company Social Media Account"  checked="{!v.Contact2.Add_client_to_Company_social_media__c}"  />  <!-- value="{!v.Contact2.Add_client_to_Company_social_media__c}" -->
+                                    </div>
+                                    
+                                </div>
+                                <aura:if isTrue="false">
+                                    <!-- ##########################        Not in used  #####################################-->
+                                    <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                        <div class="slds-col slds-size_1-of-2">
+                                            <lightning:select aura:id="par2"  name="Nationality" label="Nationality"  value="{!v.Contact2.Nationality__c}"   > 
+                                                <option value="">--None--</option>
+                                                <aura:iteration items="{!v.nationalitylist}" var="val">
+                                                    <option value="{!val}">{!val}</option>
+                                                </aura:iteration>
+                                            </lightning:select>  
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                        <div class="slds-col slds-size_1-of-2 ">
+                                            <lightning:select aura:id="par1"  name="Confirmed client in Company social media" label="Confirmed client in Company social media"  value="{!v.Contact2.Confirmed_client_in_Company_social_media__c}"  > 
+                                                <option value="">--None--</option>
+                                                <aura:iteration items="{!v.conConfirmedclientinCompanysocialmedialist}" var="val">
+                                                    <option value="{!val}">{!val}</option>
+                                                </aura:iteration>
+                                            </lightning:select>                
+                                            
+                                        </div>
+                                    </div >
+                                    <!-- ##########################        Not in used  #####################################-->
+                                </aura:if>
+                            </div><!-- Parent id Section-->
+                            
+                        </div><!-- ParentContactId accordian-->
+                        
+                        
+                        <div class="slds-section slds-is-open" aura:id="opportunityId">
+                            <h3 class="slds-section__title">
+                                <button aria-controls="Filterlist" class="slds-button slds-section__title-action">
+                                    <span onclick="{!c.toggleSection}" data-auraId="opportunityId">
+                                        <lightning:icon iconName="utility:switch"
+                                                        size="x-small"
+                                                        class="slds-section__title-action-icon slds-button__icon_left"
+                                                        alternativeText="button icon" 
+                                                        />
+                                    </span>
+                                    <i> <span class="slds-truncate" title="Opportunity Info">Opportunity Information</span></i>
+                                </button>
+                            </h3>
+                            
+                            <div class="slds-section__content" id="opportunityId">
+                                
+                                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                                    <button  class="slds-button slds-section__title-action">
+                                        <i> <span class="slds-truncate" title="Basic Information">Client Preferences</span></i>
+                                    </button>
+                                </div>
+                                
+                                <!--                                                  Client Preferences  ROW  1  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="opp" type="text" name="Opportunity Name" label="Opportunity Name" required="true"  value="{!v.opportunity.Name}" disabled="{!v.opportunity.StageName =='Closed Lost'}" />    
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input  aura:id="opp"  name="Stage" label="Stage"  value="{!v.opportunity.StageName}"  disabled="true" />  
+                                        
+                                    </div>
+                                    
+                                </div> 
+                                
+                                <!--                                                  Client Preferences  ROW  2  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="opp" type="date" name="Intended Study Abroad Date" value="{!v.opportunity.Intended_Go_Abroad_Date__c}" label="Intended Go Abroad Date" required="true"  disabled="{!v.opportunity.StageName =='Closed Lost'}"  />    
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        <lightning:input aura:id="opp"  name="Follow Up Situation" label="Follow Up Situation"  value="{!v.opportunity.Follow_Up_Situation__c}"   disabled="true" /> 
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Client Preferences  ROW  3  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:dualListbox aura:id="opp"
+                                                               name="Country"
+                                                               label="Preferred Country"
+                                                               sourceLabel="Available Country"
+                                                               selectedLabel="Selected Country"
+                                                               options="{!v.opportunitycountry }"
+                                                               value="{!v.selectedCountry}"
+                                                               /> 
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:dualListbox aura:id="opp"
+                                                               name="Close Lost Reason"
+                                                               label="Close Lost Reason"
+                                                               sourceLabel="Available Close Lost Reason"
+                                                               selectedLabel="Selected Close Lost Reason"
+                                                               options="{!v.ClosedLostReasonlist }"
+                                                               value="{!v.selectedcloselostreason}"
+                                                               disabled="true" 
+                                                               />
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Client Preferences  ROW  4  															-->
+                                
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input type="text" aura:id="opp" name="State" label="State" value="{!v.opportunity.State__c}"     /> 
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input type="text" aura:id="opp" name="Close Lost Reason Others" label="Close Lost Reason Others" value="{!v.opportunity.Closed_Lost_Description__c}"  disabled="true"    /> 
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!--                                                  Client Preferences  ROW  5  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input type="text" aura:id="opp" name="City" label="City" value="{!v.opportunity.City__c}"    /> 
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:dualListbox aura:id="opp"
+                                                               name="School Type"
+                                                               label="School Type"
+                                                               sourceLabel="Available School Type"
+                                                               selectedLabel="Selected School Type"
+                                                               options="{!v.PreferredSchoolTypelist }"
+                                                               value="{!v.selectedschooltype}"
+                                                               onchange="{!c.schooltypechange}" />     
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!--                                                  Client Preferences  ROW  6  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:dualListbox aura:id="opp"
+                                                               name="Housing Option"
+                                                               label="For High School: Housing Option"
+                                                               sourceLabel="Available Housing Option"
+                                                               selectedLabel="Selected Housing Option"
+                                                               options="{!v.HousingOptionlist }"
+                                                               value="{!v.selectedHousing}"
+                                                               disabled="{!or(v.selectedschooltype.length==0,v.schooltype!='High School')}" />
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2"> 
+                                        <lightning:dualListbox aura:id="opp"
+                                                               name="Major category"
+                                                               label="For College or University : Major"
+                                                               sourceLabel="Available Major category"
+                                                               selectedLabel="Selected Major category"
+                                                               options="{!v.ForCCorUniversityPreferredMajorlist }"
+                                                               value="{!v.selectedmajor}"
+                                                               disabled="{!or(v.selectedschooltype.length==0,v.schooltype=='High School')}" />
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--                                                  Client Preferences  ROW  7  															-->
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="opp"  name="Specific Major" label="Specific Major"   value="{!v.opportunity.Specific_Major__c}" disabled="{!or(v.selectedschooltype.length==0,v.schooltype=='High School')}" />     
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">  
+                                        <lightning:textarea  aura:id="opp" name="Description" label="Description" value="{!v.opportunity.Description}"   />    
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--div class ="slds-m-horizontal_small slds-m-top_small" >
+                                    <button  class="slds-button slds-section__title-action">
+                                        <i> <span class="slds-truncate" title="Basic Information">High School</span></i>
+                                    </button>
+                                </div>
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:dualListbox aura:id="opp"
+                                                               name="Housing Option"
+                                                               label="For High School: Housing Option"
+                                                               sourceLabel="Available Housing Option"
+                                                               selectedLabel="Selected Housing Option"
+                                                               options="{!v.HousingOptionlist }"
+                                                               value="{!v.selectedHousing}"
+                                                               disabled="{!or(v.selectedschooltype.length==0,v.schooltype!='High School')}" />
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        
+                                        
+                                    </div>
+                                    
+                                </div-->
+                                
+                                
+                                <!-- class ="slds-m-horizontal_small slds-m-top_small" >
+                                    <button  class="slds-button slds-section__title-action">
+                                        <i> <span class="slds-truncate" title="College/University">College/University</span></i>
+                                    </button>
+                                </div>
+                                
+                                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                    <div class="slds-col slds-size_1-of-2"> 
+                                        <lightning:dualListbox aura:id="opp"
+                                                               name="Major category"
+                                                               label="Major category"
+                                                               sourceLabel="Available Major category"
+                                                               selectedLabel="Selected Major category"
+                                                               options="{!v.ForCCorUniversityPreferredMajorlist }"
+                                                               value="{!v.selectedmajor}"
+                                                               disabled="{!or(v.selectedschooltype.length==0,v.schooltype=='High School')}" />
+                                        
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:input aura:id="opp"  name="Specific Major" label="Specific Major"   value="{!v.opportunity.Specific_Major__c}" disabled="{!or(v.selectedschooltype.length==0,v.schooltype=='High School')}" />     
+                                    </div>
+                                    
+                                </div -->
+                                
+                                <aura:if isTrue="false">
+                                    <!-- ##########################        Not in used  #####################################-->
+                                    <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                                        <div class="slds-col slds-size_1-of-2">  
+                                            <lightning:input aura:id="opp"  name="Annual Budget" type="text" label="Annual Budget"    value="{!v.opportunity.Annual_Budgetnew__c}"  />
+                                        </div>
+                                        
+                                        <div class="slds-col slds-size_1-of-2">
+                                            <lightning:select aura:id="opp"  name="Currency" label="Currency" required="true" value="{!v.opportunity.CurrencyIsoCode}"  > 
+                                                <option value="">--None--</option>
+                                                <aura:iteration items="{!v.currencylist}" var="val">
+                                                    <option value="{!val}">{!val}</option>
+                                                </aura:iteration>
+                                            </lightning:select>  
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- ##########################        Not in used  #####################################-->
+                                </aura:if>
+                            </div><!-- opportunityId Section-->
+                            
+                        </div><!-- opportunityId accordian-->
+                    </div><!-- main slds model -->
+                    
+                    
+                    
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="Brand" label="Save" title="Save" onclick="{!c.handleSave}"/>
+                        <lightning:button variant="Neutral" label="Cancel" title="Cancel" onclick="{!c.closemodal}" />
+                    </footer>
+                    
+                    
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:set> 
+    </aura:if>	
+</aura:component>

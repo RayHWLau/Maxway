@@ -1,0 +1,15 @@
+<aura:component controller="OptOutAddingFunctionality">
+    <aura:attribute name="contryname" type="string" />
+    
+    <aura:handler action="{!c.closemodal}" event="c:StatusAppEvent" />
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <div class="slds-grid ">
+        <div class="slds-size_1-of-8"></div>
+        <div class="slds-size_2-of-8 slds-clearfix"><div class="slds-float_right"><lightning:icon iconName="standard:note" alternativeText="Country"  size="medium"/></div>
+            </div>
+        <div class=" slds-text-heading_medium slds-text-align_left slds-size_4-of-8 slds-p-top_xx-small slds-p-left_small">
+            {!v.contryname}
+        </div>
+        <div class="slds-size_1-of-8"></div>
+    </div>
+</aura:component>

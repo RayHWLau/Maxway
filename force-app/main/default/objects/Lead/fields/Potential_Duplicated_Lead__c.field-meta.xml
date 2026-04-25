@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Potential_Duplicated_Lead__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Potential Duplicated Lead</label>
+    <referenceTo>Lead</referenceTo>
+    <relationshipLabel>New Duplicated Leads</relationshipLabel>
+    <relationshipName>New_Duplicated_Leads</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>Default_Country_Code</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK(TEXT({!$Record.Country_Code__c})),&quot;Hong Kong (852)&quot;,TEXT({!$Record.Country_Code__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>Default_Intended_Go_Aboard_Date</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+MONTH(TODAY()) &gt;= 9, 
+DATE(YEAR(TODAY())+1,9,1),
+DATE(YEAR(TODAY()),9,1)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>Default_Original_Academic_Year</name>
+        <dataType>String</dataType>
+        <expression>IF(MONTH(TODAY()) &gt;= 9, TEXT(YEAR(TODAY())), TEXT(YEAR(TODAY())-1))</expression>
+    </formulas>
+    <formulas>
+        <name>Default_Salutation</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK(TEXT({!$Record.Salutation})), &quot;Mr&quot;, TEXT({!$Record.Salutation}))</expression>
+    </formulas>
+    <formulas>
+        <name>TransformedMobileNumber</name>
+        <dataType>String</dataType>
+        <expression>If(CONTAINS({!$Record.Mobile__c},&quot;+852&quot;),RIGHT({!$Record.Mobile__c},LEN({!$Record.Mobile__c})-4),{!$Record.Mobile__c})</expression>
+    </formulas>
+    <interviewLabel>Lead - Create Campaign Member For Facebook Lead {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead - Create Campaign Member For Social Media Lead</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Associate_Lead_With_Campaign</name>
+        <label>Associate Lead With Campaign</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>CampaignId</field>
+            <value>
+                <elementReference>$Record.Campaign__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LeadId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CampaignMember</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Associate_Lead_With_Campaign</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LeadSource</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Social Media</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Lead_Source_2__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Facebook</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Campaign__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Data_Origin__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>H</stringValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>Duplicated_Lead</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+    <variables>
+        <name>DuplicatedLeadId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

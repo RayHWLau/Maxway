@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="School Clear Search">
+    <aura:attribute name="clear" type="boolean"/>
+</aura:event>

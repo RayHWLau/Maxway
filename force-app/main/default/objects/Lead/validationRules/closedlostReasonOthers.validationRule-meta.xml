@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>closedlostReasonOthers</fullName>
+    <active>true</active>
+    <description>IF Closed Lost Reason is &apos;Others&apos; and Closed Lost Others field is empty and vice versa.</description>
+    <errorConditionFormula>AND($RecordType.Name = &quot;Agent Acquisition&quot;,(OR((INCLUDES( Closed_Lost_Reason__c ,&apos;Others&apos;) &amp;&amp; ISBLANK( Closed_Lost__c)), 
+(NOT(INCLUDES(Closed_Lost_Reason__c ,&apos;Others&apos;)) &amp;&amp; NOT(ISBLANK( Closed_Lost__c))))))</errorConditionFormula>
+    <errorMessage>Align values between &quot;Closed Lost Reason&quot; and &quot;Closed Lost Reason Others&quot;.</errorMessage>
+</ValidationRule>

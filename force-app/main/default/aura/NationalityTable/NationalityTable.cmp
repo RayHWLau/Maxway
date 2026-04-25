@@ -1,0 +1,194 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithOutHeader" access="global" controller="NationalityTableApex" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:handler name="init" action="{!c.doint}" value="{!this}" />
+    <aura:attribute name="CommissionTableserverlist" type="list" />
+    <aura:attribute name="CommissionTableclist" type="list" />
+    <aura:attribute name="searchedcountry" type="list" />
+    <aura:attribute name="currencylist" type="list" />
+    <aura:attribute name="accountname" type="string" />
+    <aura:attribute name="accountcurrency" type="string" />
+    <aura:attribute name="nationalitynames" type="string" />
+    <aura:attribute name="oldnationalitynames" type="string"/>
+    <aura:attribute name="totalinsertedvalue" type="integer"/>
+    <aura:attribute name="totalupdatedvalue" type="integer"/>
+    <aura:attribute name="issearching" type="Boolean" default="false"/>
+    <aura:attribute name="nocountryfound" type="Boolean" default="false"/>
+    <aura:attribute name="spinneristrue" type="Boolean" default="true"/>
+    <aura:attribute name="finalsubmitcheck" type="Boolean" default="false"/>
+    <aura:attribute name="errorMsg" type="string" />
+    
+    <aura:if isTrue="{!v.spinneristrue}" >
+        <lightning:spinner name="spinner" size="medium" variant="brand" />
+    </aura:if>
+    <aura:if isTrue="{!!v.spinneristrue}" >
+        <div class="slds-grid  slds-m-horizontal_medium  slds-m-top_small">
+            <div class="slds-size_1-of-12">
+                <div  ><lightning:icon iconName="standard:account" alternativeText="Nationality"  size="medium"/></div>
+            </div>
+            <div class="slds-size_7-of-12">
+                <div class="slds-text-heading_large slds-text-align_left " >Nationality</div>
+            </div>
+            <div class="slds-size_2-of-12">
+                <lightning:button  class="slds-p-vertical_xxx-small " iconName="utility:link" iconPosition="left" variant="brand" onclick="{! c.savecheck }">Save</lightning:button>
+            </div>
+            <div class="slds-size_2-of-12">
+                <lightning:button class="slds-p-vertical_xxx-small"  iconName="utility:close" iconPosition="left" onclick="{! c.cancelmodel }">Close</lightning:button></div>
+        </div>
+        <div class=" slds-border_bottom  slds-m-horizontal_medium slds-m-vertical_small" />
+        
+        
+        <div class="slds-grid  slds-m-horizontal_large slds-grid_vertical ">
+            
+            <div class="slds-p-left_xx-small slds-text-heading_small" > School </div>
+            <div class=" slds-p-left_xx-small slds-form-element__label" style ="color:#3366cc;">{!v.accountname}</div>
+            
+            <div class=" slds-p-left_xx-small slds-text-heading_small"> Currency</div>
+            <div class="  slds-p-left_xx-small slds-form-element__label " style ="color:#3366cc;"> {!v.accountcurrency} </div>
+            
+            
+            
+        </div>
+        
+        
+        <div class="slds-grid slds-m-vertical_medium ">
+            <div class="slds-size_1-of-7"></div>
+            <div class="slds-size_5-of-7">
+                <div onkeyup="{! c.handleKeyUp }" >
+                    <lightning:input
+                                     aura:id="enter-search"
+                                     name="enter-search"
+                                     label="Search when user hits the 'enter' key"
+                                     isLoading="{! v.issearching }"
+                                     type="search"
+                                     variant="label-hidden"
+                                     placeholder="Enter Nationality"
+                                     onchange ="{!c.rerenderlist}"
+                                     />
+                </div>
+            </div>
+            <div class="slds-size_1-of-7"></div>
+        </div>
+        
+        <div class="slds-grid slds-gutters slds-border_top slds-border_bottom slds-border_left slds-border_right slds-m-horizontal_medium slds-m-top_small">
+            
+            <div class="slds-size_1-of-6 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                S.No.
+            </div>
+            
+            <div class="slds-size_3-of-6 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                Nationality
+            </div>
+            
+            <div class="slds-size_2-of-6 slds-text-align_center slds-p-around_xx-small slds-text-heading_small">
+                Amount
+            </div>
+            
+            
+        </div>
+        <aura:if isTrue="{!!v.nocountryfound}">
+            <aura:iteration var="var" items ="{!v.searchedcountry}" indexVar="index">
+                <div class="slds-grid slds-gutters  slds-border_bottom slds-border_left slds-border_right slds-m-horizontal_medium">
+                    
+                    <div class="slds-size_1-of-6 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                        {!index+1}
+                    </div>
+                    
+                    <div class="slds-size_3-of-6 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                        {!var.Nationality__c}
+                    </div>
+                    
+                    <div class="slds-size_2-of-6 slds-text-align_center slds-p-around_xx-small " onkeypress="{!c.isNumber}">
+                        <lightning:input  type="text" variant="label-hidden" value="{!var.Amount__c}" onpaste="{! c.handlePaste }"></lightning:input> 
+                    </div>
+                    
+                </div>
+            </aura:iteration>
+            <div class="slds-p-around_medium" >
+                <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.savecheck }" class="slds-align_absolute-center " />
+            </div>
+            <aura:set attribute="else">
+                <div class="slds-text-align_center slds-m-around_x-large slds-text-heading_small">
+                    No Country Found.
+                </div>
+            </aura:set>
+        </aura:if>
+        <aura:if isTrue="{!v.finalsubmitcheck}" >
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+                <div class="slds-modal__container"> 
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        
+                        <aura:if isTrue="{!and(v.nationalitynames.length>0,v.oldnationalitynames.length>0)}" >
+                            
+                            <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_center" style ="color:#3366cc;">
+                                <i> Following Nationalities will be inserted : </i>
+                            </div>
+                            <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-p-verical_x-small slds-text-align_center">
+                                {!v.nationalitynames}
+                            </div>
+                            <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-p-bottom_xxx-small slds-p-top_small slds-text-align_center" style ="color:#3366cc;" >
+                                <i>  Following Nationalities will be updated : </i>
+                            </div>
+                            <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_center">
+                                {!v.oldnationalitynames}
+                            </div>
+                            
+                            <aura:set attribute="else">   
+                                
+                                <aura:if isTrue="{!v.nationalitynames.length>0}">
+                                    
+                                    <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_center" style ="color:#3366cc;" >
+                                        <i> Following Nationalities will be inserted : </i>
+                                    </div>
+                                    <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_center">
+                                        {!v.nationalitynames}
+                                    </div>
+                                    
+                                    <aura:set attribute="else">
+                                        
+                                        <aura:if isTrue="{!v.oldnationalitynames.length>0}"> 
+                                            
+                                            <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_center" style ="color:#3366cc;" >
+                                                <i>  Following Nationalities will be updated : </i>
+                                            </div>
+                                            <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_center">
+                                                {!v.oldnationalitynames}
+                                            </div>
+                                            
+                                            <aura:set attribute="else">
+                                                
+                                                <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_center">
+                                                    <i>  Neither Nationality is Inserted Nor Edited.</i>
+                                                </div>
+                                                
+                                            </aura:set>
+                                            
+                                        </aura:if>
+                                        
+                                    </aura:set>
+                                    
+                                </aura:if>
+                                
+                            </aura:set>
+                            
+                        </aura:if>
+                        
+                        <div class="slds-grid slds-gutters slds-p-top_medium">
+                            
+                            <div class=" slds-size_3-of-8 "></div>
+                            <div class=" slds-size_1-of-8 "><lightning:button variant="neutral" label="Ok" title="OK" onclick="{!c.handlesave }"/></div>
+                            <div class="slds-size_2-of-8 "><lightning:button variant="neutral" label="Add More" title="Add More" onclick="{!c.reenternationality }"/></div>
+                            <div class=" slds-size_2-of-8 "></div>
+                            
+                        </div> 
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+        
+    </aura:if> 
+    
+</aura:component>

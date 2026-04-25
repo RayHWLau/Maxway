@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Rating__c</fullName>
+    <label>Lead Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Need Follow</fullName>
+                <default>false</default>
+                <label>No Need Follow</label>
+            </value>
+            <value>
+                <fullName>Blacklist</fullName>
+                <default>false</default>
+                <label>Blacklist</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

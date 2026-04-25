@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blacklist_Reason__c</fullName>
+    <label>Blacklist Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Lead_Rating__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>$: not willing to pay maxway fees</fullName>
+                <default>false</default>
+                <label>$: not willing to pay maxway fees</label>
+            </value>
+            <value>
+                <fullName>$: citizens not willing to pay school fees</fullName>
+                <default>false</default>
+                <label>$: citizens not willing to pay school fees</label>
+            </value>
+            <value>
+                <fullName>$: no $</fullName>
+                <default>false</default>
+                <label>$: no $</label>
+            </value>
+            <value>
+                <fullName>Engage another agent (after appointment)</fullName>
+                <default>false</default>
+                <label>Engage another agent (after appointment)</label>
+            </value>
+            <value>
+                <fullName>very impolite</fullName>
+                <default>false</default>
+                <label>very impolite</label>
+            </value>
+            <value>
+                <fullName>Others (pls give details)</fullName>
+                <default>false</default>
+                <label>Others (pls give details)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Blacklist</controllingFieldValue>
+            <valueName>$: not willing to pay maxway fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blacklist</controllingFieldValue>
+            <valueName>$: citizens not willing to pay school fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blacklist</controllingFieldValue>
+            <valueName>$: no $</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blacklist</controllingFieldValue>
+            <valueName>Engage another agent (after appointment)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blacklist</controllingFieldValue>
+            <valueName>very impolite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blacklist</controllingFieldValue>
+            <valueName>Others (pls give details)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadStatusWebsiteWhrDidYouHearMandatory</fullName>
+    <active>true</active>
+    <description>IF LeadSource is &apos;Website&apos; then Where did you hear about us is required and vice versa.</description>
+    <errorConditionFormula>AND( 
+    RecordType.Name =&apos;Agent Acquisition&apos;, 
+    OR(
+       (AND(
+            ISPICKVAL( LeadSource , &quot;Website&quot;), 
+            ISBLANK(TEXT(Where_did_you_hear_about_us__c))
+            )),
+       (AND( 
+           TEXT(LeadSource) !=  &quot;Website&quot;, 
+           NOT(ISBLANK(TEXT(Where_did_you_hear_about_us__c)))
+         ))
+      )
+)</errorConditionFormula>
+    <errorMessage>Please fill &quot;Where did you hear about us&quot; /  Please remove  &quot;Where did you hear about us&quot; ,if Lead Source is not &quot;Website&quot;.</errorMessage>
+</ValidationRule>

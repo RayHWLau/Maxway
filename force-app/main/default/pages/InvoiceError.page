@@ -1,0 +1,14 @@
+<apex:page >
+  <br/>
+  <h1 style="font-size:20px;text-align:center;">Cannot generate invoice because: <span id="error"></span> </h1>
+  <script type="text/javascript">
+// Error message.
+var Errors = {
+  invoice_issue_date_empty : 'The Invoice Issue Date should not be empty.'  
+};
+
+var queryDict = {};
+location.search.substr(1).split("&").forEach(function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]});
+document.getElementById('error').innerText = Errors[queryDict.e];
+  </script>
+</apex:page>

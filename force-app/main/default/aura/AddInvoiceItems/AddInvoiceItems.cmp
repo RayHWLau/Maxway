@@ -1,0 +1,147 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" controller="InvoiceLineItem" >
+    
+    <aura:html tag="style">
+        .slds-modal__container {
+        min-width: 90vw;
+        }
+    </aura:html>
+    <aura:attribute name="recordId" type="Id" />
+    <aura:handler name="init" action="{!c.doint}" value="{!this}" />
+    <aura:attribute name="applicationlist" type="list" />
+    
+    <aura:attribute name="spinneristrue" type="Boolean" default="true"/>
+    <aura:attribute name="errorMsg" type="string" />
+    <aura:attribute name="curency" type="string" default=""/>
+    <aura:attribute name="finalSubmitCheck" type="Boolean" default="false"/>
+    
+    <aura:if isTrue="{!v.spinneristrue}" >
+        <lightning:spinner name="spinner" size="medium" variant="brand" />
+    </aura:if>
+    <aura:if isTrue="{!!v.spinneristrue}" >
+        
+        <!-- 24 april 2020 -->
+        <!--added Currency,StudentId,Student NAme,Opp NAme, opp Stage, Application Status-->
+        <div class="slds-grid  slds-m-horizontal_large slds-grid_vertical ">
+            
+            <div class=" slds-p-left_xx-small slds-text-heading_small"> Currency</div>
+            <div class="  slds-p-left_xx-small slds-form-element__label " style ="color:#3366cc;"> {!v.curency} </div>
+        </div>
+        
+        <div class="slds-grid slds-gutters slds-border_top slds-border_bottom slds-border_left slds-border_right slds-m-horizontal_large slds-m-top_small">
+            
+            <div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                Add
+            </div>
+            
+            <div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                Student Id
+            </div>
+            
+            <div class="slds-size_2-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                Student Name
+            </div>
+            
+            <div class="slds-size_2-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                Opportunity Name
+            </div>
+            <!-- div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                Opportunity Stage
+            </div  -->
+            
+            <div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                Application Name
+            </div>
+            
+            <div class="slds-size_2-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                Application Status
+            </div>
+            
+            <div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right slds-text-heading_small">
+                Commission
+            </div>
+            
+            <div class="slds-size_2-of-12 slds-text-align_center slds-p-around_xx-small slds-text-heading_small">
+                Amount
+            </div>
+            
+            
+        </div>
+        <!-- 24 april 2020 -->
+        <!--added Currency,StudentId,Student NAme,Opp NAme, opp Stage, Application Status-->
+        
+        <aura:if isTrue="{!v.applicationlist.length==0}">
+            <div class="slds-text-align_center slds-m-around_x-large slds-text-heading_small">
+                <i> No Application Found.</i>
+            </div>
+            
+            <aura:set attribute ="else" >
+                <aura:iteration var="var" items ="{!v.applicationlist}" indexVar="index">
+                    <div class="slds-grid slds-gutters  slds-border_bottom slds-border_left slds-border_right slds-m-horizontal_large">
+                        
+                        <div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                            <lightning:input aura:id='checked' type="checkbox-button" label="{!var.appid}"  name="Application" />
+                        </div>
+                        
+                        <div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                            {!var.studentId}
+                        </div>
+                        
+                        <div class="slds-size_2-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                            {!var.studentName}
+                        </div>
+                        
+                        <div class="slds-size_2-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                            {!var.opportunityName}
+                        </div>
+                        
+                        <!-- div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                            {!var.opportunityStage}
+                        </div -->
+                        
+                        <div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                            {!var.appnumber}
+                        </div>
+                        
+                        <div class="slds-size_2-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                            {!var.applicationStage}
+                        </div>
+                        <div class="slds-size_1-of-12 slds-text-align_center slds-p-around_xx-small slds-border_right ">
+                            {!var.commission}
+                        </div>
+                        
+                        <div class="slds-size_2-of-12 slds-text-align_center slds-p-around_xx-small " onkeypress="{!c.isNumber}">
+                            <lightning:input aura:id='amount' accesskey="{!var.existInvLineId}" type="text" label="{!var.appid}" variant="label-hidden" value="{!var.amount}" ></lightning:input> 
+                        </div>
+                        
+                    </div>
+                </aura:iteration>
+                <div class="slds-p-around_medium" >
+                    <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.savecheck }" class="slds-align_absolute-center " />
+                </div> 
+            </aura:set>
+        </aura:if>
+    </aura:if> 
+    
+    
+    <!--              Added on 27 April 2020 for check if user had selected anything before the save  -->
+    <aura:if isTrue="{!v.finalSubmitCheck}" >
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container"> 
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_center">
+                        <i>  Either you have not entered the amount or you have not selected any application to add.</i>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-p-top_medium">
+                        
+                        <div class=" slds-size_3-of-8 "></div>
+                        <div class=" slds-size_1-of-8 "><lightning:button variant="brand" label="Ok" title="OK" onclick="{!c.returnBack }"/></div>
+                        <div class="slds-size_2-of-8 "><lightning:button variant="neutral" label="Close" title="Close" onclick="{!c.cancelmodel }"/></div>
+                        <div class=" slds-size_2-of-8 "></div>
+                        
+                    </div> 
+                    
+                </div>
+            </div>
+        </section>
+    </aura:if>
+</aura:component>

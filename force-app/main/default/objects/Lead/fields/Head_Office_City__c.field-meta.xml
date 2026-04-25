@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Head_Office_City__c</fullName>
+    <label>Head Office City</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Head_Office_Province_State__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>City</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Otago</controllingFieldValue>
+            <valueName>Dunedin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otago</controllingFieldValue>
+            <valueName>Kaitangata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otago</controllingFieldValue>
+            <valueName>Queenstown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <valueName>Harrisburg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <valueName>Philadelphia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <valueName>Pittsburgh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <valueName>Wilkes-Barre/Scranton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas</controllingFieldValue>
+            <valueName>Austin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas</controllingFieldValue>
+            <valueName>Dallas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas</controllingFieldValue>
+            <valueName>Houston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas</controllingFieldValue>
+            <valueName>San Antonio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Thua Thien-Hue</controllingFieldValue>
+            <valueName>Huế</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connacht</controllingFieldValue>
+            <valueName>Galway</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connacht</controllingFieldValue>
+            <valueName>Leitrim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connacht</controllingFieldValue>
+            <valueName>Mayo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connacht</controllingFieldValue>
+            <valueName>Roscommon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connacht</controllingFieldValue>
+            <valueName>Sligo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tianjin Municipality</controllingFieldValue>
+            <valueName>Taipei</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ulster</controllingFieldValue>
+            <valueName>Antrim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ulster</controllingFieldValue>
+            <controllingFieldValue>North Ireland</controllingFieldValue>
+            <valueName>Belfast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ulster</controllingFieldValue>
+            <valueName>Cavan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ulster</controllingFieldValue>
+            <valueName>Donegal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ulster</controllingFieldValue>
+            <valueName>Down</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ulster</controllingFieldValue>
+            <valueName>Fermanagh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ulster</controllingFieldValue>
+            <valueName>Londonderry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ulster</controllingFieldValue>
+            <valueName>Monaghan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ulster</controllingFieldValue>
+            <valueName>Tyrone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tibet Autonomous Region</controllingFieldValue>
+            <valueName>Tianjin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nelson</controllingFieldValue>
+            <controllingFieldValue>Southland</controllingFieldValue>
+            <valueName>Nelson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utah</controllingFieldValue>
+            <valueName>Salt Lake City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hawke&apos;s Bay</controllingFieldValue>
+            <valueName>Napier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vermont</controllingFieldValue>
+            <valueName>Burlington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vermont</controllingFieldValue>
+            <valueName>Montpelier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manawatu-Wanganui</controllingFieldValue>
+            <valueName>Wanganui</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Victoria</controllingFieldValue>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Melbourne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prince Edward Island</controllingFieldValue>
+            <valueName>Charlottetown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia</controllingFieldValue>
+            <valueName>Norfolk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia</controllingFieldValue>
+            <valueName>Richmond</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qinghai Province</controllingFieldValue>
+            <valueName>Xining</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wales</controllingFieldValue>
+            <valueName>Cardiff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quảng Nam</controllingFieldValue>
+            <valueName>Chu Lai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington</controllingFieldValue>
+            <valueName>Olympia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington</controllingFieldValue>
+            <valueName>Seattle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington</controllingFieldValue>
+            <valueName>Snohomish County</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington</controllingFieldValue>
+            <valueName>Spokane</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quảng Ninh</controllingFieldValue>
+            <valueName>Van Don</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec</controllingFieldValue>
+            <valueName>Montreal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec</controllingFieldValue>
+            <valueName>Quebec City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Queensland</controllingFieldValue>
+            <valueName>Brisbane</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Queensland</controllingFieldValue>
+            <valueName>Cairns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Queensland</controllingFieldValue>
+            <valueName>Gold Coast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Queensland</controllingFieldValue>
+            <valueName>Townsville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rhode Island</controllingFieldValue>
+            <valueName>Providence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Saskatchewan</controllingFieldValue>
+            <valueName>Regina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Saskatchewan</controllingFieldValue>
+            <valueName>Saskatoon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>British Columbia</controllingFieldValue>
+            <valueName>Vancouver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>British Columbia</controllingFieldValue>
+            <valueName>Victoria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Aberdeen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Edinburgh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Glasgow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Inverness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Fresno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Los Angeles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Oakland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Ontario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Orange County</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Palm Springs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Sacramento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>San Bernardino</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>San Diego</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>San Francisco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>San Jose</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi Province</controllingFieldValue>
+            <valueName>Xi&apos;an</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cần Thơ</controllingFieldValue>
+            <valueName>Cần Thơ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canterbury</controllingFieldValue>
+            <valueName>Christchurch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chongqing Municipality</controllingFieldValue>
+            <valueName>Chongqing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado</controllingFieldValue>
+            <valueName>Denver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connecticut</controllingFieldValue>
+            <valueName>Hartford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Da Nang</controllingFieldValue>
+            <valueName>Da Nang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delaware</controllingFieldValue>
+            <valueName>Dover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delaware</controllingFieldValue>
+            <controllingFieldValue>Wellington</controllingFieldValue>
+            <controllingFieldValue>North Carolina</controllingFieldValue>
+            <valueName>Wilmington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Birmingham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Bournemouth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Bristol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Exeter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Leeds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Liverpool</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <controllingFieldValue>Ontario</controllingFieldValue>
+            <valueName>London</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <controllingFieldValue>New Hampshire</controllingFieldValue>
+            <valueName>Manchester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Middlesbrough</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Newcastle upon Tyne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Norwich</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Nottingham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Sheffield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Southampton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington DC</controllingFieldValue>
+            <valueName>Washington, D.C.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alabama</controllingFieldValue>
+            <valueName>Huntsville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alabama</controllingFieldValue>
+            <valueName>Montgomery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <controllingFieldValue>South Carolina</controllingFieldValue>
+            <valueName>Charleston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alaska</controllingFieldValue>
+            <valueName>Anchorage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alaska</controllingFieldValue>
+            <valueName>Fairbanks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alaska</controllingFieldValue>
+            <valueName>Juneau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alaska</controllingFieldValue>
+            <valueName>Ketchikan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Western Australia</controllingFieldValue>
+            <valueName>Perth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Western Australia</controllingFieldValue>
+            <valueName>Port Hedland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alberta</controllingFieldValue>
+            <valueName>Calgary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alberta</controllingFieldValue>
+            <valueName>Edmonton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin</controllingFieldValue>
+            <valueName>Appleton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin</controllingFieldValue>
+            <valueName>Green Bay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin</controllingFieldValue>
+            <valueName>Madison</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin</controllingFieldValue>
+            <valueName>Milwaukee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui Province</controllingFieldValue>
+            <valueName>Hefei</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui Province</controllingFieldValue>
+            <valueName>Wuhu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wyoming</controllingFieldValue>
+            <valueName>Cheyenne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona</controllingFieldValue>
+            <valueName>Phoenix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arkansas</controllingFieldValue>
+            <valueName>Little Rock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xinjiang Uyghur Autonomous Region</controllingFieldValue>
+            <valueName>Ürümqi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auckland</controllingFieldValue>
+            <valueName>Auckland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yukon</controllingFieldValue>
+            <valueName>Whitehorse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australian Capital Territory</controllingFieldValue>
+            <valueName>Canberra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan Province</controllingFieldValue>
+            <valueName>Kunming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beijing Municipality</controllingFieldValue>
+            <valueName>Beijing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Fort Lauderdale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Fort Myers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Jacksonville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Key West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Lakeland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Miami</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Orlando</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Panama City Beach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Pensacola</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Sarasota/Bradenton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>St. Petersburg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Tallahassee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Tampa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>West Palm Beach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian Province</controllingFieldValue>
+            <valueName>Fuzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian Province</controllingFieldValue>
+            <valueName>Quanzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian Province</controllingFieldValue>
+            <valueName>Xiamen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansu Province</controllingFieldValue>
+            <valueName>Lanzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Georgia</controllingFieldValue>
+            <valueName>Atlanta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Georgia</controllingFieldValue>
+            <valueName>Savannah</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong Province</controllingFieldValue>
+            <valueName>Dongguan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong Province</controllingFieldValue>
+            <valueName>Foshan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong Province</controllingFieldValue>
+            <valueName>Guangzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong Province</controllingFieldValue>
+            <valueName>Huizhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong Province</controllingFieldValue>
+            <valueName>Shantou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong Province</controllingFieldValue>
+            <valueName>Shenzhen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong Province</controllingFieldValue>
+            <valueName>Zhongshan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi Zhuang Autonomous Region</controllingFieldValue>
+            <valueName>Liuzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi Zhuang Autonomous Region</controllingFieldValue>
+            <valueName>Nanning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou Province</controllingFieldValue>
+            <valueName>Guiyang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hai Phong</controllingFieldValue>
+            <valueName>Hai Phong</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan Province</controllingFieldValue>
+            <valueName>Haikou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hanoi</controllingFieldValue>
+            <valueName>Hanoi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang Province</controllingFieldValue>
+            <valueName>Hangzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang Province</controllingFieldValue>
+            <valueName>Ningbo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang Province</controllingFieldValue>
+            <valueName>Shaoxing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang Province</controllingFieldValue>
+            <valueName>Wenzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hawaii</controllingFieldValue>
+            <valueName>Hilo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hawaii</controllingFieldValue>
+            <valueName>Honolulu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hawaii</controllingFieldValue>
+            <valueName>Kona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hebei Province</controllingFieldValue>
+            <valueName>Shijiazhuang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hebei Province</controllingFieldValue>
+            <valueName>Tangshan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang Province</controllingFieldValue>
+            <valueName>Harbin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Henan Province</controllingFieldValue>
+            <valueName>Luoyang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Henan Province</controllingFieldValue>
+            <valueName>Zhengzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ho Chi Minh City</controllingFieldValue>
+            <valueName>Ho Chi Minh City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hong Kong Special Administrative Region</controllingFieldValue>
+            <valueName>Hong Kong</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei Province</controllingFieldValue>
+            <valueName>Wuhan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan Province</controllingFieldValue>
+            <valueName>Changsha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Idaho</controllingFieldValue>
+            <valueName>Boise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Chicago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Rockford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Springfield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana</controllingFieldValue>
+            <valueName>Indianapolis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inner Mongolia Autonomous Region</controllingFieldValue>
+            <valueName>Baotou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inner Mongolia Autonomous Region</controllingFieldValue>
+            <valueName>Hohhot</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inner Mongolia Autonomous Region</controllingFieldValue>
+            <valueName>Ordos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Iowa</controllingFieldValue>
+            <valueName>Des Moines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu Province</controllingFieldValue>
+            <valueName>Changzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu Province</controllingFieldValue>
+            <valueName>Nanjing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu Province</controllingFieldValue>
+            <valueName>Nantong</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu Province</controllingFieldValue>
+            <valueName>Suzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu Province</controllingFieldValue>
+            <valueName>Wuxi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu Province</controllingFieldValue>
+            <valueName>Xuzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu Province</controllingFieldValue>
+            <valueName>Yangzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi Province</controllingFieldValue>
+            <valueName>Nanchang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin Province</controllingFieldValue>
+            <valueName>Changchun</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kansas</controllingFieldValue>
+            <valueName>Topeka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kansas</controllingFieldValue>
+            <valueName>Wichita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kentucky</controllingFieldValue>
+            <valueName>Cincinnati</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kentucky</controllingFieldValue>
+            <valueName>Frankfort</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kentucky</controllingFieldValue>
+            <valueName>Louisville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Khánh Hòa</controllingFieldValue>
+            <valueName>Nha Trang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kiên Giang</controllingFieldValue>
+            <valueName>Phú Quốc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lâm Đồng</controllingFieldValue>
+            <valueName>Da Lat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Carlow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Dublin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Kildare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Kilkenny</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Laois</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Longford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Louth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Meath</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Offaly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Westmeath</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Wexford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leinster</controllingFieldValue>
+            <valueName>Wicklow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning Province</controllingFieldValue>
+            <valueName>Dalian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning Province</controllingFieldValue>
+            <valueName>Shenyang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Louisiana</controllingFieldValue>
+            <valueName>Baton Rouge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Louisiana</controllingFieldValue>
+            <valueName>New Orleans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Macau Special Administrative Region</controllingFieldValue>
+            <valueName>Macau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maine</controllingFieldValue>
+            <valueName>Augusta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maine</controllingFieldValue>
+            <valueName>Bangor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maine</controllingFieldValue>
+            <controllingFieldValue>Oregon</controllingFieldValue>
+            <valueName>Portland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manitoba</controllingFieldValue>
+            <valueName>Winnipeg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maryland</controllingFieldValue>
+            <valueName>Annapolis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maryland</controllingFieldValue>
+            <valueName>Baltimore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Massachusetts</controllingFieldValue>
+            <valueName>Boston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan</controllingFieldValue>
+            <valueName>Detroit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan</controllingFieldValue>
+            <valueName>Lansing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bay Of Plenty</controllingFieldValue>
+            <valueName>Rotorua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bay Of Plenty</controllingFieldValue>
+            <valueName>Tauranga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gisborne</controllingFieldValue>
+            <valueName>Gisborne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minnesota</controllingFieldValue>
+            <valueName>Minneapolis/St. Paul</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minnesota</controllingFieldValue>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>Rochester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mississippi</controllingFieldValue>
+            <valueName>Jackson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Missouri</controllingFieldValue>
+            <valueName>Kansas City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Missouri</controllingFieldValue>
+            <valueName>St. Louis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Montana</controllingFieldValue>
+            <valueName>Billings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Montana</controllingFieldValue>
+            <valueName>Helena</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Munster</controllingFieldValue>
+            <valueName>Clare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Munster</controllingFieldValue>
+            <valueName>Cork</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Munster</controllingFieldValue>
+            <valueName>Kerry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Munster</controllingFieldValue>
+            <valueName>Limerick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Munster</controllingFieldValue>
+            <valueName>Tipperary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Munster</controllingFieldValue>
+            <valueName>Waterford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nebraska</controllingFieldValue>
+            <valueName>Lincoln</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nebraska</controllingFieldValue>
+            <valueName>Omaha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nevada</controllingFieldValue>
+            <valueName>Carson City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nevada</controllingFieldValue>
+            <valueName>Las Vegas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nevada</controllingFieldValue>
+            <valueName>Reno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Brunswick</controllingFieldValue>
+            <valueName>Moncton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Hampshire</controllingFieldValue>
+            <valueName>Concord</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Malborough</controllingFieldValue>
+            <valueName>Blenheim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Northland</controllingFieldValue>
+            <valueName>Kaitaia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Northland</controllingFieldValue>
+            <valueName>Taupo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Taranaki</controllingFieldValue>
+            <valueName>New Plymouth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Waikato</controllingFieldValue>
+            <controllingFieldValue>Ontario</controllingFieldValue>
+            <valueName>Hamilton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Coast</controllingFieldValue>
+            <valueName>Westport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Jersey</controllingFieldValue>
+            <valueName>Atlantic City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Jersey</controllingFieldValue>
+            <valueName>Newark</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Mexico</controllingFieldValue>
+            <valueName>Albuquerque</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Mexico</controllingFieldValue>
+            <valueName>Santa Fe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New South Wales</controllingFieldValue>
+            <valueName>Sydney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>Albany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>Buffalo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>New York City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>Newburgh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>Syracuse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newfoundland and Labrador</controllingFieldValue>
+            <valueName>Gander</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newfoundland and Labrador</controllingFieldValue>
+            <valueName>St. John&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ningxia Hui Autonomous Region</controllingFieldValue>
+            <valueName>Yinchuan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina</controllingFieldValue>
+            <valueName>Charlotte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina</controllingFieldValue>
+            <valueName>Greensboro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina</controllingFieldValue>
+            <valueName>Raleigh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Dakota</controllingFieldValue>
+            <valueName>Bismarck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Dakota</controllingFieldValue>
+            <valueName>Fargo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Ireland</controllingFieldValue>
+            <valueName>Derry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong Province</controllingFieldValue>
+            <valueName>Jinan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong Province</controllingFieldValue>
+            <valueName>Qingdao</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong Province</controllingFieldValue>
+            <valueName>Yantai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong Province</controllingFieldValue>
+            <valueName>Zibo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanghai Municipality</controllingFieldValue>
+            <valueName>Shanghai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shanxi Province</controllingFieldValue>
+            <valueName>Taiyuan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan Province</controllingFieldValue>
+            <controllingFieldValue>Taiwan Province</controllingFieldValue>
+            <valueName>Chengdu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Australia</controllingFieldValue>
+            <valueName>Adelaide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Carolina</controllingFieldValue>
+            <valueName>Columbia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Carolina</controllingFieldValue>
+            <valueName>Hilton Head</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Carolina</controllingFieldValue>
+            <valueName>Myrtle Beach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Dakota</controllingFieldValue>
+            <valueName>Pierre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Dakota</controllingFieldValue>
+            <valueName>Sioux Falls</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Northern Territory</controllingFieldValue>
+            <valueName>Darwin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Northwest Territories</controllingFieldValue>
+            <valueName>Yellowknife</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tasmania</controllingFieldValue>
+            <valueName>Hobart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nova Scotia</controllingFieldValue>
+            <valueName>Halifax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee</controllingFieldValue>
+            <valueName>Knoxville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee</controllingFieldValue>
+            <valueName>Memphis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee</controllingFieldValue>
+            <valueName>Nashville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nunavut</controllingFieldValue>
+            <valueName>Iqaluit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Akron</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Cleveland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Columbus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Dayton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oklahoma</controllingFieldValue>
+            <valueName>Oklahoma City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario</controllingFieldValue>
+            <valueName>Ottawa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario</controllingFieldValue>
+            <valueName>Toronto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oregon</controllingFieldValue>
+            <valueName>Salem</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

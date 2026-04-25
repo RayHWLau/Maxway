@@ -1,0 +1,48 @@
+<aura:component implements="force:appHostable">
+    
+    <aura:attribute name="isDesktop" type="Boolean" default="true" />
+    <aura:attribute name="showSuccess" type="Boolean" default="false" />
+    <aura:attribute name="backgroundImageURL" type="String" default=""/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+        
+        
+     
+    <lightning:card title="" >
+      <!-- <div style="{!'position: relative; height: 30vh; background:' + v.backgroundColor + ' url(' + v.backgroundImageURL +') no-repeat;background-position: center;background-size: cover;'}">-->
+        <aura:if isTrue="{!!v.showSuccess}" >
+            <c:MaxWayLogoComponent />
+            <aura:if isTrue="{!v.isDesktop}">
+                <div class="c-container" >
+                    <lightning:layout>
+
+                        <lightning:layoutItem class="slds-p-top_xx-large slds-p-left_medium " size="6">                            
+                            <div style="margin-top: 50px;" class="custom-box"><c:MarkLocationOnMapComponent /></div>                            
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="around-small" size="6">
+                            <div class="custom-box"><c:EnquiryForm showSuccess="{!v.showSuccess}"/></div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </div>                                
+            </aura:if>
+            <aura:if isTrue="{!!v.isDesktop}" >
+                <div class="custom-box"><c:EnquiryForm showSuccess="{!v.showSuccess}"/></div>
+                <div class="custom-box"><c:MarkLocationOnMapComponent/></div>
+            </aura:if>
+        </aura:if>
+        <aura:if isTrue="{!v.showSuccess}" >
+            <div class="slds-grid slds-gutters"  style="margin-top:200px;margin-bottom:300px;">
+                <div class="slds-col slds-size_1-of-3">
+                </div>
+                
+            <div class="slds-align_absolute-center slds-col slds-size_1-of-3 slds-p-top_xx-large slds-p-bottom_xx-large" style="font-weight:bold;font-size:large; border :3px solid #D3D3D3;">
+               &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Thank you for enquiry.<br/> 
+                 We will be in touch within 24 hours.
+            </div>
+                 
+                 <div class="slds-col slds-size_1-of-3">
+                </div>
+            </div>
+        </aura:if>
+      <!--  </div>-->
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SALUTATIONREQUIRED</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (ISNEW() &amp;&amp; ISBLANK(TEXT(Salutation)),
+NOT(ISPICKVAL( LeadSource, &quot;Facebook&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Salutation</errorDisplayField>
+    <errorMessage>Please fill Salutation.</errorMessage>
+</ValidationRule>

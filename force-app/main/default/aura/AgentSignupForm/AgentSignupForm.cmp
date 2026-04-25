@@ -1,0 +1,300 @@
+<aura:component controller="AgentSignupFormController" access="global" >
+    
+    <aura:attribute name="oppId" type="String" />
+    <aura:attribute  name="acc" type="Account" default="{'sobjectType':'Account'}"/>
+    <aura:attribute  name="opp" type="Opportunity" default="{'sobjectType':'Opportunity'}"/>      
+    <aura:attribute name="CheckVisibility" type="object" /> 
+    <aura:attribute name="showSpinner" type="boolean" default="false" />
+    <aura:attribute name="errorMsg" type="String" default="" />
+    <aura:attribute name="errorMsgOnSave" type="String" default="" />
+    <aura:attribute name="successMsg" type="String" default="" />
+    <aura:attribute name="documentList" type="Map" default="{}"/>
+    <aura:attribute name="countrypurchaselist" type="List" default="[]" />
+    <aura:attribute name="iteratorList" type="List" /> 
+    <aura:attribute name="businesslicencevalidate" type="List" />  
+    <aura:attribute name="uploadList" type="List" />
+    <aura:attribute name="idandfilename" type="List" />
+    <aura:attribute name="countrylistdata" type="String[]" /> 
+    <aura:attribute name="backgroundImageURL" type="String" default=""/>
+    <aura:attribute name="renewal" type= "boolean" />
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.errorMsg.length > 0}" >
+        <ui:message title="Error" severity="error" closable="true">
+            {!v.errorMsg}
+        </ui:message>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.errorMsg.length == 0}"> 
+        
+        <aura:if isTrue="{!v.CheckVisibility.showform}">
+            <aura:if isTrue="{!v.successMsg.length == 0}">
+                
+                
+                <lightning:card title=""> 
+                    <div > 
+                        <div class="slds-grid slds-gutters"  >
+                            <div class="slds-col slds-size_1-of-5">
+                            </div>
+                            
+                            <div class="slds-col slds-size_3-of-5" style=" border :2px solid #D3D3D3;">
+                                <c:MaxWayLogoComponent /> 
+                                <div  class="slds-m-top_large" >
+                                    <lightning:card title="">
+                                        <b><div class="slds-section__title slds-align_absolute-center slds-text-heading_large " style ="font-weight:400;">
+                                            Agent Signup Form 
+                                            </div></b>
+                                        <aura:if isTrue="{!v.errorMsgOnSave.length > 0}" >
+                                            
+                                            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                                                <div class="slds-modal__container">
+                                                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                                        <div class="slds-align_absolute-center">
+                                                            <img src="{!$Resource.errorvalue}" style="height:60px;width:60px;"/>
+                                                        </div>
+                                                        <div class="slds-align_absolute-center slds-text-heading_small" style="color:red;">{!v.errorMsgOnSave}</div>
+                                                        <div class="slds-align_absolute-center slds-p-top_medium ">  <lightning:button variant="neutral" 
+                                                                                                                                       label="OK"
+                                                                                                                                       title="Cancel"
+                                                                                                                                       onclick="{! c.closeModel }"/></div>
+                                                    </div>  
+                                                </div>
+                                            </section>
+                                            <div class="slds-backdrop slds-backdrop_open"></div>
+                                            
+                                        </aura:if>
+                                        
+                                        <aura:if isTrue="{!v.showSpinner}">
+                                            <lightning:spinner name="spinner" size="medium" variant="brand" />
+                                        </aura:if>
+                                        
+                                        <aura:set attribute="footer">
+                                            <!--  <lightning:button name="saveAsDraft" label="Save As Draft" variant="brand" onclick="{!c.saveAsDraft}" /> -->
+                                            <lightning:button name="submit" class="slds-align_absolute-center" label="Submit" variant="brand" onclick="{!c.saveAsDraft}" />
+                                        </aura:set>
+                                        <div class="slds-m-horizontal_medium">
+                                            <div class="slds-text-heading_small slds-m-left_medium slds-m-top_small" >Fields marked(<span  style="color:red;">*</span>)are Mandatory.</div>     
+                                            <div class="slds-section slds-is-open" aura:id="CompanyInfosection">
+                                                <h3 class="slds-section__title">
+                                                    <button aria-controls="CompanyInfosectionlist" class="slds-button slds-section__title-action">
+                                                        <span onclick="{!c.toggleSection}" data-auraId="CompanyInfosection">
+                                                            <lightning:icon iconName="utility:switch"
+                                                                            size="x-small"
+                                                                            class="slds-section__title-action-icon slds-button__icon_left"
+                                                                            alternativeText="button icon" 
+                                                                            />
+                                                        </span>
+                                                        <span class="slds-truncate" title="Company Info">Company Info</span>
+                                                    </button>
+                                                </h3>
+                                                <div class="slds-section__content" id="CompanyInfosectionlist">
+                                                    <div class="demo-only demo-only--sizing slds-grid slds-wrap"> 
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-right_medium">                    
+                                                                <lightning:input aura:id="refInstitution" name="refInstitution" label="Referee Institution" value="{!v.acc.Referee_Institution__c}" maxlength="255" required="true" messageWhenValueMissing="Please Fill Referee Institution" disabled="{!v.renewal}"/>                    
+                                                            </div>
+                                                        </div>               
+                                                        <div class="slds-size_1-of-2">         
+                                                            <div class="slds-m-around_small slds-p-left_medium">                    
+                                                                <lightning:input aura:id="refName" name="refName" label="Referee Name" value="{!v.acc.Referee_Name__c}" maxlength="100" required="true" messageWhenValueMissing="Please Fill Referee Name" disabled="{!v.renewal}"/>                    
+                                                            </div>                        
+                                                        </div>                    
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-right_medium">                    
+                                                                <lightning:input type="email" aura:id="refEmail" name="refEmail" label="Referee Email" value="{!v.acc.Referee_Email__c}" required="true" messageWhenValueMissing="Please Fill Referee Email" disabled="{!v.renewal}"/>                                           
+                                                            </div>                       
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-section slds-is-open" aura:id="quotationvariablesection">
+                                                <h3 class="slds-section__title">
+                                                    <button aria-controls="quotationvariablesectionlist" class="slds-button slds-section__title-action">
+                                                        <span onclick="{!c.toggleSection}" data-auraId="quotationvariablesection">
+                                                            <lightning:icon iconName="utility:switch"
+                                                                            size="x-small"
+                                                                            class="slds-section__title-action-icon slds-button__icon_left"
+                                                                            alternativeText="button icon" 
+                                                                            />
+                                                        </span>
+                                                        <span class="slds-truncate" title="Quotation Variables">Quotation Variables</span>
+                                                    </button>
+                                                </h3>
+                                                <div class="slds-section__content" id="quotationvariablesectionlist">
+                                                    <div class="demo-only demo-only--sizing slds-grid slds-wrap"> 
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-right_medium" onkeypress="{!c.isNumber}">                    
+                                                                <lightning:input aura:id="NumberOfLicenses" name="NumberOfLicenses" label="Number of user licenses" value="{!v.opp.Number_Of_Licence__c}" maxlength="18" required="true" messageWhenValueMissing="Please Fill Number Of User Licenses"/>                                            
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-left_medium" onkeypress="{!c.isNumber}">                    
+                                                                <lightning:input aura:id="NumberofAdminLicenses" name="NumberofAdminLicenses" label="Number of Admin Licenses" value="{!v.opp.Number_of_Admin_Licenses__c}" maxlength="18" required="true" messageWhenValueMissing="Please Fill Number of Admin Licenses"/>                                            
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-right_medium">                    
+                                                                <lightning:input aura:id="licenceexpirationdate" type="date"  name="licenceexpirationdate" label="Business License Valid Till" value="{!v.opp.Business_License_Valid_Till__c}" required="true" messageWhenValueMissing="Please Fill Business License Valid Till"/>                                             
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-left_medium" >                    
+                                                                <lightning:input aura:id="portalemail" name="portalemail" label="Portal Admin Email" value="{!v.opp.Portal_Admin_Email__c}"  required="true" messageWhenValueMissing="Please Fill Portal Admin Email"/>                                            
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-size_1-of-1">
+                                                            <div class="slds-m-around_small" >
+                                                                <lightning:dualListbox aura:id="countrylist"
+                                                                                       name="Which country's school list to purchase?"
+                                                                                       label="Which country's school list to purchase?"
+                                                                                       sourceLabel="Available Country"
+                                                                                       selectedLabel="Selected Country"
+                                                                                       required="true"
+                                                                                       options="{!v.countrypurchaselist}"
+                                                                                       value="{!v.countrylistdata}"
+                                                                                       messageWhenValueMissing="Please mention Which country's school list to purchase?"
+                                                                                       />
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-section slds-is-open" aura:id="BankInfosection">
+                                                <h3 class="slds-section__title">
+                                                    <button aria-controls="BankInfosectionlist" class="slds-button slds-section__title-action">
+                                                        <span onclick="{!c.toggleSection}" data-auraId="BankInfosection">
+                                                            <lightning:icon iconName="utility:switch"
+                                                                            size="x-small"
+                                                                            class="slds-section__title-action-icon slds-button__icon_left"
+                                                                            alternativeText="button icon" 
+                                                                            />
+                                                        </span>
+                                                        <span class="slds-truncate" title="Bank Info">Bank Info</span>
+                                                    </button>
+                                                </h3>
+                                                <div class="slds-section__content" id="BankInfosectionlist">
+                                                    <div class="demo-only demo-only--sizing slds-grid slds-wrap"> 
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-right_medium">                    
+                                                                <lightning:input aura:id="bank" name="bank" label="Bank Name" value="{!v.acc.Bank__c}" maxlength="255" />                                            
+                                                            </div>                                                       	
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-left_medium">                    
+                                                                <lightning:input aura:id="bank" name="bankCode" label="Bank Code" value="{!v.acc.Bank_Code__c}" maxlength="50"  />                                            
+                                                            </div>                                                       	
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-right_medium">                    
+                                                                <lightning:input aura:id="bank" name="bankAddress" label="Bank Address" value="{!v.acc.Bank_Address__c}" maxlength="255"   />                                            
+                                                            </div>                                                       	
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-left_medium">                    
+                                                                <lightning:input aura:id="bank" name="bankRouting" label="Bank Routing or Transit Number" value="{!v.acc.Bank_Routing_or_Transit_Number__c}" maxlength="255"  />                                            
+                                                            </div>                                                       	
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-right_medium" onkeypress="{!c.isNumber}">                    
+                                                                <lightning:input aura:id="bank" name="bankAccountNumber" label="Bank Account Number" value="{!v.acc.Bank_Account_Number__c}" maxlength="18" />                                            
+                                                            </div>                                                       	
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-left_medium">                    
+                                                                <lightning:input aura:id="bank" name="bankAccountHolder" label="Bank Account Holder" value="{!v.acc.Bank_Account_Holder__c}" maxlength="255" />                                            
+                                                            </div>                                                       	
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-right_medium">                    
+                                                                <lightning:select aura:id="currency" name="currency" label="Currency" value="{!v.acc.CurrencyIsoCode}" required="true" messageWhenValueMissing="Please Fill Currency">
+                                                                    <option value="">---None---</option>
+                                                                    <aura:iteration items="{!v.CheckVisibility.currencyList}" var="option">
+                                                                        <option value="{!option}">{!option}</option>
+                                                                    </aura:iteration>
+                                                                </lightning:select>                    
+                                                            </div>                                                       	
+                                                        </div>
+                                                        <div class="slds-size_1-of-2">
+                                                            <div class="slds-m-around_small slds-p-left_medium">                    
+                                                                <lightning:input aura:id="bank" name="swiftCode" label="SWIFT Code" value="{!v.acc.SWIFT_Code__c}" maxlength="255" />                                            
+                                                            </div>                                                       	
+                                                        </div>                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-m-vertical_medium">
+                                                <div class="slds-section slds-is-open" aura:id="NotesAttachmentsection">
+                                                    <h3 class="slds-section__title">
+                                                        <button aria-controls="NotesAttachmentsectionlist" class="slds-button slds-section__title-action">
+                                                            <span onclick="{!c.toggleSection}" data-auraId="NotesAttachmentsection">
+                                                                <lightning:icon iconName="utility:switch"
+                                                                                size="x-small"
+                                                                                class="slds-section__title-action-icon slds-button__icon_left"
+                                                                                alternativeText="button icon" 
+                                                                                />
+                                                            </span>
+                                                            <span class="slds-truncate" title="Notes Attachment">Notes &amp; Attachment </span>
+                                                        </button>
+                                                    </h3>
+                                                    <div class="slds-section__content" id="NotesAttachmentsectionlist">
+                                                        <div>
+                                                            <c:AgentSignupUploadDocument oppId="{!v.oppId}" documentList="{!v.documentList}" iteratorList="{!v.iteratorList}"  uploadList="{!v.uploadList}" idandfilename ="{!v.idandfilename}" btnVisible="false" displayofvfinpage="string" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </lightning:card>  
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                            </div>
+                        </div>
+                    </div> 
+                    
+                </lightning:card>
+            </aura:if>
+            <aura:if isTrue="{!v.successMsg.length > 0}" >
+                
+                <div class="slds-grid slds-gutters"  style="margin-top:200px;margin-bottom:300px;">
+                    <div class="slds-col slds-size_1-of-3">
+                    </div>
+                    <div class="slds-align_absolute-center slds-col slds-size_1-of-3 slds-p-top_xx-large slds-p-bottom_xx-large" style="font-weight:bold;font-size:large; border :3px solid #D3D3D3;">
+                        {!v.successMsg}
+                    </div>
+                    <div class="slds-col slds-size_1-of-3">
+                    </div>
+                </div>
+                
+            </aura:if>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.CheckVisibility.linkExpired}">
+            
+            <div class="slds-grid slds-gutters"  style="margin-top:200px;margin-bottom:300px;">
+                <div class="slds-col slds-size_1-of-3">
+                </div>
+                <div class="slds-align_absolute-center slds-col slds-size_1-of-3 slds-p-top_xx-large slds-p-bottom_xx-large" style="font-weight:bold;font-size:large; border :3px solid #D3D3D3;">
+                    {!$Label.c.AgentSignupFormLinkExpired}
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.CheckVisibility.alreadySubmitted}">
+            
+            <div class="slds-grid slds-gutters"  style="margin-top:200px;margin-bottom:300px;">
+                <div class="slds-col slds-size_1-of-3">
+                </div>
+                <div class="slds-align_absolute-center slds-col slds-size_1-of-3 slds-p-top_xx-large slds-p-bottom_xx-large" style="font-weight:bold;font-size:large; border :3px solid #D3D3D3;">
+                    {!$Label.c.AgentSignupFormAlreadySubmitted}
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                </div>
+            </div>
+        </aura:if>        
+    </aura:if>      
+</aura:component>

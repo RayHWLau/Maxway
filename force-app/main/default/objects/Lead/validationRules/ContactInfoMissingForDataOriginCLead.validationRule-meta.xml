@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactInfoMissingForDataOriginCLead</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Data_Origin__c, &quot;C&quot;),
+ISBLANK(Mobile__c),
+ISBLANK(WeChat__c),
+ISBLANK( Email ),
+RecordType.Name =&apos;Student&apos;
+)</errorConditionFormula>
+    <errorMessage>Please enter Mobile, Email or Wechat for Data Origin = C</errorMessage>
+</ValidationRule>

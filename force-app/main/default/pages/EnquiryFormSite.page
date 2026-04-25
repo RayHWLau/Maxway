@@ -1,0 +1,18 @@
+<apex:page showHeader="false" sidebar="false" lightningStyleSheets="true">
+    
+    <apex:slds />
+    <apex:includeLightning />
+    
+    <div id="lightning" />
+    
+    <script>
+    $Lightning.use("c:LightningEnquiryApp", function() {
+        $Lightning.createComponent("c:EnquiryFormSite",
+                                   {},
+                                   "lightning",
+                                   function() {
+                                   });
+    });
+    </script>
+    
+</apex:page>

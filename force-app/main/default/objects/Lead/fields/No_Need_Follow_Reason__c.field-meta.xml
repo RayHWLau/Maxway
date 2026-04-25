@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Need_Follow_Reason__c</fullName>
+    <label>No Need Follow Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Lead_Rating__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Insufficient application time</fullName>
+                <default>false</default>
+                <label>Insufficient application time</label>
+            </value>
+            <value>
+                <fullName>Can&apos;t reach</fullName>
+                <default>false</default>
+                <label>Can&apos;t reach</label>
+            </value>
+            <value>
+                <fullName>No contact number</fullName>
+                <default>false</default>
+                <label>No contact number</label>
+            </value>
+            <value>
+                <fullName>Unrealistic school choice</fullName>
+                <default>false</default>
+                <label>Unrealistic school choice</label>
+            </value>
+            <value>
+                <fullName>Country out of maxway portfolio</fullName>
+                <default>false</default>
+                <label>Country out of maxway portfolio</label>
+            </value>
+            <value>
+                <fullName>Can&apos;t reach decision maker</fullName>
+                <default>false</default>
+                <label>Can&apos;t reach decision maker</label>
+            </value>
+            <value>
+                <fullName>Self / relative apply (pls give schl name)</fullName>
+                <default>false</default>
+                <label>Self / relative apply (pls give schl name)</label>
+            </value>
+            <value>
+                <fullName>Stay in HK</fullName>
+                <default>false</default>
+                <label>Stay in HK</label>
+            </value>
+            <value>
+                <fullName>Others (pls give details)</fullName>
+                <default>false</default>
+                <label>Others (pls give details)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>No Need Follow</controllingFieldValue>
+            <valueName>Insufficient application time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Need Follow</controllingFieldValue>
+            <valueName>Can&apos;t reach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Need Follow</controllingFieldValue>
+            <valueName>No contact number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Need Follow</controllingFieldValue>
+            <valueName>Unrealistic school choice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Need Follow</controllingFieldValue>
+            <valueName>Country out of maxway portfolio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Need Follow</controllingFieldValue>
+            <valueName>Can&apos;t reach decision maker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Need Follow</controllingFieldValue>
+            <valueName>Self / relative apply (pls give schl name)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Need Follow</controllingFieldValue>
+            <valueName>Stay in HK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Need Follow</controllingFieldValue>
+            <valueName>Others (pls give details)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

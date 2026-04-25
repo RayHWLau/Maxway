@@ -1,0 +1,23 @@
+<aura:component controller="OptOutAddingFunctionality" implements="force:appHostable">
+    <aura:attribute name="recordId" type="string" /> 
+    <aura:attribute name="accids" type="string" />
+    <aura:attribute name="countryname" type="string" />
+    <aura:attribute name="hassearchvalue" type="boolean" />
+    
+    <aura:registerEvent name="statusevent" type="c:StatusAppEvent"/>
+    
+    <aura:handler action="{!c.closemodal}" event="c:StatusAppEvent" />
+    <aura:handler action="{!c.setaccountids}" event="c:AccountList" />
+    <aura:handler action="{!c.handelsearchvalue}" event="c:SearchvalueEvent" />
+    
+    <aura:handler action="{!c.setaccountidsPg}" event="c:AccountListPage" />
+    <aura:attribute name="delids" type="string" />
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <lightning:button   iconName="utility:add" iconPosition="left" variant="brand" onclick="{! c.save }">OptOut</lightning:button>
+    <lightning:button  iconName="utility:close" iconPosition="left" onclick="{! c.handleCancel }">Close</lightning:button>
+    
+    
+    
+</aura:component>

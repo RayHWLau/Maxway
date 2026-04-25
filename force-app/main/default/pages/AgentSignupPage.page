@@ -1,0 +1,19 @@
+<apex:page showHeader="false" sidebar="false" lightningStyleSheets="true">
+    
+    <apex:slds />
+    <apex:includeLightning />
+    
+    <div id="lightning" />    
+    <script>    
+    var recordId = '{!$CurrentPage.parameters.Id}';
+    $Lightning.use("c:LightningEnquiryApp", function() {
+        $Lightning.createComponent("c:AgentSignupForm",
+                                   {"oppId" : recordId},
+                                   "lightning",
+                                   function() {
+                                   });
+        
+    });    
+    </script>
+    
+</apex:page>

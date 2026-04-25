@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NoOfBranchesValidation</fullName>
+    <active>true</active>
+    <description>If Lead Status is &apos;Qualified&apos; and Number of Branches not zero then Branch office country and Branch Office City Is Required.</description>
+    <errorConditionFormula>AND( 
+   RecordType.Name =&apos;Agent Acquisition&apos;,
+   TEXT(Status)=&apos;Qualified&apos;,
+   TEXT(Number_Of_Branches__c) !=&apos;0&apos;, 
+  OR(
+     ISBLANK(Branch_Office_Country__c),
+     ISBLANK( Branch_Office_City__c) 
+   )
+)</errorConditionFormula>
+    <errorMessage>Please provide Number of Branches, Branch Office Country and Branch Office City</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_Lead_Requires_Country_Code</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.Name = &apos;Student&apos;,
+ISBLANK( TEXT(Country_Code__c ))
+)</errorConditionFormula>
+    <errorMessage>Country Code on Student Lead must not be empty</errorMessage>
+</ValidationRule>

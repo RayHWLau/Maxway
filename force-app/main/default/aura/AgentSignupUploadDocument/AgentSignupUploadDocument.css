@@ -1,0 +1,12 @@
+.divStyle1.THIS {
+    margin-top: 5px;
+    margin-right : 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border : solid grey 2px;
+}
+.THIS .slds-spinner_container  {
+    background-color: rgba(0, 0, 0, 0.10);
+    margin-top: 200px;
+    margin-bottom: 200px; 
+}

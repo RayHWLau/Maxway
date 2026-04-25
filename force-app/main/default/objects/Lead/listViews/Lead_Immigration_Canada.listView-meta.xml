@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Immigration_Canada</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND (5 OR 6) AND 7</booleanFilter>
+    <columns>Record_Id__c</columns>
+    <columns>Student_ID__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Nationality__c</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <columns>Current_Grade_Mapping__c</columns>
+    <columns>Preferred_Country__c</columns>
+    <columns>Intended_Go_Abroad_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Student</value>
+    </filters>
+    <filters>
+        <field>LEAD.MOBILE_PHONE</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Data_Origin__c</field>
+        <operation>equals</operation>
+        <value>H</value>
+    </filters>
+    <filters>
+        <field>Student_Status__c</field>
+        <operation>equals</operation>
+        <value>Prospective</value>
+    </filters>
+    <filters>
+        <field>Preferred_Country__c</field>
+        <operation>equals</operation>
+        <value>CA</value>
+    </filters>
+    <filters>
+        <field>Preferred_Country__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Nationality__c</field>
+        <operation>equals</operation>
+        <value>&quot;Chinese, China&quot;,Hong Kong</value>
+    </filters>
+    <label>Lead - Immigration_Canada</label>
+</ListView>

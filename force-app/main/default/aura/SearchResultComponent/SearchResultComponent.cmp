@@ -1,0 +1,212 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller ="SchoolSearchAura" >
+    
+    <aura:html tag="style">
+        .slds-scope .slds-illustration {
+        border: 1px solid lightblue !important;
+        height: 455px !important;
+        background-color: white !important;
+        }
+        .slds-scope .slds-text-title_caps, .slds-scope .slds-text-title--caps{
+        color: black !important;
+        font-weight: bold !important;
+        }
+        .slds-button_icon-bare{
+        display: none !important;
+        }
+        .slds-scope .slds-scrollable_x, .slds-scope .slds-scrollable--x{
+        border: 1px solid lightblue !important;
+        }
+        
+        /*.slds-scope .slds-table th, .slds-scope .slds-table td{
+        background-color: darkblue !important;
+        color: white !important;
+        }*/
+        /*.slds-scope .slds-text-color_weak, .slds-scope .slds-text-color--weak{
+        color: white !important;
+        }*/
+    </aura:html>
+    
+    <aura:attribute name="nationality" type="String"/>
+    <aura:attribute name="country" type="String"/>
+    <aura:attribute name="programtype" type="String"/>   
+    <aura:attribute name="minbudget" type="String"/>   
+    <aura:attribute name="maxbudget" type="String"/> 
+    <aura:attribute name="grade" type="String" /> 
+    <aura:attribute name="province" type="String"/>     
+    <aura:attribute name="city" type="String"/> 
+    <aura:attribute name="housing" type="String"/>
+    <aura:attribute name="currencycode" type="String"/>
+    <aura:attribute name="programobjective" type="String" /> 
+    <aura:attribute name="Major" type="String"/>     
+    <aura:attribute name="Bachloreneeded" type="String"/> 
+    <aura:attribute name="toefl" type="String"/>
+    <aura:attribute name="ielts" type="String"/>
+    <aura:attribute name="addmissionage" type="String"/>
+    <aura:attribute name="highschoolgrad" type="String"/>
+    <aura:attribute name="selectedschoollist" type="list"/>
+    
+    <aura:handler event="c:SearchHighSchool" action="{!c.HSdoInit}"/>
+    <aura:handler event="c:SearchPostSecondarySchool" action="{!c.PSdoInit}"/>
+    <aura:handler event="c:SearchPostGradSchool" action="{!c.PGdoInit}"/>
+    <aura:handler event="c:ClearSchoolResult" action="{!c.ClearSchoolResultAction}"/>
+
+    <aura:attribute name="ScheoolColumns" type="List"/>
+    <aura:attribute name="ScheoolRecords" type="List"/>
+    <aura:attribute name="sortedBy" type="String"/>
+    <aura:attribute name="sortedColumnDirection" type="String"/>
+    <aura:attribute name="isSectionShow" type="Boolean" default="true"/>
+    <aura:attribute name="spinneristrue" type="Boolean"/>
+   <aura:attribute name="attachstudent" type="Boolean" />
+    <aura:attribute name="studentid" type="string" default=""/>
+    <aura:attribute name="totalSchool" type="string" />
+    
+    <!-- fetch the record id from the strike Lookup 8 may 2020 -->
+    <aura:attribute name="showOppRecTable" type="Boolean" />
+    <aura:attribute name="selectedOppRec" type="List"/>
+    <aura:attribute name="oppRecColum" type="List"/>
+    <!-- aura:handler event="c:getRecIdFromStrikeLookUp" action="{!c.fetchOppInfo}"/ -->
+    <aura:attribute name="ScheoolRecordsToShow" type="List"/>
+    <aura:attribute name="disablePrev" type="Boolean"/>
+    <aura:attribute name="disableNext" type="Boolean"/>
+    <aura:attribute name="draftValues" type="Object" default="[]"/>
+    <aura:attribute name="schoolDraftValues" type="Object" default="[]"/>
+     <aura:attribute name="startPage" type="Integer" />
+    <aura:attribute name="endPage" type="Integer"/>
+     <aura:attribute name="maxRowSelection" type="Integer" default="1"/>
+    <aura:attribute name="totalRecords" type="Integer"/>
+    <aura:attribute name="pageSize" type="Integer" default="25"/>
+    <aura:attribute name="searchTerm" type="string" default=""/>
+    <aura:attribute name="spinneristrueModal" type="Boolean"/>
+    <aura:if isTrue="{!v.spinneristrue}" >
+        <lightning:spinner name="spinner" size="medium" variant="brand" />
+    </aura:if>
+    <aura:if isTrue="{!!v.spinneristrue}" >
+        <aura:If isTrue="{!v.isSectionShow}">
+            <div class="slds-illustration slds-illustration_small" style="background-color:white;height:50%;">
+                <lightning:icon iconName="utility:search" alternativeText="Search" size="large" style="margin-top:5%;"/>  
+                <div class="slds-text-longform" >
+                    <h3 class="slds-text-heading_medium slds-p-bottom_x-large">No School Found. </h3>
+                </div> 
+            </div>
+        </aura:If>
+        <aura:If isTrue="{!!v.isSectionShow}">
+            <div> 
+                <lightning:card  title="">
+                    <aura:set attribute="title">
+                        <lightning:button variant="brand" label="Add Recommended School" title="Add Recomended School" onclick="{!c.AddRecomendedSchool }" />
+                    </aura:set>
+                    
+                    <aura:set attribute="actions">
+                        <h3 class="slds-text-heading_small " > {!v.totalSchool}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h3>
+                    </aura:set>
+                    
+                    <p class="slds-p-around_small">
+                        <!--  <lightning:datatable data="{! v.ScheoolRecords }" ScheoolRecordsToShow onrowselection="{! c.updateSelectedText }" showRowNumberColumn="false"-->
+                        <lightning:datatable data="{! v.ScheoolRecordsToShow }" 
+                                             columns="{! v.ScheoolColumns }" 
+                                             aura:id="tableData"
+                                             keyField="Id" 
+                                             hideCheckboxColumn="true"
+                                             showRowNumberColumn="false"
+                                             onsort="{!c.updateColumnSorting}"
+                                             sortedBy="{!v.sortedBy}" 
+                                             sortedDirection="{!v.sortedColumnDirection}"
+                                             onsave="{! c.handleSaveEdition }"
+                                             suppressBottomBar="true"
+                                             class ="slds-table slds-table_bordered slds-table_striped"
+                                             />   
+                    </p>
+                    
+                </lightning:card> 
+                
+                <footer class="slds-modal__footer">
+                   <!-- h2 class="slds-text-heading_small slds-align_absolute-center" >{!v.currPageMessage} </h2 -->
+                    
+                    <lightning:button variant="brand" disabled="{!v.startPage == 0}" label="Previous" title="Previous" 
+                                      onclick="{!c.handlePrev}" iconName="utility:chevronleft" iconPosition="left"/>
+                    
+                    <lightning:button variant="brand" disabled="{!v.endPage + 1 >= v.totalRecords}" label="Next" title="Next" 
+                                      onclick="{!c.handleNext}" iconName="utility:chevronright" iconPosition="right"/>
+                    
+                </footer>
+            </div>
+              <aura:if isTrue ="{!v.attachstudent}">
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open slds-modal_small">
+        <div class="slds-modal__container" style="width: 100%;max-width: 68%;height: 100%;">
+            <!-- Modal/Popup Box Header Starts here-->
+            <header class="slds-modal__header">
+                <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate ">Add School to Opportunity Recommended School</h2>
+            </header>
+            <!--Modal/Popup Box Body Starts here-->
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2" style="height: 60%;">
+                <!--div class="" >
+                    <c:Lookup aura:id="acc" label="Opportunity" object="Opportunity" searchField="Name" 
+                                  iconName="custom:custom27" order="Name"
+                                  limit="10" required="true" loadingMessage="Loading..." errorMessage="Invalid input" value="{!v.studentid}" />
+                    
+                    
+                </div -->
+                <aura:if isTrue="{!v.spinneristrueModal}" >
+                    <lightning:spinner name="spinner" size="medium" variant="brand" />
+                </aura:if>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_1-of-5">
+                    </div>
+                    <div class="slds-col slds-size_2-of-5">
+                        <lightning:input
+                                         aura:id="search-bar"
+                                         name="Search Bar"
+                                         label="Search Bar"
+                                         type="search"
+                                         variant="label-hidden"
+                                         placeholder="Enter Opportunity Name"
+                                         onchange ="{!c.isSearchValueEnter}"
+                                         value = "{!v.searchTerm}"
+                                         
+                                         />
+                    </div>
+                    <div class="slds-col slds-size_1-of-5">
+                        <lightning:button variant="brand"
+                                          label="Search"
+                                          title="Search"
+                                          onclick="{!c.searchOpp}"
+                                          disabled="{!v.searchTerm.length == 0}"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-5">
+                    </div>
+                </div>
+                <!--- Opportunity Record  Table -->
+                <aura:if isTrue="{!v.showOppRecTable}" >
+                    <p class="slds-p-around_medium">
+                        
+                        <lightning:datatable
+                                             keyField="id"
+                                             data="{! v.selectedOppRec }"
+                                             columns="{! v.oppRecColum }"
+                                             showRowNumberColumn="true"
+                                             onrowselection="{! c.getSelectedRecords }"
+                                             maxRowSelection="{! v.maxRowSelection }"
+                                             class ="slds-table slds-table_bordered slds-table_striped"
+                                             />
+                        
+                    </p>
+                </aura:if>
+            </div>
+         <footer class="slds-modal__footer">
+             <lightning:button variant="brand"
+                                  label="Cancel"
+                                  title="Cancel"
+                                  onclick="{!c.cancel}"/>
+                <lightning:button variant="brand"
+                                  label="ADD"
+                                  title="ADD"
+                                  disabled="{!v.studentid.length == 0}"
+                                  onclick="{!c.save}"/>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div> 
+    </aura:if>
+        </aura:If>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,27 @@
+<aura:component implements="force:appHostable,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="Spinner" type="boolean" default="false"/>    
+    
+    <!-- Commented on 4 may 2020
+  div class="slds-grid slds-gutters">
+        <div class="slds-col  slds-size_4-of-12">
+            <c:SchoolSearchFilter/>
+        </div>
+          <div class="slds-m-around_x-small">
+         
+        </div>
+        <div class="slds-col  slds-size_8-of-12">
+            <c:SearchResultComponent/>
+        </div>
+    </div -->
+    
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col slds-m-top_small slds-m-left_small slds-m-right_small ">
+            <div> <c:SchoolSearchFilter/> </div>
+        </div>
+        <div class="slds-col slds-m-left_small slds-m-right_small slds-m-top_small">
+            <div><c:SearchResultComponent/></div>
+        </div>
+        
+    </div>
+</aura:component>

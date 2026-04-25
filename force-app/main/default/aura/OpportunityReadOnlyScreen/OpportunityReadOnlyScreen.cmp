@@ -1,0 +1,749 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="OpportunityCustomScreenAura">
+    
+    <aura:attribute name="opportunity" type="Opportunity" default="{ 'sobjectType': 'Opportunity' }"/>
+    <aura:attribute name="account" type="Account" default="{ 'sobjectType': 'Account' }"/>
+    <aura:attribute name="Contact1" type="Contact" default="{ 'sobjectType': 'Contact' }"/>
+    <aura:attribute name="Contact2" type="Contact" default="{ 'sobjectType': 'Contact' }"/>
+    <aura:attribute name ="recordtypeid" type="string" />
+    <aura:attribute name ="recordtypename" type="string" />
+    <aura:attribute name ="IntendedGradelist" type="list" />
+    <aura:attribute name ="HousingOptionlist" type="list" />
+    <aura:attribute name ="ForCCorUniversityPreferredMajorlist" type="list" />
+    <aura:attribute name ="ForCCorUniversitylist" type="list" />
+    <aura:attribute name ="ForHSPreferredProgramlist" type="list" />
+    <aura:attribute name ="PreferredSchoolTypelist" type="list" />
+    <aura:attribute name ="FollowUpSituationlist" type="list" />
+    <aura:attribute name ="AnnualBudgetlist" type="list" />
+    <aura:attribute name ="ClosedLostReasonlist" type="list" />
+    <aura:attribute name ="StageNamelist" type="list" />
+    <aura:attribute name ="Relationshiplist" type="list" />
+    <aura:attribute name ="salutationlist" type="list" />
+    <aura:attribute name ="studentstatuslist" type="list" />
+    <aura:attribute name ="closeAccountreasonlist" type="list" />
+    <aura:attribute name ="SourceOfReferrallist" type="list" />
+    <aura:attribute name ="countryCodelist" type="list" />
+    <aura:attribute name ="consocialmedialist" type="list" />
+    <aura:attribute name ="accsocialmedialist" type="list" />
+    <aura:attribute name ="nationalitylist" type="list" />
+    <aura:attribute name ="levelofeducationlist" type="list" />
+    <aura:attribute name ="studentatwhatyearlist" type="list" />
+    <aura:attribute name ="startofacedmicyearlist" type="list" />
+    <aura:attribute name ="totalyearofeduationlist" type="list" />
+    <aura:attribute name ="oppId" type="string" />
+    <aura:attribute name="CountryWithStateMap" type="Map" />
+    <aura:attribute name="StateWithCityMap" type="Map" />
+    <aura:attribute name ="countrylist" type="list" />
+    <aura:attribute name ="statelist" type="list" />
+    <aura:attribute name ="citylist" type="list" />
+    <aura:attribute name ="genderlist" type="list" />
+    <aura:attribute name ="accRelationshiplist" type="list" />
+    <aura:attribute name ="accedmlist" type="list" />
+    <aura:attribute name ="accwechatsourcelist" type="list" />
+    <aura:attribute name ="accConfirmedclientinCompanysocialmedialist" type="list" />
+    <aura:attribute name ="conwechatsourcelist" type="list" />
+    <aura:attribute name ="conConfirmedclientinCompanysocialmedialist" type="list" />
+    <aura:attribute name ="accdataoriginlist" type="list" />
+    <aura:attribute name ="showspinner" type="boolean" default="true" />
+    <aura:attribute name ="isportal" type="boolean"  />
+    
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doinit}" />
+    
+    
+    
+   
+        <!-- div class="slds-section " aura:id="StudentId">
+            <h3 class="slds-section__title">
+                <button aria-controls="Filterlist" class="slds-button slds-section__title-action">
+                    <span onclick="{!c.toggleSection}" data-auraId="StudentId">
+                        <lightning:icon iconName="utility:switch"
+                                        size="x-small"
+                                        class="slds-section__title-action-icon slds-button__icon_left"
+                                        alternativeText="button icon" 
+                                        />
+                    </span>
+                    <i> <span class="slds-truncate" title="Company Info">Student Information</span></i>
+                </button>
+            </h3>
+            <div class="slds-section__content" id="StudentId">
+                
+                <div class ="slds-m-horizontal_small" >
+                    <button  class="slds-button slds-section__title-action">
+                        <i> <span class="slds-truncate" title="Basic Information">Basic Information</span></i>
+                    </button>
+                </div>
+               
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input type="text" name="Student Status" label="Student Status" readonly="true" value="{!v.account.Student_Status__c}" />
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input type="text" name="Recordtype" label="Recordtype" readonly="true" value="{!v.recordtypename}" />
+                    </div>
+                    
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc" type="date" name="Close Date" label="Close Date" readonly="true" value="{!v.account.Close_Date__c}" />    
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input type="text" name="Account Manager" label="Account Manager" readonly="true" value="{!v.account.Account_Manager_Namefor__c}" />
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input type="text" name="Source Of Referral" label="Source Of Referral" readonly="true" value="{!v.account.Source_Of_Referral__c}" />
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input type="text" name="Don't Contact Reason" label="Don't Contact Reason" readonly="true" value="{!v.account.Dont_Contact_Reason__c}" />
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input type="text" name="Source Of Referral Others" label="Source Of Referral Others" readonly="true" value="{!v.account.Source_Of_Referral_Others__c}" />
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc" type="text" name="Don't Contact Reason Others" label="Don't Contact Reason Others" readonly="true" value="{!v.account.Dont_Contact_Reason_Others__c}" />   
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input type="text" name="Data Origin" label="Data Origin" readonly="true" value="{!v.account.Data_Origin__c}" />
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                        <lightning:input aura:id="acc"  name="Country Residing" label="Country Residing"  required="true" value="{!v.account.Country_Residing__c}" readonly="true" /> 
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="Come From Province" label="Come From Province"  value="{!v.account.Come_From_Province__c}" readonly="true" /> 
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="Come From City" label="Come From City"  value="{!v.account.Come_From_City__c}" readonly="true" /> 
+                        
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                    <button  class="slds-button slds-section__title-action">
+                        <i> <span class="slds-truncate" title="Basic Information">Personal Information</span></i>
+                    </button>
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="salutation" label="Salutation"  readonly="true" value="{!v.account.Salutation}" /> 
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input  aura:id="acc" name="Nationality" label="Nationality"  readonly="true"   value="{!v.account.Nationality__c}" /> 
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc" type="text" name="First Name" label="First Name" readonly="true" value="{!v.account.FirstName}" /> 
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc" type="text" name="Last Name" label="Last Name" readonly="true" value="{!v.account.LastName}"  />  
+                    </div>
+                </div>
+                
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc" type="Date" name="Date Of Birth" label="Date Of Birth" value="{!v.account.PersonBirthdate}"  readonly="true" />  
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="Gender" label="Gender" value="{!v.account.Gender__c}" readonly="true" /> 
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="eDM" label="eDM" value="{!v.account.eDM__c}" readonly="true" /> 
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                    <button  class="slds-button slds-section__title-action">
+                        <i> <span class="slds-truncate" title="Contact">Contact</span></i>
+                    </button>
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc" type="text" name="validation" label="Email(Student)"  value="{!v.account.PersonEmail}"  readonly="true" />
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="WeChat Source" label="WeChat Source" value="{!v.account.WeChat_Source__pc}"  readonly="true" /> 
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="validation" label="Social Media" value="{!v.account.Social_Media__pc}"  readonly="true" />  
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc" type="text" name="validation" label="Social Media Others" value="{!v.account.Social_Media_Others__c}"  readonly="true" />  
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc" type="text" name="validation" label="Social Media Account" value="{!v.account.WeChat_ID__pc}"  readonly="true" />  
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 slds-m-top_large">
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc" type="text" name="validation" label="Mobile(Student)" value="{!v.account.Mobile__c}"  readonly="true" />   
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="Country Code" label="Country Code" value="{!v.account.Country_Code__c}"  readonly="true" />  
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2 ">
+                         
+                        
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 slds-m-top_large">
+                        
+                        <lightning:input aura:id="acc" type="checkbox" name="Add client to Company social media." label="Add client to Company social media." value="{!v.account.Add_client_to_Company_social_media__c}"  readonly="true" />     
+                    </div>
+                    
+                </div>
+                
+                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                    <button  class="slds-button slds-section__title-action">
+                        <i> <span class="slds-truncate" title="Basic Information">Educational Qualification</span></i>
+                    </button>
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                        <lightning:input type="text" name="Initial Grade" label="Initial Grade" readonly="true" value="{!v.account.Original_Grade_NameFor__c}" />
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 ">
+                        <lightning:input type="text" name="Current Grade" label="Current Grade" readonly="true" value="{!v.account.Current_Grade_NameFor__c}" />
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="Level of Education" label="Level of Education" readonly ="true" value="{!v.account.Level_of_Education__c}"  /> 
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 ">
+                        <lightning:input aura:id="acc"  name="Total Years of Education" label="Total Years of Education" readonly="true" value="{!v.account.Total_Years_of_Education__c}" /> 
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="acc"  name="Student at What Year" label="Student at What Year" readonly ="true" value="{!v.account.Student_at_What_Year__c}"  /> 
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 ">
+                        <lightning:input aura:id="acc"  name="Start of academic year" label="Start of academic Month" readonly ="true" value="{!v.account.Start_of_Academic_Month__c}"  /> 
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input type="Date" aura:id="acc" name="Expected Graduation Date" label="Expected Graduation Date" readonly="true" value="{!v.account.Expected_Graduation_Date__c}"  />  
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 ">
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 ">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div -->
+        
+        <!-- div class="slds-section " aura:id="ParentContactId">
+            <h3 class="slds-section__title">
+                <button aria-controls="Filterlist" class="slds-button slds-section__title-action">
+                    <span onclick="{!c.toggleSection}" data-auraId="ParentContactId">
+                        <lightning:icon iconName="utility:switch"
+                                        size="x-small"
+                                        class="slds-section__title-action-icon slds-button__icon_left"
+                                        alternativeText="button icon" 
+                                        />
+                    </span>
+                    <i> <span class="slds-truncate" title="Parent Info">Parent Information</span></i>
+                </button>
+            </h3>
+            
+            <div class="slds-section__content" id="ParentContactId">
+                
+                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                    <button  class="slds-button slds-section__title-action">
+                        <i> <span class="slds-truncate" title="Parent Information">Parent 1</span></i>
+                    </button>
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par1"  name="reqiuredonceanyonevalueisfilled" label="Salutation" value="{!v.Contact1.Salutation}" readonly="true" /> 
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par1"  name="Relationship" label="Relationship"  value="{!v.Contact1.Relationship__c}" readonly="true" /> 
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input  aura:id="par1" type="text" name="reqiuredonceanyonevalueisfilled" label="First Name" value="{!v.Contact1.FirstName}" readonly="true" /> 
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par1" type="text" name="reqiuredonceanyonevalueisfilled" label="Mobile" value="{!v.Contact1.MobilePhone}"  readonly="true" />  
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par1" type="text" name="reqiuredonceanyonevalueisfilled" label="Last Name" value="{!v.Contact1.LastName}" readonly="true" />  
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par1" type="text" name="reqiuredonceanyonevalueisfilled" label="Email" value="{!v.Contact1.Email}"  readonly="true" />  
+                    </div>
+                    
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input  aura:id="par1"  name="Nationality" label="Nationality"  value="{!v.Contact1.Nationality__c}"   readonly="true" /> 
+                        
+                        
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input  aura:id="par1"  name="reqiuredonceanyonevalueisfilled" label="Country Code" value="{!v.Contact1.Country_Code__c}"  readonly="true" /> 
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par1"  name="Social Media" label="Social Media"  value="{!v.Contact1.Social_Media__c}"  readonly="true" /> 
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par1" type="text" name="Social Media Account" label="Social Media Account" value="{!v.Contact1.WeChat_ID__c}" readonly="true" />                   
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par1" type="text" name="Social Media Others" label="Social Media Others" value="{!v.Contact1.Social_Media_Others__c}" readonly="true" />                
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 ">
+                        <lightning:input aura:id="par1"  name="WeChat Source" label="WeChat Source"  value="{!v.Contact1.WeChat_Source__c}"  readonly="true" /> 
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2 ">
+                        <lightning:input aura:id="par1"  name="Confirmed client in Company social media" label="Confirmed client in Company social media"  value="{!v.Contact1.Confirmed_client_in_Company_social_media__c}"  readonly="true" /> 
+                        
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 slds-m-top_small">
+                        <lightning:input aura:id="par1" type="checkbox" name="Add client to Company social media"  label="Add client to Company social media"  value="{!v.Contact1.Add_client_to_Company_social_media__c}" readonly="true" />  
+                    </div>
+                    
+                </div>
+                
+                
+                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                    <button  class="slds-button slds-section__title-action">
+                        <i> <span class="slds-truncate" title="Parent Information">Parent 2</span></i>
+                    </button>
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par2"  name="reqiuredonceanyonevalueisfilled" label="Salutation" value="{!v.Contact2.Salutation}"  readonly="true" /> 
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par2"  name="Relationship" label="Relationship" value="{!v.Contact2.Relationship__c}"  readonly="true" /> 
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par2" type="text" name="reqiuredonceanyonevalueisfilled" label="First Name" value="{!v.Contact2.FirstName}"  readonly="true" /> 
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par2" type="text" name="reqiuredonceanyonevalueisfilled" label="Mobile" value="{!v.Contact2.MobilePhone}" readonly="true" />  
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par2" type="text" name="reqiuredonceanyonevalueisfilled" label="Last Name" value="{!v.Contact2.LastName}" readonly="true" />  
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par2" type="text" name="reqiuredonceanyonevalueisfilled" label="Email" value="{!v.Contact2.Email}" readonly="true" />  
+                    </div>
+                    
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par2"  name="Nationality" label="Nationality"  value="{!v.Contact2.Nationality__c}"  readonly="true" /> 
+                        
+                        
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input  aura:id="par2" name="reqiuredonceanyonevalueisfilled" label="Country Code" value="{!v.Contact2.Country_Code__c}"  readonly="true" /> 
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input  aura:id="par2" name="Social Media" label="Social Media" value="{!v.Contact2.Social_Media__c}" readonly="true" /> 
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input  aura:id="par2" type="text" name="Social Media Account" label="Social Media Account" value="{!v.Contact2.WeChat_ID__c}"  readonly="true" />                    
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="par2" type="text" name="Social Media Others" label="Social Media Others" value="{!v.Contact2.Social_Media_Others__c}"  readonly="true" />                
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 ">
+                        <lightning:input aura:id="par2"  name="WeChat Source" label="WeChat Source"  value="{!v.Contact2.WeChat_Source__c}" readonly="true" />
+                        
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2 ">
+                        <lightning:input aura:id="par2"  name="Confirmed client in Company social media" label="Confirmed client in Company social media"  value="{!v.Contact2.Confirmed_client_in_Company_social_media__c}"  readonly="true" /> 
+                        
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 slds-m-top_small">
+                        <lightning:input aura:id="par2" type="checkbox" name="Add client to Company social media"  label="Add client to Company social media"  value="{!v.Contact2.Add_client_to_Company_social_media__c}" readonly="true" />  
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div -->
+        
+        
+        <div class="slds-section slds-is-open" aura:id="opportunityId">
+            <h3 class="slds-section__title">
+                <button aria-controls="Filterlist" class="slds-button slds-section__title-action">
+                    <span onclick="{!c.toggleSection}" data-auraId="opportunityId">
+                        <lightning:icon iconName="utility:switch"
+                                        size="x-small"
+                                        class="slds-section__title-action-icon slds-button__icon_left"
+                                        alternativeText="button icon" 
+                                        />
+                    </span>
+                    <i> <span class="slds-truncate" title="Opportunity Info">Opportunity Information</span></i>
+                </button>
+            </h3>
+            
+            <div class="slds-section__content" id="opportunityId">
+                
+                <!--div class ="slds-m-horizontal_small slds-m-top_small" >
+                    <button  class="slds-button slds-section__title-action">
+                        <i> <span class="slds-truncate" title="Basic Information">Basic Information</span></i>
+                    </button>
+                </div -->
+                
+                <!--                                       ROW  1  													-->
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="opp" type="text" name="Opportunity Name" label="Opportunity Name" readonly="true"  value="{!v.opportunity.Name}" />    
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                        <lightning:input aura:id="opp"  name="Stage" label="Stage"  value="{!v.opportunity.StageName}"  readonly="true" /> 
+                        
+                    </div>
+                    
+                </div>
+                
+                <!--                                       ROW  2  													-->
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                        <lightning:input aura:id="opp" type="text" name="Opportunity Name" label="Account Name" readonly="true"  value="{!v.account.Name}" />    
+                        
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="opp" type="text" name="Opportunity Name" label="Opportunity Case Manager" readonly="true"  value="{!v.opportunity.Case_Manager_Namefor__c}" />   
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+                <!--                                       ROW  3  													-->
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="opp" type="date" name="Intended Go Abroad Date" value="{!v.opportunity.Intended_Go_Abroad_Date__c}" label="Intended Study Abroad Date" readonly="true" />    
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                        <lightning:input aura:id="opp"  name="Follow Up Situation" label="Follow Up Situation"  value="{!v.opportunity.Follow_Up_Situation__c}"  readonly="true" /> 
+                        
+                    </div>
+                    
+                </div>
+                
+                <!--                                       ROW  4  													-->
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                	 <aura:if isTrue="{!v.isportal}">
+                    <div class="slds-col slds-size_1-of-2">
+                      <lightning:input  aura:id="opp" name="Country" label="Preferred Country" value="{!v.opportunity.Preferred_Countrynew__c}" readonly="true" />    
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                     <lightning:input aura:id="opp"  name="State" label="State" value="{!v.opportunity.State__c}" readonly="true" />   
+                    </div>
+                    </aura:if>
+                     <!-- Added on 18 may 2020 as Maxway will see different Fields -->
+                    <aura:if isTrue="{!!v.isportal}">
+                        
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning:input  aura:id="opp" name="Country" label="Preferred Country" value="{!v.opportunity.Preferred_Country__c}" readonly="true" />    
+                        </div>
+                        
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning:input aura:id="opp"  name="State" label="Preferred State" value="{!v.opportunity.Preferred_State__c}" readonly="true" />   
+                        </div>
+                        
+                    </aura:if>
+                    
+                </div>
+                
+                <!--                                       ROW  5  													-->
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    
+                    <aura:if isTrue="{!v.isportal}">
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning:input aura:id="opp"  name="City" label="City" value="{!v.opportunity.City__c}" readonly="true" />
+                        </div>
+                    </aura:if>
+                    
+                    <aura:if isTrue="{!!v.isportal}">
+                        
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning:input aura:id="opp"  name="City" label="Preferred City" value="{!v.opportunity.Preferred_City__c}" readonly="true" />
+                        </div>
+                        
+                    </aura:if>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input aura:id="opp"  name="School Type" label="School Type" value="{!v.opportunity.Preferred_School_Type__c}" readonly="true" />    
+                        
+                    </div>
+                    
+                </div>
+                
+                <!--                                       ROW  6  													-->
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                
+                    <div class="slds-col slds-size_1-of-2">
+                      <lightning:input aura:id="opp"  name="Housing Option" label="For High School: Housing Option" value="{!v.opportunity.Housing_Option__c}" readonly="true" />  
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2"> 
+                     <lightning:input aura:id="opp"  name="Major category" label="For College or University: Major" value="{!v.opportunity.For_CC_or_University_Preferred_Major__c}"  readonly="true" />   
+                        
+                    </div>
+                    
+                </div>
+                
+                <!--                                       ROW  7  													-->
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                
+                    <div class="slds-col slds-size_1-of-2">
+                       <lightning:input aura:id="opp"  name="Specific Major" label="Specific Major" value="{!v.opportunity.Specific_Major__c}"  readonly="true" />  
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input  aura:id="opp" name="Close Lost Reason" label="Close Lost Reason" value="{!v.opportunity.Closed_Lost_Reason__c}" readonly="true" /> 
+                        
+                    </div>
+                    
+                </div>
+                
+                <!--                                       ROW  8  													-->
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:input type="text" aura:id="opp" name="Close Lost Reason Others" label="Close Lost Reason Others" value="{!v.opportunity.Closed_Lost_Description__c}"  readonly="true" />     
+                        
+                    </div>
+                   <div class="slds-col slds-size_1-of-2">
+                        <lightning:input  aura:id="opp" type="date" name="Close Date" label="Close Date" readonly="true" value="{!v.opportunity.CloseDate}"  />    
+                    </div>
+                
+                    
+                </div>
+                
+                <!--                                       ROW  9  													-->
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    
+                    <div class="slds-col slds-size_1-of-2">  
+                        <lightning:textarea  aura:id="opp" name="Description" label="Description" value="{!v.opportunity.Description}" disabled="true" />    
+                    </div>
+                    
+                </div>
+                
+                
+                <!-- div class ="slds-m-horizontal_small slds-m-top_small" >
+                    <button  class="slds-button slds-section__title-action">
+                        <i> <span class="slds-truncate" title="Basic Information">High School</span></i>
+                    </button>
+                </div>
+                
+                <div class ="slds-m-horizontal_small slds-m-top_small" >
+                    <button  class="slds-button slds-section__title-action">
+                        <i> <span class="slds-truncate" title="College/University">College/University</span></i>
+                    </button>
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-horizontal_small">
+                    <div class="slds-col slds-size_1-of-2">  
+                        
+                        <lightning:input aura:id="opp"  name="Annual Budget" label="Annual Budget"  value="{!v.opportunity.Annual_Budgetnew__c}" readonly="true" /> 
+                        
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2">
+                       
+                       <lightning:input aura:id="opp"  name="Currency" label="Currency"  value="{!v.opportunity.CurrencyIsoCode}" readonly="true" /> 
+                    </div>
+                    
+                </div -->
+                
+                
+            </div>
+            
+        </div>
+    
+</aura:component>

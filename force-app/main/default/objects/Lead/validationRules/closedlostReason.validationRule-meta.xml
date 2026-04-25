@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>closedlostReason</fullName>
+    <active>true</active>
+    <description>If Closed lost reason is there but status is not closed lost.</description>
+    <errorConditionFormula>AND( TEXT(Status ) !=&apos;Closed_Lost&apos;,NOT(ISBLANK( Closed_Lost_Reason__c )) ,TEXT(Status )!=&apos;&apos;,$RecordType.Name = &quot;Agent Acquisition&quot;)</errorConditionFormula>
+    <errorMessage>Align Status &amp; Closed Lost Reason.</errorMessage>
+</ValidationRule>

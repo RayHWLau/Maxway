@@ -1,0 +1,14 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="opportunity" type="opportunity" default="{ 'sobjectType': 'opportunity' }"/>
+    <aura:attribute name="account" type="Account" default="{ 'sobjectType': 'Account' }"/>
+    <aura:attribute name="Contact1" type="Contact" default="{ 'sobjectType': 'Contact' }"/>
+    <aura:attribute name="Contact2" type="Contact" default="{ 'sobjectType': 'Contact' }"/>
+    <aura:attribute name ="Oppfilter" type="string" />
+    <aura:attribute name ="accfilter" type="string" />
+    <aura:attribute name ="accvalidationfilter" type="string" />
+    <aura:attribute name ="con1filter" type="string" />
+    <aura:attribute name ="con2filter" type="string" />
+    <aura:attribute name ="showbutton" type="boolean" />
+    <aura:attribute name ="dosCon1hasValue" type="boolean" />
+    <aura:attribute name ="dosCon2hasValue" type="boolean" />
+</aura:event>

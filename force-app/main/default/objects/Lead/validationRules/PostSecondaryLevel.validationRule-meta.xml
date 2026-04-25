@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PostSecondaryLevel</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( TEXT(Original_Grade__c)=&apos;Post Secondary&apos;, TEXT(Post_Secondary_Level__c)=null )</errorConditionFormula>
+    <errorDisplayField>Post_Secondary_Level__c</errorDisplayField>
+    <errorMessage>Please select Post Secondary Level</errorMessage>
+</ValidationRule>

@@ -1,0 +1,25 @@
+<aura:component controller="OpportunityCustomScreenAura" implements="force:appHostable">
+    <aura:attribute name="opp" type="Opportunity" /> 
+    <aura:attribute name="acc" type="Account" />
+    <aura:attribute name="con1" type="Contact" />
+    <aura:attribute name="con2" type="Contact" />
+    <aura:attribute name ="oppval" type ="string" />
+    <aura:attribute name ="accval" type ="string" />
+    <aura:attribute name ="acccustomval" type ="string" />
+    <aura:attribute name ="con1val" type ="string" />
+    <aura:attribute name ="con2val" type ="string" />
+    <aura:attribute name ="savebuttonshow" type ="boolean" />
+    
+    <aura:registerEvent name="statusevent" type="c:StatusAppEvent"/>
+    
+    <aura:handler action="{!c.handlesave}" event="c:OpportunityAccountContactDataSave" />
+    <aura:handler action="{!c.closemodal}" event="c:StatusAppEvent" />
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:if isTrue ="{!v.savebuttonshow}" >
+    <lightning:button  variant="brand" onclick="{!c.save }">Save</lightning:button>
+    </aura:if>
+    <lightning:button   onclick="{! c.handleCancel }">Close</lightning:button>
+    
+    
+    
+</aura:component>

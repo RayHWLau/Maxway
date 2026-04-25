@@ -1,0 +1,15 @@
+<apex:page controller="SearchPageCon" showHeader="false" contentType="application/vnd.ms-excel#{!filename}.xls">
+<apex:form >
+	<apex:pageBlock title="Recommended Schools Page">
+		<apex:pageBlockSection id="resultPanel" title="Search Results" columns="1">
+			<apex:pageBlockSectionItem rendered="{!sows.size > 0}">
+	            	<apex:pageBlockTable value="{!sows}" var="o" border="1">
+	                  		<apex:repeat value="{!ResultFieldSet}" var="f">
+		                	<apex:column value="{!o.obj[f.fieldPath]}"/>
+						</apex:repeat>
+		            </apex:pageBlockTable>
+		     </apex:pageBlockSectionItem>		
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+</apex:form>
+</apex:page>

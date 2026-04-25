@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CannotChangeStageNew</fullName>
+    <active>true</active>
+    <description>Once lead passed new status cannot be changed to new status again</description>
+    <errorConditionFormula>TEXT(PRIORVALUE(Status))!=&apos;New&apos; &amp;&amp;  TEXT(Status)=&apos;New&apos; &amp;&amp; NOT(ISBLANK(TEXT(Status))) &amp;&amp; $RecordType.Name = &quot;Agent Acquisition&quot;</errorConditionFormula>
+    <errorMessage>Lead has passed New Stage</errorMessage>
+</ValidationRule>

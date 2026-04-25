@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_Grade__c</fullName>
+    <label>Original Grade (obs)</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>K1</fullName>
+                <default>false</default>
+                <label>K1</label>
+            </value>
+            <value>
+                <fullName>K2</fullName>
+                <default>false</default>
+                <label>K2</label>
+            </value>
+            <value>
+                <fullName>K3</fullName>
+                <default>false</default>
+                <label>K3</label>
+            </value>
+            <value>
+                <fullName>P1</fullName>
+                <default>false</default>
+                <label>P1</label>
+            </value>
+            <value>
+                <fullName>P2</fullName>
+                <default>false</default>
+                <label>P2</label>
+            </value>
+            <value>
+                <fullName>P3</fullName>
+                <default>false</default>
+                <label>P3</label>
+            </value>
+            <value>
+                <fullName>P4</fullName>
+                <default>false</default>
+                <label>P4</label>
+            </value>
+            <value>
+                <fullName>P5</fullName>
+                <default>false</default>
+                <label>P5</label>
+            </value>
+            <value>
+                <fullName>P6</fullName>
+                <default>false</default>
+                <label>P6</label>
+            </value>
+            <value>
+                <fullName>S1</fullName>
+                <default>false</default>
+                <label>S1</label>
+            </value>
+            <value>
+                <fullName>S2</fullName>
+                <default>false</default>
+                <label>S2</label>
+            </value>
+            <value>
+                <fullName>S3</fullName>
+                <default>false</default>
+                <label>S3</label>
+            </value>
+            <value>
+                <fullName>S4</fullName>
+                <default>false</default>
+                <label>S4</label>
+            </value>
+            <value>
+                <fullName>S5</fullName>
+                <default>false</default>
+                <label>S5</label>
+            </value>
+            <value>
+                <fullName>S6</fullName>
+                <default>false</default>
+                <label>S6</label>
+            </value>
+            <value>
+                <fullName>Y1</fullName>
+                <default>false</default>
+                <label>Y1</label>
+            </value>
+            <value>
+                <fullName>Y2</fullName>
+                <default>false</default>
+                <label>Y2</label>
+            </value>
+            <value>
+                <fullName>Y3</fullName>
+                <default>false</default>
+                <label>Y3</label>
+            </value>
+            <value>
+                <fullName>Y4</fullName>
+                <default>false</default>
+                <label>Y4</label>
+            </value>
+            <value>
+                <fullName>Y5</fullName>
+                <default>false</default>
+                <label>Y5</label>
+            </value>
+            <value>
+                <fullName>Y6</fullName>
+                <default>false</default>
+                <label>Y6</label>
+            </value>
+            <value>
+                <fullName>Y7</fullName>
+                <default>false</default>
+                <label>Y7</label>
+            </value>
+            <value>
+                <fullName>Y8</fullName>
+                <default>false</default>
+                <label>Y8</label>
+            </value>
+            <value>
+                <fullName>Y9</fullName>
+                <default>false</default>
+                <label>Y9</label>
+            </value>
+            <value>
+                <fullName>Y10</fullName>
+                <default>false</default>
+                <label>Y10</label>
+            </value>
+            <value>
+                <fullName>Y11</fullName>
+                <default>false</default>
+                <label>Y11</label>
+            </value>
+            <value>
+                <fullName>Y12</fullName>
+                <default>false</default>
+                <label>Y12</label>
+            </value>
+            <value>
+                <fullName>Y13</fullName>
+                <default>false</default>
+                <label>Y13</label>
+            </value>
+            <value>
+                <fullName>G1</fullName>
+                <default>false</default>
+                <label>G1</label>
+            </value>
+            <value>
+                <fullName>G2</fullName>
+                <default>false</default>
+                <label>G2</label>
+            </value>
+            <value>
+                <fullName>G3</fullName>
+                <default>false</default>
+                <label>G3</label>
+            </value>
+            <value>
+                <fullName>G4</fullName>
+                <default>false</default>
+                <label>G4</label>
+            </value>
+            <value>
+                <fullName>G5</fullName>
+                <default>false</default>
+                <label>G5</label>
+            </value>
+            <value>
+                <fullName>G6</fullName>
+                <default>false</default>
+                <label>G6</label>
+            </value>
+            <value>
+                <fullName>G7</fullName>
+                <default>false</default>
+                <label>G7</label>
+            </value>
+            <value>
+                <fullName>G8</fullName>
+                <default>false</default>
+                <label>G8</label>
+            </value>
+            <value>
+                <fullName>G9</fullName>
+                <default>false</default>
+                <label>G9</label>
+            </value>
+            <value>
+                <fullName>G10</fullName>
+                <default>false</default>
+                <label>G10</label>
+            </value>
+            <value>
+                <fullName>G11</fullName>
+                <default>false</default>
+                <label>G11</label>
+            </value>
+            <value>
+                <fullName>G12</fullName>
+                <default>false</default>
+                <label>G12</label>
+            </value>
+            <value>
+                <fullName>Chu 1</fullName>
+                <default>false</default>
+                <label>Chu 1</label>
+            </value>
+            <value>
+                <fullName>Chu 2</fullName>
+                <default>false</default>
+                <label>Chu 2</label>
+            </value>
+            <value>
+                <fullName>Chu 3</fullName>
+                <default>false</default>
+                <label>Chu 3</label>
+            </value>
+            <value>
+                <fullName>Gao 1</fullName>
+                <default>false</default>
+                <label>Gao 1</label>
+            </value>
+            <value>
+                <fullName>Gao 2</fullName>
+                <default>false</default>
+                <label>Gao 2</label>
+            </value>
+            <value>
+                <fullName>Gao 3</fullName>
+                <default>false</default>
+                <label>Gao 3</label>
+            </value>
+            <value>
+                <fullName>Post Secondary</fullName>
+                <default>false</default>
+                <label>Post Secondary</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>F1 (use S1)</fullName>
+                <default>false</default>
+                <label>F1 (use S1)</label>
+            </value>
+            <value>
+                <fullName>F2 (use S2)</fullName>
+                <default>false</default>
+                <label>F2 (use S2)</label>
+            </value>
+            <value>
+                <fullName>F3 (use S3)</fullName>
+                <default>false</default>
+                <label>F3 (use S3)</label>
+            </value>
+            <value>
+                <fullName>F4 (use S4)</fullName>
+                <default>false</default>
+                <label>F4 (use S4)</label>
+            </value>
+            <value>
+                <fullName>F5 (use S5)</fullName>
+                <default>false</default>
+                <label>F5 (use S5)</label>
+            </value>
+            <value>
+                <fullName>F6 (use S6)</fullName>
+                <default>false</default>
+                <label>F6 (use S6)</label>
+            </value>
+            <value>
+                <fullName>F7 (not in use for HK)</fullName>
+                <default>false</default>
+                <label>F7 (not in use for HK)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

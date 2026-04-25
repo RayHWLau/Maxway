@@ -1,0 +1,129 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionwithoutheader,forceCommunity:availableForAllPageTypes" access="global" controller="FollowupTask">
+    
+    <aura:handler name='init' action="{!c.doinit}" value="{!this}" />
+    <aura:attribute name="oppvalue" type="String" />
+    <aura:attribute name="oppstage" type="String" />
+    <aura:attribute name="currentactivityfollowupsituation" type="String" />
+    <aura:attribute name="currentactivityfollowupremarks" type="String" />
+    <aura:attribute name="currentactivitydate" type="date" />
+    <aura:attribute name="nextactivityfollowupsituation" type="String" />
+    <aura:attribute name="taskid" type="String" />
+    <aura:attribute name="onholdreason" type="String" />
+    <aura:attribute name="error" type="String" />
+    <aura:attribute name="nextactivitydate" type="date" />
+    <aura:attribute name ="FollowUpSituationlist" type="list" />
+    <aura:attribute name ="Closelostlist" type="list" />
+    
+    <div class="slds-m-top_small" />
+    <div class="slds-page-header">
+        <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <lightning:icon iconName="standard:task" alternativeText="task" />
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-page-header__name">
+                            <div class="slds-page-header__name-title">
+                                <h1>
+                                    <span class="slds-page-header__title slds-truncate" title="Opportunity Follow Up">Opportunity Follow Up</span>
+                                </h1>
+                            </div>
+                        </div>
+                        <p class="slds-page-header__name-meta">Update Follow Up</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>	
+    
+   
+    <aura:if isTrue="{!v.currentactivityfollowupsituation.length > 0}" >
+          <div class="slds-m-top_medium" />
+            <button  class="slds-button slds-section__title-action">
+                <b> <span class="slds-truncate slds-text-heading_small" title="Opportunity Details">Opportunity Details</span></b>
+            </button>
+            <div class="slds-grid slds-gutters slds-m-top_xx-small slds-m-horizontal_x-small">
+                <div class="slds-size_1-of-2 slds-p-right_medium">
+                    <lightning:input type="text" name="Opportunity Name" label="Opportunity Name" readonly="true" value="{!v.oppvalue}" />
+                </div>
+                <div class="slds-size_1-of-2">
+                    <lightning:input type="text" name="Opportunity Stage" label="Opportunity Stage" readonly="true" value="{!v.oppstage}" />
+                </div>
+            </div>
+            <div class="slds-m-top_medium" />
+            <button  class="slds-button slds-section__title-action">
+                <b> <span class="slds-truncate slds-text-heading_small" title="Current Follow Up">Current Follow Up</span></b>
+            </button>
+            <div class="slds-grid slds-gutters slds-m-top_xx-small slds-m-horizontal_x-small">
+                <div class="slds-size_1-of-2 slds-p-right_medium">
+                    
+                    <lightning:input type="date" name="Follow Up Date" label="Follow Up Date" readonly="true" value="{!v.currentactivitydate}" />
+                </div>
+                <div class="slds-size_1-of-2 ">
+                    
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters slds-m-top_xx-small slds-m-horizontal_x-small">
+                <div class="slds-size_1-of-2 slds-p-right_medium">
+                    
+                    <lightning:input type="text" name="Follow Up Situation" label="Follow Up Situation" readonly="true" value="{!v.currentactivityfollowupsituation}" />
+                </div>
+                <div class="slds-size_1-of-2 ">
+
+                </div>
+            </div>
+            <div class="slds-m-top_xx-small slds-m-horizontal_x-small">
+                
+                <lightning:textarea  type="text" name="Follow Up Remarks" label="Follow Up Remarks" value="{!v.currentactivityfollowupremarks}" />
+            </div>
+            
+            <div class="slds-m-top_medium" />
+            <button  class="slds-button slds-section__title-action">
+                <b> <span class="slds-truncate slds-text-heading_small" title="Next Follow Up">Next Follow Up</span></b>
+            </button>
+            <div class="slds-grid slds-gutters slds-m-top_xx-small slds-m-horizontal_x-small">
+                <div class="slds-size_1-of-2 slds-p-right_medium">
+                    
+                    <lightning:input type="date" name="Follow Up Date" label="Follow Up Date" value="{!v.nextactivitydate}" />
+                </div>
+                <div class="slds-size_1-of-2">
+                    
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters slds-m-top_xx-small slds-m-horizontal_x-small">
+                <div class="slds-size_4-of-4 slds-p-right_medium">
+                    <lightning:select   name="Follow Up Situation" label="Follow Up Situation"  value="{!v.nextactivityfollowupsituation}" > 
+                        <option value="">--None--</option>
+                        <aura:iteration items="{!v.FollowUpSituationlist}" var="val">
+                            <option value="{!val}">{!val}</option>
+                        </aura:iteration>
+                    </lightning:select> 
+                    
+                </div>
+                <div class="slds-size_1-of-4 ">
+                   <!-- <lightning:input type="text"  name="On Hold Reason" label="On Hold Reason" value="{!v.onholdreason}" />-->   
+                </div>
+            </div>
+        <div class="slds-m-top_medium" />
+         <aura:if isTrue="{!v.error.length > 0}" >
+        <div class="slds-text-color_error slds-m-horizontal_x-small" style="font-size: 0.875rem;">{!v.error}</div>  
+    </aura:if>
+            <div class="slds-m-top_x-large slds-m-horizontal_x-small">
+                <div class="slds-clearfix">
+                    <div class="slds-float_right">
+                        <lightning:button label="Save" title="Save" variant="brand" onclick="{!c.save}"/>
+                        <lightning:button label="Cancel" title="Cancel" onclick="{!c.cancel}"/>
+                    </div>
+                </div>
+                
+            </div> 
+        <aura:set attribute="else">
+            <div class="slds-m-top_xx-large" />
+           
+            <i><div class="slds-text-heading_large slds-text-align_center" style="font-weight:bold;">No Open Activity</div></i>
+           
+        </aura:set>
+    </aura:if>
+    
+</aura:component>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Commission_Total_Amount</name>
+        <label>Commission - Total Amount</label>
+        <locationX>71</locationX>
+        <locationY>550</locationY>
+        <assignmentItems>
+            <assignToReference>Loop_to_Assign_Annual_Cost_to_Commission.Annual_Commission_Amount_Percentage__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Est_Annual_Cost__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Commission_Based_on_Total_Est_Cost</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Commission_Tuition_Fee</name>
+        <label>Commission - Tuition Fee</label>
+        <locationX>768</locationX>
+        <locationY>525</locationY>
+        <assignmentItems>
+            <assignToReference>Loop_to_Assign_Tuition_to_Commission.Annual_Commission_Amount_Percentage__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Tuition_Fees__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Commission_Based_on_Tuition</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Commission_Type</name>
+        <label>Check Commission Type</label>
+        <locationX>345</locationX>
+        <locationY>311</locationY>
+        <defaultConnector>
+            <targetReference>Loop_to_Assign_Annual_Cost_to_Commission</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Commission_Type_is_Tuition_Fee</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Commission_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tuition Fee</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_to_Assign_Tuition_to_Commission</targetReference>
+            </connector>
+            <label>Commission Type is Tuition Fee</label>
+        </rules>
+    </decisions>
+    <interviewLabel>Update Commission Amount When Program Commission Details Are Updated {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Commission Amount When Program Commission Details Are Updated</label>
+    <loops>
+        <name>Loop_to_Assign_Annual_Cost_to_Commission</name>
+        <label>Loop to Assign Annual Cost to Commission</label>
+        <locationX>65</locationX>
+        <locationY>307</locationY>
+        <collectionReference>Get_All_Commission</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Commission_Total_Amount</targetReference>
+        </nextValueConnector>
+    </loops>
+    <loops>
+        <name>Loop_to_Assign_Tuition_to_Commission</name>
+        <label>Loop to Assign Tuition to Commission</label>
+        <locationX>750</locationX>
+        <locationY>323</locationY>
+        <collectionReference>Get_All_Commission</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Commission_Tuition_Fee</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_All_Commission</name>
+        <label>Get All Commission</label>
+        <locationX>604</locationX>
+        <locationY>105</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Commission_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Program__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Commission__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Commission_Based_on_Total_Est_Cost</name>
+        <label>Update Commission Based on Total Est Cost</label>
+        <locationX>272</locationX>
+        <locationY>627</locationY>
+        <inputReference>Loop_to_Assign_Annual_Cost_to_Commission</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Commission_Based_on_Tuition</name>
+        <label>Update Commission Based on Tuition</label>
+        <locationX>748</locationX>
+        <locationY>655</locationY>
+        <inputReference>Loop_to_Assign_Tuition_to_Commission</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_All_Commission</targetReference>
+        </connector>
+        <filterLogic>1 OR 2 OR 3</filterLogic>
+        <filters>
+            <field>Commission_Type__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Tuition_Fees__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Est_Annual_Cost__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Program__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_Academic_Yr_Display__c</fullName>
+    <externalId>false</externalId>
+    <formula>Original_Academic_Yr__c  + &apos;/&apos; +  TEXT(VALUE(Original_Academic_Yr__c ) +1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Original Academic Year</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

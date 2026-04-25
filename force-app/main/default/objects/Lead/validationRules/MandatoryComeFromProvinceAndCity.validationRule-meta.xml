@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MandatoryComeFromProvinceAndCity</fullName>
+    <active>true</active>
+    <description>if start with C:
+  if is_new
+    cant empty
+  else
+    cant change to empty</description>
+    <errorConditionFormula>(ISNEW() &amp;&amp; BEGINS(Student_ID__c  , &apos;C&apos;) &amp;&amp;
+(ISBLANK(TEXT(Come_From_Province__c)) ||
+ ISBLANK(TEXT(Come_From_City__c))
+)) ||
+(ISNEW() == FALSE &amp;&amp; BEGINS(Student_ID__c  , &apos;C&apos;) &amp;&amp; 
+ (
+  (ISCHANGED(Come_From_Province__c) &amp;&amp; ISBLANK(TEXT(Come_From_Province__c))) ||
+  (ISCHANGED(Come_From_City__c) &amp;&amp; ISBLANK(TEXT(Come_From_City__c)))
+ )
+)</errorConditionFormula>
+    <errorMessage>Chinese Lead must have &quot;province and city&quot;</errorMessage>
+</ValidationRule>

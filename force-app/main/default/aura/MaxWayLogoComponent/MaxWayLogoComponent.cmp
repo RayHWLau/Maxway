@@ -1,0 +1,7 @@
+<aura:component>
+   <lightning:card> 
+        <div class="slds-align_absolute-center" onclick="{!c.redirectUrl}">
+            <img src="{!$Resource.EDSquareLogo}"/><!-- added By Ravi on 17 aug 2020 changed Logo ...-->
+        </div>
+    </lightning:card>
+</aura:component>

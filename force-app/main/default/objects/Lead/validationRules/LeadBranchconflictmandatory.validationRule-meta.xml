@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadBranchconflictmandatory</fullName>
+    <active>true</active>
+    <description>If Branch conflict with maxway is &apos;yes&apos; and Status is &apos;Follow Later&apos; .</description>
+    <errorConditionFormula>AND(
+    RecordType.Name =&apos;Agent Acquisition&apos;,
+    Text(Branch_Conflicts_with_Maxway__c)=&apos;Yes&apos;,
+     OR(
+     TEXT(Status)= &apos;Can\&apos;t Reach&apos;, TEXT(Status)=&apos;Follow Later&apos;
+     )
+)</errorConditionFormula>
+    <errorMessage>Please  Change &quot;Branch Conflicts with Maxway&quot; to &quot;No&quot;.</errorMessage>
+</ValidationRule>
