@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Report_is_S6_Below__c</fullName>
+    <formula>Current_Grade_Mapping__r.Master_Grade__c &lt;= 12</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Report is S6 Below</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

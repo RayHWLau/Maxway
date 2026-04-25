@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>comunityuserValidation</fullName>
+    <active>true</active>
+    <description>to lock account after its approved</description>
+    <errorConditionFormula>AND(( $Profile.Name  =&apos;Partner - Admin&apos;  || $Profile.Name  =&apos;Partner - User&apos;  || $Profile.Name =&apos;Partner Community User&apos;),
+ TEXT(Approval_Status__c) =&apos;Approved&apos; ,
+OR( 
+ Name !=  PRIORVALUE(Name) ,
+ TEXT(CurrencyIsoCode) !=  TEXT(PRIORVALUE(CurrencyIsoCode)) ,
+ TEXT(School_s_Country__c) !=  TEXT(PRIORVALUE(School_s_Country__c)),
+ Website !=  PRIORVALUE(Website) ,
+ Phone !=  PRIORVALUE(Phone) ,
+ Account_Manager__c !=  PRIORVALUE(Account_Manager__c),
+ OwnerId !=  PRIORVALUE(OwnerId),
+ RecordTypeId !=  PRIORVALUE(RecordTypeId) 
+)
+
+)</errorConditionFormula>
+    <errorMessage>Cannot Edit once account is Approved.</errorMessage>
+</ValidationRule>

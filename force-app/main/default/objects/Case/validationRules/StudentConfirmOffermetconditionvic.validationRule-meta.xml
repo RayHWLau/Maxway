@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StudentConfirmOffermetconditionvic</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( 
+ TEXT( Other_Conditions__c ) !=&apos;Yes&apos;,
+            Met_Conditions__c = true
+)</errorConditionFormula>
+    <errorMessage>Met condition can only be true if Other Conditions are  &apos;Yes&apos;.</errorMessage>
+</ValidationRule>

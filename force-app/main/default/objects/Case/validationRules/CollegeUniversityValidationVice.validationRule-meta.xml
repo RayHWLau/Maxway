@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CollegeUniversityValidationVice</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT(School_Type__c) =&apos;High School&apos;,
+      NOT(ISBLANK(  Major2__c ))
+     )</errorConditionFormula>
+    <errorMessage>If School type is not  College and University  please  remove  Major.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X5_Partner_Agent</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Status_Sub_Agent__c</columns>
+    <columns>Country_Code__c</columns>
+    <columns>School_List_Purchased__c</columns>
+    <columns>Account_Manager_s_Email__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Agent_Acquisition</value>
+    </filters>
+    <label>(5) Partner Agent</label>
+</ListView>

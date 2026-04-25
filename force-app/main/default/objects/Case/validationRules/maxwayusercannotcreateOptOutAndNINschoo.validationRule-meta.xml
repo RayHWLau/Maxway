@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>maxwayusercannotcreateOptOutAndNINschoo</fullName>
+    <active>true</active>
+    <errorConditionFormula>Owner:User.ContactId =null &amp;&amp; OR(
+                   TEXT(Application_Type__c)=&apos;Opt-Out&apos;,
+                   TEXT(Application_Type__c)=&apos;Not in Database&apos;
+                     )</errorConditionFormula>
+    <errorDisplayField>Application_Type__c</errorDisplayField>
+    <errorMessage>Cannot create Application with Application Status &apos;Opt-Out&apos; or  &apos;Not in Database&apos;</errorMessage>
+</ValidationRule>

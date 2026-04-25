@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CounterProposedDateMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISBLANK( Student_Counter_Propose_Time_Student_Lo__c )), ISBLANK( Student_Counter_Propose_Date_Student_Lo__c ))</errorConditionFormula>
+    <errorMessage>Please fill &quot;Counter Propose Student Local Date&quot;.</errorMessage>
+</ValidationRule>

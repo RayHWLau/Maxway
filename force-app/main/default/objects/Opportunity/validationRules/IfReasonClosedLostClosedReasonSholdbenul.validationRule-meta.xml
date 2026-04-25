@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IfReasonClosedLostClosedReasonSholdbenul</fullName>
+    <active>true</active>
+    <description>If Stage is not closed lost and Closed Lost Reason  and Closed Lost Description are filled.</description>
+    <errorConditionFormula>AND(
+    OR(
+      $RecordType.Name = &quot;Agent Acquisition&quot;,
+      $RecordType.Name = &quot;Renewal -Agent Acquisition&quot;),
+    TEXT(StageName) !=&apos;Closed Lost&apos;,
+    NOT(ISBLANK( Closed_Lost_Reason__c ))
+)</errorConditionFormula>
+    <errorMessage>Align Status &amp; Closed Lost Reason</errorMessage>
+</ValidationRule>

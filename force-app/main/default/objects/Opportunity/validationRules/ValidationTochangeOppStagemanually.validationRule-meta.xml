@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidationTochangeOppStagemanually</fullName>
+    <active>true</active>
+    <description>Validation to strict stage change manually when stage is after prepare quotation</description>
+    <errorConditionFormula>AND(OR($RecordType.Name = &quot;Agent Acquisition&quot;,$RecordType.Name = &quot;Renewal -Agent Acquisition&quot;),
+ (
+  OR(
+    (text(Approval_Status__c) !=&apos;pending&apos; || text(Approval_Status__c) ==null) &amp;&amp; text(StageName) = &apos;Quotation Pending Approval&apos;,
+	(text(Approval_Status__c) !=&apos;approved&apos; || text(Approval_Status__c) ==null)&amp;&amp; text(StageName) = &apos;Quotation &amp; Agreement Approved&apos;,
+    (text(Approval_Status__c) !=&apos;rejected&apos; || text(Approval_Status__c) ==null)&amp;&amp; text(StageName) = &apos;Quotation Rejected&apos;
+	 )
+  )
+)</errorConditionFormula>
+    <errorMessage>Cannot manually change approval process stage.</errorMessage>
+</ValidationRule>

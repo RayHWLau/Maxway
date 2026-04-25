@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Status_and_Partner_Type</fullName>
+    <active>true</active>
+    <errorConditionFormula>((RecordType.Name = &apos;Overseas School - CC&apos; ||
+RecordType.Name = &apos;Overseas School - ESL&apos; ||
+RecordType.Name = &apos;Overseas School - HS&apos; ||
+RecordType.Name = &apos;School Agency&apos; ||
+RecordType.Name = &apos;Overseas School - University&apos;)) &amp;&amp;
+TEXT( Contract_Status__c ) = &quot;Valid&quot; &amp;&amp;
+TEXT( Partner_Type__c ) &lt;&gt; &quot;Commission&quot; &amp;&amp; 
+ISBLANK(ParentId)</errorConditionFormula>
+    <errorMessage>Partner Type must be &quot;Commission&quot; when Contract Status is &quot;Valid&quot;</errorMessage>
+</ValidationRule>

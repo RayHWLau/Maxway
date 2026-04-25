@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Report_Proper_Closed_Lost_Reason__c</fullName>
+    <formula>OR( 
+INCLUDES(Closed_Lost_Reason__c , &quot;Duplicate with another account&quot;) ,
+INCLUDES(Closed_Lost_Reason__c , &quot;Branch office location overlap with Maxway&apos;s&quot;) ,
+INCLUDES(Closed_Lost_Reason__c , &quot;Not student recruitment company&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Report Proper Closed Lost Reason</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stagequationpendingcaneitherbeapprdorrej</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT(PRIORVALUE(StageName))=&apos;Quotation Pending Approval&apos;,
+AND(
+TEXT(StageName) != &apos;Quotation &amp; Agreement Approved&apos;,
+TEXT(StageName) != &apos;Quotation Pending Approval&apos;,
+TEXT(StageName) != &apos;Quotation Rejected&apos;
+),
+OR($RecordType.Name = &quot;Agent Acquisition&quot;,$RecordType.Name = &quot;Renewal -Agent Acquisition&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Opportunity is under approval.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>University_Program_Application</fullName>
+    <active>false</active>
+    <businessProcess>University Program Application</businessProcess>
+    <compactLayoutAssignment>Maxway</compactLayoutAssignment>
+    <label>University Program Application</label>
+    <picklistValues>
+        <picklist>Application_Type__c</picklist>
+        <values>
+            <fullName>Not in Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opt-Out</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CC_Program_Type__c</picklist>
+        <values>
+            <fullName>Cert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conditional Accept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dual Accept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HS Completion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_Accept__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Education_System__c</picklist>
+        <values>
+            <fullName>AU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HS_Program_Type__c</picklist>
+        <values>
+            <fullName>AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Art</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gifted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Diff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Housing__c</picklist>
+        <values>
+            <fullName>Dorm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homestay</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intended_Grade__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LoA_Correct__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Non_partner_School__c</picklist>
+        <values>
+            <fullName>American University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baylor University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brandeis University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brunel University London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiff University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese University of Hong Kong %28CUHK%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>City University Of London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>City University of Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Durham University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emily Carr University of Art %2B Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong Baptist University %28HKBU%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong University of Science and Technology %28HKUST%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indiana University Bloomington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Johns Hopkins University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lingnan University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marquette University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monash University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nottingham Trent University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCAD University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Penn State University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pepperdine University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plymouth University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Queen Mary University Of London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Royal Holloway University of London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ryerson University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sheffield Hallam University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simon Fraser University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swansea University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syracuse University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Hong Kong Polytechnic University %28HKPU%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Open University of Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The University of British Columbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The University of Nottingham</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The University of Queensland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The University of Texas at Austin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The University of Warwick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UC Berkeley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University College London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University Of Alberta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University Of Liverpool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University Of San Diego</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University Of San Francisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University Of Southern California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University Of Toronto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University Of Waterloo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Bath</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Bristol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Dundee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of East Anglia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Essex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Exeter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Hong Kong %28HKU%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Kent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Lancaster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Leeds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Leicester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Newcastle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Reading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Salford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Southampton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Strathclyde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Surrey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Technology Sydney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Westminster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocational Training Council %28VTC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yale University</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Offer__c</picklist>
+        <values>
+            <fullName>Conditional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unconditional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Conditions__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Placed_Grade__c</picklist>
+        <values>
+            <fullName>ESL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade 9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-Secondary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rejected_By__c</picklist>
+        <values>
+            <fullName>School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Required_Document_Upload__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>School_Type__c</picklist>
+        <values>
+            <fullName>College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Separate_Process__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Application submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arrived</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Accept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deposit received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LoA  Correct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LoA Incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Picked-up already</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting deposit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Start_Month__c</picklist>
+        <values>
+            <fullName>Apr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jun</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>May</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nov</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sep</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Student_Confirm_Offer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Student_Confirmed_Interview__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Term__c</picklist>
+        <values>
+            <fullName>Fall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Winter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Visa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Visa_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Year__c</picklist>
+        <values>
+            <fullName>2011</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2013</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2014</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>approval_status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

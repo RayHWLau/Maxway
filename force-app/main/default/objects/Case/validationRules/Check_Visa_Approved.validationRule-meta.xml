@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Visa_Approved</fullName>
+    <active>true</active>
+    <description>when stage is pending arrival ,visa Approved should b</description>
+    <errorConditionFormula>AND( ISPICKVAL(Stage__c,&apos;Pending Arrival&apos;), ISPICKVAL(Visa_Required__c,&apos;Yes&apos;), Visa_Decision__c=False)</errorConditionFormula>
+    <errorMessage>Please Check Visa Approved</errorMessage>
+</ValidationRule>

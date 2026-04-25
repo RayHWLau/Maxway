@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commission_Rate</fullName>
+    <active>true</active>
+    <errorConditionFormula>((RecordType.Name = &apos;Overseas School - CC&apos; ||
+RecordType.Name = &apos;Overseas School - ESL&apos; ||
+RecordType.Name = &apos;Overseas School - HS&apos; ||
+RecordType.Name = &apos;Overseas School - University&apos;)) &amp;&amp;
+NOT(TEXT(Partner_Type__c) = &quot;Commission&quot;) &amp;&amp;
+NOT(ISBLANK( TEXT(Commission_Rate_School__c )))</errorConditionFormula>
+    <errorDisplayField>Commission_Rate_School__c</errorDisplayField>
+    <errorMessage>Applicable for Commission Partner Only</errorMessage>
+</ValidationRule>

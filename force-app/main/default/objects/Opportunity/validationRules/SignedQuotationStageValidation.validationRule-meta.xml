@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SignedQuotationStageValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(($RecordType.Name = &quot;Agent Acquisition&quot; || $RecordType.Name = &quot;Renewal -Agent Acquisition&quot;) , TEXT(StageName) =&apos;Quotation &amp; Agreement Signed&apos; ,OR(SignedDocument__c =false, ISBLANK(Quotation_Agreement_Sign_Date__c)))</errorConditionFormula>
+    <errorMessage>Please upload Signed Quotation and Signed License Agremment before changing stage to Quotation &amp; Agreement Signed and Fill Signed &apos;Quotation &amp; Agreement Signe Date&apos;</errorMessage>
+</ValidationRule>

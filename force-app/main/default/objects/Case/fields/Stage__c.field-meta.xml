@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <label>Application Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Preparing Application</fullName>
+                <default>false</default>
+                <label>Preparing Application</label>
+            </value>
+            <value>
+                <fullName>Submitted Application to Maxway</fullName>
+                <default>false</default>
+                <label>Submitted Application to EdSquare</label>
+            </value>
+            <value>
+                <fullName>Accepted By Maxway</fullName>
+                <default>false</default>
+                <label>All Application Docs Ready</label>
+            </value>
+            <value>
+                <fullName>Application submitted to School</fullName>
+                <default>false</default>
+                <label>Application submitted to School</label>
+            </value>
+            <value>
+                <fullName>Pending Student Confirmation</fullName>
+                <default>false</default>
+                <label>Pending Student Confirmation</label>
+            </value>
+            <value>
+                <fullName>Visa In Progress</fullName>
+                <default>false</default>
+                <label>Visa In Progress</label>
+            </value>
+            <value>
+                <fullName>Pending Arrival</fullName>
+                <default>false</default>
+                <label>Pending Arrival</label>
+            </value>
+            <value>
+                <fullName>Reject</fullName>
+                <default>false</default>
+                <label>Reject</label>
+            </value>
+            <value>
+                <fullName>Commission Received</fullName>
+                <default>false</default>
+                <label>Commission Received</label>
+            </value>
+            <value>
+                <fullName>Commission Paid</fullName>
+                <default>false</default>
+                <label>Commission Paid</label>
+            </value>
+            <value>
+                <fullName>Pre Application</fullName>
+                <default>false</default>
+                <label>Pre Application</label>
+            </value>
+            <value>
+                <fullName>Application submitted</fullName>
+                <default>false</default>
+                <label>Application submitted</label>
+            </value>
+            <value>
+                <fullName>LoA  Correct</fullName>
+                <default>false</default>
+                <label>LoA  Correct</label>
+            </value>
+            <value>
+                <fullName>LoA Incorrect</fullName>
+                <default>false</default>
+                <label>LoA Incorrect</label>
+            </value>
+            <value>
+                <fullName>Client Accept</fullName>
+                <default>false</default>
+                <label>Client Accept</label>
+            </value>
+            <value>
+                <fullName>Waiting deposit</fullName>
+                <default>false</default>
+                <label>Waiting deposit</label>
+            </value>
+            <value>
+                <fullName>Deposit received</fullName>
+                <default>false</default>
+                <label>Deposit received</label>
+            </value>
+            <value>
+                <fullName>Offer received</fullName>
+                <default>false</default>
+                <label>Offer received</label>
+            </value>
+            <value>
+                <fullName>Offer Picked-up already</fullName>
+                <default>false</default>
+                <label>Offer Picked-up already</label>
+            </value>
+            <value>
+                <fullName>Arrived</fullName>
+                <default>false</default>
+                <label>Arrived</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

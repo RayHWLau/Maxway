@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>closedlostReasonOthers</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($RecordType.Name = &quot;Agent&quot;,(OR((INCLUDES( Closed_Lost_Reason__c,&apos;Others&apos;) &amp;&amp; ISBLANK( Closed_Lost_Reason_Others__c)), 
+(NOT(INCLUDES(Closed_Lost_Reason__c,&apos;Others&apos;)) &amp;&amp; NOT(ISBLANK( Closed_Lost_Reason_Others__c))))))</errorConditionFormula>
+    <errorMessage>Remove close lost reason Others text / add Other to close lost reason.</errorMessage>
+</ValidationRule>

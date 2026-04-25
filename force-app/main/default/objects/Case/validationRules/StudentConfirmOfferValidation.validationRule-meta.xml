@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StudentConfirmOfferValidation</fullName>
+    <active>true</active>
+    <description>If student confirm offer is No, then stage should be &quot;Reject&quot; and Rejected By should be student.</description>
+    <errorConditionFormula>IF( ISPICKVAL(Student_Confirm_Offer__c, &apos;No&apos;),  
+    NOT(ISPICKVAL(Stage__c, &apos;Reject&apos;) &amp;&amp; 
+        ISPICKVAL(Rejected_By__c,&apos;Student&apos;)),
+false)</errorConditionFormula>
+    <errorMessage>&quot;Student Confirm&quot; offer is equal to &quot;No&quot; , &quot;Stage&quot; should be &quot;Reject&quot; and &quot;Rejected By&quot; should be &quot;Student&quot;</errorMessage>
+</ValidationRule>

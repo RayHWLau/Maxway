@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IfLicenceendisreachedthenstatuspendingre</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(Licence_End_Date__c &gt; Today(),ISBLANK(Licence_End_Date__c)) &amp;&amp;  Text(Status_Sub_Agent__c) =&apos;Pending Renewal&apos;</errorConditionFormula>
+    <errorMessage>Cannot change status to &apos;Pending Renewal&apos; if licence end date is not reached.</errorMessage>
+</ValidationRule>

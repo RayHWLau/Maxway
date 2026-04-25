@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannotdircetlysaleswonorissueinvoice</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR($RecordType.Name = &quot;Agent Acquisition&quot;,$RecordType.Name = &quot;Renewal -Agent Acquisition&quot;),
+    (text(Approval_Status__c) != &apos;approved&apos; ||text(Approval_Status__c) ==null) &amp;&amp; (text(StageName) = &apos;Quotation &amp; Agreement Issued&apos; || text(StageName) = &apos;Quotation &amp; Agreement Signed&apos; || text(StageName) = &apos;Invoice Issued&apos; || text(StageName) = &apos;Sales Won&apos;))</errorConditionFormula>
+    <errorMessage>Opportunity needs to be Approved first.</errorMessage>
+</ValidationRule>

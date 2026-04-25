@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnconditionalCnditionalofferval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(ISBLANK(Owner:User.ContactId),
+        RecordType.Name =&apos;Application(Opt-In)&apos;
+       ),
+    NOT(ISBLANK(TEXT( Offer__c ))), 
+  OR(
+     ISBLANK(Tuition_Stated_on_Offer__c ),
+     AND(
+         TEXT(  School_Type__c ) =&apos;High School&apos;,
+         ISBLANK(  Grade__c )
+        ),
+     AND(
+         TEXT(  School_Type__c ) !=&apos;High School&apos;,
+         ISBLANK(  Program_Offered__c )
+        )
+    )
+		  
+)</errorConditionFormula>
+    <errorMessage>If Offer is filled .Please fill Tuition Stated on offer , Grade if School type is &apos;High School&apos; 
+and program offered if School type is &apos;College&apos;  or &apos;University&apos;</errorMessage>
+</ValidationRule>

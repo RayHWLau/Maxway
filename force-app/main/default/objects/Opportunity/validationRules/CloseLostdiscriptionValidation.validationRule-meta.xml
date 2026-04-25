@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CloseLostdiscriptionValidation</fullName>
+    <active>true</active>
+    <description>When Opportunity stage is changed to “Closed Lost”, Prompt the user to enter the “Close Lost Reason” and “Close Lost Description”</description>
+    <errorConditionFormula>AND(OR
+     ($RecordType.Name = &quot;Agent Acquisition&quot;,
+      $RecordType.Name = &quot;Renewal -Agent Acquisition&quot;),
+    INCLUDES(Closed_Lost_Reason__c ,&quot;Others&quot;),
+    ISBLANK( Closed_Lost_Description__c )
+ )</errorConditionFormula>
+    <errorMessage>Please Enter Closed Lost Description.</errorMessage>
+</ValidationRule>

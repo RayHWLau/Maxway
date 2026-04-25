@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closedreasonisnotothersthenclosedlostoth</fullName>
+    <active>true</active>
+    <description>If  Closed Lost Reason is  Not &apos;Others&apos;  and Closed Lost Description are filled.</description>
+    <errorConditionFormula>AND(
+    OR(
+      $RecordType.Name = &quot;Agent Acquisition&quot;,
+      $RecordType.Name = &quot;Renewal -Agent Acquisition&quot;),
+    NOT(INCLUDES(Closed_Lost_Reason__c,&apos;Others&apos;)),
+    NOT(ISBLANK( Closed_Lost_Description__c))
+)</errorConditionFormula>
+    <errorDisplayField>Closed_Lost_Description__c</errorDisplayField>
+    <errorMessage>Remove Closed Lost Description.</errorMessage>
+</ValidationRule>

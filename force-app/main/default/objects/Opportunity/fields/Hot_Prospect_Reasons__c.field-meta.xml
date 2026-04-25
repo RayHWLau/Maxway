@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hot_Prospect_Reasons__c</fullName>
+    <label>Hot Prospect Reasons</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Has counselors in place</fullName>
+                <default>false</default>
+                <label>Has counselors in place</label>
+            </value>
+            <value>
+                <fullName>Has process &amp; resources for student recruitment business</fullName>
+                <default>false</default>
+                <label>Has process &amp; resources for student recruitment business</label>
+            </value>
+            <value>
+                <fullName>Need school list that portal has</fullName>
+                <default>false</default>
+                <label>Need school list that portal has</label>
+            </value>
+            <value>
+                <fullName>Top management mindset, financial commitment, caliber and time ok</fullName>
+                <default>false</default>
+                <label>Top management mindset, financial commitment, caliber and time ok</label>
+            </value>
+            <value>
+                <fullName>Top management agrees on fees and business model</fullName>
+                <default>false</default>
+                <label>Top management agrees on fees and business model</label>
+            </value>
+            <value>
+                <fullName>Dissatisfy with existing system</fullName>
+                <default>false</default>
+                <label>Dissatisfy with existing system</label>
+            </value>
+            <value>
+                <fullName>Just start to use our system, may adopt usage for other branches near future  Others</fullName>
+                <default>false</default>
+                <label>Just start to use our system, may adopt usage for other branches near future  Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,4412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_Nearest_City__c</fullName>
+    <label>City (old)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Province_State__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abbotsford</fullName>
+                <default>false</default>
+                <label>Abbotsford</label>
+            </value>
+            <value>
+                <fullName>Aberdeen</fullName>
+                <default>false</default>
+                <label>Aberdeen</label>
+            </value>
+            <value>
+                <fullName>Abilene</fullName>
+                <default>false</default>
+                <label>Abilene</label>
+            </value>
+            <value>
+                <fullName>Akron</fullName>
+                <default>false</default>
+                <label>Akron</label>
+            </value>
+            <value>
+                <fullName>Albert Prince</fullName>
+                <default>false</default>
+                <label>Albert Prince</label>
+            </value>
+            <value>
+                <fullName>Albuquerque</fullName>
+                <default>false</default>
+                <label>Albuquerque</label>
+            </value>
+            <value>
+                <fullName>Alexandria</fullName>
+                <default>false</default>
+                <label>Alexandria</label>
+            </value>
+            <value>
+                <fullName>Allentown</fullName>
+                <default>false</default>
+                <label>Allentown</label>
+            </value>
+            <value>
+                <fullName>Amarillo</fullName>
+                <default>false</default>
+                <label>Amarillo</label>
+            </value>
+            <value>
+                <fullName>Amos</fullName>
+                <default>false</default>
+                <label>Amos</label>
+            </value>
+            <value>
+                <fullName>Anaheim</fullName>
+                <default>false</default>
+                <label>Anaheim</label>
+            </value>
+            <value>
+                <fullName>Anchorage</fullName>
+                <default>false</default>
+                <label>Anchorage</label>
+            </value>
+            <value>
+                <fullName>Ann Arbor</fullName>
+                <default>false</default>
+                <label>Ann Arbor</label>
+            </value>
+            <value>
+                <fullName>Antioch</fullName>
+                <default>false</default>
+                <label>Antioch</label>
+            </value>
+            <value>
+                <fullName>Arlington</fullName>
+                <default>false</default>
+                <label>Arlington</label>
+            </value>
+            <value>
+                <fullName>Armagh</fullName>
+                <default>false</default>
+                <label>Armagh</label>
+            </value>
+            <value>
+                <fullName>Arvada</fullName>
+                <default>false</default>
+                <label>Arvada</label>
+            </value>
+            <value>
+                <fullName>Athens</fullName>
+                <default>false</default>
+                <label>Athens</label>
+            </value>
+            <value>
+                <fullName>Atlanta</fullName>
+                <default>false</default>
+                <label>Atlanta</label>
+            </value>
+            <value>
+                <fullName>Augusta</fullName>
+                <default>false</default>
+                <label>Augusta</label>
+            </value>
+            <value>
+                <fullName>Aurora</fullName>
+                <default>false</default>
+                <label>Aurora</label>
+            </value>
+            <value>
+                <fullName>Austin</fullName>
+                <default>false</default>
+                <label>Austin</label>
+            </value>
+            <value>
+                <fullName>Baie-Comeau</fullName>
+                <default>false</default>
+                <label>Baie-Comeau</label>
+            </value>
+            <value>
+                <fullName>Baie-Saint-Paul</fullName>
+                <default>false</default>
+                <label>Baie-Saint-Paul</label>
+            </value>
+            <value>
+                <fullName>Baie Verte</fullName>
+                <default>false</default>
+                <label>Baie Verte</label>
+            </value>
+            <value>
+                <fullName>Bakersfield</fullName>
+                <default>false</default>
+                <label>Bakersfield</label>
+            </value>
+            <value>
+                <fullName>Balitmore</fullName>
+                <default>false</default>
+                <label>Balitmore</label>
+            </value>
+            <value>
+                <fullName>Baltimore</fullName>
+                <default>false</default>
+                <label>Baltimore</label>
+            </value>
+            <value>
+                <fullName>Bangor</fullName>
+                <default>false</default>
+                <label>Bangor</label>
+            </value>
+            <value>
+                <fullName>Bath</fullName>
+                <default>false</default>
+                <label>Bath</label>
+            </value>
+            <value>
+                <fullName>Baton Rouge</fullName>
+                <default>false</default>
+                <label>Baton Rouge</label>
+            </value>
+            <value>
+                <fullName>Beaumont</fullName>
+                <default>false</default>
+                <label>Beaumont</label>
+            </value>
+            <value>
+                <fullName>Bécancour</fullName>
+                <default>false</default>
+                <label>Bécancour</label>
+            </value>
+            <value>
+                <fullName>Belfast</fullName>
+                <default>false</default>
+                <label>Belfast</label>
+            </value>
+            <value>
+                <fullName>Belleterre</fullName>
+                <default>false</default>
+                <label>Belleterre</label>
+            </value>
+            <value>
+                <fullName>Bellevue</fullName>
+                <default>false</default>
+                <label>Bellevue</label>
+            </value>
+            <value>
+                <fullName>Berkeley</fullName>
+                <default>false</default>
+                <label>Berkeley</label>
+            </value>
+            <value>
+                <fullName>Billings</fullName>
+                <default>false</default>
+                <label>Billings</label>
+            </value>
+            <value>
+                <fullName>Biloxi</fullName>
+                <default>false</default>
+                <label>Biloxi</label>
+            </value>
+            <value>
+                <fullName>Birmingham</fullName>
+                <default>false</default>
+                <label>Birmingham</label>
+            </value>
+            <value>
+                <fullName>Bismarck</fullName>
+                <default>false</default>
+                <label>Bismarck</label>
+            </value>
+            <value>
+                <fullName>Blind River</fullName>
+                <default>false</default>
+                <label>Blind River</label>
+            </value>
+            <value>
+                <fullName>Boise</fullName>
+                <default>false</default>
+                <label>Boise</label>
+            </value>
+            <value>
+                <fullName>Boston</fullName>
+                <default>false</default>
+                <label>Boston</label>
+            </value>
+            <value>
+                <fullName>Boulder</fullName>
+                <default>false</default>
+                <label>Boulder</label>
+            </value>
+            <value>
+                <fullName>Bracebridge</fullName>
+                <default>false</default>
+                <label>Bracebridge</label>
+            </value>
+            <value>
+                <fullName>Bradford</fullName>
+                <default>false</default>
+                <label>Bradford</label>
+            </value>
+            <value>
+                <fullName>Brampton</fullName>
+                <default>false</default>
+                <label>Brampton</label>
+            </value>
+            <value>
+                <fullName>Brandon</fullName>
+                <default>false</default>
+                <label>Brandon</label>
+            </value>
+            <value>
+                <fullName>Bridgeport</fullName>
+                <default>false</default>
+                <label>Bridgeport</label>
+            </value>
+            <value>
+                <fullName>Brighton &amp; Hove</fullName>
+                <default>false</default>
+                <label>Brighton &amp; Hove</label>
+            </value>
+            <value>
+                <fullName>Bristol</fullName>
+                <default>false</default>
+                <label>Bristol</label>
+            </value>
+            <value>
+                <fullName>Broken Arrow</fullName>
+                <default>false</default>
+                <label>Broken Arrow</label>
+            </value>
+            <value>
+                <fullName>Brownsville</fullName>
+                <default>false</default>
+                <label>Brownsville</label>
+            </value>
+            <value>
+                <fullName>Buffalo</fullName>
+                <default>false</default>
+                <label>Buffalo</label>
+            </value>
+            <value>
+                <fullName>Burbank</fullName>
+                <default>false</default>
+                <label>Burbank</label>
+            </value>
+            <value>
+                <fullName>Burlington</fullName>
+                <default>false</default>
+                <label>Burlington</label>
+            </value>
+            <value>
+                <fullName>Caledon</fullName>
+                <default>false</default>
+                <label>Caledon</label>
+            </value>
+            <value>
+                <fullName>Calgary</fullName>
+                <default>false</default>
+                <label>Calgary</label>
+            </value>
+            <value>
+                <fullName>Cambridge</fullName>
+                <default>false</default>
+                <label>Cambridge</label>
+            </value>
+            <value>
+                <fullName>Canterbury</fullName>
+                <default>false</default>
+                <label>Canterbury</label>
+            </value>
+            <value>
+                <fullName>Cape Breton</fullName>
+                <default>false</default>
+                <label>Cape Breton</label>
+            </value>
+            <value>
+                <fullName>Cape Breton Regional Municipality</fullName>
+                <default>false</default>
+                <label>Cape Breton Regional Municipality</label>
+            </value>
+            <value>
+                <fullName>Cape Coral</fullName>
+                <default>false</default>
+                <label>Cape Coral</label>
+            </value>
+            <value>
+                <fullName>Cardiff</fullName>
+                <default>false</default>
+                <label>Cardiff</label>
+            </value>
+            <value>
+                <fullName>Carlisle</fullName>
+                <default>false</default>
+                <label>Carlisle</label>
+            </value>
+            <value>
+                <fullName>Carlsbad</fullName>
+                <default>false</default>
+                <label>Carlsbad</label>
+            </value>
+            <value>
+                <fullName>Carrollton</fullName>
+                <default>false</default>
+                <label>Carrollton</label>
+            </value>
+            <value>
+                <fullName>Cary</fullName>
+                <default>false</default>
+                <label>Cary</label>
+            </value>
+            <value>
+                <fullName>Casper</fullName>
+                <default>false</default>
+                <label>Casper</label>
+            </value>
+            <value>
+                <fullName>Cedar Rapids</fullName>
+                <default>false</default>
+                <label>Cedar Rapids</label>
+            </value>
+            <value>
+                <fullName>Centennial</fullName>
+                <default>false</default>
+                <label>Centennial</label>
+            </value>
+            <value>
+                <fullName>Chandler</fullName>
+                <default>false</default>
+                <label>Chandler</label>
+            </value>
+            <value>
+                <fullName>Charleston</fullName>
+                <default>false</default>
+                <label>Charleston</label>
+            </value>
+            <value>
+                <fullName>Charlotte</fullName>
+                <default>false</default>
+                <label>Charlotte</label>
+            </value>
+            <value>
+                <fullName>Charlottetown</fullName>
+                <default>false</default>
+                <label>Charlottetown</label>
+            </value>
+            <value>
+                <fullName>Chattanooga</fullName>
+                <default>false</default>
+                <label>Chattanooga</label>
+            </value>
+            <value>
+                <fullName>Chelmsford</fullName>
+                <default>false</default>
+                <label>Chelmsford</label>
+            </value>
+            <value>
+                <fullName>Chesapeake</fullName>
+                <default>false</default>
+                <label>Chesapeake</label>
+            </value>
+            <value>
+                <fullName>Chester</fullName>
+                <default>false</default>
+                <label>Chester</label>
+            </value>
+            <value>
+                <fullName>Cheyenne</fullName>
+                <default>false</default>
+                <label>Cheyenne</label>
+            </value>
+            <value>
+                <fullName>Chibougamau</fullName>
+                <default>false</default>
+                <label>Chibougamau</label>
+            </value>
+            <value>
+                <fullName>Chicago</fullName>
+                <default>false</default>
+                <label>Chicago</label>
+            </value>
+            <value>
+                <fullName>Chichester</fullName>
+                <default>false</default>
+                <label>Chichester</label>
+            </value>
+            <value>
+                <fullName>Chula Vista</fullName>
+                <default>false</default>
+                <label>Chula Vista</label>
+            </value>
+            <value>
+                <fullName>Cincinnati</fullName>
+                <default>false</default>
+                <label>Cincinnati</label>
+            </value>
+            <value>
+                <fullName>City of London</fullName>
+                <default>false</default>
+                <label>City of London</label>
+            </value>
+            <value>
+                <fullName>City of Westminster</fullName>
+                <default>false</default>
+                <label>City of Westminster</label>
+            </value>
+            <value>
+                <fullName>Clarence-Rockland</fullName>
+                <default>false</default>
+                <label>Clarence-Rockland</label>
+            </value>
+            <value>
+                <fullName>Clarksville</fullName>
+                <default>false</default>
+                <label>Clarksville</label>
+            </value>
+            <value>
+                <fullName>Clearwater</fullName>
+                <default>false</default>
+                <label>Clearwater</label>
+            </value>
+            <value>
+                <fullName>Cleveland</fullName>
+                <default>false</default>
+                <label>Cleveland</label>
+            </value>
+            <value>
+                <fullName>Cochrane</fullName>
+                <default>false</default>
+                <label>Cochrane</label>
+            </value>
+            <value>
+                <fullName>Colorado Springs</fullName>
+                <default>false</default>
+                <label>Colorado Springs</label>
+            </value>
+            <value>
+                <fullName>Columbia</fullName>
+                <default>false</default>
+                <label>Columbia</label>
+            </value>
+            <value>
+                <fullName>Columbus</fullName>
+                <default>false</default>
+                <label>Columbus</label>
+            </value>
+            <value>
+                <fullName>Concord</fullName>
+                <default>false</default>
+                <label>Concord</label>
+            </value>
+            <value>
+                <fullName>Cookshire-Eaton</fullName>
+                <default>false</default>
+                <label>Cookshire-Eaton</label>
+            </value>
+            <value>
+                <fullName>Coral Springs</fullName>
+                <default>false</default>
+                <label>Coral Springs</label>
+            </value>
+            <value>
+                <fullName>Corner Brook</fullName>
+                <default>false</default>
+                <label>Corner Brook</label>
+            </value>
+            <value>
+                <fullName>Corona</fullName>
+                <default>false</default>
+                <label>Corona</label>
+            </value>
+            <value>
+                <fullName>Corpus Christi</fullName>
+                <default>false</default>
+                <label>Corpus Christi</label>
+            </value>
+            <value>
+                <fullName>Costa Mesa</fullName>
+                <default>false</default>
+                <label>Costa Mesa</label>
+            </value>
+            <value>
+                <fullName>County of Brant</fullName>
+                <default>false</default>
+                <label>County of Brant</label>
+            </value>
+            <value>
+                <fullName>Coventry</fullName>
+                <default>false</default>
+                <label>Coventry</label>
+            </value>
+            <value>
+                <fullName>Cranston</fullName>
+                <default>false</default>
+                <label>Cranston</label>
+            </value>
+            <value>
+                <fullName>Dallas</fullName>
+                <default>false</default>
+                <label>Dallas</label>
+            </value>
+            <value>
+                <fullName>Daly City</fullName>
+                <default>false</default>
+                <label>Daly City</label>
+            </value>
+            <value>
+                <fullName>Davenport</fullName>
+                <default>false</default>
+                <label>Davenport</label>
+            </value>
+            <value>
+                <fullName>Dawson City</fullName>
+                <default>false</default>
+                <label>Dawson City</label>
+            </value>
+            <value>
+                <fullName>Dayton</fullName>
+                <default>false</default>
+                <label>Dayton</label>
+            </value>
+            <value>
+                <fullName>Dégelis</fullName>
+                <default>false</default>
+                <label>Dégelis</label>
+            </value>
+            <value>
+                <fullName>Denton</fullName>
+                <default>false</default>
+                <label>Denton</label>
+            </value>
+            <value>
+                <fullName>Denver</fullName>
+                <default>false</default>
+                <label>Denver</label>
+            </value>
+            <value>
+                <fullName>Derby</fullName>
+                <default>false</default>
+                <label>Derby</label>
+            </value>
+            <value>
+                <fullName>Derry/Londonderry</fullName>
+                <default>false</default>
+                <label>Derry/Londonderry</label>
+            </value>
+            <value>
+                <fullName>Des Moines</fullName>
+                <default>false</default>
+                <label>Des Moines</label>
+            </value>
+            <value>
+                <fullName>Detroit</fullName>
+                <default>false</default>
+                <label>Detroit</label>
+            </value>
+            <value>
+                <fullName>Dolbeau-Mistassini</fullName>
+                <default>false</default>
+                <label>Dolbeau-Mistassini</label>
+            </value>
+            <value>
+                <fullName>Dover</fullName>
+                <default>false</default>
+                <label>Dover</label>
+            </value>
+            <value>
+                <fullName>Downey</fullName>
+                <default>false</default>
+                <label>Downey</label>
+            </value>
+            <value>
+                <fullName>Dublin</fullName>
+                <default>false</default>
+                <label>Dublin</label>
+            </value>
+            <value>
+                <fullName>Dundee</fullName>
+                <default>false</default>
+                <label>Dundee</label>
+            </value>
+            <value>
+                <fullName>Durham</fullName>
+                <default>false</default>
+                <label>Durham</label>
+            </value>
+            <value>
+                <fullName>Edinburgh</fullName>
+                <default>false</default>
+                <label>Edinburgh</label>
+            </value>
+            <value>
+                <fullName>Edmonton</fullName>
+                <default>false</default>
+                <label>Edmonton</label>
+            </value>
+            <value>
+                <fullName>El Cajon</fullName>
+                <default>false</default>
+                <label>El Cajon</label>
+            </value>
+            <value>
+                <fullName>Elgin</fullName>
+                <default>false</default>
+                <label>Elgin</label>
+            </value>
+            <value>
+                <fullName>Elizabeth</fullName>
+                <default>false</default>
+                <label>Elizabeth</label>
+            </value>
+            <value>
+                <fullName>Elk Grove</fullName>
+                <default>false</default>
+                <label>Elk Grove</label>
+            </value>
+            <value>
+                <fullName>Elliot Lake</fullName>
+                <default>false</default>
+                <label>Elliot Lake</label>
+            </value>
+            <value>
+                <fullName>El Monte</fullName>
+                <default>false</default>
+                <label>El Monte</label>
+            </value>
+            <value>
+                <fullName>El Paso</fullName>
+                <default>false</default>
+                <label>El Paso</label>
+            </value>
+            <value>
+                <fullName>Ely</fullName>
+                <default>false</default>
+                <label>Ely</label>
+            </value>
+            <value>
+                <fullName>Erie</fullName>
+                <default>false</default>
+                <label>Erie</label>
+            </value>
+            <value>
+                <fullName>Erin</fullName>
+                <default>false</default>
+                <label>Erin</label>
+            </value>
+            <value>
+                <fullName>Escondido</fullName>
+                <default>false</default>
+                <label>Escondido</label>
+            </value>
+            <value>
+                <fullName>Essex</fullName>
+                <default>false</default>
+                <label>Essex</label>
+            </value>
+            <value>
+                <fullName>Eugene</fullName>
+                <default>false</default>
+                <label>Eugene</label>
+            </value>
+            <value>
+                <fullName>Evansville</fullName>
+                <default>false</default>
+                <label>Evansville</label>
+            </value>
+            <value>
+                <fullName>Everett</fullName>
+                <default>false</default>
+                <label>Everett</label>
+            </value>
+            <value>
+                <fullName>Exeter</fullName>
+                <default>false</default>
+                <label>Exeter</label>
+            </value>
+            <value>
+                <fullName>Fairbanks</fullName>
+                <default>false</default>
+                <label>Fairbanks</label>
+            </value>
+            <value>
+                <fullName>Fairfield</fullName>
+                <default>false</default>
+                <label>Fairfield</label>
+            </value>
+            <value>
+                <fullName>Fargo</fullName>
+                <default>false</default>
+                <label>Fargo</label>
+            </value>
+            <value>
+                <fullName>Faro</fullName>
+                <default>false</default>
+                <label>Faro</label>
+            </value>
+            <value>
+                <fullName>Fayetteville</fullName>
+                <default>false</default>
+                <label>Fayetteville</label>
+            </value>
+            <value>
+                <fullName>Fermont</fullName>
+                <default>false</default>
+                <label>Fermont</label>
+            </value>
+            <value>
+                <fullName>Flint</fullName>
+                <default>false</default>
+                <label>Flint</label>
+            </value>
+            <value>
+                <fullName>Fontana</fullName>
+                <default>false</default>
+                <label>Fontana</label>
+            </value>
+            <value>
+                <fullName>Fort Collins</fullName>
+                <default>false</default>
+                <label>Fort Collins</label>
+            </value>
+            <value>
+                <fullName>Fort Lauderdale</fullName>
+                <default>false</default>
+                <label>Fort Lauderdale</label>
+            </value>
+            <value>
+                <fullName>Fort Smith</fullName>
+                <default>false</default>
+                <label>Fort Smith</label>
+            </value>
+            <value>
+                <fullName>Fort Wayne</fullName>
+                <default>false</default>
+                <label>Fort Wayne</label>
+            </value>
+            <value>
+                <fullName>Fort Worth</fullName>
+                <default>false</default>
+                <label>Fort Worth</label>
+            </value>
+            <value>
+                <fullName>Frederick</fullName>
+                <default>false</default>
+                <label>Frederick</label>
+            </value>
+            <value>
+                <fullName>Fredericton</fullName>
+                <default>false</default>
+                <label>Fredericton</label>
+            </value>
+            <value>
+                <fullName>Fremont</fullName>
+                <default>false</default>
+                <label>Fremont</label>
+            </value>
+            <value>
+                <fullName>Fresno</fullName>
+                <default>false</default>
+                <label>Fresno</label>
+            </value>
+            <value>
+                <fullName>Frisco</fullName>
+                <default>false</default>
+                <label>Frisco</label>
+            </value>
+            <value>
+                <fullName>Fullerton</fullName>
+                <default>false</default>
+                <label>Fullerton</label>
+            </value>
+            <value>
+                <fullName>Gainesville</fullName>
+                <default>false</default>
+                <label>Gainesville</label>
+            </value>
+            <value>
+                <fullName>Gaithersburg</fullName>
+                <default>false</default>
+                <label>Gaithersburg</label>
+            </value>
+            <value>
+                <fullName>Garden Grove</fullName>
+                <default>false</default>
+                <label>Garden Grove</label>
+            </value>
+            <value>
+                <fullName>Garland</fullName>
+                <default>false</default>
+                <label>Garland</label>
+            </value>
+            <value>
+                <fullName>Gaspé</fullName>
+                <default>false</default>
+                <label>Gaspé</label>
+            </value>
+            <value>
+                <fullName>Gatineau</fullName>
+                <default>false</default>
+                <label>Gatineau</label>
+            </value>
+            <value>
+                <fullName>Georgina</fullName>
+                <default>false</default>
+                <label>Georgina</label>
+            </value>
+            <value>
+                <fullName>Gilbert</fullName>
+                <default>false</default>
+                <label>Gilbert</label>
+            </value>
+            <value>
+                <fullName>Gillam</fullName>
+                <default>false</default>
+                <label>Gillam</label>
+            </value>
+            <value>
+                <fullName>Glasgow</fullName>
+                <default>false</default>
+                <label>Glasgow</label>
+            </value>
+            <value>
+                <fullName>Glendale</fullName>
+                <default>false</default>
+                <label>Glendale</label>
+            </value>
+            <value>
+                <fullName>Gloucester</fullName>
+                <default>false</default>
+                <label>Gloucester</label>
+            </value>
+            <value>
+                <fullName>Gracefield</fullName>
+                <default>false</default>
+                <label>Gracefield</label>
+            </value>
+            <value>
+                <fullName>Grand Falls-Windsor</fullName>
+                <default>false</default>
+                <label>Grand Falls-Windsor</label>
+            </value>
+            <value>
+                <fullName>Grand Forks</fullName>
+                <default>false</default>
+                <label>Grand Forks</label>
+            </value>
+            <value>
+                <fullName>Grand Prairie</fullName>
+                <default>false</default>
+                <label>Grand Prairie</label>
+            </value>
+            <value>
+                <fullName>Grand Rapids</fullName>
+                <default>false</default>
+                <label>Grand Rapids</label>
+            </value>
+            <value>
+                <fullName>Gravenhurst</fullName>
+                <default>false</default>
+                <label>Gravenhurst</label>
+            </value>
+            <value>
+                <fullName>Greater Napanee</fullName>
+                <default>false</default>
+                <label>Greater Napanee</label>
+            </value>
+            <value>
+                <fullName>Greater Sudbury</fullName>
+                <default>false</default>
+                <label>Greater Sudbury</label>
+            </value>
+            <value>
+                <fullName>Great Falls</fullName>
+                <default>false</default>
+                <label>Great Falls</label>
+            </value>
+            <value>
+                <fullName>Green Bay</fullName>
+                <default>false</default>
+                <label>Green Bay</label>
+            </value>
+            <value>
+                <fullName>Greensboro</fullName>
+                <default>false</default>
+                <label>Greensboro</label>
+            </value>
+            <value>
+                <fullName>Gresham</fullName>
+                <default>false</default>
+                <label>Gresham</label>
+            </value>
+            <value>
+                <fullName>Gulfport</fullName>
+                <default>false</default>
+                <label>Gulfport</label>
+            </value>
+            <value>
+                <fullName>Haldimand County</fullName>
+                <default>false</default>
+                <label>Haldimand County</label>
+            </value>
+            <value>
+                <fullName>Halifax</fullName>
+                <default>false</default>
+                <label>Halifax</label>
+            </value>
+            <value>
+                <fullName>Halifax Regional Municipality</fullName>
+                <default>false</default>
+                <label>Halifax Regional Municipality</label>
+            </value>
+            <value>
+                <fullName>Halton Hills</fullName>
+                <default>false</default>
+                <label>Halton Hills</label>
+            </value>
+            <value>
+                <fullName>Hamilton</fullName>
+                <default>false</default>
+                <label>Hamilton</label>
+            </value>
+            <value>
+                <fullName>Hampton</fullName>
+                <default>false</default>
+                <label>Hampton</label>
+            </value>
+            <value>
+                <fullName>Happy Valley-Goose Bay</fullName>
+                <default>false</default>
+                <label>Happy Valley-Goose Bay</label>
+            </value>
+            <value>
+                <fullName>Hartford</fullName>
+                <default>false</default>
+                <label>Hartford</label>
+            </value>
+            <value>
+                <fullName>Hayward</fullName>
+                <default>false</default>
+                <label>Hayward</label>
+            </value>
+            <value>
+                <fullName>Henderson</fullName>
+                <default>false</default>
+                <label>Henderson</label>
+            </value>
+            <value>
+                <fullName>Hereford</fullName>
+                <default>false</default>
+                <label>Hereford</label>
+            </value>
+            <value>
+                <fullName>Hialeah</fullName>
+                <default>false</default>
+                <label>Hialeah</label>
+            </value>
+            <value>
+                <fullName>High Point</fullName>
+                <default>false</default>
+                <label>High Point</label>
+            </value>
+            <value>
+                <fullName>Hilo</fullName>
+                <default>false</default>
+                <label>Hilo</label>
+            </value>
+            <value>
+                <fullName>Hollywood</fullName>
+                <default>false</default>
+                <label>Hollywood</label>
+            </value>
+            <value>
+                <fullName>Honolulu</fullName>
+                <default>false</default>
+                <label>Honolulu</label>
+            </value>
+            <value>
+                <fullName>Houston</fullName>
+                <default>false</default>
+                <label>Houston</label>
+            </value>
+            <value>
+                <fullName>Huntington</fullName>
+                <default>false</default>
+                <label>Huntington</label>
+            </value>
+            <value>
+                <fullName>Huntington Beach</fullName>
+                <default>false</default>
+                <label>Huntington Beach</label>
+            </value>
+            <value>
+                <fullName>Huntsville</fullName>
+                <default>false</default>
+                <label>Huntsville</label>
+            </value>
+            <value>
+                <fullName>Idaho Falls</fullName>
+                <default>false</default>
+                <label>Idaho Falls</label>
+            </value>
+            <value>
+                <fullName>Independence</fullName>
+                <default>false</default>
+                <label>Independence</label>
+            </value>
+            <value>
+                <fullName>Indianapolis</fullName>
+                <default>false</default>
+                <label>Indianapolis</label>
+            </value>
+            <value>
+                <fullName>Inglewood</fullName>
+                <default>false</default>
+                <label>Inglewood</label>
+            </value>
+            <value>
+                <fullName>Innisfil</fullName>
+                <default>false</default>
+                <label>Innisfil</label>
+            </value>
+            <value>
+                <fullName>Inverness</fullName>
+                <default>false</default>
+                <label>Inverness</label>
+            </value>
+            <value>
+                <fullName>Iqaluit</fullName>
+                <default>false</default>
+                <label>Iqaluit</label>
+            </value>
+            <value>
+                <fullName>Iroquois Falls</fullName>
+                <default>false</default>
+                <label>Iroquois Falls</label>
+            </value>
+            <value>
+                <fullName>Irvine</fullName>
+                <default>false</default>
+                <label>Irvine</label>
+            </value>
+            <value>
+                <fullName>Irving</fullName>
+                <default>false</default>
+                <label>Irving</label>
+            </value>
+            <value>
+                <fullName>Jackson</fullName>
+                <default>false</default>
+                <label>Jackson</label>
+            </value>
+            <value>
+                <fullName>Jacksonville</fullName>
+                <default>false</default>
+                <label>Jacksonville</label>
+            </value>
+            <value>
+                <fullName>Jersey City</fullName>
+                <default>false</default>
+                <label>Jersey City</label>
+            </value>
+            <value>
+                <fullName>Joliet</fullName>
+                <default>false</default>
+                <label>Joliet</label>
+            </value>
+            <value>
+                <fullName>Juneau</fullName>
+                <default>false</default>
+                <label>Juneau</label>
+            </value>
+            <value>
+                <fullName>Kailua</fullName>
+                <default>false</default>
+                <label>Kailua</label>
+            </value>
+            <value>
+                <fullName>Kamloops</fullName>
+                <default>false</default>
+                <label>Kamloops</label>
+            </value>
+            <value>
+                <fullName>Kansas City</fullName>
+                <default>false</default>
+                <label>Kansas City</label>
+            </value>
+            <value>
+                <fullName>Kawartha Lakes</fullName>
+                <default>false</default>
+                <label>Kawartha Lakes</label>
+            </value>
+            <value>
+                <fullName>Kearney</fullName>
+                <default>false</default>
+                <label>Kearney</label>
+            </value>
+            <value>
+                <fullName>Kelowna</fullName>
+                <default>false</default>
+                <label>Kelowna</label>
+            </value>
+            <value>
+                <fullName>Kenosha</fullName>
+                <default>false</default>
+                <label>Kenosha</label>
+            </value>
+            <value>
+                <fullName>Kent</fullName>
+                <default>false</default>
+                <label>Kent</label>
+            </value>
+            <value>
+                <fullName>Killeen</fullName>
+                <default>false</default>
+                <label>Killeen</label>
+            </value>
+            <value>
+                <fullName>Kingston</fullName>
+                <default>false</default>
+                <label>Kingston</label>
+            </value>
+            <value>
+                <fullName>Kingston upon Hull</fullName>
+                <default>false</default>
+                <label>Kingston upon Hull</label>
+            </value>
+            <value>
+                <fullName>Knoxville</fullName>
+                <default>false</default>
+                <label>Knoxville</label>
+            </value>
+            <value>
+                <fullName>Lafayette</fullName>
+                <default>false</default>
+                <label>Lafayette</label>
+            </value>
+            <value>
+                <fullName>Lakeshore</fullName>
+                <default>false</default>
+                <label>Lakeshore</label>
+            </value>
+            <value>
+                <fullName>Lakewood</fullName>
+                <default>false</default>
+                <label>Lakewood</label>
+            </value>
+            <value>
+                <fullName>La Malbaie</fullName>
+                <default>false</default>
+                <label>La Malbaie</label>
+            </value>
+            <value>
+                <fullName>Lancaster</fullName>
+                <default>false</default>
+                <label>Lancaster</label>
+            </value>
+            <value>
+                <fullName>Lansing</fullName>
+                <default>false</default>
+                <label>Lansing</label>
+            </value>
+            <value>
+                <fullName>Laramie</fullName>
+                <default>false</default>
+                <label>Laramie</label>
+            </value>
+            <value>
+                <fullName>Laredo</fullName>
+                <default>false</default>
+                <label>Laredo</label>
+            </value>
+            <value>
+                <fullName>Las Cruces</fullName>
+                <default>false</default>
+                <label>Las Cruces</label>
+            </value>
+            <value>
+                <fullName>Las Vegas</fullName>
+                <default>false</default>
+                <label>Las Vegas</label>
+            </value>
+            <value>
+                <fullName>La Tuque</fullName>
+                <default>false</default>
+                <label>La Tuque</label>
+            </value>
+            <value>
+                <fullName>Laurentian Hills</fullName>
+                <default>false</default>
+                <label>Laurentian Hills</label>
+            </value>
+            <value>
+                <fullName>Leaf Rapids</fullName>
+                <default>false</default>
+                <label>Leaf Rapids</label>
+            </value>
+            <value>
+                <fullName>Leeds</fullName>
+                <default>false</default>
+                <label>Leeds</label>
+            </value>
+            <value>
+                <fullName>Leicester</fullName>
+                <default>false</default>
+                <label>Leicester</label>
+            </value>
+            <value>
+                <fullName>Lethbridge</fullName>
+                <default>false</default>
+                <label>Lethbridge</label>
+            </value>
+            <value>
+                <fullName>Lévis</fullName>
+                <default>false</default>
+                <label>Lévis</label>
+            </value>
+            <value>
+                <fullName>Lewiston</fullName>
+                <default>false</default>
+                <label>Lewiston</label>
+            </value>
+            <value>
+                <fullName>Lexington</fullName>
+                <default>false</default>
+                <label>Lexington</label>
+            </value>
+            <value>
+                <fullName>Lichfield</fullName>
+                <default>false</default>
+                <label>Lichfield</label>
+            </value>
+            <value>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+                <label>Lincoln</label>
+            </value>
+            <value>
+                <fullName>Lisburn</fullName>
+                <default>false</default>
+                <label>Lisburn</label>
+            </value>
+            <value>
+                <fullName>Little Rock</fullName>
+                <default>false</default>
+                <label>Little Rock</label>
+            </value>
+            <value>
+                <fullName>Liverpool</fullName>
+                <default>false</default>
+                <label>Liverpool</label>
+            </value>
+            <value>
+                <fullName>London</fullName>
+                <default>false</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>Londonderry</fullName>
+                <default>false</default>
+                <label>Londonderry</label>
+            </value>
+            <value>
+                <fullName>Long Beach</fullName>
+                <default>false</default>
+                <label>Long Beach</label>
+            </value>
+            <value>
+                <fullName>Los Angeles</fullName>
+                <default>false</default>
+                <label>Los Angeles</label>
+            </value>
+            <value>
+                <fullName>Louisville</fullName>
+                <default>false</default>
+                <label>Louisville</label>
+            </value>
+            <value>
+                <fullName>Lowell</fullName>
+                <default>false</default>
+                <label>Lowell</label>
+            </value>
+            <value>
+                <fullName>Lubbock</fullName>
+                <default>false</default>
+                <label>Lubbock</label>
+            </value>
+            <value>
+                <fullName>Lynn Lake</fullName>
+                <default>false</default>
+                <label>Lynn Lake</label>
+            </value>
+            <value>
+                <fullName>Madison</fullName>
+                <default>false</default>
+                <label>Madison</label>
+            </value>
+            <value>
+                <fullName>Manchester</fullName>
+                <default>false</default>
+                <label>Manchester</label>
+            </value>
+            <value>
+                <fullName>McAllen</fullName>
+                <default>false</default>
+                <label>McAllen</label>
+            </value>
+            <value>
+                <fullName>McKinney</fullName>
+                <default>false</default>
+                <label>McKinney</label>
+            </value>
+            <value>
+                <fullName>Memphis</fullName>
+                <default>false</default>
+                <label>Memphis</label>
+            </value>
+            <value>
+                <fullName>Mesa</fullName>
+                <default>false</default>
+                <label>Mesa</label>
+            </value>
+            <value>
+                <fullName>Mesquite</fullName>
+                <default>false</default>
+                <label>Mesquite</label>
+            </value>
+            <value>
+                <fullName>Miami</fullName>
+                <default>false</default>
+                <label>Miami</label>
+            </value>
+            <value>
+                <fullName>Miami Gardens</fullName>
+                <default>false</default>
+                <label>Miami Gardens</label>
+            </value>
+            <value>
+                <fullName>Midland</fullName>
+                <default>false</default>
+                <label>Midland</label>
+            </value>
+            <value>
+                <fullName>Milton</fullName>
+                <default>false</default>
+                <label>Milton</label>
+            </value>
+            <value>
+                <fullName>Milwaukee</fullName>
+                <default>false</default>
+                <label>Milwaukee</label>
+            </value>
+            <value>
+                <fullName>Minneapolis</fullName>
+                <default>false</default>
+                <label>Minneapolis</label>
+            </value>
+            <value>
+                <fullName>Minto</fullName>
+                <default>false</default>
+                <label>Minto</label>
+            </value>
+            <value>
+                <fullName>Mirabel</fullName>
+                <default>false</default>
+                <label>Mirabel</label>
+            </value>
+            <value>
+                <fullName>Miramar</fullName>
+                <default>false</default>
+                <label>Miramar</label>
+            </value>
+            <value>
+                <fullName>Mississauga</fullName>
+                <default>false</default>
+                <label>Mississauga</label>
+            </value>
+            <value>
+                <fullName>Mississippi Mills</fullName>
+                <default>false</default>
+                <label>Mississippi Mills</label>
+            </value>
+            <value>
+                <fullName>Missoula</fullName>
+                <default>false</default>
+                <label>Missoula</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>Modesto</fullName>
+                <default>false</default>
+                <label>Modesto</label>
+            </value>
+            <value>
+                <fullName>Moncton</fullName>
+                <default>false</default>
+                <label>Moncton</label>
+            </value>
+            <value>
+                <fullName>Mono</fullName>
+                <default>false</default>
+                <label>Mono</label>
+            </value>
+            <value>
+                <fullName>Montgomery</fullName>
+                <default>false</default>
+                <label>Montgomery</label>
+            </value>
+            <value>
+                <fullName>Mont-Laurier</fullName>
+                <default>false</default>
+                <label>Mont-Laurier</label>
+            </value>
+            <value>
+                <fullName>Montreal</fullName>
+                <default>false</default>
+                <label>Montreal</label>
+            </value>
+            <value>
+                <fullName>Moreno Valley</fullName>
+                <default>false</default>
+                <label>Moreno Valley</label>
+            </value>
+            <value>
+                <fullName>Murfreesboro</fullName>
+                <default>false</default>
+                <label>Murfreesboro</label>
+            </value>
+            <value>
+                <fullName>Murrieta</fullName>
+                <default>false</default>
+                <label>Murrieta</label>
+            </value>
+            <value>
+                <fullName>Nampa</fullName>
+                <default>false</default>
+                <label>Nampa</label>
+            </value>
+            <value>
+                <fullName>Naperville</fullName>
+                <default>false</default>
+                <label>Naperville</label>
+            </value>
+            <value>
+                <fullName>Nashua</fullName>
+                <default>false</default>
+                <label>Nashua</label>
+            </value>
+            <value>
+                <fullName>Nashville</fullName>
+                <default>false</default>
+                <label>Nashville</label>
+            </value>
+            <value>
+                <fullName>Newark</fullName>
+                <default>false</default>
+                <label>Newark</label>
+            </value>
+            <value>
+                <fullName>Newcastle upon Tyne</fullName>
+                <default>false</default>
+                <label>Newcastle upon Tyne</label>
+            </value>
+            <value>
+                <fullName>New Haven</fullName>
+                <default>false</default>
+                <label>New Haven</label>
+            </value>
+            <value>
+                <fullName>New Orleans</fullName>
+                <default>false</default>
+                <label>New Orleans</label>
+            </value>
+            <value>
+                <fullName>Newport</fullName>
+                <default>false</default>
+                <label>Newport</label>
+            </value>
+            <value>
+                <fullName>Newport News</fullName>
+                <default>false</default>
+                <label>Newport News</label>
+            </value>
+            <value>
+                <fullName>Newry</fullName>
+                <default>false</default>
+                <label>Newry</label>
+            </value>
+            <value>
+                <fullName>New Tecumseth</fullName>
+                <default>false</default>
+                <label>New Tecumseth</label>
+            </value>
+            <value>
+                <fullName>New York</fullName>
+                <default>false</default>
+                <label>New York</label>
+            </value>
+            <value>
+                <fullName>New York City</fullName>
+                <default>false</default>
+                <label>New York City</label>
+            </value>
+            <value>
+                <fullName>Norfolk</fullName>
+                <default>false</default>
+                <label>Norfolk</label>
+            </value>
+            <value>
+                <fullName>Norfolk County</fullName>
+                <default>false</default>
+                <label>Norfolk County</label>
+            </value>
+            <value>
+                <fullName>Norman</fullName>
+                <default>false</default>
+                <label>Norman</label>
+            </value>
+            <value>
+                <fullName>North Bay</fullName>
+                <default>false</default>
+                <label>North Bay</label>
+            </value>
+            <value>
+                <fullName>North Charleston</fullName>
+                <default>false</default>
+                <label>North Charleston</label>
+            </value>
+            <value>
+                <fullName>Northeastern Manitoulin and the Islands</fullName>
+                <default>false</default>
+                <label>Northeastern Manitoulin and the Islands</label>
+            </value>
+            <value>
+                <fullName>North Las Vegas</fullName>
+                <default>false</default>
+                <label>North Las Vegas</label>
+            </value>
+            <value>
+                <fullName>Norwalk</fullName>
+                <default>false</default>
+                <label>Norwalk</label>
+            </value>
+            <value>
+                <fullName>Norwich</fullName>
+                <default>false</default>
+                <label>Norwich</label>
+            </value>
+            <value>
+                <fullName>Nottingham</fullName>
+                <default>false</default>
+                <label>Nottingham</label>
+            </value>
+            <value>
+                <fullName>Oakland</fullName>
+                <default>false</default>
+                <label>Oakland</label>
+            </value>
+            <value>
+                <fullName>Oceanside</fullName>
+                <default>false</default>
+                <label>Oceanside</label>
+            </value>
+            <value>
+                <fullName>Odessa</fullName>
+                <default>false</default>
+                <label>Odessa</label>
+            </value>
+            <value>
+                <fullName>Oklahoma City</fullName>
+                <default>false</default>
+                <label>Oklahoma City</label>
+            </value>
+            <value>
+                <fullName>Olathe</fullName>
+                <default>false</default>
+                <label>Olathe</label>
+            </value>
+            <value>
+                <fullName>Omaha</fullName>
+                <default>false</default>
+                <label>Omaha</label>
+            </value>
+            <value>
+                <fullName>Ontario</fullName>
+                <default>false</default>
+                <label>Ontario</label>
+            </value>
+            <value>
+                <fullName>Orange</fullName>
+                <default>false</default>
+                <label>Orange</label>
+            </value>
+            <value>
+                <fullName>Orlando</fullName>
+                <default>false</default>
+                <label>Orlando</label>
+            </value>
+            <value>
+                <fullName>Ottawa</fullName>
+                <default>false</default>
+                <label>Ottawa</label>
+            </value>
+            <value>
+                <fullName>Overland Park</fullName>
+                <default>false</default>
+                <label>Overland Park</label>
+            </value>
+            <value>
+                <fullName>Owensboro</fullName>
+                <default>false</default>
+                <label>Owensboro</label>
+            </value>
+            <value>
+                <fullName>Oxford</fullName>
+                <default>false</default>
+                <label>Oxford</label>
+            </value>
+            <value>
+                <fullName>Oxnard</fullName>
+                <default>false</default>
+                <label>Oxnard</label>
+            </value>
+            <value>
+                <fullName>Palm Bay</fullName>
+                <default>false</default>
+                <label>Palm Bay</label>
+            </value>
+            <value>
+                <fullName>Palmdale</fullName>
+                <default>false</default>
+                <label>Palmdale</label>
+            </value>
+            <value>
+                <fullName>Parkersburg</fullName>
+                <default>false</default>
+                <label>Parkersburg</label>
+            </value>
+            <value>
+                <fullName>Pasadena</fullName>
+                <default>false</default>
+                <label>Pasadena</label>
+            </value>
+            <value>
+                <fullName>Paterson</fullName>
+                <default>false</default>
+                <label>Paterson</label>
+            </value>
+            <value>
+                <fullName>Pembroke Pines</fullName>
+                <default>false</default>
+                <label>Pembroke Pines</label>
+            </value>
+            <value>
+                <fullName>Peoria</fullName>
+                <default>false</default>
+                <label>Peoria</label>
+            </value>
+            <value>
+                <fullName>Percé</fullName>
+                <default>false</default>
+                <label>Percé</label>
+            </value>
+            <value>
+                <fullName>Perth</fullName>
+                <default>false</default>
+                <label>Perth</label>
+            </value>
+            <value>
+                <fullName>Peterborough</fullName>
+                <default>false</default>
+                <label>Peterborough</label>
+            </value>
+            <value>
+                <fullName>Philadelphia</fullName>
+                <default>false</default>
+                <label>Philadelphia</label>
+            </value>
+            <value>
+                <fullName>Philadephia</fullName>
+                <default>false</default>
+                <label>Philadephia</label>
+            </value>
+            <value>
+                <fullName>Phoenix</fullName>
+                <default>false</default>
+                <label>Phoenix</label>
+            </value>
+            <value>
+                <fullName>Pittsburgh</fullName>
+                <default>false</default>
+                <label>Pittsburgh</label>
+            </value>
+            <value>
+                <fullName>Plano</fullName>
+                <default>false</default>
+                <label>Plano</label>
+            </value>
+            <value>
+                <fullName>Plymouth</fullName>
+                <default>false</default>
+                <label>Plymouth</label>
+            </value>
+            <value>
+                <fullName>Plympton–Wyoming</fullName>
+                <default>false</default>
+                <label>Plympton–Wyoming</label>
+            </value>
+            <value>
+                <fullName>Pohénégamook</fullName>
+                <default>false</default>
+                <label>Pohénégamook</label>
+            </value>
+            <value>
+                <fullName>Pomona</fullName>
+                <default>false</default>
+                <label>Pomona</label>
+            </value>
+            <value>
+                <fullName>Pompano Beach</fullName>
+                <default>false</default>
+                <label>Pompano Beach</label>
+            </value>
+            <value>
+                <fullName>Port-Cartier</fullName>
+                <default>false</default>
+                <label>Port-Cartier</label>
+            </value>
+            <value>
+                <fullName>Portland</fullName>
+                <default>false</default>
+                <label>Portland</label>
+            </value>
+            <value>
+                <fullName>Portsmouth</fullName>
+                <default>false</default>
+                <label>Portsmouth</label>
+            </value>
+            <value>
+                <fullName>Port St. Lucie</fullName>
+                <default>false</default>
+                <label>Port St. Lucie</label>
+            </value>
+            <value>
+                <fullName>Preston</fullName>
+                <default>false</default>
+                <label>Preston</label>
+            </value>
+            <value>
+                <fullName>Prince Edward County</fullName>
+                <default>false</default>
+                <label>Prince Edward County</label>
+            </value>
+            <value>
+                <fullName>Prince George</fullName>
+                <default>false</default>
+                <label>Prince George</label>
+            </value>
+            <value>
+                <fullName>Providence</fullName>
+                <default>false</default>
+                <label>Providence</label>
+            </value>
+            <value>
+                <fullName>Provo</fullName>
+                <default>false</default>
+                <label>Provo</label>
+            </value>
+            <value>
+                <fullName>Pueblo</fullName>
+                <default>false</default>
+                <label>Pueblo</label>
+            </value>
+            <value>
+                <fullName>Quebec City</fullName>
+                <default>false</default>
+                <label>Quebec City</label>
+            </value>
+            <value>
+                <fullName>Québec City</fullName>
+                <default>false</default>
+                <label>Québec City</label>
+            </value>
+            <value>
+                <fullName>Queens</fullName>
+                <default>false</default>
+                <label>Queens</label>
+            </value>
+            <value>
+                <fullName>Quinte West</fullName>
+                <default>false</default>
+                <label>Quinte West</label>
+            </value>
+            <value>
+                <fullName>Raleigh</fullName>
+                <default>false</default>
+                <label>Raleigh</label>
+            </value>
+            <value>
+                <fullName>Rancho Cucamonga</fullName>
+                <default>false</default>
+                <label>Rancho Cucamonga</label>
+            </value>
+            <value>
+                <fullName>Rapid City</fullName>
+                <default>false</default>
+                <label>Rapid City</label>
+            </value>
+            <value>
+                <fullName>Regina</fullName>
+                <default>false</default>
+                <label>Regina</label>
+            </value>
+            <value>
+                <fullName>Reno</fullName>
+                <default>false</default>
+                <label>Reno</label>
+            </value>
+            <value>
+                <fullName>Rialto</fullName>
+                <default>false</default>
+                <label>Rialto</label>
+            </value>
+            <value>
+                <fullName>Richardson</fullName>
+                <default>false</default>
+                <label>Richardson</label>
+            </value>
+            <value>
+                <fullName>Richmond</fullName>
+                <default>false</default>
+                <label>Richmond</label>
+            </value>
+            <value>
+                <fullName>Ripon</fullName>
+                <default>false</default>
+                <label>Ripon</label>
+            </value>
+            <value>
+                <fullName>Riverside</fullName>
+                <default>false</default>
+                <label>Riverside</label>
+            </value>
+            <value>
+                <fullName>Rivière-Rouge</fullName>
+                <default>false</default>
+                <label>Rivière-Rouge</label>
+            </value>
+            <value>
+                <fullName>Rochester</fullName>
+                <default>false</default>
+                <label>Rochester</label>
+            </value>
+            <value>
+                <fullName>Rockford</fullName>
+                <default>false</default>
+                <label>Rockford</label>
+            </value>
+            <value>
+                <fullName>Roseville</fullName>
+                <default>false</default>
+                <label>Roseville</label>
+            </value>
+            <value>
+                <fullName>Round Rock</fullName>
+                <default>false</default>
+                <label>Round Rock</label>
+            </value>
+            <value>
+                <fullName>Rouyn-Noranda</fullName>
+                <default>false</default>
+                <label>Rouyn-Noranda</label>
+            </value>
+            <value>
+                <fullName>Rutland</fullName>
+                <default>false</default>
+                <label>Rutland</label>
+            </value>
+            <value>
+                <fullName>Sacramento</fullName>
+                <default>false</default>
+                <label>Sacramento</label>
+            </value>
+            <value>
+                <fullName>Saguenay</fullName>
+                <default>false</default>
+                <label>Saguenay</label>
+            </value>
+            <value>
+                <fullName>Saint-Félicien</fullName>
+                <default>false</default>
+                <label>Saint-Félicien</label>
+            </value>
+            <value>
+                <fullName>Saint John</fullName>
+                <default>false</default>
+                <label>Saint John</label>
+            </value>
+            <value>
+                <fullName>Saint Paul</fullName>
+                <default>false</default>
+                <label>Saint Paul</label>
+            </value>
+            <value>
+                <fullName>Saint-Raymond</fullName>
+                <default>false</default>
+                <label>Saint-Raymond</label>
+            </value>
+            <value>
+                <fullName>Salem</fullName>
+                <default>false</default>
+                <label>Salem</label>
+            </value>
+            <value>
+                <fullName>Salford</fullName>
+                <default>false</default>
+                <label>Salford</label>
+            </value>
+            <value>
+                <fullName>Salinas</fullName>
+                <default>false</default>
+                <label>Salinas</label>
+            </value>
+            <value>
+                <fullName>Salisbury</fullName>
+                <default>false</default>
+                <label>Salisbury</label>
+            </value>
+            <value>
+                <fullName>Salt Lake City</fullName>
+                <default>false</default>
+                <label>Salt Lake City</label>
+            </value>
+            <value>
+                <fullName>San Antonio</fullName>
+                <default>false</default>
+                <label>San Antonio</label>
+            </value>
+            <value>
+                <fullName>San Bernardino</fullName>
+                <default>false</default>
+                <label>San Bernardino</label>
+            </value>
+            <value>
+                <fullName>San Diego</fullName>
+                <default>false</default>
+                <label>San Diego</label>
+            </value>
+            <value>
+                <fullName>San Francisco</fullName>
+                <default>false</default>
+                <label>San Francisco</label>
+            </value>
+            <value>
+                <fullName>Sanit Louis</fullName>
+                <default>false</default>
+                <label>Sanit Louis</label>
+            </value>
+            <value>
+                <fullName>San Jose</fullName>
+                <default>false</default>
+                <label>San Jose</label>
+            </value>
+            <value>
+                <fullName>San José</fullName>
+                <default>false</default>
+                <label>San José</label>
+            </value>
+            <value>
+                <fullName>Santa Ana</fullName>
+                <default>false</default>
+                <label>Santa Ana</label>
+            </value>
+            <value>
+                <fullName>Santa Clara</fullName>
+                <default>false</default>
+                <label>Santa Clara</label>
+            </value>
+            <value>
+                <fullName>Santa Clarita</fullName>
+                <default>false</default>
+                <label>Santa Clarita</label>
+            </value>
+            <value>
+                <fullName>Santa Fe</fullName>
+                <default>false</default>
+                <label>Santa Fe</label>
+            </value>
+            <value>
+                <fullName>Santa Maria</fullName>
+                <default>false</default>
+                <label>Santa Maria</label>
+            </value>
+            <value>
+                <fullName>Santa Rosa</fullName>
+                <default>false</default>
+                <label>Santa Rosa</label>
+            </value>
+            <value>
+                <fullName>Saskatoon</fullName>
+                <default>false</default>
+                <label>Saskatoon</label>
+            </value>
+            <value>
+                <fullName>Savannah</fullName>
+                <default>false</default>
+                <label>Savannah</label>
+            </value>
+            <value>
+                <fullName>Scottsdale</fullName>
+                <default>false</default>
+                <label>Scottsdale</label>
+            </value>
+            <value>
+                <fullName>Seattle</fullName>
+                <default>false</default>
+                <label>Seattle</label>
+            </value>
+            <value>
+                <fullName>Senneterre</fullName>
+                <default>false</default>
+                <label>Senneterre</label>
+            </value>
+            <value>
+                <fullName>Sept-Îles</fullName>
+                <default>false</default>
+                <label>Sept-Îles</label>
+            </value>
+            <value>
+                <fullName>Shawinigan</fullName>
+                <default>false</default>
+                <label>Shawinigan</label>
+            </value>
+            <value>
+                <fullName>Sheffield</fullName>
+                <default>false</default>
+                <label>Sheffield</label>
+            </value>
+            <value>
+                <fullName>Sherbrooke</fullName>
+                <default>false</default>
+                <label>Sherbrooke</label>
+            </value>
+            <value>
+                <fullName>Shreveport</fullName>
+                <default>false</default>
+                <label>Shreveport</label>
+            </value>
+            <value>
+                <fullName>Simi Valley</fullName>
+                <default>false</default>
+                <label>Simi Valley</label>
+            </value>
+            <value>
+                <fullName>Sioux Falls</fullName>
+                <default>false</default>
+                <label>Sioux Falls</label>
+            </value>
+            <value>
+                <fullName>Snow Lake</fullName>
+                <default>false</default>
+                <label>Snow Lake</label>
+            </value>
+            <value>
+                <fullName>Southampton</fullName>
+                <default>false</default>
+                <label>Southampton</label>
+            </value>
+            <value>
+                <fullName>South Bend</fullName>
+                <default>false</default>
+                <label>South Bend</label>
+            </value>
+            <value>
+                <fullName>South Bruce Peninsula</fullName>
+                <default>false</default>
+                <label>South Bruce Peninsula</label>
+            </value>
+            <value>
+                <fullName>South Burlington</fullName>
+                <default>false</default>
+                <label>South Burlington</label>
+            </value>
+            <value>
+                <fullName>Spokane</fullName>
+                <default>false</default>
+                <label>Spokane</label>
+            </value>
+            <value>
+                <fullName>Springfield</fullName>
+                <default>false</default>
+                <label>Springfield</label>
+            </value>
+            <value>
+                <fullName>St. Albans</fullName>
+                <default>false</default>
+                <label>St. Albans</label>
+            </value>
+            <value>
+                <fullName>St. David&apos;s</fullName>
+                <default>false</default>
+                <label>St. David&apos;s</label>
+            </value>
+            <value>
+                <fullName>St. John&apos;s</fullName>
+                <default>false</default>
+                <label>St. John&apos;s</label>
+            </value>
+            <value>
+                <fullName>St. Louis</fullName>
+                <default>false</default>
+                <label>St. Louis</label>
+            </value>
+            <value>
+                <fullName>St. Petersburg</fullName>
+                <default>false</default>
+                <label>St. Petersburg</label>
+            </value>
+            <value>
+                <fullName>St Albans</fullName>
+                <default>false</default>
+                <label>St Albans</label>
+            </value>
+            <value>
+                <fullName>Stamford</fullName>
+                <default>false</default>
+                <label>Stamford</label>
+            </value>
+            <value>
+                <fullName>St Asaph</fullName>
+                <default>false</default>
+                <label>St Asaph</label>
+            </value>
+            <value>
+                <fullName>St David&apos;s</fullName>
+                <default>false</default>
+                <label>St David&apos;s</label>
+            </value>
+            <value>
+                <fullName>Steinbach</fullName>
+                <default>false</default>
+                <label>Steinbach</label>
+            </value>
+            <value>
+                <fullName>Sterling Heights</fullName>
+                <default>false</default>
+                <label>Sterling Heights</label>
+            </value>
+            <value>
+                <fullName>Stirling</fullName>
+                <default>false</default>
+                <label>Stirling</label>
+            </value>
+            <value>
+                <fullName>Stockton</fullName>
+                <default>false</default>
+                <label>Stockton</label>
+            </value>
+            <value>
+                <fullName>Stoke-on-Trent</fullName>
+                <default>false</default>
+                <label>Stoke-on-Trent</label>
+            </value>
+            <value>
+                <fullName>Stratford</fullName>
+                <default>false</default>
+                <label>Stratford</label>
+            </value>
+            <value>
+                <fullName>Summerside</fullName>
+                <default>false</default>
+                <label>Summerside</label>
+            </value>
+            <value>
+                <fullName>Sunderland</fullName>
+                <default>false</default>
+                <label>Sunderland</label>
+            </value>
+            <value>
+                <fullName>Sunnyvale</fullName>
+                <default>false</default>
+                <label>Sunnyvale</label>
+            </value>
+            <value>
+                <fullName>Surprise</fullName>
+                <default>false</default>
+                <label>Surprise</label>
+            </value>
+            <value>
+                <fullName>Surrey</fullName>
+                <default>false</default>
+                <label>Surrey</label>
+            </value>
+            <value>
+                <fullName>Swansea</fullName>
+                <default>false</default>
+                <label>Swansea</label>
+            </value>
+            <value>
+                <fullName>Syracuse</fullName>
+                <default>false</default>
+                <label>Syracuse</label>
+            </value>
+            <value>
+                <fullName>Tacoma</fullName>
+                <default>false</default>
+                <label>Tacoma</label>
+            </value>
+            <value>
+                <fullName>Tallahassee</fullName>
+                <default>false</default>
+                <label>Tallahassee</label>
+            </value>
+            <value>
+                <fullName>Tampa</fullName>
+                <default>false</default>
+                <label>Tampa</label>
+            </value>
+            <value>
+                <fullName>Temecula</fullName>
+                <default>false</default>
+                <label>Temecula</label>
+            </value>
+            <value>
+                <fullName>Témiscaming</fullName>
+                <default>false</default>
+                <label>Témiscaming</label>
+            </value>
+            <value>
+                <fullName>Tempe</fullName>
+                <default>false</default>
+                <label>Tempe</label>
+            </value>
+            <value>
+                <fullName>The Blue Mountains</fullName>
+                <default>false</default>
+                <label>The Blue Mountains</label>
+            </value>
+            <value>
+                <fullName>Thornton</fullName>
+                <default>false</default>
+                <label>Thornton</label>
+            </value>
+            <value>
+                <fullName>Thousand Oaks</fullName>
+                <default>false</default>
+                <label>Thousand Oaks</label>
+            </value>
+            <value>
+                <fullName>Thunder Bay</fullName>
+                <default>false</default>
+                <label>Thunder Bay</label>
+            </value>
+            <value>
+                <fullName>Timmins</fullName>
+                <default>false</default>
+                <label>Timmins</label>
+            </value>
+            <value>
+                <fullName>Toledo</fullName>
+                <default>false</default>
+                <label>Toledo</label>
+            </value>
+            <value>
+                <fullName>Topeka</fullName>
+                <default>false</default>
+                <label>Topeka</label>
+            </value>
+            <value>
+                <fullName>Toronto</fullName>
+                <default>false</default>
+                <label>Toronto</label>
+            </value>
+            <value>
+                <fullName>Torrance</fullName>
+                <default>false</default>
+                <label>Torrance</label>
+            </value>
+            <value>
+                <fullName>Trois-Rivières</fullName>
+                <default>false</default>
+                <label>Trois-Rivières</label>
+            </value>
+            <value>
+                <fullName>Truro</fullName>
+                <default>false</default>
+                <label>Truro</label>
+            </value>
+            <value>
+                <fullName>Tucson</fullName>
+                <default>false</default>
+                <label>Tucson</label>
+            </value>
+            <value>
+                <fullName>Tulsa</fullName>
+                <default>false</default>
+                <label>Tulsa</label>
+            </value>
+            <value>
+                <fullName>Val-d&apos;Or</fullName>
+                <default>false</default>
+                <label>Val-d&apos;Or</label>
+            </value>
+            <value>
+                <fullName>Vallejo</fullName>
+                <default>false</default>
+                <label>Vallejo</label>
+            </value>
+            <value>
+                <fullName>Vancouver</fullName>
+                <default>false</default>
+                <label>Vancouver</label>
+            </value>
+            <value>
+                <fullName>Vaughan</fullName>
+                <default>false</default>
+                <label>Vaughan</label>
+            </value>
+            <value>
+                <fullName>Ventura</fullName>
+                <default>false</default>
+                <label>Ventura</label>
+            </value>
+            <value>
+                <fullName>Victoria</fullName>
+                <default>false</default>
+                <label>Victoria</label>
+            </value>
+            <value>
+                <fullName>Victorville</fullName>
+                <default>false</default>
+                <label>Victorville</label>
+            </value>
+            <value>
+                <fullName>Virginia Beach</fullName>
+                <default>false</default>
+                <label>Virginia Beach</label>
+            </value>
+            <value>
+                <fullName>Visalia</fullName>
+                <default>false</default>
+                <label>Visalia</label>
+            </value>
+            <value>
+                <fullName>Waco</fullName>
+                <default>false</default>
+                <label>Waco</label>
+            </value>
+            <value>
+                <fullName>Wakefield</fullName>
+                <default>false</default>
+                <label>Wakefield</label>
+            </value>
+            <value>
+                <fullName>Warren</fullName>
+                <default>false</default>
+                <label>Warren</label>
+            </value>
+            <value>
+                <fullName>Warwick</fullName>
+                <default>false</default>
+                <label>Warwick</label>
+            </value>
+            <value>
+                <fullName>Washington</fullName>
+                <default>false</default>
+                <label>Washington</label>
+            </value>
+            <value>
+                <fullName>Washington DC</fullName>
+                <default>false</default>
+                <label>Washington DC</label>
+            </value>
+            <value>
+                <fullName>Waterbury</fullName>
+                <default>false</default>
+                <label>Waterbury</label>
+            </value>
+            <value>
+                <fullName>Wells</fullName>
+                <default>false</default>
+                <label>Wells</label>
+            </value>
+            <value>
+                <fullName>West Covina</fullName>
+                <default>false</default>
+                <label>West Covina</label>
+            </value>
+            <value>
+                <fullName>West Jordan</fullName>
+                <default>false</default>
+                <label>West Jordan</label>
+            </value>
+            <value>
+                <fullName>Westminster</fullName>
+                <default>false</default>
+                <label>Westminster</label>
+            </value>
+            <value>
+                <fullName>West Palm Beach</fullName>
+                <default>false</default>
+                <label>West Palm Beach</label>
+            </value>
+            <value>
+                <fullName>West Valley City</fullName>
+                <default>false</default>
+                <label>West Valley City</label>
+            </value>
+            <value>
+                <fullName>Whitehorse</fullName>
+                <default>false</default>
+                <label>Whitehorse</label>
+            </value>
+            <value>
+                <fullName>Wichita</fullName>
+                <default>false</default>
+                <label>Wichita</label>
+            </value>
+            <value>
+                <fullName>Wichita Falls</fullName>
+                <default>false</default>
+                <label>Wichita Falls</label>
+            </value>
+            <value>
+                <fullName>Wilmington</fullName>
+                <default>false</default>
+                <label>Wilmington</label>
+            </value>
+            <value>
+                <fullName>Winchester</fullName>
+                <default>false</default>
+                <label>Winchester</label>
+            </value>
+            <value>
+                <fullName>Winnipeg</fullName>
+                <default>false</default>
+                <label>Winnipeg</label>
+            </value>
+            <value>
+                <fullName>Winston–Salem</fullName>
+                <default>false</default>
+                <label>Winston–Salem</label>
+            </value>
+            <value>
+                <fullName>Wolverhampton</fullName>
+                <default>false</default>
+                <label>Wolverhampton</label>
+            </value>
+            <value>
+                <fullName>Worcester</fullName>
+                <default>false</default>
+                <label>Worcester</label>
+            </value>
+            <value>
+                <fullName>Yellowknife</fullName>
+                <default>false</default>
+                <label>Yellowknife</label>
+            </value>
+            <value>
+                <fullName>Yonkers</fullName>
+                <default>false</default>
+                <label>Yonkers</label>
+            </value>
+            <value>
+                <fullName>York</fullName>
+                <default>false</default>
+                <label>York</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Utah (UT)</controllingFieldValue>
+            <valueName>Provo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utah (UT)</controllingFieldValue>
+            <valueName>Salt Lake City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utah (UT)</controllingFieldValue>
+            <valueName>West Jordan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utah (UT)</controllingFieldValue>
+            <valueName>West Valley City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vermont (VT)</controllingFieldValue>
+            <valueName>Burlington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vermont (VT)</controllingFieldValue>
+            <valueName>South Burlington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia (VA)</controllingFieldValue>
+            <valueName>Alexandria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia (VA)</controllingFieldValue>
+            <valueName>Chesapeake</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia (VA)</controllingFieldValue>
+            <valueName>Chester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia (VA)</controllingFieldValue>
+            <valueName>Hampton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia (VA)</controllingFieldValue>
+            <valueName>Newport News</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia (VA)</controllingFieldValue>
+            <valueName>Norfolk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia (VA)</controllingFieldValue>
+            <valueName>Richmond</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virginia (VA)</controllingFieldValue>
+            <valueName>Virginia Beach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington (WA)</controllingFieldValue>
+            <valueName>Columbia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington (WA)</controllingFieldValue>
+            <valueName>Everett</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington (WA)</controllingFieldValue>
+            <valueName>Seattle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington (WA)</controllingFieldValue>
+            <valueName>Spokane</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington (WA)</controllingFieldValue>
+            <valueName>Tacoma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia (WV)</controllingFieldValue>
+            <valueName>Parkersburg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin (WI)</controllingFieldValue>
+            <valueName>Green Bay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin (WI)</controllingFieldValue>
+            <valueName>Kenosha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin (WI)</controllingFieldValue>
+            <valueName>Madison</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin (WI)</controllingFieldValue>
+            <valueName>Milwaukee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wyoming (WY)</controllingFieldValue>
+            <valueName>Casper</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wyoming (WY)</controllingFieldValue>
+            <valueName>Cheyenne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wyoming (WY)</controllingFieldValue>
+            <valueName>Laramie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manitoba (MB)</controllingFieldValue>
+            <valueName>Brandon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manitoba (MB)</controllingFieldValue>
+            <valueName>Gillam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manitoba (MB)</controllingFieldValue>
+            <valueName>Leaf Rapids</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manitoba (MB)</controllingFieldValue>
+            <valueName>Lynn Lake</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manitoba (MB)</controllingFieldValue>
+            <valueName>Regina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manitoba (MB)</controllingFieldValue>
+            <valueName>Snow Lake</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manitoba (MB)</controllingFieldValue>
+            <valueName>Steinbach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manitoba (MB)</controllingFieldValue>
+            <valueName>Winnipeg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Georgia (GA)</controllingFieldValue>
+            <valueName>Athens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Georgia (GA)</controllingFieldValue>
+            <valueName>Atlanta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Georgia (GA)</controllingFieldValue>
+            <valueName>Savannah</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Brunswick (NB)</controllingFieldValue>
+            <valueName>Fredericton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Brunswick (NB)</controllingFieldValue>
+            <valueName>Moncton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Brunswick (NB)</controllingFieldValue>
+            <valueName>Saint John</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hawaii (HI)</controllingFieldValue>
+            <valueName>Hilo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hawaii (HI)</controllingFieldValue>
+            <valueName>Honolulu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hawaii (HI)</controllingFieldValue>
+            <valueName>Kailua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newfoundland (NF)</controllingFieldValue>
+            <valueName>Baie Verte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newfoundland (NF)</controllingFieldValue>
+            <valueName>Corner Brook</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newfoundland (NF)</controllingFieldValue>
+            <valueName>Grand Falls-Windsor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newfoundland (NF)</controllingFieldValue>
+            <valueName>Happy Valley-Goose Bay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newfoundland (NF)</controllingFieldValue>
+            <valueName>St. John&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Idaho (ID)</controllingFieldValue>
+            <valueName>Boise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Idaho (ID)</controllingFieldValue>
+            <valueName>Idaho Falls</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Idaho (ID)</controllingFieldValue>
+            <valueName>Nampa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Northwest Territories (NT)</controllingFieldValue>
+            <valueName>Yellowknife</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois (IL)</controllingFieldValue>
+            <valueName>Chicago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois (IL)</controllingFieldValue>
+            <valueName>Joliet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois (IL)</controllingFieldValue>
+            <valueName>Naperville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois (IL)</controllingFieldValue>
+            <valueName>Peoria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois (IL)</controllingFieldValue>
+            <valueName>Rockford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nova Scotia (NS)</controllingFieldValue>
+            <valueName>Cape Breton Regional Municipality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nova Scotia (NS)</controllingFieldValue>
+            <valueName>Cape Coral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nova Scotia (NS)</controllingFieldValue>
+            <valueName>Halifax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nova Scotia (NS)</controllingFieldValue>
+            <valueName>Halifax Regional Municipality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana (IN)</controllingFieldValue>
+            <valueName>Evansville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana (IN)</controllingFieldValue>
+            <valueName>Fort Wayne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nunavut (NU)</controllingFieldValue>
+            <valueName>Iqaluit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Iowa (IA)</controllingFieldValue>
+            <valueName>Cedar Rapids</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Iowa (IA)</controllingFieldValue>
+            <valueName>Davenport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Iowa (IA)</controllingFieldValue>
+            <valueName>Des Moines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Iowa (IA)</controllingFieldValue>
+            <valueName>Henderson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Augusta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Blind River</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Bracebridge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Bradford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Brampton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Caledon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Clarence-Rockland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Cochrane</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>County of Brant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Elliot Lake</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Georgina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Gravenhurst</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Greater Napanee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Greater Sudbury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Haldimand County</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Halton Hills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Hamilton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Innisfil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Iroquois Falls</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Kawartha Lakes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Kingston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Lakeshore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Laurentian Hills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Milton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Minto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Mississauga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Mississippi Mills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Mono</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>New Tecumseth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Norfolk County</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>North Bay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Northeastern Manitoulin and the Islands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Ottawa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Plympton–Wyoming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Prince Edward County</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Quinte West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>South Bruce Peninsula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>The Blue Mountains</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Thunder Bay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Timmins</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Toronto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ontario (ON)</controllingFieldValue>
+            <valueName>Vaughan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kansas (KS)</controllingFieldValue>
+            <valueName>Olathe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kansas (KS)</controllingFieldValue>
+            <valueName>Overland Park</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kansas (KS)</controllingFieldValue>
+            <valueName>Topeka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kansas (KS)</controllingFieldValue>
+            <valueName>Wichita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kentucky (KY)</controllingFieldValue>
+            <valueName>Lexington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kentucky (KY)</controllingFieldValue>
+            <valueName>Louisville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kentucky (KY)</controllingFieldValue>
+            <valueName>Owensboro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Louisiana (LA)</controllingFieldValue>
+            <valueName>Lafayette</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Louisiana (LA)</controllingFieldValue>
+            <valueName>New Orleans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Louisiana (LA)</controllingFieldValue>
+            <valueName>Shreveport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maine (ME)</controllingFieldValue>
+            <valueName>Bangor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maine (ME)</controllingFieldValue>
+            <valueName>Lewiston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maine (ME)</controllingFieldValue>
+            <controllingFieldValue>Oregon (OR)</controllingFieldValue>
+            <valueName>Portland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alabama (AL)</controllingFieldValue>
+            <valueName>Huntsville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alabama (AL)</controllingFieldValue>
+            <valueName>Mobile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alabama (AL)</controllingFieldValue>
+            <valueName>Montgomery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alaska (AK)</controllingFieldValue>
+            <valueName>Anchorage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alaska (AK)</controllingFieldValue>
+            <valueName>Fairbanks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alaska (AK)</controllingFieldValue>
+            <valueName>Juneau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona (AZ)</controllingFieldValue>
+            <valueName>Chandler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona (AZ)</controllingFieldValue>
+            <valueName>Little Rock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona (AZ)</controllingFieldValue>
+            <valueName>Phoenix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona (AZ)</controllingFieldValue>
+            <valueName>Scottsdale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona (AZ)</controllingFieldValue>
+            <valueName>Surprise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona (AZ)</controllingFieldValue>
+            <valueName>Tempe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona (AZ)</controllingFieldValue>
+            <valueName>Tucson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arkansas (AR)</controllingFieldValue>
+            <valueName>Fayetteville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Anaheim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Antioch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Bakersfield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Berkeley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Burbank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Carlsbad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Chula Vista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Corona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Costa Mesa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Daly City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Downey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Dublin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>El Cajon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Elk Grove</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>El Monte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Escondido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Fairfield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Fontana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Fremont</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Fresno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Fullerton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Garden Grove</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Glendale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Hayward</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Hollywood</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Huntington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Huntington Beach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Inglewood</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Irvine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Lakewood</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Long Beach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Los Angeles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Mesa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Miramar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Modesto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Moreno Valley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Murrieta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Oakland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Oceanside</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Ontario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Orange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Oxford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Oxnard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Palmdale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Pasadena</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Pomona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Rancho Cucamonga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Rapid City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Rialto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Riverside</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Roseville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Sacramento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Salinas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>San Bernardino</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>San Diego</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>San Francisco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>San Jose</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>San José</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Santa Ana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Santa Clara</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Santa Clarita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Santa Maria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Santa Rosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Simi Valley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Stockton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Sunnyvale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Temecula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Thousand Oaks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Torrance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Vallejo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Ventura</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Victorville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>Visalia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California (CA)</controllingFieldValue>
+            <valueName>West Covina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Arvada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Aurora</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Boulder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Centennial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Colorado Springs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Denver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Fort Collins</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Pueblo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Thornton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Colorado (CO)</controllingFieldValue>
+            <valueName>Westminster</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connecticut (CT)</controllingFieldValue>
+            <valueName>Bridgeport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connecticut (CT)</controllingFieldValue>
+            <valueName>Hartford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connecticut (CT)</controllingFieldValue>
+            <valueName>New Haven</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connecticut (CT)</controllingFieldValue>
+            <valueName>Norwalk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connecticut (CT)</controllingFieldValue>
+            <valueName>Stamford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connecticut (CT)</controllingFieldValue>
+            <valueName>Waterbury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Cape Breton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Clearwater</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Coral Springs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Fort Lauderdale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Gainesville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Hialeah</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Jacksonville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Miami</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Miami Gardens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Orlando</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Palm Bay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Pembroke Pines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Pompano Beach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Port St. Lucie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>St. Petersburg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Tallahassee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>Tampa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida (FL)</controllingFieldValue>
+            <valueName>West Palm Beach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prince Edward Island (PE)</controllingFieldValue>
+            <valueName>Charlottetown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prince Edward Island (PE)</controllingFieldValue>
+            <valueName>Summerside</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Amos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Baie-Comeau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Baie-Saint-Paul</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Bécancour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Belleterre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Chichester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Cookshire-Eaton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Dégelis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Dolbeau-Mistassini</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Fermont</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Gaspé</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Gatineau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Gracefield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>La Malbaie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>La Tuque</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Lévis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Mont-Laurier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Montreal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Percé</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Pohénégamook</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Port-Cartier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Québec City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Rivière-Rouge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Rouyn-Noranda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Saguenay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Saint-Félicien</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Senneterre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Sept-Îles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Shawinigan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Sherbrooke</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Témiscaming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Trois-Rivières</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebec (QC)</controllingFieldValue>
+            <valueName>Val-d&apos;Or</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Saskatchewan (SK)</controllingFieldValue>
+            <valueName>Saskatoon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yukon (YT)</controllingFieldValue>
+            <valueName>Dawson City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yukon (YT)</controllingFieldValue>
+            <valueName>Whitehorse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maryland (MD)</controllingFieldValue>
+            <valueName>Balitmore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maryland (MD)</controllingFieldValue>
+            <valueName>Baltimore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maryland (MD)</controllingFieldValue>
+            <valueName>Frederick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maryland (MD)</controllingFieldValue>
+            <valueName>Gaithersburg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Bath</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Birmingham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Brighton &amp; Hove</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Bristol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Cambridge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Canterbury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Carlisle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Chelmsford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>City of London</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>City of Westminster</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Coventry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Derby</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Derry/Londonderry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Dover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Durham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Ely</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Essex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Exeter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Gloucester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Hereford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Kingston upon Hull</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Leeds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Leicester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Lincoln</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Liverpool</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>London</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Londonderry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Manchester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Newcastle upon Tyne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Norwich</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Nottingham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Peterborough</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Plymouth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Portsmouth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Preston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Ripon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Rutland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Salford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Salisbury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Sheffield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Southampton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Springfield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>St. Albans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <controllingFieldValue>Wales</controllingFieldValue>
+            <valueName>St. David&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>St Albans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Stoke-on-Trent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Stratford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Sunderland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Truro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Wakefield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Warwick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Wells</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Winchester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>Wolverhampton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>England</controllingFieldValue>
+            <valueName>York</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Massachusetts (MA)</controllingFieldValue>
+            <valueName>Boston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Massachusetts (MA)</controllingFieldValue>
+            <valueName>Lowell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Massachusetts (MA)</controllingFieldValue>
+            <valueName>Salem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Massachusetts (MA)</controllingFieldValue>
+            <valueName>Worcester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Aberdeen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Dundee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Edinburgh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Elgin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Glasgow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Inverness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Sterling Heights</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scotland</controllingFieldValue>
+            <valueName>Stirling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan (MI)</controllingFieldValue>
+            <valueName>Ann Arbor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan (MI)</controllingFieldValue>
+            <valueName>Flint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan (MI)</controllingFieldValue>
+            <valueName>Grand Rapids</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan (MI)</controllingFieldValue>
+            <valueName>Lansing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan (MI)</controllingFieldValue>
+            <valueName>Warren</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minnesota (MN)</controllingFieldValue>
+            <valueName>Minneapolis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minnesota (MN)</controllingFieldValue>
+            <valueName>Paterson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minnesota (MN)</controllingFieldValue>
+            <valueName>Saint Paul</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Ireland</controllingFieldValue>
+            <valueName>Armagh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Ireland</controllingFieldValue>
+            <valueName>Belfast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Ireland</controllingFieldValue>
+            <valueName>Lisburn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Ireland</controllingFieldValue>
+            <valueName>Newry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mississippi (MS)</controllingFieldValue>
+            <valueName>Biloxi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mississippi (MS)</controllingFieldValue>
+            <valueName>Gulfport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mississippi (MS)</controllingFieldValue>
+            <valueName>Jackson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wales</controllingFieldValue>
+            <valueName>Cardiff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wales</controllingFieldValue>
+            <valueName>Newport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wales</controllingFieldValue>
+            <valueName>St David&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wales</controllingFieldValue>
+            <valueName>Swansea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Missouri (MO)</controllingFieldValue>
+            <valueName>Independence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Missouri (MO)</controllingFieldValue>
+            <valueName>Kansas City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Missouri (MO)</controllingFieldValue>
+            <valueName>Kearney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Missouri (MO)</controllingFieldValue>
+            <valueName>Sanit Louis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Missouri (MO)</controllingFieldValue>
+            <valueName>St. Louis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Montana (MT)</controllingFieldValue>
+            <valueName>Billings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Montana (MT)</controllingFieldValue>
+            <valueName>Great Falls</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Montana (MT)</controllingFieldValue>
+            <valueName>Missoula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nebraska (NE)</controllingFieldValue>
+            <valueName>Omaha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nevada (NV)</controllingFieldValue>
+            <valueName>Las Vegas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nevada (NV)</controllingFieldValue>
+            <valueName>North Las Vegas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nevada (NV)</controllingFieldValue>
+            <valueName>Reno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Hampshire (NH)</controllingFieldValue>
+            <valueName>Nashua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Jersey (NJ)</controllingFieldValue>
+            <valueName>Jersey City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Jersey (NJ)</controllingFieldValue>
+            <valueName>Wilmington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Mexico (NM)</controllingFieldValue>
+            <valueName>Albuquerque</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Mexico (NM)</controllingFieldValue>
+            <valueName>Las Cruces</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Mexico (NM)</controllingFieldValue>
+            <valueName>Santa Fe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York (NY)</controllingFieldValue>
+            <valueName>Buffalo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York (NY)</controllingFieldValue>
+            <valueName>Newark</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York (NY)</controllingFieldValue>
+            <valueName>New York</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York (NY)</controllingFieldValue>
+            <valueName>New York City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York (NY)</controllingFieldValue>
+            <valueName>Queens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York (NY)</controllingFieldValue>
+            <valueName>Rochester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York (NY)</controllingFieldValue>
+            <valueName>Syracuse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York (NY)</controllingFieldValue>
+            <valueName>Yonkers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina (NC)</controllingFieldValue>
+            <valueName>Cary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina (NC)</controllingFieldValue>
+            <valueName>Charlotte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina (NC)</controllingFieldValue>
+            <valueName>Concord</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina (NC)</controllingFieldValue>
+            <valueName>Elizabeth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina (NC)</controllingFieldValue>
+            <valueName>Greensboro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina (NC)</controllingFieldValue>
+            <valueName>High Point</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina (NC)</controllingFieldValue>
+            <valueName>Raleigh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina (NC)</controllingFieldValue>
+            <valueName>Winston–Salem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Dakota (ND)</controllingFieldValue>
+            <valueName>Bismarck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Dakota (ND)</controllingFieldValue>
+            <valueName>Fargo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Dakota (ND)</controllingFieldValue>
+            <valueName>Grand Forks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio (OH)</controllingFieldValue>
+            <valueName>Akron</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio (OH)</controllingFieldValue>
+            <valueName>Cincinnati</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio (OH)</controllingFieldValue>
+            <valueName>Cleveland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio (OH)</controllingFieldValue>
+            <valueName>Columbus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio (OH)</controllingFieldValue>
+            <valueName>Dayton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio (OH)</controllingFieldValue>
+            <valueName>Kent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio (OH)</controllingFieldValue>
+            <valueName>Toledo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oklahoma (OK)</controllingFieldValue>
+            <valueName>Broken Arrow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oklahoma (OK)</controllingFieldValue>
+            <valueName>Norman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oklahoma (OK)</controllingFieldValue>
+            <valueName>Oklahoma City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oklahoma (OK)</controllingFieldValue>
+            <valueName>Tulsa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oregon (OR)</controllingFieldValue>
+            <valueName>Eugene</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oregon (OR)</controllingFieldValue>
+            <valueName>Gresham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oregon (OR)</controllingFieldValue>
+            <valueName>Lichfield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania (PA)</controllingFieldValue>
+            <valueName>Allentown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania (PA)</controllingFieldValue>
+            <valueName>Erie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania (PA)</controllingFieldValue>
+            <valueName>Lancaster</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania (PA)</controllingFieldValue>
+            <valueName>Philadelphia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania (PA)</controllingFieldValue>
+            <valueName>Pittsburgh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rhode Island (RI)</controllingFieldValue>
+            <valueName>Cranston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rhode Island (RI)</controllingFieldValue>
+            <valueName>Providence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Carolina (SC)</controllingFieldValue>
+            <valueName>Charleston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Carolina (SC)</controllingFieldValue>
+            <valueName>North Charleston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Dakota (SD)</controllingFieldValue>
+            <valueName>Sioux Falls</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee (TN)</controllingFieldValue>
+            <valueName>Chattanooga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee (TN)</controllingFieldValue>
+            <valueName>Clarksville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee (TN)</controllingFieldValue>
+            <valueName>Erin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee (TN)</controllingFieldValue>
+            <valueName>Knoxville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee (TN)</controllingFieldValue>
+            <valueName>Memphis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee (TN)</controllingFieldValue>
+            <valueName>Murfreesboro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee (TN)</controllingFieldValue>
+            <valueName>Nashville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Abilene</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Amarillo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Arlington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Austin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Beaumont</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Brownsville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Carrollton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Dallas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Denton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>El Paso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Fort Worth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Frisco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Garland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Grand Prairie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Houston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Irving</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Killeen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Laredo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Lubbock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>McAllen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>McKinney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Mesquite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Midland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Odessa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Plano</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Richardson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Round Rock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>San Antonio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Waco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas (TX)</controllingFieldValue>
+            <valueName>Wichita Falls</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

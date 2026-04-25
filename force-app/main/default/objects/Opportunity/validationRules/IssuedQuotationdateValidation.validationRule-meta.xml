@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IssuedQuotationdateValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(($RecordType.Name = &quot;Agent Acquisition&quot; || $RecordType.Name = &quot;Renewal -Agent Acquisition&quot;) , TEXT(StageName) =&apos;Quotation &amp; Agreement Issued&apos; ,ISBLANK(quotation_Agreement_issue_date__c))</errorConditionFormula>
+    <errorMessage>Please Fill Signed &apos;Quotation &amp; Agreement Issued Date&apos; before changing stage to Quotation &amp; Agreement Issued.</errorMessage>
+</ValidationRule>

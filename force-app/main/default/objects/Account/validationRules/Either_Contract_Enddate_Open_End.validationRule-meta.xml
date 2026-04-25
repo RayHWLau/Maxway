@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Either_Contract_Enddate_Open_End</fullName>
+    <active>true</active>
+    <errorConditionFormula>((RecordType.Name = &apos;Overseas School - CC&apos; || 
+RecordType.Name = &apos;Overseas School - ESL&apos; || 
+RecordType.Name = &apos;Overseas School - HS&apos; || 
+RecordType.Name = &apos;School Agency&apos; || 
+RecordType.Name = &apos;Overseas School - University&apos;)) &amp;&amp; 
+AND( TEXT(Partner_Type__c)=&quot;Commission&quot;,OR(AND(ISNULL(Contract_End_Date__c),IF(Contract_Open_End__c=FALSE,TRUE,FALSE)),
+AND(NOT(ISNULL(Contract_End_Date__c)),NOT(IF(Contract_Open_End__c=FALSE,TRUE,FALSE)))))</errorConditionFormula>
+    <errorDisplayField>Contract_Open_End__c</errorDisplayField>
+    <errorMessage>Either Open End or Fill In Contract End Date</errorMessage>
+</ValidationRule>

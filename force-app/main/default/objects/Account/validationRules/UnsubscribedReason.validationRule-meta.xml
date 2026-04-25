@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnsubscribedReason</fullName>
+    <active>true</active>
+    <description>If sub agent status=&apos;Unsubscribed&apos; and Unsubscribed Reason is empty and vice versa.</description>
+    <errorConditionFormula>AND( $RecordType.Name = &quot;Agent&quot;,
+OR(AND(TEXT(Status_Sub_Agent__c) !=&apos;Unsubscribed&apos;,NOT(ISBLANK( Unsubscribed_Reason__c ))),
+AND(TEXT(Status_Sub_Agent__c) =&apos;Unsubscribed&apos;,ISBLANK( Unsubscribed_Reason__c ))))</errorConditionFormula>
+    <errorMessage>Fill in Unsubscribe reason / remove Unsubscribed Others / Change status</errorMessage>
+</ValidationRule>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Major__c</fullName>
+    <label>Major (obs)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+                <label>Engineering</label>
+            </value>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Law</fullName>
+                <default>false</default>
+                <label>Law</label>
+            </value>
+            <value>
+                <fullName>Visual arts</fullName>
+                <default>false</default>
+                <label>Visual arts</label>
+            </value>
+            <value>
+                <fullName>Performing Arts</fullName>
+                <default>false</default>
+                <label>Performing Arts</label>
+            </value>
+            <value>
+                <fullName>Science</fullName>
+                <default>false</default>
+                <label>Science</label>
+            </value>
+            <value>
+                <fullName>Social Science</fullName>
+                <default>false</default>
+                <label>Social Science</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Today_s_Opportunity</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Current_Grade__c</columns>
+    <columns>Intended_Go_Abroad_Date__c</columns>
+    <columns>Nationality__c</columns>
+    <columns>Preferred_Country__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Case_Manager__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Today&apos;s Opportunity</label>
+</ListView>

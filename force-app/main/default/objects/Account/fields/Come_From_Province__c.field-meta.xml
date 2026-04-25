@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Come_From_Province__c</fullName>
+    <label>Come From Province</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Municipality 直辖市</fullName>
+                <default>false</default>
+                <label>Municipality 直辖市</label>
+            </value>
+            <value>
+                <fullName>SAR 特别行政区</fullName>
+                <default>false</default>
+                <label>SAR 特别行政区</label>
+            </value>
+            <value>
+                <fullName>Anhui   安徽省</fullName>
+                <default>false</default>
+                <label>Anhui   安徽省</label>
+            </value>
+            <value>
+                <fullName>Fujian   福建省</fullName>
+                <default>false</default>
+                <label>Fujian   福建省</label>
+            </value>
+            <value>
+                <fullName>Gansusheng    甘肃省</fullName>
+                <default>false</default>
+                <label>Gansusheng    甘肃省</label>
+            </value>
+            <value>
+                <fullName>Guangdong   广东省</fullName>
+                <default>false</default>
+                <label>Guangdong   广东省</label>
+            </value>
+            <value>
+                <fullName>Guangxi    广西省</fullName>
+                <default>false</default>
+                <label>Guangxi    广西省</label>
+            </value>
+            <value>
+                <fullName>Guizhou   贵州省</fullName>
+                <default>false</default>
+                <label>Guizhou   贵州省</label>
+            </value>
+            <value>
+                <fullName>Hainan   海南省</fullName>
+                <default>false</default>
+                <label>Hainan   海南省</label>
+            </value>
+            <value>
+                <fullName>Heibei 河北省</fullName>
+                <default>false</default>
+                <label>Heibei 河北省</label>
+            </value>
+            <value>
+                <fullName>Heilongjiang 黑龙江省</fullName>
+                <default>false</default>
+                <label>Heilongjiang 黑龙江省</label>
+            </value>
+            <value>
+                <fullName>Heinan 河南省</fullName>
+                <default>false</default>
+                <label>Heinan 河南省</label>
+            </value>
+            <value>
+                <fullName>Hubei 湖北省</fullName>
+                <default>false</default>
+                <label>Hubei 湖北省</label>
+            </value>
+            <value>
+                <fullName>Hunan   湖南省</fullName>
+                <default>false</default>
+                <label>Hunan   湖南省</label>
+            </value>
+            <value>
+                <fullName>Jiangsu   江苏省</fullName>
+                <default>false</default>
+                <label>Jiangsu   江苏省</label>
+            </value>
+            <value>
+                <fullName>Jiangxi   江西省</fullName>
+                <default>false</default>
+                <label>Jiangxi   江西省</label>
+            </value>
+            <value>
+                <fullName>Jilin 吉林省</fullName>
+                <default>false</default>
+                <label>Jilin 吉林省</label>
+            </value>
+            <value>
+                <fullName>Liaoning 辽宁省</fullName>
+                <default>false</default>
+                <label>Liaoning 辽宁省</label>
+            </value>
+            <value>
+                <fullName>Neimenggu   内蒙古自治区</fullName>
+                <default>false</default>
+                <label>Neimenggu   内蒙古自治区</label>
+            </value>
+            <value>
+                <fullName>Ningxia 宁夏回族自治区</fullName>
+                <default>false</default>
+                <label>Ningxia 宁夏回族自治区</label>
+            </value>
+            <value>
+                <fullName>Qinghai   青海省</fullName>
+                <default>false</default>
+                <label>Qinghai   青海省</label>
+            </value>
+            <value>
+                <fullName>Shaanxi 陕西省</fullName>
+                <default>false</default>
+                <label>Shaanxi 陕西省</label>
+            </value>
+            <value>
+                <fullName>Shandong 山东省</fullName>
+                <default>false</default>
+                <label>Shandong 山东省</label>
+            </value>
+            <value>
+                <fullName>Shan‘xi 山西省</fullName>
+                <default>false</default>
+                <label>Shan‘xi 山西省</label>
+            </value>
+            <value>
+                <fullName>Sichuan   四川省</fullName>
+                <default>false</default>
+                <label>Sichuan   四川省</label>
+            </value>
+            <value>
+                <fullName>Xingjiang   新疆自治区</fullName>
+                <default>false</default>
+                <label>Xingjiang   新疆自治区</label>
+            </value>
+            <value>
+                <fullName>Xizang   西藏自治区</fullName>
+                <default>false</default>
+                <label>Xizang   西藏自治区</label>
+            </value>
+            <value>
+                <fullName>Yunnan   云南省</fullName>
+                <default>false</default>
+                <label>Yunnan   云南省</label>
+            </value>
+            <value>
+                <fullName>Zhejiang   浙江省</fullName>
+                <default>false</default>
+                <label>Zhejiang   浙江省</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IssueContractAfterFirstStuden_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>Issue_contract_after_1st_student_is_sent__c &amp;&amp; 
+(
+TEXT( Partner_Type__c ) &lt;&gt; &quot;Commission&quot;  ||
+TEXT( Contract_Status__c) = &quot;Maxway Withdraw&quot; ||
+TEXT( Contract_Status__c) = &quot;Contract Denied&quot;
+) &amp;&amp; ISBLANK(ParentId)</errorConditionFormula>
+    <errorMessage>Must be Commission Partner and Contract Status cannot be &quot;Maxway Withdraw&quot; and &quot;Contract Denied&quot;</errorMessage>
+</ValidationRule>

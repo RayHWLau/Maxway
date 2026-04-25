@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CannotCreateOpportunityUnderClosedLostOp</fullName>
+    <active>true</active>
+    <errorConditionFormula>TEXT(Opportunity__r.StageName) = &apos;Closed Lost&apos; &amp;&amp;  ISNEW()</errorConditionFormula>
+    <errorMessage>Cannot Create Application Under Closed Lost Account.</errorMessage>
+</ValidationRule>

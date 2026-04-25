@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solicitation_Required__c</fullName>
+    <label>No solicit reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Country out of Portfolio</fullName>
+                <default>false</default>
+                <label>Country out of Portfolio</label>
+            </value>
+            <value>
+                <fullName>Maxway has NIN (agent didn&apos;t purchase)</fullName>
+                <default>false</default>
+                <label>Maxway has NIN (agent didn&apos;t purchase)</label>
+            </value>
+            <value>
+                <fullName>Maxway invisible such school</fullName>
+                <default>false</default>
+                <label>Maxway invisible such school</label>
+            </value>
+            <value>
+                <fullName>School deny specific program / major</fullName>
+                <default>false</default>
+                <label>School deny specific program / major</label>
+            </value>
+            <value>
+                <fullName>School deny Maxway</fullName>
+                <default>false</default>
+                <label>School deny Maxway</label>
+            </value>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Yes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

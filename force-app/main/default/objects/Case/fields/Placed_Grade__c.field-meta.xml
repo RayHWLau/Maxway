@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Placed_Grade__c</fullName>
+    <label>Placed Grade</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Grade 1</fullName>
+                <default>false</default>
+                <label>Grade 1</label>
+            </value>
+            <value>
+                <fullName>Grade 2</fullName>
+                <default>false</default>
+                <label>Grade 2</label>
+            </value>
+            <value>
+                <fullName>Grade 3</fullName>
+                <default>false</default>
+                <label>Grade 3</label>
+            </value>
+            <value>
+                <fullName>Grade 4</fullName>
+                <default>false</default>
+                <label>Grade 4</label>
+            </value>
+            <value>
+                <fullName>Grade 5</fullName>
+                <default>false</default>
+                <label>Grade 5</label>
+            </value>
+            <value>
+                <fullName>Grade 6</fullName>
+                <default>false</default>
+                <label>Grade 6</label>
+            </value>
+            <value>
+                <fullName>Grade 7</fullName>
+                <default>false</default>
+                <label>Grade 7</label>
+            </value>
+            <value>
+                <fullName>Grade 8</fullName>
+                <default>false</default>
+                <label>Grade 8</label>
+            </value>
+            <value>
+                <fullName>Grade 9</fullName>
+                <default>false</default>
+                <label>Grade 9</label>
+            </value>
+            <value>
+                <fullName>Grade 10</fullName>
+                <default>false</default>
+                <label>Grade 10</label>
+            </value>
+            <value>
+                <fullName>Grade 11</fullName>
+                <default>false</default>
+                <label>Grade 11</label>
+            </value>
+            <value>
+                <fullName>Grade 12</fullName>
+                <default>false</default>
+                <label>Grade 12</label>
+            </value>
+            <value>
+                <fullName>Year 1</fullName>
+                <default>false</default>
+                <label>Year 1</label>
+            </value>
+            <value>
+                <fullName>Year 2</fullName>
+                <default>false</default>
+                <label>Year 2</label>
+            </value>
+            <value>
+                <fullName>Year 3</fullName>
+                <default>false</default>
+                <label>Year 3</label>
+            </value>
+            <value>
+                <fullName>Year 4</fullName>
+                <default>false</default>
+                <label>Year 4</label>
+            </value>
+            <value>
+                <fullName>Year 5</fullName>
+                <default>false</default>
+                <label>Year 5</label>
+            </value>
+            <value>
+                <fullName>Year 6</fullName>
+                <default>false</default>
+                <label>Year 6</label>
+            </value>
+            <value>
+                <fullName>Year 7</fullName>
+                <default>false</default>
+                <label>Year 7</label>
+            </value>
+            <value>
+                <fullName>Year 8</fullName>
+                <default>false</default>
+                <label>Year 8</label>
+            </value>
+            <value>
+                <fullName>Year 9</fullName>
+                <default>false</default>
+                <label>Year 9</label>
+            </value>
+            <value>
+                <fullName>Year 10</fullName>
+                <default>false</default>
+                <label>Year 10</label>
+            </value>
+            <value>
+                <fullName>Year 11</fullName>
+                <default>false</default>
+                <label>Year 11</label>
+            </value>
+            <value>
+                <fullName>Year 12</fullName>
+                <default>false</default>
+                <label>Year 12</label>
+            </value>
+            <value>
+                <fullName>Year 13</fullName>
+                <default>false</default>
+                <label>Year 13</label>
+            </value>
+            <value>
+                <fullName>Fast Track GCSE</fullName>
+                <default>false</default>
+                <label>Fast Track GCSE</label>
+            </value>
+            <value>
+                <fullName>Fast Track A-Level</fullName>
+                <default>false</default>
+                <label>Fast Track A-Level</label>
+            </value>
+            <value>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+                <label>Foundation</label>
+            </value>
+            <value>
+                <fullName>ESL</fullName>
+                <default>false</default>
+                <label>ESL</label>
+            </value>
+            <value>
+                <fullName>Post-Secondary</fullName>
+                <default>false</default>
+                <label>Post-Secondary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

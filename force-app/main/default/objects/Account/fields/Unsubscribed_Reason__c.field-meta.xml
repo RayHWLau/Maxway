@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unsubscribed_Reason__c</fullName>
+    <label>Unsubscribed Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Can&apos;t reach decision maker</fullName>
+                <default>false</default>
+                <label>Can&apos;t reach decision maker</label>
+            </value>
+            <value>
+                <fullName>Close down of student recruitment business</fullName>
+                <default>false</default>
+                <label>Close down of student recruitment business</label>
+            </value>
+            <value>
+                <fullName>Location conflict with Maxway&apos;s</fullName>
+                <default>false</default>
+                <label>Location conflict with Maxway&apos;s</label>
+            </value>
+            <value>
+                <fullName>Management disagrees with business model</fullName>
+                <default>false</default>
+                <label>Management disagrees with business model</label>
+            </value>
+            <value>
+                <fullName>Management disagrees with pricing</fullName>
+                <default>false</default>
+                <label>Management disagrees with pricing</label>
+            </value>
+            <value>
+                <fullName>No longer need database school list</fullName>
+                <default>false</default>
+                <label>No longer need database school list</label>
+            </value>
+            <value>
+                <fullName>No opt in applications: No Resources</fullName>
+                <default>false</default>
+                <label>No opt in applications: No Resources</label>
+            </value>
+            <value>
+                <fullName>Violate license agreement</fullName>
+                <default>false</default>
+                <label>Violate license agreement</label>
+            </value>
+            <value>
+                <fullName>Product can&apos;t meet agent&apos;s needs</fullName>
+                <default>false</default>
+                <label>Product can&apos;t meet agent&apos;s needs</label>
+            </value>
+            <value>
+                <fullName>Product too complicated</fullName>
+                <default>false</default>
+                <label>Product too complicated</label>
+            </value>
+            <value>
+                <fullName>No need such product</fullName>
+                <default>false</default>
+                <label>No need such product</label>
+            </value>
+            <value>
+                <fullName>Maxway school types unfit for local market</fullName>
+                <default>false</default>
+                <label>Maxway school types unfit for local market</label>
+            </value>
+            <value>
+                <fullName>Maxway&apos;s school list overlap</fullName>
+                <default>false</default>
+                <label>Maxway&apos;s school list overlap</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

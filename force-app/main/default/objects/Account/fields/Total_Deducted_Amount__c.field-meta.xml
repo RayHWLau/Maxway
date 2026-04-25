@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Deducted_Amount__c</fullName>
+    <description>Total prepaid amount deducted for creation of records.</description>
+    <inlineHelpText>Total prepaid amount deducted for creation of records.</inlineHelpText>
+    <label>Total Deducted Amount</label>
+    <summarizedField>Transaction__c.Amount_Deducted__c</summarizedField>
+    <summaryFilterItems>
+        <field>Transaction__c.Type__c</field>
+        <operation>equals</operation>
+        <value>Paid</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Transaction__c.Account__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

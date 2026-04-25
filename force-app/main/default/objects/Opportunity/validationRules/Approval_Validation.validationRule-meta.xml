@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Validation</fullName>
+    <active>true</active>
+    <description>Entry criteria before submitting for approval</description>
+    <errorConditionFormula>AND(OR($RecordType.Name = &quot;Agent Acquisition&quot;,$RecordType.Name = &quot;Renewal -Agent Acquisition&quot;),(
+     text(StageName)!=&apos;Prepare Quotation&apos; &amp;&amp;
+     text(StageName)!=&apos;Initiate Contact&apos; &amp;&amp; 
+	 text(StageName)!=&apos;Hot Prospect&apos; &amp;&amp; 
+	 text(StageName)!=&apos;Quotation Rejected&apos; ) &amp;&amp;
+    ( 
+	PRIORVALUE(Number_Of_Licence__c)!= Number_Of_Licence__c  || 
+	PRIORVALUE(Quotation_Attached__c)!= Quotation_Attached__c || 
+	
+	PRIORVALUE(Number_of_Admin_Licenses__c) != Number_of_Admin_Licenses__c  || 
+	PRIORVALUE(Portal_Admin_Email__c) != Portal_Admin_Email__c|| 
+	PRIORVALUE(Required_Successful_Applications_to_Data__c ) != Required_Successful_Applications_to_Data__c  ||   
+    TEXT(PRIORVALUE(Agent_Reference_Check__c)) != TEXT(Agent_Reference_Check__c) || 
+	TEXT(PRIORVALUE(Branch_Conflicts_with_Maxway__c)) != TEXT(Branch_Conflicts_with_Maxway__c)
+))</errorConditionFormula>
+    <errorMessage>Quatation section can not be edited once quoatation is approved.</errorMessage>
+</ValidationRule>

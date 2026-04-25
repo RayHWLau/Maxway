@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Checklist_Required__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Program__r.Application_Form_ACL__c, &apos;Application Form&apos; + BR(),&apos;&apos;) + 
+IF(Program__r.Online_Application_ACL__c, &apos;Online Application&apos; + BR(),&apos;&apos;) + 
+IF(Program__r.Application_Fee_ACL__c, &apos;Application Fee&apos; + BR(),&apos;&apos;) +
+IF(Program__r.Transcripts_ACL__c, &apos;Transcripts&apos; + BR(), &apos;&apos;) +
+IF(Program__r.Financial_Proof_ACL__c, &apos;Financial Proof&apos; + BR(),&apos;&apos;) +
+IF(Program__r.Passport_Copy_ACL__c, &apos;Passport Copy&apos; + BR(),&apos;&apos;) +
+IF(Program__r.Personal_Essay_ACL__c, &apos;Personal Essay&apos; + BR(),&apos;&apos;) +
+IF(Program__r.Recommendation_ACL__c, &apos;Recommendation&apos; + BR(),&apos;&apos;) +
+IF(Program__r.Phone_Interview_ACL__c, &apos;Phone Interview&apos; + BR(),&apos;&apos;) +
+IF(Program__r.Portfolio__c, &apos;Portfolio&apos; + BR(),&apos;&apos;) +
+IF(Program__r.Photo_ACL__c, &apos;Photo&apos; + BR(),&apos;&apos;) +
+IF(Program__r.IELTS_ACL_2del__c, &apos;IELTS&apos; + BR(),&apos;&apos;) +
+IF(Program__r.TOEFL_ACL_2del__c, &apos;TOEFL&apos; + BR(),&apos;&apos;) +
+IF(Program__r.SSAT_ACL__c, &apos;SSAT&apos; + BR(),&apos;&apos;) + 
+IF(Program__r.SLEP_ACL__c, &apos;SLEP&apos; + BR(),&apos;&apos;) +
+IF(Program__r.SLATE_ACL__c, &apos;SLATE&apos; + BR(),&apos;&apos;) +
+IF(Program__r.UKISET_ACL__c, &apos;UKISET&apos; + BR(),&apos;&apos;) +
+IF(Program__r.School_Admission_Test_ACL__c, &apos;School Admission Test&apos; + BR(),&apos;&apos;) +
+IF(NOT(ISBLANK(Program__r.List_of_Original_Documents__c)), &apos;List of Original Documents : &apos; + Program__r.List_of_Original_Documents__c + BR(),&apos;&apos;) +
+IF(Program__r.Immunization__c, &apos;Immunization&apos; + BR(),&apos;&apos;) +
+IF(Program__r.TB_Test_ACL__c, &apos;TB Test&apos; + BR(),&apos;&apos;) +
+IF(Program__r.Medical_Report__c, &apos;Medical Report&apos; + BR(),&apos;&apos;) +
+IF(NOT(ISBLANK(Program__r.Checklist_Others__c)), &apos;Others : &apos; + Program__r.Checklist_Others__c + BR(),&apos;&apos;)</formula>
+    <label>Checklist Required</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

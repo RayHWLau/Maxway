@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Application</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Application</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/setup/ui/recordtypeselect.jsp?ent=Case&amp;retURL=%2F500%2Fo
+&amp;CF00N90000001v66E_lkid={!Opportunity.Id} 
+&amp;CF00N90000001v66E={!Opportunity.Name} 
+&amp;save_new_url=%2F500%2Fe%3FretURL%3D%252F500%252Fo</url>
+</WebLink>

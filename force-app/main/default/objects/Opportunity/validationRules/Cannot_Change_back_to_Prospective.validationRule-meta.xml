@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Change_back_to_Prospective</fullName>
+    <active>false</active>
+    <description>deactivated by TMC on 9th jan 2020 . need to accomudate later.</description>
+    <errorConditionFormula>NOT(ISNEW()) &amp;&amp;  ISCHANGED( StageName )  &amp;&amp; TEXT(StageName)=&quot;Prospective&quot;</errorConditionFormula>
+    <errorMessage>You are not allowed to change back to Prospective Stage</errorMessage>
+</ValidationRule>

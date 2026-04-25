@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NumberOfBranchesValidation</fullName>
+    <active>false</active>
+    <description>IF Number of Branches is greater then 1 then branch office country and branch office city is mandatory.</description>
+    <errorConditionFormula>AND($RecordType.Name = &quot;Agent&quot;,(OR(AND( TEXT(Number_of_Branches__c) ==&apos;0&apos;,OR( NOT(ISBLANK(Branch_Office_Country__c)) , NOT(ISBLANK(Branch_City__c))) ),
+AND( TEXT(Number_of_Branches__c) !=&apos;0&apos;,OR( ISBLANK(Branch_Office_Country__c) , ISBLANK(Branch_City__c)) )
+)))</errorConditionFormula>
+    <errorMessage>If Number of Branches are more then 1 , Please fill Branch Office Country and Branch City</errorMessage>
+</ValidationRule>

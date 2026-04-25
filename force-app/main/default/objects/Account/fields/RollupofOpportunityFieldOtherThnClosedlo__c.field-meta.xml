@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RollupofOpportunityFieldOtherThnClosedlo__c</fullName>
+    <label>RollupofOpportunityFieldOtherThnClosedlo</label>
+    <summaryFilterItems>
+        <field>Opportunity.StageName</field>
+        <operation>equals</operation>
+        <value>Initiate Contact, Hot Prospect, Prepare Quotation, Quotation Pending Approval, Quotation &amp; Agreement Approved, Quotation &amp; Agreement Issued, Quotation &amp; Agreement Signed, Invoice Issued, Sales Won</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

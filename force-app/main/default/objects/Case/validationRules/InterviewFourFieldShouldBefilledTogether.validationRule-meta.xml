@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InterviewFourFieldShouldBefilledTogether</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(NOT(ISBLANK(Interview_Date_Student_Local__c)),
+    OR(ISBLANK(Interview_Time_Student_Local__c),
+       ISBLANK(Interviewer__c),
+       ISBLANK(Interviewee_Contact_Means__c))),
+AND(NOT(ISBLANK(Interview_Time_Student_Local__c)),
+    OR(ISBLANK(Interview_Date_Student_Local__c),
+       ISBLANK(Interviewer__c),
+       ISBLANK(Interviewee_Contact_Means__c))),
+AND(NOT(ISBLANK(Interviewer__c)),
+    OR(ISBLANK(Interview_Time_Student_Local__c),
+       ISBLANK(Interview_Date_Student_Local__c),
+       ISBLANK(Interviewee_Contact_Means__c))),
+AND(NOT(ISBLANK(Interviewee_Contact_Means__c)),
+    OR(ISBLANK(Interview_Time_Student_Local__c),
+       ISBLANK(Interviewer__c),
+       ISBLANK(Interview_Date_Student_Local__c)))
+)</errorConditionFormula>
+    <errorMessage>Student Local Time,Student Local Date,Interviewer Contact Means,Interviewer should be filled together.</errorMessage>
+</ValidationRule>

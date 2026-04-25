@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OtherConditionSpecification</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( AND(TEXT(Other_Conditions__c) = &apos;Yes&apos;,
+       ISBLANK(Conditions_Specificiation__c)
+       ),
+   AND(TEXT(Other_Conditions__c) != &apos;Yes&apos;,
+       NOT(ISBLANK(Conditions_Specificiation__c))
+       )
+)</errorConditionFormula>
+    <errorMessage>IF Other Conditions is &apos;Yes&apos; then fill Conditions Specificiation else remove Conditions Specificiation.</errorMessage>
+</ValidationRule>

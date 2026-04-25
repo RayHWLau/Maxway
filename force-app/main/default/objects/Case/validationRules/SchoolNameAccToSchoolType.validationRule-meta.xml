@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SchoolNameAccToSchoolType</fullName>
+    <active>true</active>
+    <description>If School Type is HS then Only HS Type of School Account should be Selected.</description>
+    <errorConditionFormula>OR(AND( ISPICKVAL( School_Type__c , &apos;High School&apos;),
+      NOT(ISBLANK(  School__c)),
+          School__r.RecordType.Name &lt;&gt; &quot;Overseas School - HS&quot;),
+  AND(ISPICKVAL( School_Type__c , &apos;College&apos;),
+      NOT(ISBLANK(  School__c)),
+      School__r.RecordType.Name &lt;&gt; &quot;Overseas School - CC&quot;  
+  ),
+  AND(ISPICKVAL( School_Type__c , &apos;University&apos;),
+      NOT(ISBLANK(  School__c)),
+       School__r.RecordType.Name &lt;&gt; &quot;Overseas School - University&quot;
+
+  )
+)</errorConditionFormula>
+    <errorMessage>School Name should be of School Type.</errorMessage>
+</ValidationRule>

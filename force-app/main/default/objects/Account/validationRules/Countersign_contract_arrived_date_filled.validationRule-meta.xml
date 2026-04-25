@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Countersign_contract_arrived_date_filled</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( Counter_Sign_Contract_Arrived_Date__c ) &amp;&amp; ISNULL(PRIORVALUE( Counter_Sign_Contract_Arrived_Date__c )) &amp;&amp; TEXT(Partner_Type__c ) &lt;&gt;&quot;Commission&quot;</errorConditionFormula>
+    <errorDisplayField>Partner_Type__c</errorDisplayField>
+    <errorMessage>Please update partner type is Commission</errorMessage>
+</ValidationRule>

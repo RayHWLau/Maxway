@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Goal_With_Portal__c</fullName>
+    <label>Goal With Portal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Streamline Operations</fullName>
+                <default>false</default>
+                <label>Streamline Operations</label>
+            </value>
+            <value>
+                <fullName>Empowerment</fullName>
+                <default>false</default>
+                <label>Empowerment</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Check &amp; Balance</fullName>
+                <default>false</default>
+                <label>Check &amp; Balance</label>
+            </value>
+            <value>
+                <fullName>School Database</fullName>
+                <default>false</default>
+                <label>School Database</label>
+            </value>
+            <value>
+                <fullName>Performance Mgt</fullName>
+                <default>false</default>
+                <label>Performance Mgt</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Centralizes &amp;Transparent operation for efficient staff &amp; knowledge management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Centralizes &amp;Transparent operation for efficient staff &amp; knowledge management</label>
+            </value>
+            <value>
+                <fullName>Diversify clientele,thus, need diversify school portfolio</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Diversify clientele,thus, need diversify school portfolio</label>
+            </value>
+            <value>
+                <fullName>Focus on business/ affiliate product development, thus, need efficiency in operation, application, customer service, commission &amp; school database management and maintenance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Focus on business/ affiliate product development, thus, need efficiency in operation, application, customer service, commission &amp; school database management and maintenance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

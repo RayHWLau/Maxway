@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Social_Media_Account_must_be_synced</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+NOT(ISBLANK( WeChat_ID__pc)),
+OR(
+ISPICKVAL(Social_Media__pc, &quot;&quot;),
+NOT(ISBLANK(Social_Media_Others__c))
+)
+),
+AND(
+ISBLANK(WeChat_ID__pc),
+NOT(ISPICKVAL(Social_Media__pc, &quot;Others&quot;)),
+NOT(ISPICKVAL(Social_Media__pc, &quot;&quot;))
+),
+AND(
+ISPICKVAL(Social_Media__pc, &quot;Others&quot;),
+ISBLANK( Social_Media_Others__c)
+),
+AND(
+NOT(ISPICKVAL(Social_Media__pc, &quot;Others&quot;)),
+NOT(ISBLANK(Social_Media_Others__c))
+)
+)</errorConditionFormula>
+    <errorMessage>Social Media fields must be in pair (both empty or both not empty)</errorMessage>
+</ValidationRule>

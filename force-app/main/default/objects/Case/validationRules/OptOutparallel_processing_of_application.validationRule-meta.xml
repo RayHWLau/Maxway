@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OptOutparallel_processing_of_application</fullName>
+    <active>true</active>
+    <description>If Stage = Application Submitted to School then &quot;Allow parallel processing of application&quot; should be True.</description>
+    <errorConditionFormula>AND( RecordType.Name =&apos;Application(Opt-Out/NIN/Maxway)&apos;,ISPICKVAL( Stage__c , &apos;Application submitted to School&apos;), Allow_parallel_processing_of_Application__c !=TRUE, ISPICKVAL(Application_Type__c,&apos;Maxway Application&apos;) )</errorConditionFormula>
+    <errorMessage>Please check Allow parallel processing of Application when Stage is Application submitted to School</errorMessage>
+</ValidationRule>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dont_Contact_Reason__c</fullName>
+    <label>Don&apos;t Contact Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client apply on his own</fullName>
+                <default>false</default>
+                <label>Client apply on his own</label>
+            </value>
+            <value>
+                <fullName>No money</fullName>
+                <default>false</default>
+                <label>No money</label>
+            </value>
+            <value>
+                <fullName>Invalid contact</fullName>
+                <default>false</default>
+                <label>Invalid contact</label>
+            </value>
+            <value>
+                <fullName>Country out of scope</fullName>
+                <default>false</default>
+                <label>Country out of scope</label>
+            </value>
+            <value>
+                <fullName>Stay in original country &amp; already in Uni</fullName>
+                <default>false</default>
+                <label>Stay in original country for University</label>
+            </value>
+            <value>
+                <fullName>Very Impolite</fullName>
+                <default>false</default>
+                <label>Very Impolite</label>
+            </value>
+            <value>
+                <fullName>No Commission due to immigration intent / Passport</fullName>
+                <default>false</default>
+                <label>No Commission due to immigration intent / Passport</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

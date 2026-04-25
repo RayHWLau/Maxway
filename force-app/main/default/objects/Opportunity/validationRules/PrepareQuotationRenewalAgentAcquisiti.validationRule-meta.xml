@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrepareQuotationRenewalAgentAcquisiti</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT(StageName)=&apos;Prepare Quotation&apos;,$RecordType.Name = &quot;Renewal -Agent Acquisition&quot;,OR( TEXT(Agent_Reference_Check__c)!=&apos;Verified&apos; ,  Quotation_Attached__c = false))</errorConditionFormula>
+    <errorMessage>Please Upload Required documents .</errorMessage>
+</ValidationRule>

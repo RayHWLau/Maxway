@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnconditionalCnditionaloffervalVICE</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( OR(ISBLANK(Owner:User.ContactId),
+        RecordType.Name =&apos;Application(Opt-In)&apos;
+       ),
+    ISBLANK(TEXT( Offer__c )),
+     OR(
+         NOT(ISBLANK( Grade__c )),
+         NOT(ISBLANK(  Program_Offered__c )),
+         NOT(ISBLANK(Tuition_Stated_on_Offer__c ))
+        )
+    )</errorConditionFormula>
+    <errorMessage>If offer is not  Filled , Please remove Tuition Stated on offer , Grade, program offered .</errorMessage>
+</ValidationRule>

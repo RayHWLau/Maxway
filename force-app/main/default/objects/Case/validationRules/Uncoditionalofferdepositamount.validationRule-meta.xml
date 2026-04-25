@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uncoditionalofferdepositamount</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    TEXT( Offer__c ) =&apos;Unconditional&apos;, 
+     Deposit_Amount__c !=0
+     )</errorConditionFormula>
+    <errorMessage>If offer is &apos;UnConditional&apos; , then deposit amount should be 0.</errorMessage>
+</ValidationRule>

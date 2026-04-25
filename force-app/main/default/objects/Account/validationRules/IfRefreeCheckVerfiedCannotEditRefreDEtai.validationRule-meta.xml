@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IfRefreeCheckVerfiedCannotEditRefreDEtai</fullName>
+    <active>true</active>
+    <description>Once Refrence check is done cannot change refree details.</description>
+    <errorConditionFormula>AND ($RecordType.Name = &quot;Agent&quot;,
+      RollupForRefreeValidation__c &gt;= 1,
+    OR( Referee_Email__c != PRIORVALUE(Referee_Email__c),
+       Referee_Institution__c!=PRIORVALUE(Referee_Institution__c),
+        Referee_Name__c != PRIORVALUE(Referee_Name__c )
+)
+)</errorConditionFormula>
+    <errorMessage>Reference check is done and verified ,cannot edit Refree Details.</errorMessage>
+</ValidationRule>

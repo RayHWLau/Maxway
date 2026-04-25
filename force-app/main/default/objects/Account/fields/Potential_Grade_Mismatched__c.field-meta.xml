@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Potential_Grade_Mismatched__c</fullName>
+    <formula>AND(Original_Academic_Yr__c == &apos;2025&apos;, TEXT(Original_Grade__c) != TEXT(Current_Grade__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Potential Grade Mismatched</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

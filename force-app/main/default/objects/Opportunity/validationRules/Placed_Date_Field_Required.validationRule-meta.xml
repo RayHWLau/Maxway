@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Placed_Date_Field_Required</fullName>
+    <active>false</active>
+    <description>Placed Date Field is required when Opportunity stage changes to placed</description>
+    <errorConditionFormula>ISPICKVAL( StageName , &quot;Placed&quot;) &amp;&amp; ISBLANK( Placed_Date__c )</errorConditionFormula>
+    <errorDisplayField>Placed_Date__c</errorDisplayField>
+    <errorMessage>Missing place date for placed opportunity</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FillBankDetailsBeforeChangingSatgeToquat</fullName>
+    <active>true</active>
+    <description>Fill Bank Details Before Changing Satge To quatation signed</description>
+    <errorConditionFormula>ISBLANK(Account.Bank__c) &amp;&amp;  TEXT(StageName) =&apos;Quotation &amp; Agreement Signed&apos; &amp;&amp; OR($RecordType.Name = &quot;Agent Acquisition&quot;,$RecordType.Name = &quot;Renewal -Agent Acquisition&quot;)</errorConditionFormula>
+    <errorMessage>Please Fill All Bank details on account .</errorMessage>
+</ValidationRule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GoalWithPortalOthersManadatory</fullName>
+    <active>true</active>
+    <description>If Goal With Portal is &apos;Others&apos; then fill Goal with portal Other or vice versa.</description>
+    <errorConditionFormula>AND( 
+$RecordType.Name = &quot;Agent&quot;,
+ OR(AND(INCLUDES(Goal_With_Portal__c, &quot;Others&quot;), 
+        ISBLANK(Goal_With_Portal_Others__c)
+       ),
+    AND(NOT(INCLUDES(Goal_With_Portal__c, &quot;Others&quot;)), 
+        NOT(ISBLANK(Goal_With_Portal_Others__c))
+       )
+   )
+
+)</errorConditionFormula>
+    <errorDisplayField>Goal_With_Portal_Others__c</errorDisplayField>
+    <errorMessage>Please mention Goal with portal Other/Remove Goal with portal Other.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Should_be_Pending_arrival</fullName>
+    <active>true</active>
+    <description>stage should be pending arrival if visa requires is yes and visa approved is true</description>
+    <errorConditionFormula>AND(ISPICKVAL(Visa_Required__c ,&apos;Yes&apos;),
+Visa_Decision__c=TRUE,
+OR(
+TEXT(Stage__c)=&apos;Visa In Progress&apos;,
+TEXT(Stage__c)=&apos;Pending Student Confirmation&apos;,
+TEXT(Stage__c)=&apos;Application submitted to School&apos;,
+TEXT(Stage__c)=&apos;Preparing Application&apos;
+)  
+)</errorConditionFormula>
+    <errorMessage>Please select Pending Arrival Stage when Visa Required is yes and Visa approved is checked</errorMessage>
+</ValidationRule>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_With_Agency_Cant_Fill_in_Date</fullName>
+    <active>false</active>
+    <errorConditionFormula>((RecordType.Name = &apos;Overseas School - CC&apos; ||
+RecordType.Name = &apos;Overseas School - ESL&apos; ||
+RecordType.Name = &apos;Overseas School - HS&apos; ||
+RecordType.Name = &apos;Overseas School - University&apos;)) &amp;&amp;
+NOT(ISBLANK( ParentId )) &amp;&amp;
+(
+NOT(ISBLANK( Solicit_Date__c )) ||
+NOT(ISBLANK( Contract_Renewal_Date__c)) ||
+NOT(ISBLANK( Agency_Questionnaire_Arrived_Date__c)) ||
+NOT(ISBLANK( Agency_Questionnaire_Submitted_Date__c)) ||
+NOT(ISBLANK( Contract_Received_Date__c)) ||
+NOT(ISBLANK( Contract_Returned_Date__c)) ||
+NOT(ISBLANK( Counter_Sign_Contract_Arrived_Date__c))
+)</errorConditionFormula>
+    <errorMessage>Please refer to School Agency for Contract Details and do not enter any details in Contract Section</errorMessage>
+</ValidationRule>

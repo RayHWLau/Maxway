@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LoACorrect</fullName>
+    <active>true</active>
+    <errorConditionFormula>(ISBLANK(Deposit_Amount__c) &amp;&amp; NOT(TEXT(  LoA_Correct__c )=&quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Deposit_Amount__c</errorDisplayField>
+    <errorMessage>Please define deposit amount</errorMessage>
+</ValidationRule>

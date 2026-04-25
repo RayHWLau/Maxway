@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_contract_after_1st_student_is_sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Issue contract after 1st student is sent</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

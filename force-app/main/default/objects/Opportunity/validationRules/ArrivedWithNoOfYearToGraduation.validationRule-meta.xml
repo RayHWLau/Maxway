@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ArrivedWithNoOfYearToGraduation</fullName>
+    <active>false</active>
+    <errorConditionFormula>TEXT(StageName ) = &quot;Arrived&quot; &amp;&amp; 
+ISBLANK( Num_of_Year_to_Graduation__c )</errorConditionFormula>
+    <errorDisplayField>Num_of_Year_to_Graduation__c</errorDisplayField>
+    <errorMessage>Please fill in # of Year to Graduation!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrepareQuotation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT(StageName)=&apos;Prepare Quotation&apos;,$RecordType.Name = &quot;Agent Acquisition&quot;,OR( TEXT(Agent_Reference_Check__c)!=&apos;Verified&apos; , AgentSignedUpDocUpload__c = false))</errorConditionFormula>
+    <errorMessage>Either Reference check is not done Or Business Licence is not uploaded.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StudentConfirmOfferVic</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( OR( TEXT(Stage__c) = &apos;Visa In Progress&apos;,
+         TEXT(Stage__c) = &apos;Pending Arrival&apos;,
+         TEXT(Stage__c) = &apos;Arrived&apos;,
+         TEXT(Stage__c) = &apos;Commission Received&apos;,
+         TEXT(Stage__c) = &apos;Commission Paid&apos;
+        ),
+     TEXT(Student_Confirm_Offer__c)!=&apos;Yes&apos;
+    )</errorConditionFormula>
+    <errorMessage>Student Confirm Offer should be &apos;Yes&apos;.</errorMessage>
+</ValidationRule>

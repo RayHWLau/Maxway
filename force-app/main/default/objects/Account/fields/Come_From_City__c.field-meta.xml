@@ -1,0 +1,3290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Come_From_City__c</fullName>
+    <label>Come From City</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Come_From_Province__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>北京市</fullName>
+                <default>false</default>
+                <label>北京市</label>
+            </value>
+            <value>
+                <fullName>上海市</fullName>
+                <default>false</default>
+                <label>上海市</label>
+            </value>
+            <value>
+                <fullName>天津市</fullName>
+                <default>false</default>
+                <label>天津市</label>
+            </value>
+            <value>
+                <fullName>重庆市</fullName>
+                <default>false</default>
+                <label>重庆市</label>
+            </value>
+            <value>
+                <fullName>香港特别行政区</fullName>
+                <default>false</default>
+                <label>香港特别行政区</label>
+            </value>
+            <value>
+                <fullName>澳门特别行政区</fullName>
+                <default>false</default>
+                <label>澳门特别行政区</label>
+            </value>
+            <value>
+                <fullName>合肥市</fullName>
+                <default>false</default>
+                <label>合肥市</label>
+            </value>
+            <value>
+                <fullName>芜湖市</fullName>
+                <default>false</default>
+                <label>芜湖市</label>
+            </value>
+            <value>
+                <fullName>蚌埠市</fullName>
+                <default>false</default>
+                <label>蚌埠市</label>
+            </value>
+            <value>
+                <fullName>淮南市</fullName>
+                <default>false</default>
+                <label>淮南市</label>
+            </value>
+            <value>
+                <fullName>马鞍山市</fullName>
+                <default>false</default>
+                <label>马鞍山市</label>
+            </value>
+            <value>
+                <fullName>淮北市</fullName>
+                <default>false</default>
+                <label>淮北市</label>
+            </value>
+            <value>
+                <fullName>铜陵市</fullName>
+                <default>false</default>
+                <label>铜陵市</label>
+            </value>
+            <value>
+                <fullName>安庆市</fullName>
+                <default>false</default>
+                <label>安庆市</label>
+            </value>
+            <value>
+                <fullName>黄山市</fullName>
+                <default>false</default>
+                <label>黄山市</label>
+            </value>
+            <value>
+                <fullName>滁州市</fullName>
+                <default>false</default>
+                <label>滁州市</label>
+            </value>
+            <value>
+                <fullName>阜阳市</fullName>
+                <default>false</default>
+                <label>阜阳市</label>
+            </value>
+            <value>
+                <fullName>宿州市</fullName>
+                <default>false</default>
+                <label>宿州市</label>
+            </value>
+            <value>
+                <fullName>巢湖市</fullName>
+                <default>false</default>
+                <label>巢湖市</label>
+            </value>
+            <value>
+                <fullName>六安市</fullName>
+                <default>false</default>
+                <label>六安市</label>
+            </value>
+            <value>
+                <fullName>亳州市</fullName>
+                <default>false</default>
+                <label>亳州市</label>
+            </value>
+            <value>
+                <fullName>池州市</fullName>
+                <default>false</default>
+                <label>池州市</label>
+            </value>
+            <value>
+                <fullName>宣城市</fullName>
+                <default>false</default>
+                <label>宣城市</label>
+            </value>
+            <value>
+                <fullName>福州市</fullName>
+                <default>false</default>
+                <label>福州市</label>
+            </value>
+            <value>
+                <fullName>厦门市</fullName>
+                <default>false</default>
+                <label>厦门市</label>
+            </value>
+            <value>
+                <fullName>莆田市</fullName>
+                <default>false</default>
+                <label>莆田市</label>
+            </value>
+            <value>
+                <fullName>三明市</fullName>
+                <default>false</default>
+                <label>三明市</label>
+            </value>
+            <value>
+                <fullName>泉州市</fullName>
+                <default>false</default>
+                <label>泉州市</label>
+            </value>
+            <value>
+                <fullName>漳州市</fullName>
+                <default>false</default>
+                <label>漳州市</label>
+            </value>
+            <value>
+                <fullName>南平市</fullName>
+                <default>false</default>
+                <label>南平市</label>
+            </value>
+            <value>
+                <fullName>龙岩市</fullName>
+                <default>false</default>
+                <label>龙岩市</label>
+            </value>
+            <value>
+                <fullName>宁德市</fullName>
+                <default>false</default>
+                <label>宁德市</label>
+            </value>
+            <value>
+                <fullName>兰州市</fullName>
+                <default>false</default>
+                <label>兰州市</label>
+            </value>
+            <value>
+                <fullName>嘉峪关市</fullName>
+                <default>false</default>
+                <label>嘉峪关市</label>
+            </value>
+            <value>
+                <fullName>金昌市</fullName>
+                <default>false</default>
+                <label>金昌市</label>
+            </value>
+            <value>
+                <fullName>白银市</fullName>
+                <default>false</default>
+                <label>白银市</label>
+            </value>
+            <value>
+                <fullName>天水市</fullName>
+                <default>false</default>
+                <label>天水市</label>
+            </value>
+            <value>
+                <fullName>武威市</fullName>
+                <default>false</default>
+                <label>武威市</label>
+            </value>
+            <value>
+                <fullName>张掖市</fullName>
+                <default>false</default>
+                <label>张掖市</label>
+            </value>
+            <value>
+                <fullName>平凉市</fullName>
+                <default>false</default>
+                <label>平凉市</label>
+            </value>
+            <value>
+                <fullName>酒泉市</fullName>
+                <default>false</default>
+                <label>酒泉市</label>
+            </value>
+            <value>
+                <fullName>庆阳市</fullName>
+                <default>false</default>
+                <label>庆阳市</label>
+            </value>
+            <value>
+                <fullName>定西市</fullName>
+                <default>false</default>
+                <label>定西市</label>
+            </value>
+            <value>
+                <fullName>陇南市</fullName>
+                <default>false</default>
+                <label>陇南市</label>
+            </value>
+            <value>
+                <fullName>临夏回族自治州</fullName>
+                <default>false</default>
+                <label>临夏回族自治州</label>
+            </value>
+            <value>
+                <fullName>甘南藏族自治州</fullName>
+                <default>false</default>
+                <label>甘南藏族自治州</label>
+            </value>
+            <value>
+                <fullName>广州市</fullName>
+                <default>false</default>
+                <label>广州市</label>
+            </value>
+            <value>
+                <fullName>韶关市</fullName>
+                <default>false</default>
+                <label>韶关市</label>
+            </value>
+            <value>
+                <fullName>深圳市</fullName>
+                <default>false</default>
+                <label>深圳市</label>
+            </value>
+            <value>
+                <fullName>珠海市</fullName>
+                <default>false</default>
+                <label>珠海市</label>
+            </value>
+            <value>
+                <fullName>汕头市</fullName>
+                <default>false</default>
+                <label>汕头市</label>
+            </value>
+            <value>
+                <fullName>佛山市</fullName>
+                <default>false</default>
+                <label>佛山市</label>
+            </value>
+            <value>
+                <fullName>江门市</fullName>
+                <default>false</default>
+                <label>江门市</label>
+            </value>
+            <value>
+                <fullName>湛江市</fullName>
+                <default>false</default>
+                <label>湛江市</label>
+            </value>
+            <value>
+                <fullName>茂名市</fullName>
+                <default>false</default>
+                <label>茂名市</label>
+            </value>
+            <value>
+                <fullName>肇庆市</fullName>
+                <default>false</default>
+                <label>肇庆市</label>
+            </value>
+            <value>
+                <fullName>惠州市</fullName>
+                <default>false</default>
+                <label>惠州市</label>
+            </value>
+            <value>
+                <fullName>梅州市</fullName>
+                <default>false</default>
+                <label>梅州市</label>
+            </value>
+            <value>
+                <fullName>汕尾市</fullName>
+                <default>false</default>
+                <label>汕尾市</label>
+            </value>
+            <value>
+                <fullName>河源市</fullName>
+                <default>false</default>
+                <label>河源市</label>
+            </value>
+            <value>
+                <fullName>阳江市</fullName>
+                <default>false</default>
+                <label>阳江市</label>
+            </value>
+            <value>
+                <fullName>清远市</fullName>
+                <default>false</default>
+                <label>清远市</label>
+            </value>
+            <value>
+                <fullName>东莞市</fullName>
+                <default>false</default>
+                <label>东莞市</label>
+            </value>
+            <value>
+                <fullName>中山市</fullName>
+                <default>false</default>
+                <label>中山市</label>
+            </value>
+            <value>
+                <fullName>潮州市</fullName>
+                <default>false</default>
+                <label>潮州市</label>
+            </value>
+            <value>
+                <fullName>揭阳市</fullName>
+                <default>false</default>
+                <label>揭阳市</label>
+            </value>
+            <value>
+                <fullName>云浮市</fullName>
+                <default>false</default>
+                <label>云浮市</label>
+            </value>
+            <value>
+                <fullName>南宁市</fullName>
+                <default>false</default>
+                <label>南宁市</label>
+            </value>
+            <value>
+                <fullName>柳州市</fullName>
+                <default>false</default>
+                <label>柳州市</label>
+            </value>
+            <value>
+                <fullName>桂林市</fullName>
+                <default>false</default>
+                <label>桂林市</label>
+            </value>
+            <value>
+                <fullName>梧州市</fullName>
+                <default>false</default>
+                <label>梧州市</label>
+            </value>
+            <value>
+                <fullName>北海市</fullName>
+                <default>false</default>
+                <label>北海市</label>
+            </value>
+            <value>
+                <fullName>防城港市</fullName>
+                <default>false</default>
+                <label>防城港市</label>
+            </value>
+            <value>
+                <fullName>钦州市</fullName>
+                <default>false</default>
+                <label>钦州市</label>
+            </value>
+            <value>
+                <fullName>贵港市</fullName>
+                <default>false</default>
+                <label>贵港市</label>
+            </value>
+            <value>
+                <fullName>玉林市</fullName>
+                <default>false</default>
+                <label>玉林市</label>
+            </value>
+            <value>
+                <fullName>百色市</fullName>
+                <default>false</default>
+                <label>百色市</label>
+            </value>
+            <value>
+                <fullName>贺州市</fullName>
+                <default>false</default>
+                <label>贺州市</label>
+            </value>
+            <value>
+                <fullName>河池市</fullName>
+                <default>false</default>
+                <label>河池市</label>
+            </value>
+            <value>
+                <fullName>来宾市</fullName>
+                <default>false</default>
+                <label>来宾市</label>
+            </value>
+            <value>
+                <fullName>崇左市</fullName>
+                <default>false</default>
+                <label>崇左市</label>
+            </value>
+            <value>
+                <fullName>贵阳市</fullName>
+                <default>false</default>
+                <label>贵阳市</label>
+            </value>
+            <value>
+                <fullName>六盘水市</fullName>
+                <default>false</default>
+                <label>六盘水市</label>
+            </value>
+            <value>
+                <fullName>遵义市</fullName>
+                <default>false</default>
+                <label>遵义市</label>
+            </value>
+            <value>
+                <fullName>安顺市</fullName>
+                <default>false</default>
+                <label>安顺市</label>
+            </value>
+            <value>
+                <fullName>铜仁地区</fullName>
+                <default>false</default>
+                <label>铜仁地区</label>
+            </value>
+            <value>
+                <fullName>黔西南布依族苗族自治州</fullName>
+                <default>false</default>
+                <label>黔西南布依族苗族自治州</label>
+            </value>
+            <value>
+                <fullName>毕节地区</fullName>
+                <default>false</default>
+                <label>毕节地区</label>
+            </value>
+            <value>
+                <fullName>黔东南苗族侗族自治州</fullName>
+                <default>false</default>
+                <label>黔东南苗族侗族自治州</label>
+            </value>
+            <value>
+                <fullName>黔南布依族苗族自治州</fullName>
+                <default>false</default>
+                <label>黔南布依族苗族自治州</label>
+            </value>
+            <value>
+                <fullName>海口市</fullName>
+                <default>false</default>
+                <label>海口市</label>
+            </value>
+            <value>
+                <fullName>三亚市</fullName>
+                <default>false</default>
+                <label>三亚市</label>
+            </value>
+            <value>
+                <fullName>五指山市</fullName>
+                <default>false</default>
+                <label>五指山市</label>
+            </value>
+            <value>
+                <fullName>琼海市</fullName>
+                <default>false</default>
+                <label>琼海市</label>
+            </value>
+            <value>
+                <fullName>儋州市</fullName>
+                <default>false</default>
+                <label>儋州市</label>
+            </value>
+            <value>
+                <fullName>文昌市</fullName>
+                <default>false</default>
+                <label>文昌市</label>
+            </value>
+            <value>
+                <fullName>万宁市</fullName>
+                <default>false</default>
+                <label>万宁市</label>
+            </value>
+            <value>
+                <fullName>东方市</fullName>
+                <default>false</default>
+                <label>东方市</label>
+            </value>
+            <value>
+                <fullName>定安县</fullName>
+                <default>false</default>
+                <label>定安县</label>
+            </value>
+            <value>
+                <fullName>屯昌县</fullName>
+                <default>false</default>
+                <label>屯昌县</label>
+            </value>
+            <value>
+                <fullName>澄迈县</fullName>
+                <default>false</default>
+                <label>澄迈县</label>
+            </value>
+            <value>
+                <fullName>临高县</fullName>
+                <default>false</default>
+                <label>临高县</label>
+            </value>
+            <value>
+                <fullName>白沙黎族自治县</fullName>
+                <default>false</default>
+                <label>白沙黎族自治县</label>
+            </value>
+            <value>
+                <fullName>昌江黎族自治县</fullName>
+                <default>false</default>
+                <label>昌江黎族自治县</label>
+            </value>
+            <value>
+                <fullName>乐东黎族自治县</fullName>
+                <default>false</default>
+                <label>乐东黎族自治县</label>
+            </value>
+            <value>
+                <fullName>陵水黎族自治县</fullName>
+                <default>false</default>
+                <label>陵水黎族自治县</label>
+            </value>
+            <value>
+                <fullName>保亭黎族苗族自治县</fullName>
+                <default>false</default>
+                <label>保亭黎族苗族自治县</label>
+            </value>
+            <value>
+                <fullName>琼中黎族苗族自治县</fullName>
+                <default>false</default>
+                <label>琼中黎族苗族自治县</label>
+            </value>
+            <value>
+                <fullName>石家庄市</fullName>
+                <default>false</default>
+                <label>石家庄市</label>
+            </value>
+            <value>
+                <fullName>唐山市</fullName>
+                <default>false</default>
+                <label>唐山市</label>
+            </value>
+            <value>
+                <fullName>秦皇岛市</fullName>
+                <default>false</default>
+                <label>秦皇岛市</label>
+            </value>
+            <value>
+                <fullName>邯郸市</fullName>
+                <default>false</default>
+                <label>邯郸市</label>
+            </value>
+            <value>
+                <fullName>邢台市</fullName>
+                <default>false</default>
+                <label>邢台市</label>
+            </value>
+            <value>
+                <fullName>保定市</fullName>
+                <default>false</default>
+                <label>保定市</label>
+            </value>
+            <value>
+                <fullName>张家口市</fullName>
+                <default>false</default>
+                <label>张家口市</label>
+            </value>
+            <value>
+                <fullName>承德市</fullName>
+                <default>false</default>
+                <label>承德市</label>
+            </value>
+            <value>
+                <fullName>沧州市</fullName>
+                <default>false</default>
+                <label>沧州市</label>
+            </value>
+            <value>
+                <fullName>廊坊市</fullName>
+                <default>false</default>
+                <label>廊坊市</label>
+            </value>
+            <value>
+                <fullName>衡水市</fullName>
+                <default>false</default>
+                <label>衡水市</label>
+            </value>
+            <value>
+                <fullName>哈尔滨市</fullName>
+                <default>false</default>
+                <label>哈尔滨市</label>
+            </value>
+            <value>
+                <fullName>齐齐哈尔市</fullName>
+                <default>false</default>
+                <label>齐齐哈尔市</label>
+            </value>
+            <value>
+                <fullName>鸡西市</fullName>
+                <default>false</default>
+                <label>鸡西市</label>
+            </value>
+            <value>
+                <fullName>鹤岗市</fullName>
+                <default>false</default>
+                <label>鹤岗市</label>
+            </value>
+            <value>
+                <fullName>双鸭山市</fullName>
+                <default>false</default>
+                <label>双鸭山市</label>
+            </value>
+            <value>
+                <fullName>大庆市</fullName>
+                <default>false</default>
+                <label>大庆市</label>
+            </value>
+            <value>
+                <fullName>伊春市</fullName>
+                <default>false</default>
+                <label>伊春市</label>
+            </value>
+            <value>
+                <fullName>佳木斯市</fullName>
+                <default>false</default>
+                <label>佳木斯市</label>
+            </value>
+            <value>
+                <fullName>七台河市</fullName>
+                <default>false</default>
+                <label>七台河市</label>
+            </value>
+            <value>
+                <fullName>牡丹江市</fullName>
+                <default>false</default>
+                <label>牡丹江市</label>
+            </value>
+            <value>
+                <fullName>黑河市</fullName>
+                <default>false</default>
+                <label>黑河市</label>
+            </value>
+            <value>
+                <fullName>绥化市</fullName>
+                <default>false</default>
+                <label>绥化市</label>
+            </value>
+            <value>
+                <fullName>大兴安岭地区</fullName>
+                <default>false</default>
+                <label>大兴安岭地区</label>
+            </value>
+            <value>
+                <fullName>郑州市</fullName>
+                <default>false</default>
+                <label>郑州市</label>
+            </value>
+            <value>
+                <fullName>开封市</fullName>
+                <default>false</default>
+                <label>开封市</label>
+            </value>
+            <value>
+                <fullName>洛阳市</fullName>
+                <default>false</default>
+                <label>洛阳市</label>
+            </value>
+            <value>
+                <fullName>平顶山市</fullName>
+                <default>false</default>
+                <label>平顶山市</label>
+            </value>
+            <value>
+                <fullName>安阳市</fullName>
+                <default>false</default>
+                <label>安阳市</label>
+            </value>
+            <value>
+                <fullName>鹤壁市</fullName>
+                <default>false</default>
+                <label>鹤壁市</label>
+            </value>
+            <value>
+                <fullName>新乡市</fullName>
+                <default>false</default>
+                <label>新乡市</label>
+            </value>
+            <value>
+                <fullName>焦作市</fullName>
+                <default>false</default>
+                <label>焦作市</label>
+            </value>
+            <value>
+                <fullName>济源市</fullName>
+                <default>false</default>
+                <label>济源市</label>
+            </value>
+            <value>
+                <fullName>濮阳市</fullName>
+                <default>false</default>
+                <label>濮阳市</label>
+            </value>
+            <value>
+                <fullName>许昌市</fullName>
+                <default>false</default>
+                <label>许昌市</label>
+            </value>
+            <value>
+                <fullName>漯河市</fullName>
+                <default>false</default>
+                <label>漯河市</label>
+            </value>
+            <value>
+                <fullName>三门峡市</fullName>
+                <default>false</default>
+                <label>三门峡市</label>
+            </value>
+            <value>
+                <fullName>南阳市</fullName>
+                <default>false</default>
+                <label>南阳市</label>
+            </value>
+            <value>
+                <fullName>商丘市</fullName>
+                <default>false</default>
+                <label>商丘市</label>
+            </value>
+            <value>
+                <fullName>信阳市</fullName>
+                <default>false</default>
+                <label>信阳市</label>
+            </value>
+            <value>
+                <fullName>周口市</fullName>
+                <default>false</default>
+                <label>周口市</label>
+            </value>
+            <value>
+                <fullName>驻马店市</fullName>
+                <default>false</default>
+                <label>驻马店市</label>
+            </value>
+            <value>
+                <fullName>武汉市</fullName>
+                <default>false</default>
+                <label>武汉市</label>
+            </value>
+            <value>
+                <fullName>黄石市</fullName>
+                <default>false</default>
+                <label>黄石市</label>
+            </value>
+            <value>
+                <fullName>十堰市</fullName>
+                <default>false</default>
+                <label>十堰市</label>
+            </value>
+            <value>
+                <fullName>宜昌市</fullName>
+                <default>false</default>
+                <label>宜昌市</label>
+            </value>
+            <value>
+                <fullName>襄樊市</fullName>
+                <default>false</default>
+                <label>襄樊市</label>
+            </value>
+            <value>
+                <fullName>鄂州市</fullName>
+                <default>false</default>
+                <label>鄂州市</label>
+            </value>
+            <value>
+                <fullName>荆门市</fullName>
+                <default>false</default>
+                <label>荆门市</label>
+            </value>
+            <value>
+                <fullName>孝感市</fullName>
+                <default>false</default>
+                <label>孝感市</label>
+            </value>
+            <value>
+                <fullName>荆州市</fullName>
+                <default>false</default>
+                <label>荆州市</label>
+            </value>
+            <value>
+                <fullName>黄冈市</fullName>
+                <default>false</default>
+                <label>黄冈市</label>
+            </value>
+            <value>
+                <fullName>咸宁市</fullName>
+                <default>false</default>
+                <label>咸宁市</label>
+            </value>
+            <value>
+                <fullName>随州市</fullName>
+                <default>false</default>
+                <label>随州市</label>
+            </value>
+            <value>
+                <fullName>恩施土家族苗族自治州</fullName>
+                <default>false</default>
+                <label>恩施土家族苗族自治州</label>
+            </value>
+            <value>
+                <fullName>仙桃市</fullName>
+                <default>false</default>
+                <label>仙桃市</label>
+            </value>
+            <value>
+                <fullName>潜江市</fullName>
+                <default>false</default>
+                <label>潜江市</label>
+            </value>
+            <value>
+                <fullName>天门市</fullName>
+                <default>false</default>
+                <label>天门市</label>
+            </value>
+            <value>
+                <fullName>神农架林区</fullName>
+                <default>false</default>
+                <label>神农架林区</label>
+            </value>
+            <value>
+                <fullName>长沙市</fullName>
+                <default>false</default>
+                <label>长沙市</label>
+            </value>
+            <value>
+                <fullName>株洲市</fullName>
+                <default>false</default>
+                <label>株洲市</label>
+            </value>
+            <value>
+                <fullName>湘潭市</fullName>
+                <default>false</default>
+                <label>湘潭市</label>
+            </value>
+            <value>
+                <fullName>衡阳市</fullName>
+                <default>false</default>
+                <label>衡阳市</label>
+            </value>
+            <value>
+                <fullName>邵阳市</fullName>
+                <default>false</default>
+                <label>邵阳市</label>
+            </value>
+            <value>
+                <fullName>岳阳市</fullName>
+                <default>false</default>
+                <label>岳阳市</label>
+            </value>
+            <value>
+                <fullName>常德市</fullName>
+                <default>false</default>
+                <label>常德市</label>
+            </value>
+            <value>
+                <fullName>张家界市</fullName>
+                <default>false</default>
+                <label>张家界市</label>
+            </value>
+            <value>
+                <fullName>益阳市</fullName>
+                <default>false</default>
+                <label>益阳市</label>
+            </value>
+            <value>
+                <fullName>郴州市</fullName>
+                <default>false</default>
+                <label>郴州市</label>
+            </value>
+            <value>
+                <fullName>永州市</fullName>
+                <default>false</default>
+                <label>永州市</label>
+            </value>
+            <value>
+                <fullName>怀化市</fullName>
+                <default>false</default>
+                <label>怀化市</label>
+            </value>
+            <value>
+                <fullName>娄底市</fullName>
+                <default>false</default>
+                <label>娄底市</label>
+            </value>
+            <value>
+                <fullName>湘西土家族苗族自治州</fullName>
+                <default>false</default>
+                <label>湘西土家族苗族自治州</label>
+            </value>
+            <value>
+                <fullName>南京市</fullName>
+                <default>false</default>
+                <label>南京市</label>
+            </value>
+            <value>
+                <fullName>无锡市</fullName>
+                <default>false</default>
+                <label>无锡市</label>
+            </value>
+            <value>
+                <fullName>徐州市</fullName>
+                <default>false</default>
+                <label>徐州市</label>
+            </value>
+            <value>
+                <fullName>常州市</fullName>
+                <default>false</default>
+                <label>常州市</label>
+            </value>
+            <value>
+                <fullName>苏州市</fullName>
+                <default>false</default>
+                <label>苏州市</label>
+            </value>
+            <value>
+                <fullName>南通市</fullName>
+                <default>false</default>
+                <label>南通市</label>
+            </value>
+            <value>
+                <fullName>连云港市</fullName>
+                <default>false</default>
+                <label>连云港市</label>
+            </value>
+            <value>
+                <fullName>淮安市</fullName>
+                <default>false</default>
+                <label>淮安市</label>
+            </value>
+            <value>
+                <fullName>盐城市</fullName>
+                <default>false</default>
+                <label>盐城市</label>
+            </value>
+            <value>
+                <fullName>扬州市</fullName>
+                <default>false</default>
+                <label>扬州市</label>
+            </value>
+            <value>
+                <fullName>镇江市</fullName>
+                <default>false</default>
+                <label>镇江市</label>
+            </value>
+            <value>
+                <fullName>泰州市</fullName>
+                <default>false</default>
+                <label>泰州市</label>
+            </value>
+            <value>
+                <fullName>宿迁市</fullName>
+                <default>false</default>
+                <label>宿迁市</label>
+            </value>
+            <value>
+                <fullName>南昌市</fullName>
+                <default>false</default>
+                <label>南昌市</label>
+            </value>
+            <value>
+                <fullName>景德镇市</fullName>
+                <default>false</default>
+                <label>景德镇市</label>
+            </value>
+            <value>
+                <fullName>萍乡市</fullName>
+                <default>false</default>
+                <label>萍乡市</label>
+            </value>
+            <value>
+                <fullName>九江市</fullName>
+                <default>false</default>
+                <label>九江市</label>
+            </value>
+            <value>
+                <fullName>新余市</fullName>
+                <default>false</default>
+                <label>新余市</label>
+            </value>
+            <value>
+                <fullName>鹰潭市</fullName>
+                <default>false</default>
+                <label>鹰潭市</label>
+            </value>
+            <value>
+                <fullName>赣州市</fullName>
+                <default>false</default>
+                <label>赣州市</label>
+            </value>
+            <value>
+                <fullName>吉安市</fullName>
+                <default>false</default>
+                <label>吉安市</label>
+            </value>
+            <value>
+                <fullName>宜春市</fullName>
+                <default>false</default>
+                <label>宜春市</label>
+            </value>
+            <value>
+                <fullName>抚州市</fullName>
+                <default>false</default>
+                <label>抚州市</label>
+            </value>
+            <value>
+                <fullName>上饶市</fullName>
+                <default>false</default>
+                <label>上饶市</label>
+            </value>
+            <value>
+                <fullName>长春市</fullName>
+                <default>false</default>
+                <label>长春市</label>
+            </value>
+            <value>
+                <fullName>吉林市</fullName>
+                <default>false</default>
+                <label>吉林市</label>
+            </value>
+            <value>
+                <fullName>四平市</fullName>
+                <default>false</default>
+                <label>四平市</label>
+            </value>
+            <value>
+                <fullName>辽源市</fullName>
+                <default>false</default>
+                <label>辽源市</label>
+            </value>
+            <value>
+                <fullName>通化市</fullName>
+                <default>false</default>
+                <label>通化市</label>
+            </value>
+            <value>
+                <fullName>白山市</fullName>
+                <default>false</default>
+                <label>白山市</label>
+            </value>
+            <value>
+                <fullName>松原市</fullName>
+                <default>false</default>
+                <label>松原市</label>
+            </value>
+            <value>
+                <fullName>白城市</fullName>
+                <default>false</default>
+                <label>白城市</label>
+            </value>
+            <value>
+                <fullName>延边朝鲜族自治州</fullName>
+                <default>false</default>
+                <label>延边朝鲜族自治州</label>
+            </value>
+            <value>
+                <fullName>沈阳市</fullName>
+                <default>false</default>
+                <label>沈阳市</label>
+            </value>
+            <value>
+                <fullName>大连市</fullName>
+                <default>false</default>
+                <label>大连市</label>
+            </value>
+            <value>
+                <fullName>鞍山市</fullName>
+                <default>false</default>
+                <label>鞍山市</label>
+            </value>
+            <value>
+                <fullName>抚顺市</fullName>
+                <default>false</default>
+                <label>抚顺市</label>
+            </value>
+            <value>
+                <fullName>本溪市</fullName>
+                <default>false</default>
+                <label>本溪市</label>
+            </value>
+            <value>
+                <fullName>丹东市</fullName>
+                <default>false</default>
+                <label>丹东市</label>
+            </value>
+            <value>
+                <fullName>锦州市</fullName>
+                <default>false</default>
+                <label>锦州市</label>
+            </value>
+            <value>
+                <fullName>营口市</fullName>
+                <default>false</default>
+                <label>营口市</label>
+            </value>
+            <value>
+                <fullName>阜新市</fullName>
+                <default>false</default>
+                <label>阜新市</label>
+            </value>
+            <value>
+                <fullName>辽阳市</fullName>
+                <default>false</default>
+                <label>辽阳市</label>
+            </value>
+            <value>
+                <fullName>盘锦市</fullName>
+                <default>false</default>
+                <label>盘锦市</label>
+            </value>
+            <value>
+                <fullName>铁岭市</fullName>
+                <default>false</default>
+                <label>铁岭市</label>
+            </value>
+            <value>
+                <fullName>朝阳市</fullName>
+                <default>false</default>
+                <label>朝阳市</label>
+            </value>
+            <value>
+                <fullName>葫芦岛市</fullName>
+                <default>false</default>
+                <label>葫芦岛市</label>
+            </value>
+            <value>
+                <fullName>呼和浩特市</fullName>
+                <default>false</default>
+                <label>呼和浩特市</label>
+            </value>
+            <value>
+                <fullName>包头市</fullName>
+                <default>false</default>
+                <label>包头市</label>
+            </value>
+            <value>
+                <fullName>乌海市</fullName>
+                <default>false</default>
+                <label>乌海市</label>
+            </value>
+            <value>
+                <fullName>赤峰市</fullName>
+                <default>false</default>
+                <label>赤峰市</label>
+            </value>
+            <value>
+                <fullName>通辽市</fullName>
+                <default>false</default>
+                <label>通辽市</label>
+            </value>
+            <value>
+                <fullName>鄂尔多斯市</fullName>
+                <default>false</default>
+                <label>鄂尔多斯市</label>
+            </value>
+            <value>
+                <fullName>呼伦贝尔市</fullName>
+                <default>false</default>
+                <label>呼伦贝尔市</label>
+            </value>
+            <value>
+                <fullName>巴彦淖尔市</fullName>
+                <default>false</default>
+                <label>巴彦淖尔市</label>
+            </value>
+            <value>
+                <fullName>乌兰察布市</fullName>
+                <default>false</default>
+                <label>乌兰察布市</label>
+            </value>
+            <value>
+                <fullName>兴安盟</fullName>
+                <default>false</default>
+                <label>兴安盟</label>
+            </value>
+            <value>
+                <fullName>锡林郭勒盟</fullName>
+                <default>false</default>
+                <label>锡林郭勒盟</label>
+            </value>
+            <value>
+                <fullName>阿拉善盟</fullName>
+                <default>false</default>
+                <label>阿拉善盟</label>
+            </value>
+            <value>
+                <fullName>银川市</fullName>
+                <default>false</default>
+                <label>银川市</label>
+            </value>
+            <value>
+                <fullName>石嘴山市</fullName>
+                <default>false</default>
+                <label>石嘴山市</label>
+            </value>
+            <value>
+                <fullName>吴忠市</fullName>
+                <default>false</default>
+                <label>吴忠市</label>
+            </value>
+            <value>
+                <fullName>固原市</fullName>
+                <default>false</default>
+                <label>固原市</label>
+            </value>
+            <value>
+                <fullName>中卫市</fullName>
+                <default>false</default>
+                <label>中卫市</label>
+            </value>
+            <value>
+                <fullName>西宁市</fullName>
+                <default>false</default>
+                <label>西宁市</label>
+            </value>
+            <value>
+                <fullName>海东地区</fullName>
+                <default>false</default>
+                <label>海东地区</label>
+            </value>
+            <value>
+                <fullName>海北藏族自治州</fullName>
+                <default>false</default>
+                <label>海北藏族自治州</label>
+            </value>
+            <value>
+                <fullName>黄南藏族自治州</fullName>
+                <default>false</default>
+                <label>黄南藏族自治州</label>
+            </value>
+            <value>
+                <fullName>海南藏族自治州</fullName>
+                <default>false</default>
+                <label>海南藏族自治州</label>
+            </value>
+            <value>
+                <fullName>果洛藏族自治州</fullName>
+                <default>false</default>
+                <label>果洛藏族自治州</label>
+            </value>
+            <value>
+                <fullName>玉树藏族自治州</fullName>
+                <default>false</default>
+                <label>玉树藏族自治州</label>
+            </value>
+            <value>
+                <fullName>海西蒙古族藏族自治州</fullName>
+                <default>false</default>
+                <label>海西蒙古族藏族自治州</label>
+            </value>
+            <value>
+                <fullName>西安市</fullName>
+                <default>false</default>
+                <label>西安市</label>
+            </value>
+            <value>
+                <fullName>铜川市</fullName>
+                <default>false</default>
+                <label>铜川市</label>
+            </value>
+            <value>
+                <fullName>宝鸡市</fullName>
+                <default>false</default>
+                <label>宝鸡市</label>
+            </value>
+            <value>
+                <fullName>咸阳市</fullName>
+                <default>false</default>
+                <label>咸阳市</label>
+            </value>
+            <value>
+                <fullName>渭南市</fullName>
+                <default>false</default>
+                <label>渭南市</label>
+            </value>
+            <value>
+                <fullName>延安市</fullName>
+                <default>false</default>
+                <label>延安市</label>
+            </value>
+            <value>
+                <fullName>汉中市</fullName>
+                <default>false</default>
+                <label>汉中市</label>
+            </value>
+            <value>
+                <fullName>榆林市</fullName>
+                <default>false</default>
+                <label>榆林市</label>
+            </value>
+            <value>
+                <fullName>安康市</fullName>
+                <default>false</default>
+                <label>安康市</label>
+            </value>
+            <value>
+                <fullName>商洛市</fullName>
+                <default>false</default>
+                <label>商洛市</label>
+            </value>
+            <value>
+                <fullName>济南市</fullName>
+                <default>false</default>
+                <label>济南市</label>
+            </value>
+            <value>
+                <fullName>青岛市</fullName>
+                <default>false</default>
+                <label>青岛市</label>
+            </value>
+            <value>
+                <fullName>淄博市</fullName>
+                <default>false</default>
+                <label>淄博市</label>
+            </value>
+            <value>
+                <fullName>枣庄市</fullName>
+                <default>false</default>
+                <label>枣庄市</label>
+            </value>
+            <value>
+                <fullName>东营市</fullName>
+                <default>false</default>
+                <label>东营市</label>
+            </value>
+            <value>
+                <fullName>烟台市</fullName>
+                <default>false</default>
+                <label>烟台市</label>
+            </value>
+            <value>
+                <fullName>潍坊市</fullName>
+                <default>false</default>
+                <label>潍坊市</label>
+            </value>
+            <value>
+                <fullName>济宁市</fullName>
+                <default>false</default>
+                <label>济宁市</label>
+            </value>
+            <value>
+                <fullName>泰安市</fullName>
+                <default>false</default>
+                <label>泰安市</label>
+            </value>
+            <value>
+                <fullName>威海市</fullName>
+                <default>false</default>
+                <label>威海市</label>
+            </value>
+            <value>
+                <fullName>日照市</fullName>
+                <default>false</default>
+                <label>日照市</label>
+            </value>
+            <value>
+                <fullName>莱芜市</fullName>
+                <default>false</default>
+                <label>莱芜市</label>
+            </value>
+            <value>
+                <fullName>临沂市</fullName>
+                <default>false</default>
+                <label>临沂市</label>
+            </value>
+            <value>
+                <fullName>德州市</fullName>
+                <default>false</default>
+                <label>德州市</label>
+            </value>
+            <value>
+                <fullName>聊城市</fullName>
+                <default>false</default>
+                <label>聊城市</label>
+            </value>
+            <value>
+                <fullName>滨州市</fullName>
+                <default>false</default>
+                <label>滨州市</label>
+            </value>
+            <value>
+                <fullName>菏泽市</fullName>
+                <default>false</default>
+                <label>菏泽市</label>
+            </value>
+            <value>
+                <fullName>太原市</fullName>
+                <default>false</default>
+                <label>太原市</label>
+            </value>
+            <value>
+                <fullName>大同市</fullName>
+                <default>false</default>
+                <label>大同市</label>
+            </value>
+            <value>
+                <fullName>阳泉市</fullName>
+                <default>false</default>
+                <label>阳泉市</label>
+            </value>
+            <value>
+                <fullName>长治市</fullName>
+                <default>false</default>
+                <label>长治市</label>
+            </value>
+            <value>
+                <fullName>晋城市</fullName>
+                <default>false</default>
+                <label>晋城市</label>
+            </value>
+            <value>
+                <fullName>朔州市</fullName>
+                <default>false</default>
+                <label>朔州市</label>
+            </value>
+            <value>
+                <fullName>晋中市</fullName>
+                <default>false</default>
+                <label>晋中市</label>
+            </value>
+            <value>
+                <fullName>运城市</fullName>
+                <default>false</default>
+                <label>运城市</label>
+            </value>
+            <value>
+                <fullName>忻州市</fullName>
+                <default>false</default>
+                <label>忻州市</label>
+            </value>
+            <value>
+                <fullName>临汾市</fullName>
+                <default>false</default>
+                <label>临汾市</label>
+            </value>
+            <value>
+                <fullName>吕梁市</fullName>
+                <default>false</default>
+                <label>吕梁市</label>
+            </value>
+            <value>
+                <fullName>成都市</fullName>
+                <default>false</default>
+                <label>成都市</label>
+            </value>
+            <value>
+                <fullName>自贡市</fullName>
+                <default>false</default>
+                <label>自贡市</label>
+            </value>
+            <value>
+                <fullName>攀枝花市</fullName>
+                <default>false</default>
+                <label>攀枝花市</label>
+            </value>
+            <value>
+                <fullName>泸州市</fullName>
+                <default>false</default>
+                <label>泸州市</label>
+            </value>
+            <value>
+                <fullName>德阳市</fullName>
+                <default>false</default>
+                <label>德阳市</label>
+            </value>
+            <value>
+                <fullName>绵阳市</fullName>
+                <default>false</default>
+                <label>绵阳市</label>
+            </value>
+            <value>
+                <fullName>广元市</fullName>
+                <default>false</default>
+                <label>广元市</label>
+            </value>
+            <value>
+                <fullName>遂宁市</fullName>
+                <default>false</default>
+                <label>遂宁市</label>
+            </value>
+            <value>
+                <fullName>内江市</fullName>
+                <default>false</default>
+                <label>内江市</label>
+            </value>
+            <value>
+                <fullName>乐山市</fullName>
+                <default>false</default>
+                <label>乐山市</label>
+            </value>
+            <value>
+                <fullName>南充市</fullName>
+                <default>false</default>
+                <label>南充市</label>
+            </value>
+            <value>
+                <fullName>眉山市</fullName>
+                <default>false</default>
+                <label>眉山市</label>
+            </value>
+            <value>
+                <fullName>宜宾市</fullName>
+                <default>false</default>
+                <label>宜宾市</label>
+            </value>
+            <value>
+                <fullName>广安市</fullName>
+                <default>false</default>
+                <label>广安市</label>
+            </value>
+            <value>
+                <fullName>达州市</fullName>
+                <default>false</default>
+                <label>达州市</label>
+            </value>
+            <value>
+                <fullName>雅安市</fullName>
+                <default>false</default>
+                <label>雅安市</label>
+            </value>
+            <value>
+                <fullName>巴中市</fullName>
+                <default>false</default>
+                <label>巴中市</label>
+            </value>
+            <value>
+                <fullName>资阳市</fullName>
+                <default>false</default>
+                <label>资阳市</label>
+            </value>
+            <value>
+                <fullName>阿坝藏族羌族自治州</fullName>
+                <default>false</default>
+                <label>阿坝藏族羌族自治州</label>
+            </value>
+            <value>
+                <fullName>甘孜藏族自治州</fullName>
+                <default>false</default>
+                <label>甘孜藏族自治州</label>
+            </value>
+            <value>
+                <fullName>凉山彝族自治州</fullName>
+                <default>false</default>
+                <label>凉山彝族自治州</label>
+            </value>
+            <value>
+                <fullName>乌鲁木齐市</fullName>
+                <default>false</default>
+                <label>乌鲁木齐市</label>
+            </value>
+            <value>
+                <fullName>克拉玛依市</fullName>
+                <default>false</default>
+                <label>克拉玛依市</label>
+            </value>
+            <value>
+                <fullName>吐鲁番地区</fullName>
+                <default>false</default>
+                <label>吐鲁番地区</label>
+            </value>
+            <value>
+                <fullName>哈密地区</fullName>
+                <default>false</default>
+                <label>哈密地区</label>
+            </value>
+            <value>
+                <fullName>昌吉回族自治州</fullName>
+                <default>false</default>
+                <label>昌吉回族自治州</label>
+            </value>
+            <value>
+                <fullName>博尔塔拉蒙古自治州</fullName>
+                <default>false</default>
+                <label>博尔塔拉蒙古自治州</label>
+            </value>
+            <value>
+                <fullName>巴音郭楞蒙古自治州</fullName>
+                <default>false</default>
+                <label>巴音郭楞蒙古自治州</label>
+            </value>
+            <value>
+                <fullName>阿克苏地区</fullName>
+                <default>false</default>
+                <label>阿克苏地区</label>
+            </value>
+            <value>
+                <fullName>克孜勒苏柯尔克孜自治州</fullName>
+                <default>false</default>
+                <label>克孜勒苏柯尔克孜自治州</label>
+            </value>
+            <value>
+                <fullName>喀什地区</fullName>
+                <default>false</default>
+                <label>喀什地区</label>
+            </value>
+            <value>
+                <fullName>和田地区</fullName>
+                <default>false</default>
+                <label>和田地区</label>
+            </value>
+            <value>
+                <fullName>伊犁哈萨克自治州</fullName>
+                <default>false</default>
+                <label>伊犁哈萨克自治州</label>
+            </value>
+            <value>
+                <fullName>塔城地区</fullName>
+                <default>false</default>
+                <label>塔城地区</label>
+            </value>
+            <value>
+                <fullName>阿勒泰地区</fullName>
+                <default>false</default>
+                <label>阿勒泰地区</label>
+            </value>
+            <value>
+                <fullName>石河子市</fullName>
+                <default>false</default>
+                <label>石河子市</label>
+            </value>
+            <value>
+                <fullName>阿拉尔市</fullName>
+                <default>false</default>
+                <label>阿拉尔市</label>
+            </value>
+            <value>
+                <fullName>图木舒克市</fullName>
+                <default>false</default>
+                <label>图木舒克市</label>
+            </value>
+            <value>
+                <fullName>五家渠市</fullName>
+                <default>false</default>
+                <label>五家渠市</label>
+            </value>
+            <value>
+                <fullName>拉萨市</fullName>
+                <default>false</default>
+                <label>拉萨市</label>
+            </value>
+            <value>
+                <fullName>昌都地区</fullName>
+                <default>false</default>
+                <label>昌都地区</label>
+            </value>
+            <value>
+                <fullName>山南地区</fullName>
+                <default>false</default>
+                <label>山南地区</label>
+            </value>
+            <value>
+                <fullName>日喀则地区</fullName>
+                <default>false</default>
+                <label>日喀则地区</label>
+            </value>
+            <value>
+                <fullName>那曲地区</fullName>
+                <default>false</default>
+                <label>那曲地区</label>
+            </value>
+            <value>
+                <fullName>阿里地区</fullName>
+                <default>false</default>
+                <label>阿里地区</label>
+            </value>
+            <value>
+                <fullName>林芝地区</fullName>
+                <default>false</default>
+                <label>林芝地区</label>
+            </value>
+            <value>
+                <fullName>昆明市</fullName>
+                <default>false</default>
+                <label>昆明市</label>
+            </value>
+            <value>
+                <fullName>曲靖市</fullName>
+                <default>false</default>
+                <label>曲靖市</label>
+            </value>
+            <value>
+                <fullName>玉溪市</fullName>
+                <default>false</default>
+                <label>玉溪市</label>
+            </value>
+            <value>
+                <fullName>保山市</fullName>
+                <default>false</default>
+                <label>保山市</label>
+            </value>
+            <value>
+                <fullName>昭通市</fullName>
+                <default>false</default>
+                <label>昭通市</label>
+            </value>
+            <value>
+                <fullName>丽江市</fullName>
+                <default>false</default>
+                <label>丽江市</label>
+            </value>
+            <value>
+                <fullName>思茅市</fullName>
+                <default>false</default>
+                <label>思茅市</label>
+            </value>
+            <value>
+                <fullName>临沧市</fullName>
+                <default>false</default>
+                <label>临沧市</label>
+            </value>
+            <value>
+                <fullName>楚雄彝族自治州</fullName>
+                <default>false</default>
+                <label>楚雄彝族自治州</label>
+            </value>
+            <value>
+                <fullName>红河哈尼族彝族自治州</fullName>
+                <default>false</default>
+                <label>红河哈尼族彝族自治州</label>
+            </value>
+            <value>
+                <fullName>文山壮族苗族自治州</fullName>
+                <default>false</default>
+                <label>文山壮族苗族自治州</label>
+            </value>
+            <value>
+                <fullName>西双版纳傣族自治州</fullName>
+                <default>false</default>
+                <label>西双版纳傣族自治州</label>
+            </value>
+            <value>
+                <fullName>大理白族自治州</fullName>
+                <default>false</default>
+                <label>大理白族自治州</label>
+            </value>
+            <value>
+                <fullName>德宏傣族景颇族自治州</fullName>
+                <default>false</default>
+                <label>德宏傣族景颇族自治州</label>
+            </value>
+            <value>
+                <fullName>怒江傈僳族自治州</fullName>
+                <default>false</default>
+                <label>怒江傈僳族自治州</label>
+            </value>
+            <value>
+                <fullName>迪庆藏族自治州</fullName>
+                <default>false</default>
+                <label>迪庆藏族自治州</label>
+            </value>
+            <value>
+                <fullName>杭州市</fullName>
+                <default>false</default>
+                <label>杭州市</label>
+            </value>
+            <value>
+                <fullName>宁波市</fullName>
+                <default>false</default>
+                <label>宁波市</label>
+            </value>
+            <value>
+                <fullName>温州市</fullName>
+                <default>false</default>
+                <label>温州市</label>
+            </value>
+            <value>
+                <fullName>嘉兴市</fullName>
+                <default>false</default>
+                <label>嘉兴市</label>
+            </value>
+            <value>
+                <fullName>湖州市</fullName>
+                <default>false</default>
+                <label>湖州市</label>
+            </value>
+            <value>
+                <fullName>绍兴市</fullName>
+                <default>false</default>
+                <label>绍兴市</label>
+            </value>
+            <value>
+                <fullName>金华市</fullName>
+                <default>false</default>
+                <label>金华市</label>
+            </value>
+            <value>
+                <fullName>衢州市</fullName>
+                <default>false</default>
+                <label>衢州市</label>
+            </value>
+            <value>
+                <fullName>舟山市</fullName>
+                <default>false</default>
+                <label>舟山市</label>
+            </value>
+            <value>
+                <fullName>台州市</fullName>
+                <default>false</default>
+                <label>台州市</label>
+            </value>
+            <value>
+                <fullName>丽水市</fullName>
+                <default>false</default>
+                <label>丽水市</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>西安市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>铜川市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>宝鸡市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>咸阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>渭南市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>延安市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>汉中市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>榆林市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>安康市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shaanxi 陕西省</controllingFieldValue>
+            <valueName>商洛市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>济南市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>青岛市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>淄博市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>枣庄市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>东营市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>烟台市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>潍坊市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>济宁市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>泰安市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>威海市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>日照市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>莱芜市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>临沂市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>德州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>聊城市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>滨州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shandong 山东省</controllingFieldValue>
+            <valueName>菏泽市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>太原市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>大同市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>阳泉市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>长治市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>晋城市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>朔州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>晋中市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>运城市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>忻州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>临汾市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shan‘xi 山西省</controllingFieldValue>
+            <valueName>吕梁市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>成都市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>自贡市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>攀枝花市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>泸州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>德阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>绵阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>广元市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>遂宁市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>内江市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>乐山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>南充市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>眉山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>宜宾市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>广安市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>达州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>雅安市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>巴中市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>资阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>阿坝藏族羌族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>甘孜藏族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sichuan   四川省</controllingFieldValue>
+            <valueName>凉山彝族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>乌鲁木齐市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>克拉玛依市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>吐鲁番地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>哈密地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>昌吉回族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>博尔塔拉蒙古自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>巴音郭楞蒙古自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>阿克苏地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>克孜勒苏柯尔克孜自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>喀什地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>和田地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>伊犁哈萨克自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>塔城地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>阿勒泰地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>石河子市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>阿拉尔市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>图木舒克市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xingjiang   新疆自治区</controllingFieldValue>
+            <valueName>五家渠市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xizang   西藏自治区</controllingFieldValue>
+            <valueName>拉萨市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xizang   西藏自治区</controllingFieldValue>
+            <valueName>昌都地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xizang   西藏自治区</controllingFieldValue>
+            <valueName>山南地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xizang   西藏自治区</controllingFieldValue>
+            <valueName>日喀则地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xizang   西藏自治区</controllingFieldValue>
+            <valueName>那曲地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xizang   西藏自治区</controllingFieldValue>
+            <valueName>阿里地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Xizang   西藏自治区</controllingFieldValue>
+            <valueName>林芝地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>昆明市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>曲靖市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>玉溪市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>保山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>昭通市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>丽江市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>思茅市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>临沧市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>楚雄彝族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>红河哈尼族彝族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>文山壮族苗族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>西双版纳傣族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>大理白族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>德宏傣族景颇族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>怒江傈僳族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yunnan   云南省</controllingFieldValue>
+            <valueName>迪庆藏族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>杭州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>宁波市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>温州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>嘉兴市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>湖州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>绍兴市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>金华市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>衢州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>舟山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>台州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Zhejiang   浙江省</controllingFieldValue>
+            <valueName>丽水市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>石家庄市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>唐山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>秦皇岛市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>邯郸市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>邢台市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>保定市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>张家口市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>承德市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>沧州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>廊坊市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heibei 河北省</controllingFieldValue>
+            <valueName>衡水市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>哈尔滨市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>齐齐哈尔市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>鸡西市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>鹤岗市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>双鸭山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>大庆市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>伊春市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>佳木斯市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>七台河市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>牡丹江市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>黑河市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>绥化市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heilongjiang 黑龙江省</controllingFieldValue>
+            <valueName>大兴安岭地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>郑州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>开封市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>洛阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>平顶山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>安阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>鹤壁市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>新乡市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>焦作市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>济源市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>濮阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>许昌市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>漯河市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>三门峡市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>南阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>商丘市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>信阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>周口市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heinan 河南省</controllingFieldValue>
+            <valueName>驻马店市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>武汉市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>黄石市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>十堰市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>宜昌市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>襄樊市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>鄂州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>荆门市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>孝感市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>荆州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>黄冈市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>咸宁市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>随州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>恩施土家族苗族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>仙桃市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>潜江市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>天门市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hubei 湖北省</controllingFieldValue>
+            <valueName>神农架林区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>长沙市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>株洲市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>湘潭市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>衡阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>邵阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>岳阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>常德市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>张家界市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>益阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>郴州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>永州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>怀化市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>娄底市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hunan   湖南省</controllingFieldValue>
+            <valueName>湘西土家族苗族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>南京市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>无锡市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>徐州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>常州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>苏州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>南通市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>连云港市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>淮安市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>盐城市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>扬州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>镇江市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>泰州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangsu   江苏省</controllingFieldValue>
+            <valueName>宿迁市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>南昌市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>景德镇市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>萍乡市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>九江市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>新余市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>鹰潭市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>赣州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>吉安市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>宜春市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>抚州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jiangxi   江西省</controllingFieldValue>
+            <valueName>上饶市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin 吉林省</controllingFieldValue>
+            <valueName>长春市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin 吉林省</controllingFieldValue>
+            <valueName>吉林市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin 吉林省</controllingFieldValue>
+            <valueName>四平市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin 吉林省</controllingFieldValue>
+            <valueName>辽源市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin 吉林省</controllingFieldValue>
+            <valueName>通化市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin 吉林省</controllingFieldValue>
+            <valueName>白山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin 吉林省</controllingFieldValue>
+            <valueName>松原市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin 吉林省</controllingFieldValue>
+            <valueName>白城市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jilin 吉林省</controllingFieldValue>
+            <valueName>延边朝鲜族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>沈阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>大连市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>鞍山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>抚顺市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>本溪市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>丹东市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>锦州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>营口市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>阜新市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>辽阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>盘锦市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>铁岭市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>朝阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liaoning 辽宁省</controllingFieldValue>
+            <valueName>葫芦岛市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>呼和浩特市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>包头市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>乌海市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>赤峰市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>通辽市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>鄂尔多斯市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>呼伦贝尔市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>巴彦淖尔市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>乌兰察布市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>兴安盟</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>锡林郭勒盟</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Neimenggu   内蒙古自治区</controllingFieldValue>
+            <valueName>阿拉善盟</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipality 直辖市</controllingFieldValue>
+            <valueName>北京市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipality 直辖市</controllingFieldValue>
+            <valueName>上海市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipality 直辖市</controllingFieldValue>
+            <valueName>天津市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Municipality 直辖市</controllingFieldValue>
+            <valueName>重庆市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAR 特别行政区</controllingFieldValue>
+            <valueName>香港特别行政区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAR 特别行政区</controllingFieldValue>
+            <valueName>澳门特别行政区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>合肥市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>芜湖市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>蚌埠市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>淮南市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>马鞍山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>淮北市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>铜陵市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>安庆市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>黄山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>滁州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>阜阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>宿州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>巢湖市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>六安市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>亳州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>池州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anhui   安徽省</controllingFieldValue>
+            <valueName>宣城市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian   福建省</controllingFieldValue>
+            <valueName>福州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian   福建省</controllingFieldValue>
+            <valueName>厦门市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian   福建省</controllingFieldValue>
+            <valueName>莆田市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian   福建省</controllingFieldValue>
+            <valueName>三明市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian   福建省</controllingFieldValue>
+            <valueName>泉州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian   福建省</controllingFieldValue>
+            <valueName>漳州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian   福建省</controllingFieldValue>
+            <valueName>南平市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian   福建省</controllingFieldValue>
+            <valueName>龙岩市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fujian   福建省</controllingFieldValue>
+            <valueName>宁德市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>兰州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>嘉峪关市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>金昌市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>白银市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>天水市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>武威市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>张掖市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>平凉市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>酒泉市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>庆阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>定西市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>陇南市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>临夏回族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gansusheng    甘肃省</controllingFieldValue>
+            <valueName>甘南藏族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>广州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>韶关市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>深圳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>珠海市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>汕头市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>佛山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>江门市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>湛江市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>茂名市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>肇庆市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>惠州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>梅州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>汕尾市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>河源市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>阳江市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>清远市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>东莞市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>中山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>潮州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>揭阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangdong   广东省</controllingFieldValue>
+            <valueName>云浮市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>南宁市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>柳州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>桂林市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>梧州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>北海市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>防城港市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>钦州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>贵港市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>玉林市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>百色市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>贺州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>河池市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>来宾市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guangxi    广西省</controllingFieldValue>
+            <valueName>崇左市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou   贵州省</controllingFieldValue>
+            <valueName>贵阳市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou   贵州省</controllingFieldValue>
+            <valueName>六盘水市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou   贵州省</controllingFieldValue>
+            <valueName>遵义市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou   贵州省</controllingFieldValue>
+            <valueName>安顺市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou   贵州省</controllingFieldValue>
+            <valueName>铜仁地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou   贵州省</controllingFieldValue>
+            <valueName>黔西南布依族苗族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou   贵州省</controllingFieldValue>
+            <valueName>毕节地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou   贵州省</controllingFieldValue>
+            <valueName>黔东南苗族侗族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guizhou   贵州省</controllingFieldValue>
+            <valueName>黔南布依族苗族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>海口市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>三亚市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>五指山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>琼海市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>儋州市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>文昌市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>万宁市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>东方市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>定安县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>屯昌县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>澄迈县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>临高县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>白沙黎族自治县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>昌江黎族自治县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>乐东黎族自治县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>陵水黎族自治县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>保亭黎族苗族自治县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hainan   海南省</controllingFieldValue>
+            <valueName>琼中黎族苗族自治县</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ningxia 宁夏回族自治区</controllingFieldValue>
+            <valueName>银川市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ningxia 宁夏回族自治区</controllingFieldValue>
+            <valueName>石嘴山市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ningxia 宁夏回族自治区</controllingFieldValue>
+            <valueName>吴忠市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ningxia 宁夏回族自治区</controllingFieldValue>
+            <valueName>固原市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ningxia 宁夏回族自治区</controllingFieldValue>
+            <valueName>中卫市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qinghai   青海省</controllingFieldValue>
+            <valueName>西宁市</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qinghai   青海省</controllingFieldValue>
+            <valueName>海东地区</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qinghai   青海省</controllingFieldValue>
+            <valueName>海北藏族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qinghai   青海省</controllingFieldValue>
+            <valueName>黄南藏族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qinghai   青海省</controllingFieldValue>
+            <valueName>海南藏族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qinghai   青海省</controllingFieldValue>
+            <valueName>果洛藏族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qinghai   青海省</controllingFieldValue>
+            <valueName>玉树藏族自治州</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qinghai   青海省</controllingFieldValue>
+            <valueName>海西蒙古族藏族自治州</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

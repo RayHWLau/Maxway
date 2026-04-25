@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>offerval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( OR( TEXT(Stage__c) = &apos;Visa In Progress&apos;,
+         TEXT(Stage__c) = &apos;Pending Arrival&apos;,
+         TEXT(Stage__c) = &apos;Arrived&apos;,
+         TEXT(Stage__c) = &apos;Commission Received&apos;,
+         TEXT(Stage__c) = &apos;Commission Paid&apos;
+        ),
+     ISBLANK(TEXT(  Offer__c ))
+    )</errorConditionFormula>
+    <errorDisplayField>Offer__c</errorDisplayField>
+    <errorMessage>There should be offer.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SchoolCountryMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+$RecordType.Name = &quot;Overseas School - CC&quot;,
+$RecordType.Name = &quot;Overseas School - HS&quot;,
+$RecordType.Name = &quot;Overseas School - University&quot;
+),
+NIN__c = &apos;No&apos;,
+(ISBLANK (TEXT( School_s_Country__c ))
+)
+)</errorConditionFormula>
+    <errorMessage>Please enter school&apos;s country.</errorMessage>
+</ValidationRule>

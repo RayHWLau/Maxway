@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cannotmakevisibletoagentifninistrue</fullName>
+    <active>true</active>
+    <errorConditionFormula>NIN__c =&apos;Yes&apos; &amp;&amp; NOT(ISBLANK(TEXT( Visible_to_Agent__c )))</errorConditionFormula>
+    <errorMessage>Insufficient Access.</errorMessage>
+</ValidationRule>

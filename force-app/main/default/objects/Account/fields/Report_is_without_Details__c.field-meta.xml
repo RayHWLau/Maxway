@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Report_is_without_Details__c</fullName>
+    <formula>OR(
+   No_of_Missing_Program_Campus__c &gt; 0,
+   No_of_Campus__c = 0,
+   AND(
+        OR(
+            RecordType.Name = &apos;Overseas School - CC&apos;,
+            RecordType.Name = &apos;Overseas School - University&apos;
+        ),
+       No_of_Missing_Major_Program__c &gt; 0
+   )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Report is without Details</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

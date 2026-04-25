@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CollegeUniversityValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT(School_Type__c) !=&apos;High School&apos;,
+      ISBLANK(  Major2__c )
+, OR( RecordType.Name == &apos;Application(Opt-In)&apos;, RecordType.Name == &apos;Application(Opt-Out/NIN/Maxway)&apos; )
+     )</errorConditionFormula>
+    <errorDisplayField>Pre_application_Date__c</errorDisplayField>
+    <errorMessage>If School type is  College or University please fill Major.</errorMessage>
+</ValidationRule>

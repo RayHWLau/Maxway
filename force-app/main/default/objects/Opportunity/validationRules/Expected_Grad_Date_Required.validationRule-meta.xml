@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Grad_Date_Required</fullName>
+    <active>false</active>
+    <description>Expected Graduation Date is required when Opportunity stage changes to Arrived</description>
+    <errorConditionFormula>ISPICKVAL( StageName , &quot;Arrived&quot;) &amp;&amp; ISCHANGED(StageName ) &amp;&amp; ISBLANK(  Expected_Graduation_Date__c )</errorConditionFormula>
+    <errorDisplayField>Expected_Graduation_Date__c</errorDisplayField>
+    <errorMessage>Missing Expected Graduation Date for arrived opportunity</errorMessage>
+</ValidationRule>

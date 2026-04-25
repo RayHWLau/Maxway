@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_partner_School__c</fullName>
+    <label>Non-partner School</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cambridge</fullName>
+                <default>false</default>
+                <label>Cambridge</label>
+            </value>
+            <value>
+                <fullName>UC Berkeley</fullName>
+                <default>false</default>
+                <label>UC Berkeley</label>
+            </value>
+            <value>
+                <fullName>Suffield Academy</fullName>
+                <default>false</default>
+                <label>Suffield Academy</label>
+            </value>
+            <value>
+                <fullName>Deans College</fullName>
+                <default>false</default>
+                <label>Deans College</label>
+            </value>
+            <value>
+                <fullName>Nottingham Trent University</fullName>
+                <default>false</default>
+                <label>Nottingham Trent University</label>
+            </value>
+            <value>
+                <fullName>Brunel University London</fullName>
+                <default>false</default>
+                <label>Brunel University London</label>
+            </value>
+            <value>
+                <fullName>City University Of London</fullName>
+                <default>false</default>
+                <label>City University Of London</label>
+            </value>
+            <value>
+                <fullName>Queen Mary University Of London</fullName>
+                <default>false</default>
+                <label>Queen Mary University Of London</label>
+            </value>
+            <value>
+                <fullName>Durham University</fullName>
+                <default>false</default>
+                <label>Durham University</label>
+            </value>
+            <value>
+                <fullName>The University of Warwick</fullName>
+                <default>false</default>
+                <label>The University of Warwick</label>
+            </value>
+            <value>
+                <fullName>The University of Nottingham</fullName>
+                <default>false</default>
+                <label>The University of Nottingham</label>
+            </value>
+            <value>
+                <fullName>Swansea University</fullName>
+                <default>false</default>
+                <label>Swansea University</label>
+            </value>
+            <value>
+                <fullName>Cardiff University</fullName>
+                <default>false</default>
+                <label>Cardiff University</label>
+            </value>
+            <value>
+                <fullName>OCAD University</fullName>
+                <default>false</default>
+                <label>OCAD University</label>
+            </value>
+            <value>
+                <fullName>Yale University</fullName>
+                <default>false</default>
+                <label>Yale University</label>
+            </value>
+            <value>
+                <fullName>University of Hong Kong (HKU)</fullName>
+                <default>false</default>
+                <label>University of Hong Kong (HKU)</label>
+            </value>
+            <value>
+                <fullName>Chinese University of Hong Kong (CUHK)</fullName>
+                <default>false</default>
+                <label>Chinese University of Hong Kong (CUHK)</label>
+            </value>
+            <value>
+                <fullName>The Hong Kong Polytechnic University (HKPU)</fullName>
+                <default>false</default>
+                <label>The Hong Kong Polytechnic University (HKPU)</label>
+            </value>
+            <value>
+                <fullName>City University of Hong Kong</fullName>
+                <default>false</default>
+                <label>City University of Hong Kong</label>
+            </value>
+            <value>
+                <fullName>Hong Kong University of Science and Technology (HKUST)</fullName>
+                <default>false</default>
+                <label>Hong Kong University of Science and Technology (HKUST)</label>
+            </value>
+            <value>
+                <fullName>Monash University</fullName>
+                <default>false</default>
+                <label>Monash University</label>
+            </value>
+            <value>
+                <fullName>The University of Queensland</fullName>
+                <default>false</default>
+                <label>The University of Queensland</label>
+            </value>
+            <value>
+                <fullName>Simon Fraser University</fullName>
+                <default>false</default>
+                <label>Simon Fraser University</label>
+            </value>
+            <value>
+                <fullName>The University of British Columbia</fullName>
+                <default>false</default>
+                <label>The University of British Columbia</label>
+            </value>
+            <value>
+                <fullName>University of Leeds</fullName>
+                <default>false</default>
+                <label>University of Leeds</label>
+            </value>
+            <value>
+                <fullName>University of Lancaster</fullName>
+                <default>false</default>
+                <label>University of Lancaster</label>
+            </value>
+            <value>
+                <fullName>University of Newcastle</fullName>
+                <default>false</default>
+                <label>University of Newcastle</label>
+            </value>
+            <value>
+                <fullName>University of Kent</fullName>
+                <default>false</default>
+                <label>University of Kent</label>
+            </value>
+            <value>
+                <fullName>University of Surrey</fullName>
+                <default>false</default>
+                <label>University of Surrey</label>
+            </value>
+            <value>
+                <fullName>University Of Toronto</fullName>
+                <default>false</default>
+                <label>University Of Toronto</label>
+            </value>
+            <value>
+                <fullName>University Of Waterloo</fullName>
+                <default>false</default>
+                <label>University Of Waterloo</label>
+            </value>
+            <value>
+                <fullName>Ryerson University</fullName>
+                <default>false</default>
+                <label>Ryerson University</label>
+            </value>
+            <value>
+                <fullName>University Of Alberta</fullName>
+                <default>false</default>
+                <label>University Of Alberta</label>
+            </value>
+            <value>
+                <fullName>University Of San Francisco</fullName>
+                <default>false</default>
+                <label>University Of San Francisco</label>
+            </value>
+            <value>
+                <fullName>University Of Southern California</fullName>
+                <default>false</default>
+                <label>University Of Southern California</label>
+            </value>
+            <value>
+                <fullName>Pepperdine University</fullName>
+                <default>false</default>
+                <label>Pepperdine University</label>
+            </value>
+            <value>
+                <fullName>Baylor University</fullName>
+                <default>false</default>
+                <label>Baylor University</label>
+            </value>
+            <value>
+                <fullName>Syracuse University</fullName>
+                <default>false</default>
+                <label>Syracuse University</label>
+            </value>
+            <value>
+                <fullName>Marquette University</fullName>
+                <default>false</default>
+                <label>Marquette University</label>
+            </value>
+            <value>
+                <fullName>University Of San Diego</fullName>
+                <default>false</default>
+                <label>University Of San Diego</label>
+            </value>
+            <value>
+                <fullName>University Of Liverpool</fullName>
+                <default>false</default>
+                <label>University Of Liverpool</label>
+            </value>
+            <value>
+                <fullName>University of Leicester</fullName>
+                <default>false</default>
+                <label>University of Leicester</label>
+            </value>
+            <value>
+                <fullName>Royal Holloway University of London</fullName>
+                <default>false</default>
+                <label>Royal Holloway University of London</label>
+            </value>
+            <value>
+                <fullName>University of Southampton</fullName>
+                <default>false</default>
+                <label>University of Southampton</label>
+            </value>
+            <value>
+                <fullName>University of Essex</fullName>
+                <default>false</default>
+                <label>University of Essex</label>
+            </value>
+            <value>
+                <fullName>University of Bath</fullName>
+                <default>false</default>
+                <label>University of Bath</label>
+            </value>
+            <value>
+                <fullName>University of Bristol</fullName>
+                <default>false</default>
+                <label>University of Bristol</label>
+            </value>
+            <value>
+                <fullName>Hong Kong Baptist University (HKBU)</fullName>
+                <default>false</default>
+                <label>Hong Kong Baptist University (HKBU)</label>
+            </value>
+            <value>
+                <fullName>University of Exeter</fullName>
+                <default>false</default>
+                <label>University of Exeter</label>
+            </value>
+            <value>
+                <fullName>University of Strathclyde</fullName>
+                <default>false</default>
+                <label>University of Strathclyde</label>
+            </value>
+            <value>
+                <fullName>University of Dundee</fullName>
+                <default>false</default>
+                <label>University of Dundee</label>
+            </value>
+            <value>
+                <fullName>Lingnan University</fullName>
+                <default>false</default>
+                <label>Lingnan University</label>
+            </value>
+            <value>
+                <fullName>Vocational Training Council (VTC)</fullName>
+                <default>false</default>
+                <label>Vocational Training Council (VTC)</label>
+            </value>
+            <value>
+                <fullName>University of East Anglia</fullName>
+                <default>false</default>
+                <label>University of East Anglia</label>
+            </value>
+            <value>
+                <fullName>University of California</fullName>
+                <default>false</default>
+                <label>University of California</label>
+            </value>
+            <value>
+                <fullName>The University of Texas at Austin</fullName>
+                <default>false</default>
+                <label>The University of Texas at Austin</label>
+            </value>
+            <value>
+                <fullName>University of Technology Sydney</fullName>
+                <default>false</default>
+                <label>University of Technology Sydney</label>
+            </value>
+            <value>
+                <fullName>Walnut Hill School For The Arts</fullName>
+                <default>false</default>
+                <label>Walnut Hill School For The Arts</label>
+            </value>
+            <value>
+                <fullName>Deerfield Academy</fullName>
+                <default>false</default>
+                <label>Deerfield Academy</label>
+            </value>
+            <value>
+                <fullName>The Cambridge School of Weston</fullName>
+                <default>false</default>
+                <label>The Cambridge School of Weston</label>
+            </value>
+            <value>
+                <fullName>Emily Carr University of Art + Design</fullName>
+                <default>false</default>
+                <label>Emily Carr University of Art + Design</label>
+            </value>
+            <value>
+                <fullName>Interlochen Center for the Arts</fullName>
+                <default>false</default>
+                <label>Interlochen Center for the Arts</label>
+            </value>
+            <value>
+                <fullName>St. Mark&apos;s School</fullName>
+                <default>false</default>
+                <label>St. Mark&apos;s School</label>
+            </value>
+            <value>
+                <fullName>Cushing Academy</fullName>
+                <default>false</default>
+                <label>Cushing Academy</label>
+            </value>
+            <value>
+                <fullName>Miss Hall&apos;s School</fullName>
+                <default>false</default>
+                <label>Miss Hall&apos;s School</label>
+            </value>
+            <value>
+                <fullName>Brandeis University</fullName>
+                <default>false</default>
+                <label>Brandeis University</label>
+            </value>
+            <value>
+                <fullName>Johns Hopkins University</fullName>
+                <default>false</default>
+                <label>Johns Hopkins University</label>
+            </value>
+            <value>
+                <fullName>University College London</fullName>
+                <default>false</default>
+                <label>University College London</label>
+            </value>
+            <value>
+                <fullName>University of Reading</fullName>
+                <default>false</default>
+                <label>University of Reading</label>
+            </value>
+            <value>
+                <fullName>University of Salford</fullName>
+                <default>false</default>
+                <label>University of Salford</label>
+            </value>
+            <value>
+                <fullName>Plymouth University</fullName>
+                <default>false</default>
+                <label>Plymouth University</label>
+            </value>
+            <value>
+                <fullName>Sheffield Hallam University</fullName>
+                <default>false</default>
+                <label>Sheffield Hallam University</label>
+            </value>
+            <value>
+                <fullName>Indiana University Bloomington</fullName>
+                <default>false</default>
+                <label>Indiana University Bloomington</label>
+            </value>
+            <value>
+                <fullName>University of Maryland</fullName>
+                <default>false</default>
+                <label>University of Maryland</label>
+            </value>
+            <value>
+                <fullName>American University</fullName>
+                <default>false</default>
+                <label>American University</label>
+            </value>
+            <value>
+                <fullName>Penn State University</fullName>
+                <default>false</default>
+                <label>Penn State University</label>
+            </value>
+            <value>
+                <fullName>The Open University of Hong Kong</fullName>
+                <default>false</default>
+                <label>The Open University of Hong Kong</label>
+            </value>
+            <value>
+                <fullName>University of Westminster</fullName>
+                <default>false</default>
+                <label>University of Westminster</label>
+            </value>
+            <value>
+                <fullName>St. John’s School (Vancouver)</fullName>
+                <default>false</default>
+                <label>St. John’s School (Vancouver)</label>
+            </value>
+            <value>
+                <fullName>British Columbia Institute of Technology</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>British Columbia Institute of Technology</label>
+            </value>
+            <value>
+                <fullName>Brock University</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Brock University</label>
+            </value>
+            <value>
+                <fullName>Carleton University</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Carleton University</label>
+            </value>
+            <value>
+                <fullName>Collingwood School</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Collingwood School</label>
+            </value>
+            <value>
+                <fullName>Imperial College London</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Imperial College London</label>
+            </value>
+            <value>
+                <fullName>McMaster University</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>McMaster University</label>
+            </value>
+            <value>
+                <fullName>Ontario Tech University</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ontario Tech University</label>
+            </value>
+            <value>
+                <fullName>Queen&apos;s University</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Queen&apos;s University</label>
+            </value>
+            <value>
+                <fullName>St. Thomas Aquinas</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>St. Thomas Aquinas</label>
+            </value>
+            <value>
+                <fullName>The University of Edinburgh</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>The University of Edinburgh</label>
+            </value>
+            <value>
+                <fullName>University Of Manchester</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>University Of Manchester</label>
+            </value>
+            <value>
+                <fullName>University of Glasgow</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>University of Glasgow</label>
+            </value>
+            <value>
+                <fullName>University of Ottawa</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>University of Ottawa</label>
+            </value>
+            <value>
+                <fullName>Vancouver Christian School</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Vancouver Christian School</label>
+            </value>
+            <value>
+                <fullName>Vancouver College</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Vancouver College</label>
+            </value>
+            <value>
+                <fullName>Western University</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Western University</label>
+            </value>
+            <value>
+                <fullName>Wilfrid Laurier University</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wilfrid Laurier University</label>
+            </value>
+            <value>
+                <fullName>York University</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>York University</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

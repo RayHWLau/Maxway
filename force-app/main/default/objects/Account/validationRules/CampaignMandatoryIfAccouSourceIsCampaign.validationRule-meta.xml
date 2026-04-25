@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CampaignMandatoryIfAccouSourceIsCampaign</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$RecordType.Name = &quot;Agent&quot;, 
+OR( 
+(AND( 
+ISPICKVAL( AccountSource , &quot;Campaign&quot;), 
+ISBLANK(Campaign__c ) 
+)), 
+(AND( 
+TEXT(AccountSource) != &quot;Campaign&quot;, 
+NOT(ISBLANK(Campaign__c)) 
+)) 
+) 
+)</errorConditionFormula>
+    <errorMessage>Please fill &quot;Campaign&quot; / Please remove &quot;Campaign&quot; ,if Lead Source is not &quot;Campaign&quot;.</errorMessage>
+</ValidationRule>

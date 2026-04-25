@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HighSchoolValidationVice</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT(School_Type__c) !=&apos;High School&apos;,
+     OR(NOT(ISBLANK( Housing__c)),
+        NOT(ISBLANK(TEXT(Intended_Grade__c)))
+        )
+     )</errorConditionFormula>
+    <errorMessage>If School type is  not  &apos;High School&apos; please remove Housing and Intended Grade.</errorMessage>
+</ValidationRule>

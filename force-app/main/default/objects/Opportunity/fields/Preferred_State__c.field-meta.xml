@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_State__c</fullName>
+    <label>Preferred State</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>--US--</fullName>
+                <default>false</default>
+                <label>--US--</label>
+            </value>
+            <value>
+                <fullName>Alabama (AL)</fullName>
+                <default>false</default>
+                <label>Alabama (AL)</label>
+            </value>
+            <value>
+                <fullName>Alaska (AK)</fullName>
+                <default>false</default>
+                <label>Alaska (AK)</label>
+            </value>
+            <value>
+                <fullName>Arizona (AZ)</fullName>
+                <default>false</default>
+                <label>Arizona (AZ)</label>
+            </value>
+            <value>
+                <fullName>Arkansas (AR)</fullName>
+                <default>false</default>
+                <label>Arkansas (AR)</label>
+            </value>
+            <value>
+                <fullName>California (CA)</fullName>
+                <default>false</default>
+                <label>California (CA)</label>
+            </value>
+            <value>
+                <fullName>Colorado (CO)</fullName>
+                <default>false</default>
+                <label>Colorado (CO)</label>
+            </value>
+            <value>
+                <fullName>Connecticut (CT)</fullName>
+                <default>false</default>
+                <label>Connecticut (CT)</label>
+            </value>
+            <value>
+                <fullName>Delaware (DE)</fullName>
+                <default>false</default>
+                <label>Delaware (DE)</label>
+            </value>
+            <value>
+                <fullName>Florida (FL)</fullName>
+                <default>false</default>
+                <label>Florida (FL)</label>
+            </value>
+            <value>
+                <fullName>Georgia (GA)</fullName>
+                <default>false</default>
+                <label>Georgia (GA)</label>
+            </value>
+            <value>
+                <fullName>Hawaii (HI)</fullName>
+                <default>false</default>
+                <label>Hawaii (HI)</label>
+            </value>
+            <value>
+                <fullName>Idaho (ID)</fullName>
+                <default>false</default>
+                <label>Idaho (ID)</label>
+            </value>
+            <value>
+                <fullName>Illinois (IL)</fullName>
+                <default>false</default>
+                <label>Illinois (IL)</label>
+            </value>
+            <value>
+                <fullName>Indiana (IN)</fullName>
+                <default>false</default>
+                <label>Indiana (IN)</label>
+            </value>
+            <value>
+                <fullName>Iowa (IA)</fullName>
+                <default>false</default>
+                <label>Iowa (IA)</label>
+            </value>
+            <value>
+                <fullName>Kansas (KS)</fullName>
+                <default>false</default>
+                <label>Kansas (KS)</label>
+            </value>
+            <value>
+                <fullName>Kentucky (KY)</fullName>
+                <default>false</default>
+                <label>Kentucky (KY)</label>
+            </value>
+            <value>
+                <fullName>Louisiana (LA)</fullName>
+                <default>false</default>
+                <label>Louisiana (LA)</label>
+            </value>
+            <value>
+                <fullName>Maine (ME)</fullName>
+                <default>false</default>
+                <label>Maine (ME)</label>
+            </value>
+            <value>
+                <fullName>Maryland (MD)</fullName>
+                <default>false</default>
+                <label>Maryland (MD)</label>
+            </value>
+            <value>
+                <fullName>Massachusetts (MA)</fullName>
+                <default>false</default>
+                <label>Massachusetts (MA)</label>
+            </value>
+            <value>
+                <fullName>Michigan (MI)</fullName>
+                <default>false</default>
+                <label>Michigan (MI)</label>
+            </value>
+            <value>
+                <fullName>Minnesota (MN)</fullName>
+                <default>false</default>
+                <label>Minnesota (MN)</label>
+            </value>
+            <value>
+                <fullName>Mississippi (MS)</fullName>
+                <default>false</default>
+                <label>Mississippi (MS)</label>
+            </value>
+            <value>
+                <fullName>Missouri (MO)</fullName>
+                <default>false</default>
+                <label>Missouri (MO)</label>
+            </value>
+            <value>
+                <fullName>Montana (MT)</fullName>
+                <default>false</default>
+                <label>Montana (MT)</label>
+            </value>
+            <value>
+                <fullName>Nebraska (NE)</fullName>
+                <default>false</default>
+                <label>Nebraska (NE)</label>
+            </value>
+            <value>
+                <fullName>Nevada (NV)</fullName>
+                <default>false</default>
+                <label>Nevada (NV)</label>
+            </value>
+            <value>
+                <fullName>New Hampshire (NH)</fullName>
+                <default>false</default>
+                <label>New Hampshire (NH)</label>
+            </value>
+            <value>
+                <fullName>New Jersey (NJ)</fullName>
+                <default>false</default>
+                <label>New Jersey (NJ)</label>
+            </value>
+            <value>
+                <fullName>New Mexico (NM)</fullName>
+                <default>false</default>
+                <label>New Mexico (NM)</label>
+            </value>
+            <value>
+                <fullName>New York (NY)</fullName>
+                <default>false</default>
+                <label>New York (NY)</label>
+            </value>
+            <value>
+                <fullName>North Carolina (NC)</fullName>
+                <default>false</default>
+                <label>North Carolina (NC)</label>
+            </value>
+            <value>
+                <fullName>North Dakota (ND)</fullName>
+                <default>false</default>
+                <label>North Dakota (ND)</label>
+            </value>
+            <value>
+                <fullName>Ohio (OH)</fullName>
+                <default>false</default>
+                <label>Ohio (OH)</label>
+            </value>
+            <value>
+                <fullName>Oklahoma (OK)</fullName>
+                <default>false</default>
+                <label>Oklahoma (OK)</label>
+            </value>
+            <value>
+                <fullName>Oregon (OR)</fullName>
+                <default>false</default>
+                <label>Oregon (OR)</label>
+            </value>
+            <value>
+                <fullName>Pennsylvania (PA)</fullName>
+                <default>false</default>
+                <label>Pennsylvania (PA)</label>
+            </value>
+            <value>
+                <fullName>Rhode Island (RI)</fullName>
+                <default>false</default>
+                <label>Rhode Island (RI)</label>
+            </value>
+            <value>
+                <fullName>South Carolina (SC)</fullName>
+                <default>false</default>
+                <label>South Carolina (SC)</label>
+            </value>
+            <value>
+                <fullName>South Dakota (SD)</fullName>
+                <default>false</default>
+                <label>South Dakota (SD)</label>
+            </value>
+            <value>
+                <fullName>Tennessee (TN)</fullName>
+                <default>false</default>
+                <label>Tennessee (TN)</label>
+            </value>
+            <value>
+                <fullName>Texas (TX)</fullName>
+                <default>false</default>
+                <label>Texas (TX)</label>
+            </value>
+            <value>
+                <fullName>Utah (UT)</fullName>
+                <default>false</default>
+                <label>Utah (UT)</label>
+            </value>
+            <value>
+                <fullName>Vermont (VT)</fullName>
+                <default>false</default>
+                <label>Vermont (VT)</label>
+            </value>
+            <value>
+                <fullName>Virginia (VA)</fullName>
+                <default>false</default>
+                <label>Virginia (VA)</label>
+            </value>
+            <value>
+                <fullName>Washington (WA)</fullName>
+                <default>false</default>
+                <label>Washington (WA)</label>
+            </value>
+            <value>
+                <fullName>West Virginia (WV)</fullName>
+                <default>false</default>
+                <label>West Virginia (WV)</label>
+            </value>
+            <value>
+                <fullName>Wisconsin (WI)</fullName>
+                <default>false</default>
+                <label>Wisconsin (WI)</label>
+            </value>
+            <value>
+                <fullName>Wyoming (WY)</fullName>
+                <default>false</default>
+                <label>Wyoming (WY)</label>
+            </value>
+            <value>
+                <fullName>--CA --</fullName>
+                <default>false</default>
+                <label>--CA --</label>
+            </value>
+            <value>
+                <fullName>Alberta (AB)</fullName>
+                <default>false</default>
+                <label>Alberta (AB)</label>
+            </value>
+            <value>
+                <fullName>British Columbia (BC)</fullName>
+                <default>false</default>
+                <label>British Columbia (BC)</label>
+            </value>
+            <value>
+                <fullName>Manitoba (MB)</fullName>
+                <default>false</default>
+                <label>Manitoba (MB)</label>
+            </value>
+            <value>
+                <fullName>New Brunswick (NB)</fullName>
+                <default>false</default>
+                <label>New Brunswick (NB)</label>
+            </value>
+            <value>
+                <fullName>Newfoundland (NF)</fullName>
+                <default>false</default>
+                <label>Newfoundland (NF)</label>
+            </value>
+            <value>
+                <fullName>Northwest Territories (NT)</fullName>
+                <default>false</default>
+                <label>Northwest Territories (NT)</label>
+            </value>
+            <value>
+                <fullName>Nova Scotia (NS)</fullName>
+                <default>false</default>
+                <label>Nova Scotia (NS)</label>
+            </value>
+            <value>
+                <fullName>Nunavut (NU)</fullName>
+                <default>false</default>
+                <label>Nunavut (NU)</label>
+            </value>
+            <value>
+                <fullName>Ontario (ON)</fullName>
+                <default>false</default>
+                <label>Ontario (ON)</label>
+            </value>
+            <value>
+                <fullName>Prince Edward Island (PE)</fullName>
+                <default>false</default>
+                <label>Prince Edward Island (PE)</label>
+            </value>
+            <value>
+                <fullName>Quebec (QC)</fullName>
+                <default>false</default>
+                <label>Quebec (QC)</label>
+            </value>
+            <value>
+                <fullName>Saskatchewan (SK)</fullName>
+                <default>false</default>
+                <label>Saskatchewan (SK)</label>
+            </value>
+            <value>
+                <fullName>Yukon (YT)</fullName>
+                <default>false</default>
+                <label>Yukon (YT)</label>
+            </value>
+            <value>
+                <fullName>--UK--</fullName>
+                <default>false</default>
+                <label>--UK--</label>
+            </value>
+            <value>
+                <fullName>England</fullName>
+                <default>false</default>
+                <label>England</label>
+            </value>
+            <value>
+                <fullName>Scotland</fullName>
+                <default>false</default>
+                <label>Scotland</label>
+            </value>
+            <value>
+                <fullName>Ireland</fullName>
+                <default>false</default>
+                <label>Ireland</label>
+            </value>
+            <value>
+                <fullName>North Ireland</fullName>
+                <default>false</default>
+                <label>North Ireland</label>
+            </value>
+            <value>
+                <fullName>Wales</fullName>
+                <default>false</default>
+                <label>Wales</label>
+            </value>
+            <value>
+                <fullName>--AU--</fullName>
+                <default>false</default>
+                <label>--AU--</label>
+            </value>
+            <value>
+                <fullName>New South Wales</fullName>
+                <default>false</default>
+                <label>New South Wales</label>
+            </value>
+            <value>
+                <fullName>Queensland</fullName>
+                <default>false</default>
+                <label>Queensland</label>
+            </value>
+            <value>
+                <fullName>Northern Territory</fullName>
+                <default>false</default>
+                <label>Northern Territory</label>
+            </value>
+            <value>
+                <fullName>South Australia</fullName>
+                <default>false</default>
+                <label>South Australia</label>
+            </value>
+            <value>
+                <fullName>Western Australia</fullName>
+                <default>false</default>
+                <label>Western Australia</label>
+            </value>
+            <value>
+                <fullName>Victoria</fullName>
+                <default>false</default>
+                <label>Victoria</label>
+            </value>
+            <value>
+                <fullName>--NZ--</fullName>
+                <default>false</default>
+                <label>--NZ--</label>
+            </value>
+            <value>
+                <fullName>Auckland</fullName>
+                <default>false</default>
+                <label>Auckland</label>
+            </value>
+            <value>
+                <fullName>Bay of Plenty</fullName>
+                <default>false</default>
+                <label>Bay of Plenty</label>
+            </value>
+            <value>
+                <fullName>Canterbury</fullName>
+                <default>false</default>
+                <label>Canterbury</label>
+            </value>
+            <value>
+                <fullName>Gisborne</fullName>
+                <default>false</default>
+                <label>Gisborne</label>
+            </value>
+            <value>
+                <fullName>Hawkes Bay</fullName>
+                <default>false</default>
+                <label>Hawkes Bay</label>
+            </value>
+            <value>
+                <fullName>Malborough</fullName>
+                <default>false</default>
+                <label>Malborough</label>
+            </value>
+            <value>
+                <fullName>Northland</fullName>
+                <default>false</default>
+                <label>Northland</label>
+            </value>
+            <value>
+                <fullName>Otago</fullName>
+                <default>false</default>
+                <label>Otago</label>
+            </value>
+            <value>
+                <fullName>South Land</fullName>
+                <default>false</default>
+                <label>South Land</label>
+            </value>
+            <value>
+                <fullName>Taranaki</fullName>
+                <default>false</default>
+                <label>Taranaki</label>
+            </value>
+            <value>
+                <fullName>Tasman</fullName>
+                <default>false</default>
+                <label>Tasman</label>
+            </value>
+            <value>
+                <fullName>Waikato</fullName>
+                <default>false</default>
+                <label>Waikato</label>
+            </value>
+            <value>
+                <fullName>Wanganui</fullName>
+                <default>false</default>
+                <label>Wanganui</label>
+            </value>
+            <value>
+                <fullName>Wellington</fullName>
+                <default>false</default>
+                <label>Wellington</label>
+            </value>
+            <value>
+                <fullName>West Coast</fullName>
+                <default>false</default>
+                <label>West Coast</label>
+            </value>
+            <value>
+                <fullName>--CA--</fullName>
+                <default>false</default>
+                <label>--CA--</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

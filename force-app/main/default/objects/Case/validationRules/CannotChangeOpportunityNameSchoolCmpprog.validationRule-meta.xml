@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CannotChangeOpportunityNameSchoolCmpprog</fullName>
+    <active>true</active>
+    <description>for community user cannot change opportunity , school ,campus,program,major once saved.</description>
+    <errorConditionFormula>AND( 
+    NOT(ISNEW()),
+       NOT(ISBLANK(Owner:User.ContactId)), 
+    OR(PRIORVALUE(Opportunity__c) &lt;&gt; Opportunity__c,
+       PRIORVALUE( School__c ) &lt;&gt; School__c ,
+       PRIORVALUE(  Campus__c ) &lt;&gt; Campus__c ,
+       PRIORVALUE(   Program__c ) &lt;&gt; Program__c 
+      )
+   )</errorConditionFormula>
+    <errorMessage>Cannot change Opportunity , School , Program and Campus.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visa_Required_No</fullName>
+    <active>true</active>
+    <description>When Visa required is no the stage should not be visa in progress</description>
+    <errorConditionFormula>AND ( TEXT(Stage__c)= &apos;Visa In Progress&apos;,TEXT( Visa_Required__c )=&apos;No&apos;
+    )</errorConditionFormula>
+    <errorMessage>IF Visa Required is &apos;No&apos; then Stage should Not be &apos;Visa In Progress&apos;.</errorMessage>
+</ValidationRule>

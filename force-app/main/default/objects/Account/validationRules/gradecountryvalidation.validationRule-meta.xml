@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gradecountryvalidation</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR((TEXT(Country_Residing__c) !=  TEXT(Original_Grade_Mapping__r.Country__c ) &amp;&amp; NOT(ISBLANK(Original_Grade_Mapping__c)) ),(TEXT(Country_Residing__c) !=   TEXT(Current_Grade_Mapping__r.Country__c) &amp;&amp; NOT(ISBLANK(Current_Grade_Mapping__c)) )
+
+)</errorConditionFormula>
+    <errorMessage>Please Choose Correct Grade.</errorMessage>
+</ValidationRule>

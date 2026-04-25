@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VisaApproved</fullName>
+    <active>true</active>
+    <errorConditionFormula>Visa_Decision__c = true &amp;&amp;  TEXT(Rejected_By__c) =&apos;Visa&apos;</errorConditionFormula>
+    <errorMessage>Please uncheck Visa Approved.</errorMessage>
+</ValidationRule>

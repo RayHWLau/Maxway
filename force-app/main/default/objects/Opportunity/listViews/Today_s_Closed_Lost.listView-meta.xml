@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Today_s_Closed_Lost</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Case_Manager__c</columns>
+    <columns>Closed_Lost_Reason__c</columns>
+    <columns>Closed_Lost_Description__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Lost</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Today&apos;s Closed Lost</label>
+    <sharedTo>
+        <allPartnerUsers></allPartnerUsers>
+    </sharedTo>
+</ListView>

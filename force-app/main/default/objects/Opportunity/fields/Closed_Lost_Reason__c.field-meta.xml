@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Lost_Reason__c</fullName>
+    <label>Closed Lost Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Satisfy with system already in place</fullName>
+                <default>false</default>
+                <label>Satisfy with system already in place</label>
+            </value>
+            <value>
+                <fullName>Not student recruitment company</fullName>
+                <default>false</default>
+                <label>Not student recruitment company</label>
+            </value>
+            <value>
+                <fullName>Can&apos;t reach decision maker</fullName>
+                <default>false</default>
+                <label>Can&apos;t reach decision maker</label>
+            </value>
+            <value>
+                <fullName>Management disagrees with business model</fullName>
+                <default>false</default>
+                <label>Management disagrees with business model</label>
+            </value>
+            <value>
+                <fullName>Management disagrees with pricing</fullName>
+                <default>false</default>
+                <label>Management disagrees with pricing</label>
+            </value>
+            <value>
+                <fullName>No resources</fullName>
+                <default>false</default>
+                <label>No resources</label>
+            </value>
+            <value>
+                <fullName>Product too complicated</fullName>
+                <default>false</default>
+                <label>Product too complicated</label>
+            </value>
+            <value>
+                <fullName>Maxway&apos;s school list overlaps with theirs</fullName>
+                <default>false</default>
+                <label>Maxway&apos;s school list overlaps with theirs</label>
+            </value>
+            <value>
+                <fullName>Maxway school types unfit for local market</fullName>
+                <default>false</default>
+                <label>Maxway school types unfit for local market</label>
+            </value>
+            <value>
+                <fullName>Duplicate with another account</fullName>
+                <default>false</default>
+                <label>Duplicate with another account</label>
+            </value>
+            <value>
+                <fullName>Branch office location overlap with Maxway&apos;s</fullName>
+                <default>false</default>
+                <label>Branch office location overlap with Maxway&apos;s</label>
+            </value>
+            <value>
+                <fullName>No need such product: low labor cost, winning position in market...</fullName>
+                <default>false</default>
+                <label>No need such product: low labor cost, winning position in market...</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

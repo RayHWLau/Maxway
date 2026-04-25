@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnsubscribedReasonOthers</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($RecordType.Name = &quot;Agent&quot;,(OR((INCLUDES( Unsubscribed_Reason__c,&apos;Others&apos;) &amp;&amp;  ISBLANK( Unsubscribed_Others__c )),
+(NOT(INCLUDES(Unsubscribed_Reason__c ,&apos;Others&apos;)) &amp;&amp;  NOT(ISBLANK( Unsubscribed_Others__c ))))))</errorConditionFormula>
+    <errorMessage>Align values between Unsubscribed Reason and Unsubscribed Others.</errorMessage>
+</ValidationRule>

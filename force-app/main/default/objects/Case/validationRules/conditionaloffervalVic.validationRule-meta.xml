@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>conditionaloffervalVic</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    TEXT( Offer__c ) !=&apos;Conditional&apos;, 
+    NOT(ISBLANK(TEXT(Other_Conditions__c)))
+     )</errorConditionFormula>
+    <errorMessage>If offer is not &apos;Conditional&apos; , Please remove Other Conditions.</errorMessage>
+</ValidationRule>

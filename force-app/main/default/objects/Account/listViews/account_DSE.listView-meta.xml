@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>account_DSE</fullName>
+    <columns>Record_Id__c</columns>
+    <columns>Student_ID__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Nationality__pc</columns>
+    <columns>Current_Grade_Mapping__c</columns>
+    <columns>Father_Mobile__c</columns>
+    <columns>Mother_Mobile__c</columns>
+    <columns>Mobile__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Data_Origin__c</field>
+        <operation>equals</operation>
+        <value>H</value>
+    </filters>
+    <filters>
+        <field>Current_Grade_Mapping__c</field>
+        <operation>equals</operation>
+        <value>S6</value>
+    </filters>
+    <filters>
+        <field>Student_Status__c</field>
+        <operation>equals</operation>
+        <value>Prospective</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.StudentAccount</value>
+    </filters>
+    <label>account_DSE</label>
+</ListView>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Lost_Reason__c</fullName>
+    <label>Closed Lost Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Continue Existing System</fullName>
+                <default>false</default>
+                <label>Continue Existing System</label>
+            </value>
+            <value>
+                <fullName>Not Recruitment co.</fullName>
+                <default>false</default>
+                <label>Not Recruitment co.</label>
+            </value>
+            <value>
+                <fullName>Mgt Can&apos;t Reach</fullName>
+                <default>false</default>
+                <label>Mgt Can&apos;t Reach</label>
+            </value>
+            <value>
+                <fullName>Disagrees w/ Biz Model</fullName>
+                <default>false</default>
+                <label>Disagrees w/ Biz Model</label>
+            </value>
+            <value>
+                <fullName>Disagrees w/ Pricing</fullName>
+                <default>false</default>
+                <label>Disagrees w/ Pricing</label>
+            </value>
+            <value>
+                <fullName>No resources</fullName>
+                <default>false</default>
+                <label>No resources</label>
+            </value>
+            <value>
+                <fullName>Complex Product</fullName>
+                <default>false</default>
+                <label>Complex Product</label>
+            </value>
+            <value>
+                <fullName>Can&apos;t Use Schl List</fullName>
+                <default>false</default>
+                <label>Can&apos;t Use Schl List</label>
+            </value>
+            <value>
+                <fullName>Maxway School Types Unfit For Local Market</fullName>
+                <default>false</default>
+                <label>Maxway School Types Unfit For Local Market</label>
+            </value>
+            <value>
+                <fullName>Duplicate Account</fullName>
+                <default>false</default>
+                <label>Duplicate Account</label>
+            </value>
+            <value>
+                <fullName>Branch office location overlap with Maxway&apos;s</fullName>
+                <default>false</default>
+                <label>Branch office location overlap with Maxway&apos;s</label>
+            </value>
+            <value>
+                <fullName>No Need Product</fullName>
+                <default>false</default>
+                <label>No Need Product</label>
+            </value>
+            <value>
+                <fullName>Ref Check Deny</fullName>
+                <default>false</default>
+                <label>Ref Check Deny</label>
+            </value>
+            <value>
+                <fullName>Disagrees w/ License Terms</fullName>
+                <default>false</default>
+                <label>Disagrees w/ License Terms</label>
+            </value>
+            <value>
+                <fullName>Invalid contacts</fullName>
+                <default>false</default>
+                <label>Invalid contacts</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Client apply on his own</fullName>
+                <default>false</default>
+                <label>Client apply on his own</label>
+            </value>
+            <value>
+                <fullName>No money</fullName>
+                <default>false</default>
+                <label>No money</label>
+            </value>
+            <value>
+                <fullName>Invalid contact</fullName>
+                <default>false</default>
+                <label>Invalid contact</label>
+            </value>
+            <value>
+                <fullName>Country out of scope</fullName>
+                <default>false</default>
+                <label>Country out of scope</label>
+            </value>
+            <value>
+                <fullName>No Commission due to immigration intent / Passport</fullName>
+                <default>false</default>
+                <label>No Commission due to immigration intent / Passport</label>
+            </value>
+            <value>
+                <fullName>Stay in original country &amp; already in Uni</fullName>
+                <default>false</default>
+                <label>Stay in original country &amp; already in Uni</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

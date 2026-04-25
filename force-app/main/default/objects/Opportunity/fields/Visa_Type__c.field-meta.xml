@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visa_Type__c</fullName>
+    <label>Visa Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>US-F1</fullName>
+                <default>false</default>
+                <label>US-F1</label>
+            </value>
+            <value>
+                <fullName>US-J1</fullName>
+                <default>false</default>
+                <label>US-J1</label>
+            </value>
+            <value>
+                <fullName>US-B1</fullName>
+                <default>false</default>
+                <label>US-B1</label>
+            </value>
+            <value>
+                <fullName>CA-Stud</fullName>
+                <default>false</default>
+                <label>CA-Stud</label>
+            </value>
+            <value>
+                <fullName>CA-Tour</fullName>
+                <default>false</default>
+                <label>CA-Tour</label>
+            </value>
+            <value>
+                <fullName>Self</fullName>
+                <default>false</default>
+                <label>Self</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

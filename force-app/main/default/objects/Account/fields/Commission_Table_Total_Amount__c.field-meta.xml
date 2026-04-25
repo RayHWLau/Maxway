@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commission_Table_Total_Amount__c</fullName>
+    <label>Commission Table Total Amount</label>
+    <summarizedField>Commission_Table__c.Amount__c</summarizedField>
+    <summaryForeignKey>Commission_Table__c.School__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

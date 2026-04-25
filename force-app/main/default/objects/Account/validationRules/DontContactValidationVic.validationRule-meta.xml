@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DontContactValidationVic</fullName>
+    <active>true</active>
+    <errorConditionFormula>TEXT(Student_Status__c) != &quot;Don&apos;t Contact&quot; &amp;&amp; (NOT(ISBLANK( Dont_Contact_Reason__c )) || NOT(ISBLANK( Dont_Contact_Reason_Others__c )))</errorConditionFormula>
+    <errorMessage>If Student Status is not  &apos;Don&apos;t Contact&apos; please remove Dont Contact Reason and  Dont Contant Reason Others.</errorMessage>
+</ValidationRule>

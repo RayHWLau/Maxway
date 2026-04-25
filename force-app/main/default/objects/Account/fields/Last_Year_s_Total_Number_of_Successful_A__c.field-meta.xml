@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Year_s_Total_Number_of_Successful_A__c</fullName>
+    <label>Last Year’s Successful Applications</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0-20</fullName>
+                <default>false</default>
+                <label>0-20</label>
+            </value>
+            <value>
+                <fullName>21-50</fullName>
+                <default>false</default>
+                <label>21-50</label>
+            </value>
+            <value>
+                <fullName>51-70</fullName>
+                <default>false</default>
+                <label>51-70</label>
+            </value>
+            <value>
+                <fullName>71-100</fullName>
+                <default>false</default>
+                <label>71-100</label>
+            </value>
+            <value>
+                <fullName>101-130</fullName>
+                <default>false</default>
+                <label>101-130</label>
+            </value>
+            <value>
+                <fullName>131-150</fullName>
+                <default>false</default>
+                <label>131-150</label>
+            </value>
+            <value>
+                <fullName>151-170</fullName>
+                <default>false</default>
+                <label>151-170</label>
+            </value>
+            <value>
+                <fullName>171-200</fullName>
+                <default>false</default>
+                <label>171-200</label>
+            </value>
+            <value>
+                <fullName>201-300</fullName>
+                <default>false</default>
+                <label>201-300</label>
+            </value>
+            <value>
+                <fullName>More than 300</fullName>
+                <default>false</default>
+                <label>More than 300</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RollupForRefreeValidation__c</fullName>
+    <description>cannot edit refree details once opportunity refrence is verified</description>
+    <label>RollupForRefreeValidation</label>
+    <summaryFilterItems>
+        <field>Opportunity.Agent_Reference_Check__c</field>
+        <operation>equals</operation>
+        <value>Verified</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>
