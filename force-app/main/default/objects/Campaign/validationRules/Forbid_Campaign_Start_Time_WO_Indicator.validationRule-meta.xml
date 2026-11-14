@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forbid_Campaign_Start_Time_WO_Indicator</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Campaign_Start_Time__c)),
+ISPICKVAL( Type, &quot;Seminar / Event&quot;),
+NOT(CONTAINS(LOWER(Campaign_Start_Time__c), &quot;am&quot;)),
+NOT(CONTAINS(LOWER(Campaign_Start_Time__c), &quot;pm&quot;)),
+NOT(CONTAINS(LOWER(Campaign_Start_Time__c), &quot;a.m.&quot;)),
+NOT(CONTAINS(LOWER(Campaign_Start_Time__c), &quot;p.m.&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>IsActive</errorDisplayField>
+    <errorMessage>Seminar Campaign Start Time must include indicator (i.e. &quot;a.m.&quot;, &quot;am&quot;, &quot;p.m.&quot;, &quot;pm&quot;)</errorMessage>
+</ValidationRule>

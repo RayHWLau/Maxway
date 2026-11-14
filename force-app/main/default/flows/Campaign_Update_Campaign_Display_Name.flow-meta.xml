@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <ends>
+        <name>END_ELEMENT_1</name>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+    </ends>
+    <environments>Default</environments>
+    <formulas>
+        <name>TransformedDisplayCampaignName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Display_Campaign_Name__c} + &quot;(&quot;+{!$Record.WhatsApp_Response_Mapping_Key__c}+&quot;)&quot;</expression>
+    </formulas>
+    <interviewLabel>Campaign - Update Campaign Display Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Campaign - Update Campaign Display Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Display_Campaign_Name</name>
+        <label>Update Display Campaign Name</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>END_ELEMENT_1</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Display_Campaign_Name__c</field>
+            <value>
+                <elementReference>TransformedDisplayCampaignName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Display_Campaign_Name</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Seminar / Event</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Display_Campaign_Name__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>WhatsApp_Response_Mapping_Key__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Campaign</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
