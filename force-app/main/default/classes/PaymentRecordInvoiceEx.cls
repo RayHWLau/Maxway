@@ -31,18 +31,19 @@ public class PaymentRecordInvoiceEx {
                        Service_Application_Skype_Interview__c,
                        Service_Visa__c,
                        
-                       Item_Name_1__c, Item_Amount_1__c,
-                       Item_Name_2__c, Item_Amount_2__c,
-                       Item_Name_3__c, Item_Amount_3__c,
-                       Item_Name_4__c, Item_Amount_4__c,
-                       Item_Name_5__c, Item_Amount_5__c,
-                       Item_Name_6__c, Item_Amount_6__c,
-                       Item_Name_7__c, Item_Amount_7__c,
-                       Item_Name_8__c, Item_Amount_8__c,
-                       Item_Name_9__c, Item_Amount_9__c,
-                       Item_Name_10__c, Item_Amount_10__c
+                       Item_Name_1__c, Item_Amount_1__c, Item_1_Transaction_Type__c,
+                       Item_Name_2__c, Item_Amount_2__c, Item_2_Transaction_Type__c,
+                       Item_Name_3__c, Item_Amount_3__c, Item_3_Transaction_Type__c,
+                       Item_Name_4__c, Item_Amount_4__c, Item_4_Transaction_Type__c,
+                       Item_Name_5__c, Item_Amount_5__c, Item_5_Transaction_Type__c,
+                       Item_Name_6__c, Item_Amount_6__c, Item_6_Transaction_Type__c,
+                       Item_Name_7__c, Item_Amount_7__c, Item_7_Transaction_Type__c,
+                       Item_Name_8__c, Item_Amount_8__c, Item_8_Transaction_Type__c,
+                       Item_Name_9__c, Item_Amount_9__c, Item_9_Transaction_Type__c,
+                       Item_Name_10__c, Item_Amount_10__c, Item_10_Transaction_Type__c
                        FROM Payment_Record__c
-                       WHERE Id=:prId];     
+                       WHERE Id=:prId
+                       WITH SYSTEM_MODE];     
         }
         if(payment==null || payment.Invoice_Issue_Date__c == null)
             return (new PageReference('/apex/InvoiceError?e=invoice_issue_date_empty'));

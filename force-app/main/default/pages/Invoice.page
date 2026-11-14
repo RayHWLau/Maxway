@@ -8,7 +8,7 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
             }
 
             div.container {
-                width: 900px;
+                width: 1024px;
                 margin: 0px auto;
                 text-align: left;
             }
@@ -17,6 +17,10 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
                 border-spacing: 0px;
                 border-collapse: collapse;
                 width: 100%;
+            }
+
+            .type {
+                text-align:center;
             }
 
             tr#heading td#logo
@@ -45,7 +49,7 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
 
             table#std-info, table#description
             {
-                width: 80%;
+                width: 70%;
                 margin-left: 10%;
                 margin-right: 10%;
                 border: 1px solid black;
@@ -85,7 +89,7 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
             }
 
             table#description th:nth-child(1){
-                width: 80%
+                width: 70%
             }
             
             table#description td.amount {
@@ -100,12 +104,19 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
             table#description > thead > tr > th:nth-child(odd){
                 border-right: 1px dashed black;
             }
+            table#description > thead > tr > th:nth-child(even){
+                border-right: 1px dashed black;
+            }
             
             table#description > tbody > tr {
                 border-bottom : 1px dashed grey;
             }
             
             table#description > tbody > tr > td:nth-child(odd){
+                border-right : 1px dashed grey;
+            }
+
+            table#description > tbody > tr > td:nth-child(even){
                 border-right : 1px dashed grey;
             }
 
@@ -174,7 +185,8 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
                                 <thead>
                                     <tr>
                                         <th>Description</th>
-                                        <th>Amount</th>
+                                        <th>T/S/F</th>
+                                        <th style="width:20%;">Amount</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -191,39 +203,16 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
                             <table id="methods">
                                 <thead>
                                     <tr>
-                                        <th>請選以下其中一項付款方式</th>
-                                        <th>Please select one of the following payment method :</th>
+                                        <th>請參考下列付款方式:</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="item">
                                         <td>
-                                            支票抬頭 : 萬威教育集團有限公司<br />
-                                            香港灣仔, 皇后大道東43-59<br />
-                                            東美中心2108室<br />
-                                            切記 : <strong>支票背面註明學生名字</strong>
-                                        </td>
-                                        <td>
-                                            by cheque : payable to Maxway Education Group Limited <br />
-                                            Rm 2108 Dominion Center, 43-59 Queen's Road East,  <br />
-                                            Wanchai, Hong Kong <br />
-                                            <strong>Write student name at the back of the cheque</strong>
-                                        </td>
-                                    </tr>
-                                    <tr class="empty"><td></td><td></td></tr>
-                                    <tr class="item">
-                                        <td>
-                                            直接存入銀行<br />
-                                            香港匯豐銀行<br />
-                                            帳戶號碼 : <strong>658-042759-001 (HK$)</strong><br />
-                                            切記 : <strong>存款單背面註明學生名字</strong><br />
-                                            <!--將存款單傳真致 : <strong>30115284</strong>-->
-                                        </td>
-                                        <td>
-                                            pay-in to bank directly<br />
-                                            Hong Kong bank account :  658-042759-001 (HK$)<br />
-                                            account name :  Maxway Education Group Limited<br />
-                                            <strong>Write student name on bank pay-in slip</strong>
+                                            匯豐銀行帳戶: 658 042759 001<br />
+                                            帳戶名稱: Maxway Education Group Limited<br />
+                                            簡稱 : M E* * LTD T/A M ED<br />
+                                            或 FPS - 請輸入公司的銀行帳號 : 658 042759 001
                                         </td>
                                     </tr>
                                     <!--render<tr class="empty"><td></td><td></td></tr>
@@ -273,9 +262,10 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
                 var tmp = re.exec(k);
                 if (tmp){
                     var x = tmp[1];
+                    var t = 'Item_' + x + '_Transaction_Type__c';
                     var a = 'Item_Amount_' + x + '__c';
                     var amount = _.has(payment, a) ? parseFloat(payment[a]) : 0;
-                    return {name: v, amount: amount};
+                    return {name: v, transactionType: payment[t], amount: amount};
                 } else {
                     return null;
                 }
@@ -311,6 +301,7 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
 <% _.each(items, function(i){ %>
 <tr>
     <td class="name"><%= i.name %></td>
+    <td class="type"><%= i.transactionType %></td>
     <td class="amount"><%= i.amount ? ('$ ' + i.amount.formatMoney(2)) : '' %></td>
 </tr>
 <% }) %>
@@ -341,6 +332,7 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
         <input type="checkbox" <%= CurrencyIsoCode === 'HKD' ? 'checked="checked"' : '' %> /> HKD &nbsp; 
         <input type="checkbox" <%= CurrencyIsoCode === 'CNY' ? 'checked="checked"' : '' %> /> RMB (人民币)
     </td>
+    <td></td>
     <td class="amount"><%= total ? ('$ ' + total.formatMoney(2)) : ('$ ' + Number(0).formatMoney(2))  %></td>
 </tr>
         </script>
@@ -350,6 +342,7 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
 <% _.each(items, function(i){ %>
 <tr>
     <td class="name"><%= i.name %></td>
+    <td class="type"><%= i.transactionType %></td>
     <td class="amount"><%= i.amount ? ('$ ' + i.amount.formatMoney(2)) : '' %></td>
 </tr>
 <% }) %>
@@ -362,6 +355,7 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
         <input type="checkbox" <%= CurrencyIsoCode === 'HKD' ? 'checked="checked"' : '' %> /> HKD &nbsp; 
         <input type="checkbox" <%= CurrencyIsoCode === 'CNY' ? 'checked="checked"' : '' %> /> RMB (人民币)
     </td>
+    <td></td>
     <td class="amount"><%= total ? ('$ ' + total.formatMoney(2)) : ('$ ' + Number(0).formatMoney(2))  %></td>
 </tr>
         </script>
@@ -371,6 +365,7 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
 <% _.each(items, function(i){ %>
 <tr>
     <td class="name"><%= i.name %></td>
+    <td class="type"><%= i.transactionType %></td>
     <td class="amount"><%= i.amount ? ('$ ' + i.amount.formatMoney(2)) : '' %></td>
 </tr>
 <% }) %>
@@ -383,6 +378,7 @@ standardStylesheets="false" renderAs="{!IF($CurrentPage.Parameters.type='pdf', '
         <input type="checkbox" <%= CurrencyIsoCode === 'HKD' ? 'checked="checked"' : '' %> /> HKD &nbsp; 
         <input type="checkbox" <%= CurrencyIsoCode === 'CNY' ? 'checked="checked"' : '' %> /> RMB (人民币)
     </td>
+    <td></td>
     <td class="amount"><%= total ? ('$ ' + total.formatMoney(2)) : ('$ ' + Number(0).formatMoney(2))  %></td>
 </tr>
         </script>

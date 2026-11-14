@@ -11,11 +11,6 @@ public without sharing class LeadDuplicateMatchUtil {
             return null;
         }
 
-        String countryDigits = extractCountryDigits(countryCode);
-        if (String.isNotBlank(countryDigits) && digitsOnly.startsWith(countryDigits) && digitsOnly.length() > countryDigits.length()) {
-            digitsOnly = digitsOnly.substring(countryDigits.length());
-        }
-
         if (countryCode == HK_COUNTRY_CODE || countryCode == MACAU_COUNTRY_CODE) {
             return rightDigits(digitsOnly, 8);
         }
@@ -59,15 +54,6 @@ public without sharing class LeadDuplicateMatchUtil {
             }
         }
         return cleanedValue;
-    }
-
-    private static String extractCountryDigits(String countryCode) {
-        if (String.isBlank(countryCode) || !countryCode.contains('(') || !countryCode.contains(')')) {
-            return null;
-        }
-
-        String betweenBrackets = countryCode.substringAfter('(').substringBefore(')');
-        return digitsOnly(betweenBrackets);
     }
 
     private static String rightDigits(String inputValue, Integer count) {

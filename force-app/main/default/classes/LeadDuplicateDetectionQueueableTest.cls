@@ -71,6 +71,7 @@ private class LeadDuplicateDetectionQueueableTest {
         System.assertEquals(null, refreshedNonStudentLead.Merged_To_Account__c, 'Non-student leads should not populate the account target field.');
         System.assertEquals('12345678', LeadDuplicateMatchUtil.normalizeMobileForComparison('+852 1234 5678', 'Hong Kong (852)'), 'HK numbers should compare on the right 8 digits.');
         System.assertEquals('13800138000', LeadDuplicateMatchUtil.normalizeMobileForComparison('+86 13800138000', 'China (86)'), 'China numbers should compare on the right 11 digits.');
+        System.assertEquals('213123456789', LeadDuplicateMatchUtil.normalizeMobileForComparison('213123456789', 'Algeria (213)'), 'Non-HK and non-China numbers should not remove digits based on Country_Code__c.');
     }
 
     private static Lead createStudentLead(StudentLeadSpec spec) {
