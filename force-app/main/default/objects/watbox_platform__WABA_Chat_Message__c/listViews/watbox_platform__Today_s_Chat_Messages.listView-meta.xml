@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>watbox_platform__Today_s_Chat_Messages</fullName>
+    <columns>NAME</columns>
+    <columns>watbox_platform__Lead__c</columns>
+    <columns>watbox_platform__Account__c</columns>
+    <columns>watbox_platform__Contact__c</columns>
+    <columns>watbox_platform__Type__c</columns>
+    <columns>watbox_platform__Message_Type__c</columns>
+    <columns>watbox_platform__WA_Message_Id__c</columns>
+    <columns>watbox_platform__Error_Message__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Today&apos;s Chat Messages</label>
+</ListView>

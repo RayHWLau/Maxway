@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>watbox_platform__Previous_Message_Source__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>This field is to capture the reponse of list replies / template replies</description>
+    <label>Previous Message Source</label>
+    <referenceTo>watbox_platform__WABA_Chat_Message__c</referenceTo>
+    <relationshipLabel>WABA Chat Messages</relationshipLabel>
+    <relationshipName>WABA_Chat_Messages</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
