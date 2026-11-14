@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ComunityValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>TEXT(Account.Approval_Status__c) !=&apos;Approved&apos; &amp;&amp;  ( Account.Owner.Profile.Name =&apos;Partner - Admin&apos; || Account.Owner.Profile.Name =&apos;Partner - User&apos; )
+
+
+/*TEXT(Account.Approval_Status__c) !=&apos;Approved&apos; &amp;&amp;  Account.Owner.Profile.Name =&apos;Partner&apos;
+*/</errorConditionFormula>
+    <errorMessage>Account should be approved first.</errorMessage>
+</ValidationRule>

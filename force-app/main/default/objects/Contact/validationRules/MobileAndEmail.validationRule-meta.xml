@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MobileAndEmail</fullName>
+    <active>false</active>
+    <errorConditionFormula>(MobilePhone = null) &amp;&amp; ( Email = null) &amp;&amp; ($RecordType.Name = &apos;Primary Contact&apos;)</errorConditionFormula>
+    <errorMessage>Please enter either Mobile or Email.</errorMessage>
+</ValidationRule>

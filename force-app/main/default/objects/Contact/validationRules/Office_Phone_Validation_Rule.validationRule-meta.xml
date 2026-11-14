@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office_Phone_Validation_Rule</fullName>
+    <active>true</active>
+    <description>Prevent users from entering characters in Office Phone field.</description>
+    <errorConditionFormula>OR( 
+CONTAINS(OtherPhone , &quot;a&quot;), 
+CONTAINS(OtherPhone , &quot;b&quot;), 
+CONTAINS(OtherPhone , &quot;c&quot;), 
+CONTAINS(OtherPhone , &quot;d&quot;), 
+CONTAINS(OtherPhone , &quot;e&quot;), 
+CONTAINS(OtherPhone , &quot;f&quot;), 
+CONTAINS(OtherPhone , &quot;g&quot;), 
+CONTAINS(OtherPhone , &quot;h&quot;), 
+CONTAINS(OtherPhone , &quot;i&quot;), 
+CONTAINS(OtherPhone , &quot;j&quot;), 
+CONTAINS(OtherPhone , &quot;k&quot;), 
+CONTAINS(OtherPhone , &quot;l&quot;), 
+CONTAINS(OtherPhone , &quot;m&quot;), 
+CONTAINS(OtherPhone , &quot;n&quot;), 
+CONTAINS(OtherPhone , &quot;o&quot;), 
+CONTAINS(OtherPhone , &quot;p&quot;), 
+CONTAINS(OtherPhone , &quot;q&quot;), 
+CONTAINS(OtherPhone , &quot;r&quot;), 
+CONTAINS(OtherPhone , &quot;s&quot;), 
+CONTAINS(OtherPhone , &quot;t&quot;), 
+CONTAINS(OtherPhone , &quot;u&quot;), 
+CONTAINS(OtherPhone , &quot;v&quot;), 
+CONTAINS(OtherPhone , &quot;w&quot;), 
+CONTAINS(OtherPhone , &quot;x&quot;), 
+CONTAINS(OtherPhone , &quot;y&quot;), 
+CONTAINS(OtherPhone , &quot;z&quot;), 
+
+CONTAINS(OtherPhone , &quot;A&quot;), 
+CONTAINS(OtherPhone , &quot;B&quot;), 
+CONTAINS(OtherPhone , &quot;C&quot;), 
+CONTAINS(OtherPhone , &quot;D&quot;), 
+CONTAINS(OtherPhone , &quot;E&quot;), 
+CONTAINS(OtherPhone , &quot;F&quot;), 
+CONTAINS(OtherPhone , &quot;G&quot;), 
+CONTAINS(OtherPhone , &quot;H&quot;), 
+CONTAINS(OtherPhone , &quot;I&quot;), 
+CONTAINS(OtherPhone , &quot;J&quot;), 
+CONTAINS(OtherPhone , &quot;K&quot;), 
+CONTAINS(OtherPhone , &quot;L&quot;), 
+CONTAINS(OtherPhone , &quot;M&quot;), 
+CONTAINS(OtherPhone , &quot;N&quot;), 
+CONTAINS(OtherPhone , &quot;O&quot;), 
+CONTAINS(OtherPhone , &quot;P&quot;), 
+CONTAINS(OtherPhone , &quot;Q&quot;), 
+CONTAINS(OtherPhone , &quot;R&quot;), 
+CONTAINS(OtherPhone , &quot;S&quot;), 
+CONTAINS(OtherPhone , &quot;T&quot;), 
+CONTAINS(OtherPhone , &quot;U&quot;), 
+CONTAINS(OtherPhone , &quot;V&quot;), 
+CONTAINS(OtherPhone , &quot;W&quot;), 
+CONTAINS(OtherPhone , &quot;X&quot;), 
+CONTAINS(OtherPhone , &quot;Y&quot;), 
+CONTAINS(OtherPhone , &quot;Z&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>OtherPhone</errorDisplayField>
+    <errorMessage>Please enter a valid phone number. Characters are not allowed.</errorMessage>
+</ValidationRule>

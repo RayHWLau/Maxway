@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_2__c</fullName>
+    <label>Lead Source 2</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>LeadSource</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>Yahoo</fullName>
+                <default>false</default>
+                <label>Yahoo</label>
+            </value>
+            <value>
+                <fullName>DM: MM/YY (amend when use)</fullName>
+                <default>false</default>
+                <label>DM: MM/YY (amend when use)</label>
+            </value>
+            <value>
+                <fullName>E: Jul-13</fullName>
+                <default>false</default>
+                <label>E: Jul-13</label>
+            </value>
+            <value>
+                <fullName>E: Nov-13</fullName>
+                <default>false</default>
+                <label>E: Nov-13</label>
+            </value>
+            <value>
+                <fullName>MA: Jul-13</fullName>
+                <default>false</default>
+                <label>MA: Jul-13</label>
+            </value>
+            <value>
+                <fullName>MTR: Jul-13</fullName>
+                <default>false</default>
+                <label>MTR: Jul-13</label>
+            </value>
+            <value>
+                <fullName>MTR: Nov-13</fullName>
+                <default>false</default>
+                <label>MTR: Nov-13</label>
+            </value>
+            <value>
+                <fullName>PRN: Jul-13</fullName>
+                <default>false</default>
+                <label>PRN: Jul-13</label>
+            </value>
+            <value>
+                <fullName>AOL: Jul-13</fullName>
+                <default>false</default>
+                <label>AOL: Jul-13</label>
+            </value>
+            <value>
+                <fullName>Wechat</fullName>
+                <default>false</default>
+                <label>Wechat</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Xiaohongshu</fullName>
+                <default>false</default>
+                <label>小紅書</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Mob App</controllingFieldValue>
+            <valueName>MA: Jul-13</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPLE Online</controllingFieldValue>
+            <valueName>AOL: Jul-13</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Printed Adv</controllingFieldValue>
+            <valueName>PRN: Jul-13</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media</controllingFieldValue>
+            <valueName>Wechat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media</controllingFieldValue>
+            <valueName>Facebook</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media</controllingFieldValue>
+            <valueName>Xiaohongshu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Direct Mail</controllingFieldValue>
+            <valueName>DM: MM/YY (amend when use)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Search Engine</controllingFieldValue>
+            <valueName>Google</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Search Engine</controllingFieldValue>
+            <valueName>Yahoo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expo</controllingFieldValue>
+            <valueName>E: Jul-13</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expo</controllingFieldValue>
+            <valueName>E: Nov-13</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MTR Adv</controllingFieldValue>
+            <valueName>MTR: Jul-13</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MTR Adv</controllingFieldValue>
+            <valueName>MTR: Nov-13</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

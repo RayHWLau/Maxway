@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_field_Validation_Rule</fullName>
+    <active>true</active>
+    <description>Prevent users from entering characters in Phone field.</description>
+    <errorConditionFormula>OR( 
+CONTAINS(Phone, &quot;a&quot;), 
+CONTAINS(Phone, &quot;b&quot;), 
+CONTAINS(Phone, &quot;c&quot;), 
+CONTAINS(Phone, &quot;d&quot;), 
+CONTAINS(Phone, &quot;e&quot;), 
+CONTAINS(Phone, &quot;f&quot;), 
+CONTAINS(Phone, &quot;g&quot;), 
+CONTAINS(Phone, &quot;h&quot;), 
+CONTAINS(Phone, &quot;i&quot;), 
+CONTAINS(Phone, &quot;j&quot;), 
+CONTAINS(Phone, &quot;k&quot;), 
+CONTAINS(Phone, &quot;l&quot;), 
+CONTAINS(Phone, &quot;m&quot;), 
+CONTAINS(Phone, &quot;n&quot;), 
+CONTAINS(Phone, &quot;o&quot;), 
+CONTAINS(Phone, &quot;p&quot;), 
+CONTAINS(Phone, &quot;q&quot;), 
+CONTAINS(Phone, &quot;r&quot;), 
+CONTAINS(Phone, &quot;s&quot;), 
+CONTAINS(Phone, &quot;t&quot;), 
+CONTAINS(Phone, &quot;u&quot;), 
+CONTAINS(Phone, &quot;v&quot;), 
+CONTAINS(Phone, &quot;w&quot;), 
+CONTAINS(Phone, &quot;x&quot;), 
+CONTAINS(Phone, &quot;y&quot;), 
+CONTAINS(Phone, &quot;z&quot;), 
+
+CONTAINS(Phone, &quot;A&quot;), 
+CONTAINS(Phone, &quot;B&quot;), 
+CONTAINS(Phone, &quot;C&quot;), 
+CONTAINS(Phone, &quot;D&quot;), 
+CONTAINS(Phone, &quot;E&quot;), 
+CONTAINS(Phone, &quot;F&quot;), 
+CONTAINS(Phone, &quot;G&quot;), 
+CONTAINS(Phone, &quot;H&quot;), 
+CONTAINS(Phone, &quot;I&quot;), 
+CONTAINS(Phone, &quot;J&quot;), 
+CONTAINS(Phone, &quot;K&quot;), 
+CONTAINS(Phone, &quot;L&quot;), 
+CONTAINS(Phone, &quot;M&quot;), 
+CONTAINS(Phone, &quot;N&quot;), 
+CONTAINS(Phone, &quot;O&quot;), 
+CONTAINS(Phone, &quot;P&quot;), 
+CONTAINS(Phone, &quot;Q&quot;), 
+CONTAINS(Phone, &quot;R&quot;), 
+CONTAINS(Phone, &quot;S&quot;), 
+CONTAINS(Phone, &quot;T&quot;), 
+CONTAINS(Phone, &quot;U&quot;), 
+CONTAINS(Phone, &quot;V&quot;), 
+CONTAINS(Phone, &quot;W&quot;), 
+CONTAINS(Phone, &quot;X&quot;), 
+CONTAINS(Phone, &quot;Y&quot;), 
+CONTAINS(Phone, &quot;Z&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Please enter a valid phone number. Characters are not allowed.</errorMessage>
+</ValidationRule>

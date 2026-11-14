@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Home_Phone_Validation_Rule</fullName>
+    <active>true</active>
+    <description>Prevent users from entering characters in Home Phone field.</description>
+    <errorConditionFormula>OR( 
+CONTAINS(HomePhone  , &quot;a&quot;), 
+CONTAINS(HomePhone, &quot;b&quot;), 
+CONTAINS(HomePhone, &quot;c&quot;), 
+CONTAINS(HomePhone, &quot;d&quot;), 
+CONTAINS(HomePhone, &quot;e&quot;), 
+CONTAINS(HomePhone, &quot;f&quot;), 
+CONTAINS(HomePhone, &quot;g&quot;), 
+CONTAINS(HomePhone, &quot;h&quot;), 
+CONTAINS(HomePhone, &quot;i&quot;), 
+CONTAINS(HomePhone, &quot;j&quot;), 
+CONTAINS(HomePhone, &quot;k&quot;), 
+CONTAINS(HomePhone, &quot;l&quot;), 
+CONTAINS(HomePhone, &quot;m&quot;), 
+CONTAINS(HomePhone, &quot;n&quot;), 
+CONTAINS(HomePhone, &quot;o&quot;), 
+CONTAINS(HomePhone, &quot;p&quot;), 
+CONTAINS(HomePhone, &quot;q&quot;), 
+CONTAINS(HomePhone, &quot;r&quot;), 
+CONTAINS(HomePhone, &quot;s&quot;), 
+CONTAINS(HomePhone, &quot;t&quot;), 
+CONTAINS(HomePhone, &quot;u&quot;), 
+CONTAINS(HomePhone, &quot;v&quot;), 
+CONTAINS(HomePhone, &quot;w&quot;), 
+CONTAINS(HomePhone, &quot;x&quot;), 
+CONTAINS(HomePhone, &quot;y&quot;), 
+CONTAINS(HomePhone, &quot;z&quot;), 
+
+CONTAINS(HomePhone, &quot;A&quot;), 
+CONTAINS(HomePhone, &quot;B&quot;), 
+CONTAINS(HomePhone, &quot;C&quot;), 
+CONTAINS(HomePhone, &quot;D&quot;), 
+CONTAINS(HomePhone, &quot;E&quot;), 
+CONTAINS(HomePhone, &quot;F&quot;), 
+CONTAINS(HomePhone, &quot;G&quot;), 
+CONTAINS(HomePhone, &quot;H&quot;), 
+CONTAINS(HomePhone, &quot;I&quot;), 
+CONTAINS(HomePhone, &quot;J&quot;), 
+CONTAINS(HomePhone, &quot;K&quot;), 
+CONTAINS(HomePhone, &quot;L&quot;), 
+CONTAINS(HomePhone, &quot;M&quot;), 
+CONTAINS(HomePhone, &quot;N&quot;), 
+CONTAINS(HomePhone, &quot;O&quot;), 
+CONTAINS(HomePhone, &quot;P&quot;), 
+CONTAINS(HomePhone, &quot;Q&quot;), 
+CONTAINS(HomePhone, &quot;R&quot;), 
+CONTAINS(HomePhone, &quot;S&quot;), 
+CONTAINS(HomePhone, &quot;T&quot;), 
+CONTAINS(HomePhone, &quot;U&quot;), 
+CONTAINS(HomePhone, &quot;V&quot;), 
+CONTAINS(HomePhone, &quot;W&quot;), 
+CONTAINS(HomePhone, &quot;X&quot;), 
+CONTAINS(HomePhone, &quot;Y&quot;), 
+CONTAINS(HomePhone, &quot;Z&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>HomePhone</errorDisplayField>
+    <errorMessage>Please enter a valid phone number. Characters are not allowed.</errorMessage>
+</ValidationRule>

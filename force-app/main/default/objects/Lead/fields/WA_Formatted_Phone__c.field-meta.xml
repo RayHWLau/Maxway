@@ -6,7 +6,7 @@
 SUBSTITUTE(
 SUBSTITUTE(
 SUBSTITUTE(SUBSTITUTE( MobilePhone , &apos;(&apos;, &apos;&apos;), &apos;)&apos;, &apos;&apos;), &apos;-&apos;, &apos;&apos;), &apos;+&apos;, &apos;&apos;), &apos; &apos;, &apos;&apos;)</formula>
-    <label>WA Formatted Phone</label>
+    <label>WA Formatted Phone (Lead)</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>
